@@ -3,7 +3,7 @@ import Button from './Button';
 const Hero = () => {
   return (
     <>
-      <header className={`m-auto w-full items-center bg-white`}>
+      <header className={`m-auto w-full items-center bg-white `}>
         <div className="flex m-auto justify-center items-center flex-col w-[95%] gap-8 md:flex-row">
           {/* video */}
           <div className="m-auto top-0 w-[98%] min-[420px]:w-[404px] md:w-[40%] cursor-pointer">
@@ -13,7 +13,7 @@ const Hero = () => {
                 alt="header bg"
                 className="hidden absolute justify-center items-center left-0 top-0 w-full hue-rotate-383 lg:flex"
               />
-              <div className="relative m-auto shadow-[10px_10px_45px_15px_rgba(0,0,0,0.25)] rounded-2xl flex flex-col justify-center items-center w-full lg:scale-80">
+              <div className="relative m-auto shadow-[10px_10px_45px_5px_rgba(0,0,0,0.25)] rounded-2xl flex flex-col justify-center items-center w-full lg:scale-80">
                 <img
                   src="./images/hero/header-video-cover.avif"
                   alt="header bg cover"

@@ -5,7 +5,6 @@ import OutsideClickHandler from 'react-outside-click-handler';
 
 const Navbar = () => {
   const [isHovered, setIsHovered] = useState(false);
-  const [isItemHovered, setIsItemHovered] = useState(false);
   const [isResourceHovered, setIsResourceHovered] = useState(false);
 
   const NavLists = () => {
@@ -349,9 +348,10 @@ const Navbar = () => {
           id="menu"
           className={
             isNavOpen
-              ? 'fixed float-end top-20 flex justify-start items-center flex-col w-full h-screen p-5 gap-10 border rounded-md bg-white m-auto scale-x-100 z-1 xl:hidden'
+              ? 'fixed top-20 flex justify-start items-center flex-col w-full h-screen p-5 gap-10 border rounded-md bg-white m-auto scale-x-100 xl:hidden'
               : 'hidden'
           }
+          style={{ zIndex: 12 }}
         >
           <ul className="flex justify-start items-start flex-col leading-12">
             <NavListsSmallScreen />
