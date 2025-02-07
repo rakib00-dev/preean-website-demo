@@ -12,3 +12,12 @@
   --others-blue: #0a32c3;
   --text-white: white;
 }
+
+/* navbar */
+.dropDownMenu:hover .dropDown {
+  opacity: 1;
+}
+
+.dropDown {
+  opacity: 0;
+}

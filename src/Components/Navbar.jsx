@@ -4,6 +4,142 @@ import { RiMenu3Fill } from 'react-icons/ri';
 import OutsideClickHandler from 'react-outside-click-handler';
 
 const Navbar = () => {
+  const [isHovered, setIsHovered] = useState(false);
+  const [isResourceHovered, setIsResourceHovered] = useState(false);
+
+  const NavLists = () => {
+    console.log(isHovered);
+
+    return (
+      <>
+        <ListItem
+          NavLink="/#"
+          className={
+            'uppercase flex justify-start items-center gap-2  text-sm sm:font-bold'
+          }
+          onmouseover={() => setIsHovered(true)}
+          onmouseout={() => setIsHovered(false)}
+          onclick={() => setIsHovered((prev) => !prev)}
+        >
+          solutions{' '}
+          <FaChevronDown
+            className={
+              isHovered ? `rotate-180 transition-all` : 'transition-all'
+            }
+          />
+        </ListItem>
+        <ListItem NavLink="/#" className={'uppercase text-sm sm:font-bold'}>
+          our work
+        </ListItem>
+        <ListItem NavLink="/#" className={'uppercase text-sm sm:font-bold'}>
+          pricing
+        </ListItem>
+        {/* <ListItem NavLink="/#" className={'uppercase text-sm sm:font-bold'}>
+          resources
+        </ListItem> */}
+        <ListItem
+          NavLink="/#"
+          className={
+            'uppercase flex justify-start items-center gap-2  text-sm sm:font-bold'
+          }
+          onmouseover={() => setIsResourceHovered(true)}
+          onmouseout={() => setIsResourceHovered(false)}
+          onclick={() => setIsResourceHovered((prev) => !prev)}
+        >
+          resources{' '}
+          <FaChevronDown
+            className={
+              isResourceHovered ? `rotate-180 transition-all` : 'transition-all'
+            }
+          />
+        </ListItem>
+      </>
+    );
+  };
+
+  const NavListsSmallScreen = () => {
+    return (
+      <>
+        <ListItem
+          NavLink="/#"
+          className={
+            'uppercase flex justify-start items-center gap-2 sm:font-bold'
+          }
+          onmouseover={() => setIsHovered(true)}
+          onmouseout={() => setIsHovered(false)}
+          onclick={() => setIsHovered((prev) => !prev)}
+        >
+          solutions{' '}
+          <FaChevronDown
+            className={
+              isHovered ? `rotate-180 transition-all` : 'transition-all'
+            }
+          />
+        </ListItem>
+        <ListItem NavLink="/#" className={'uppercase sm:font-bold'}>
+          our work
+        </ListItem>
+        <ListItem NavLink="/#" className={'uppercase sm:font-bold'}>
+          pricing
+        </ListItem>
+        <ListItem NavLink="/#" className={'uppercase sm:font-bold'}>
+          resources
+        </ListItem>
+      </>
+    );
+  };
+
+  const ListItem = ({
+    className,
+    NavLink,
+    onmouseover,
+    onmouseout,
+    children,
+    onclick,
+  }) => {
+    return (
+      <>
+        <li>
+          <a
+            href={NavLink}
+            className={`relative py-7 font-semibold cursor-pointer transition-all duration-300 uppercase hover:text-gray-500 ${className}`}
+            onMouseOver={onmouseover}
+            onMouseOut={onmouseout}
+            onClick={onclick}
+          >
+            {children}
+          </a>
+        </li>
+      </>
+    );
+  };
+
+  const DropDown = ({
+    title = 'web design',
+    src = 'https://cdn.prod.website-files.com/63a9cb71c629474d4ae334b9/64ad4265f27f2a2ecddd973e_social-media%20(1)%201.svg',
+    to = '#',
+    className,
+    imgClassName,
+  }) => {
+    return (
+      <>
+        <a
+          href={to}
+          className={`flex gap-2 p-4 justify-start items-center w-[210px] ${className}`}
+        >
+          <img
+            src={src}
+            alt={title}
+            className={`p-3 rounded bg-gray-100/80 h-[43.98px] ${imgClassName}`}
+          />
+          <h5 className="uppercase text-sm w-fit font-bold">{title}</h5>
+        </a>
+      </>
+    );
+  };
+
+  console.log(isHovered);
+
   const cssStyle = {
     blur: {
       position: 'absolute',
@@ -111,19 +247,59 @@ const Navbar = () => {
       </div>
 
       {/* dropdown menu */}
-      <div className="hidden flex-wrap w-[40rem] lg:flex">
-        <DropDown />
-        <DropDown />
-        <DropDown />
-        <DropDown />
-        <DropDown />
-        <DropDown />
-        <DropDown />
-        <DropDown />
-        <DropDown />
-        <DropDown />
-        <DropDown />
-        <DropDown />
+      <div
+        className={
+          isHovered
+            ? ` transition-all flex justify-center items-center place-items-center m-auto`
+            : 'transition-all hidden top-50 opacity-0'
+        }
+        onMouseOver={() => setIsHovered(true)}
+        onMouseOut={() => setIsHovered(false)}
+        onClick={() => setIsHovered((prev) => !prev)}
+      >
+        <div
+          className="hidden fixed bg-white top-[48px] m-auto justify-start items-start flex-wrap shadow-xl w-[40rem] lg:flex"
+          style={{ zIndex: 1122 }}
+        >
+          <DropDown
+            title="social media"
+            src="./images/navbar/social-media.svg"
+          />
+          <DropDown title="canva design" src="./images/navbar/canva.png" />
+          <DropDown
+            title="graphic design"
+            src="./images/navbar/graphic-design.svg"
+          />
+          <DropDown title="web design" src="./images/navbar/web-design.svg" />
+          <DropDown
+            title="print design"
+            src="./images/navbar/print-design.png"
+          />
+          <DropDown
+            title="video editing"
+            src="./images/navbar/video-editing.png"
+          />
+          <DropDown title="branding" src="./images/navbar/branding.png" />
+          <DropDown
+            title="presentation"
+            src="./images/navbar/presentation.png"
+          />
+          <DropDown title="ad design" src="./images/navbar/ad-design.png" />
+          <DropDown
+            title="illustrations"
+            src="./images/navbar/illustrations.png"
+          />
+          <DropDown
+            title="motion graphic"
+            src="./images/navbar/motion-graphic.png"
+          />
+          <a
+            href="/#"
+            className="transition-all px-3 py-3 mt-4 bg-blue-100/50 border-1/80 text-blue-500 font-bold rounded-md text-sm hover:border-1 hover:bg-white"
+          >
+            ENTIRE SCOPE OF SERVICE
+          </a>
+        </div>
       </div>
 
       {/* small screen */}
@@ -170,141 +346,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-const NavLists = () => {
-  const [isHovered, setIsHovered] = useState(false);
-
-  return (
-    <>
-      <ListItem
-        NavLink="/#"
-        className={
-          'uppercase flex justify-start items-center gap-2  text-sm sm:font-bold'
-        }
-        onmouseover={() => setIsHovered(true)}
-        onmouseout={() => setIsHovered(false)}
-        onclick={() => setIsHovered((prev) => !prev)}
-      >
-        solutions{' '}
-        <FaChevronDown
-          className={isHovered ? `rotate-180 transition-all` : 'transition-all'}
-        />
-      </ListItem>
-      <ListItem NavLink="/#" className={'uppercase text-sm sm:font-bold'}>
-        our work
-      </ListItem>
-      <ListItem NavLink="/#" className={'uppercase text-sm sm:font-bold'}>
-        pricing
-      </ListItem>
-      <ListItem NavLink="/#" className={'uppercase text-sm sm:font-bold'}>
-        resources
-      </ListItem>
-    </>
-  );
-};
-
-const NavListsSmallScreen = () => {
-  const [isHovered, setIsHovered] = useState(false);
-
-  return (
-    <>
-      <ListItem
-        NavLink="/#"
-        className={
-          'uppercase flex justify-start items-center gap-2 sm:font-bold'
-        }
-        onmouseover={() => setIsHovered(true)}
-        onmouseout={() => setIsHovered(false)}
-        onclick={() => setIsHovered((prev) => !prev)}
-      >
-        solutions{' '}
-        <FaChevronDown
-          className={isHovered ? `rotate-180 transition-all` : 'transition-all'}
-        />
-      </ListItem>
-      <ListItem NavLink="/#" className={'uppercase sm:font-bold'}>
-        our work
-      </ListItem>
-      <ListItem NavLink="/#" className={'uppercase sm:font-bold'}>
-        pricing
-      </ListItem>
-      <ListItem NavLink="/#" className={'uppercase sm:font-bold'}>
-        resources
-      </ListItem>
-    </>
-  );
-};
-
-const ListItem = ({
-  className,
-  NavLink,
-  onmouseover,
-  onmouseout,
-  children,
-  onclick,
-}) => {
-  return (
-    <>
-      <li>
-        <a
-          href={NavLink}
-          className={`relative py-7 font-semibold cursor-pointer transition-all duration-300 uppercase hover:text-gray-500 ${className}`}
-          onMouseOver={onmouseover}
-          onMouseOut={onmouseout}
-          onClick={onclick}
-        >
-          {children}
-        </a>
-      </li>
-      {/* <li
-        className={`relative py-7 text-sm font-semibold cursor-pointer transition-all duration-300 hover:text-yellow-500 md:text-lg ${className}`}
-      >
-        <a href="#projects">Projects</a>
-      </li>
-      <li
-        className={`relative py-7 text-sm font-semibold cursor-pointer transition-all duration-300 hover:text-yellow-500 md:text-lg ${className}`}
-      >
-        <a href="#services-section">Services</a>
-      </li> */}
-    </>
-  );
-};
-
-const DropDown = ({
-  title = 'web design',
-  src = 'https://cdn.prod.website-files.com/63a9cb71c629474d4ae334b9/64ad4265f27f2a2ecddd973e_social-media%20(1)%201.svg',
-  to = '#',
-  className,
-}) => {
-  return (
-    <>
-      <a
-        href={to}
-        className={`flex gap-2 p-4 justify-center items-center w-fit ${className}`}
-      >
-        <div className="bg-gray-500 ">
-          <img src={src} alt={title} className="px-6" />
-        </div>
-        <h5 className="uppercase w-fit">{title}</h5>
-      </a>
-    </>
-  );
-};
-
-const HoverDropdown = () => {
-  const [isHovered, setIsHovered] = useState(false);
-
-  return (
-    <Dropdown
-      title="Services"
-      open={isHovered}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      renderToggle={(props) => <span {...props}>Services</span>}
-    >
-      <Menu.Item>Web Development</Menu.Item>
-      <Menu.Item>App Development</Menu.Item>
-      <Menu.Item>Design</Menu.Item>
-    </Dropdown>
-  );
-};
