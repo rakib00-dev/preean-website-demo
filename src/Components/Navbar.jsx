@@ -8,15 +8,12 @@ const Navbar = () => {
   const [isResourceHovered, setIsResourceHovered] = useState(false);
 
   const NavLists = () => {
-    console.log(isHovered);
-    console.log(isResourceHovered);
-
     return (
       <>
         <ListItem
           NavLink="/#"
           className={
-            'uppercase flex justify-start items-center gap-2  text-sm sm:font-bold'
+            'uppercase  flex justify-start items-center gap-2  text-sm sm:font-bold'
           }
           onmouseover={() => setIsHovered(true)}
           onmouseout={() => setIsHovered(false)}
@@ -29,16 +26,16 @@ const Navbar = () => {
             }
           />
         </ListItem>
-        <ListItem NavLink="/#" className={'uppercase text-sm sm:font-bold'}>
+        <ListItem NavLink="/#" className={'uppercase  text-sm sm:font-bold'}>
           our work
         </ListItem>
-        <ListItem NavLink="/#" className={'uppercase text-sm sm:font-bold'}>
+        <ListItem NavLink="/#" className={'uppercase  text-sm sm:font-bold'}>
           pricing
         </ListItem>
         <ListItem
           NavLink="/#"
           className={
-            'uppercase flex justify-start items-center gap-2  text-sm sm:font-bold'
+            'uppercase  flex justify-start items-center gap-2  text-sm sm:font-bold'
           }
           onmouseover={() => setIsResourceHovered(true)}
           onmouseout={() => setIsResourceHovered(false)}
@@ -196,10 +193,10 @@ const Navbar = () => {
   }) => {
     return (
       <>
-        <li className="pb-5 left-0">
+        <li className="pb-5 left-0 lg:pb-0">
           <a
             href={NavLink}
-            className={`relative text-xl font-bold cursor-pointer transition-all duration-300 uppercase hover:text-gray-500 ${className}`}
+            className={`relative text-xl font-bold cursor-pointer transition-all duration-300 uppercase lg:text-sm hover:text-gray-500 ${className}`}
             style={style}
             onMouseOver={onmouseover}
             onMouseOut={onmouseout}
@@ -308,9 +305,9 @@ const Navbar = () => {
             {/* large screen */}
             <div
               id="menu"
-              className="hidden justify-between gap-10 items-center w-full xl:flex"
+              className="hidden justify-between  gap-10 items-center w-full xl:flex"
             >
-              <ul className="flex justify-center items-center gap-7">
+              <ul className="flex justify-center  items-center gap-7">
                 <NavLists />
               </ul>
               <div id="contact">
@@ -331,7 +328,7 @@ const Navbar = () => {
               </div>
             </div>
             <div
-              className={!isNavOpen ? `block` : 'hidden xl:hidden'}
+              className={!isNavOpen ? `block xl:hidden` : 'hidden xl:hidden'}
               onClick={() => {
                 setIsNavOpen((prev) => !prev);
               }}
@@ -340,7 +337,7 @@ const Navbar = () => {
             </div>
 
             <div
-              className={isNavOpen ? `block` : 'hidden xl:hidden'}
+              className={isNavOpen ? `block xl:hidden` : 'hidden xl:hidden'}
               onClick={() => {
                 setIsNavOpen((prev) => prev);
               }}
