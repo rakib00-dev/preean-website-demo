@@ -36,7 +36,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <LinkGroup header="Resources">
+            <LinkGroup header="Solutions">
               <NavLink link="/#" label="Social Media" />
               <NavLink link="/#" label="Canva Design" />
               <NavLink link="/#" label="Graphic Design" />
@@ -46,28 +46,28 @@ const Footer = () => {
                 className={'text-blue-500'}
               />
             </LinkGroup>
-            <LinkGroup header="Company">
-              <NavLink link="/#" label="About TailGrids" />
-              <NavLink link="/#" label="Contact & Support" />
-              <NavLink link="/#" label="Success History" />
-              <NavLink link="/#" label="Setting & Privacy" />
+            <LinkGroup header="Resources">
+              <NavLink link="/#" label="Free Illustrations" />
+              <NavLink link="/#" label="Guides" />
+              <NavLink link="/#" label="Design Blog" />
+              <NavLink link="/#" label="Case Studies" />
             </LinkGroup>
             <LinkGroup header="Quick Links">
               <NavLink link="/#" label="Premium Support" />
               <NavLink link="/#" label="Our Services" />
               <NavLink link="/#" label="Know Our Team" />
-              <NavLink link="/#" label="Download App" />
+              <NavLink link="/#" label="Sign in" />
             </LinkGroup>
 
             <div className="w-full px-4 sm:w-1/2 lg:w-3/12">
               <div className="mb-10 w-full">
-                <h4 className="mb-9 text-lg font-semibold text-dark dark:text-white">
+                <h4 className="mb-9 text-lg font-semibold text-dark ">
                   Follow Us On
                 </h4>
                 <div className="mb-6 flex items-center">
                   <a
-                    href="javascript:void(0)"
-                    className="mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-stroke text-dark hover:border-primary hover:bg-primary hover:text-white dark:border-dark-3 dark:text-white dark:hover:border-primary sm:mr-4 lg:mr-3 xl:mr-4"
+                    href="#"
+                    className="transition-all mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-stroke text-dark bg-blue-800 text-white hover:border-primary hover:bg-white hover:text-red-500 sm:mr-4 lg:mr-3 xl:mr-4"
                   >
                     <svg
                       width="8"
@@ -79,8 +79,8 @@ const Footer = () => {
                     </svg>
                   </a>
                   <a
-                    href="javascript:void(0)"
-                    className="mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-stroke text-dark hover:border-primary hover:bg-primary hover:text-white dark:border-dark-3 dark:text-white dark:hover:border-primary sm:mr-4 lg:mr-3 xl:mr-4"
+                    href="#"
+                    className="transition-all mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-stroke text-dark bg-blue-500 text-white hover:border-primary hover:bg-white hover:text-red-500 sm:mr-4 lg:mr-3 xl:mr-4"
                   >
                     <svg
                       width="16"
@@ -92,8 +92,8 @@ const Footer = () => {
                     </svg>
                   </a>
                   <a
-                    href="javascript:void(0)"
-                    className="mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-stroke text-dark hover:border-primary hover:bg-primary hover:text-white dark:border-dark-3 dark:text-white dark:hover:border-primary sm:mr-4 lg:mr-3 xl:mr-4"
+                    href="#"
+                    className="transition-all mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-stroke text-dark bg-red-500 text-white hover:border-primary hover:bg-white hover:text-red-500 sm:mr-4 lg:mr-3 xl:mr-4"
                   >
                     <svg
                       width="16"
@@ -105,8 +105,8 @@ const Footer = () => {
                     </svg>
                   </a>
                   <a
-                    href="javascript:void(0)"
-                    className="mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-stroke text-dark hover:border-primary hover:bg-primary hover:text-white dark:border-dark-3 dark:text-white dark:hover:border-primary sm:mr-4 lg:mr-3 xl:mr-4"
+                    href="#"
+                    className="transition-all mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-stroke text-dark bg-blue-800 text-white hover:border-primary hover:bg-white hover:text-red-500  sm:mr-4 lg:mr-3 xl:mr-4"
                   >
                     <svg
                       width="14"
@@ -194,9 +194,7 @@ const LinkGroup = ({ children, header }) => {
     <>
       <div className="w-full px-4 sm:w-1/2 lg:w-2/12">
         <div className="mb-10 w-full">
-          <h4 className="mb-9 text-lg font-semibold text-dark dark:text-white">
-            {header}
-          </h4>
+          <h4 className="mb-9 text-lg font-semibold text-dark ">{header}</h4>
           <ul className="space-y-3">{children}</ul>
         </div>
       </div>
@@ -209,7 +207,7 @@ const NavLink = ({ link, label, className }) => {
     <li>
       <a
         href={link}
-        className={`inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6 ${className}`}
+        className={`inline-block text-base leading-loose text-body-color hover:underline  ${className}`}
       >
         {label}
       </a>
