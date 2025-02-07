@@ -219,13 +219,13 @@ const Navbar = () => {
                 <div className="flex flex-row gap-4 justify-end pr-16 sm:flex lg:pr-0">
                   <a
                     href="/#"
-                    className="px-7 py-3 text-blue-500 border border-blue-500 rounded-md font-medium text-dark hover:text-blue-500"
+                    className="transition-all px-7 py-3 text-blue-500 border border-blue-500 rounded-md font-medium text-dark hover:text-white hover:bg-blue-300"
                   >
                     Sign in
                   </a>
                   <a
                     href="/#"
-                    className="rounded-md bg-blue-500 px-7 py-3 text-base font-medium text-white hover:bg-blue-500/90"
+                    className="transition-all rounded-md bg-blue-500 px-7 py-3 text-base font-medium text-white hover:bg-blue-500/90"
                   >
                     Book A Call
                   </a>
@@ -317,15 +317,25 @@ const Navbar = () => {
           style={{ zIndex: 1122 }}
         >
           <DropDown
-            title="social media"
-            src="./images/navbar/social-media.svg"
+            title="Free illustrations"
+            src="./images/navbar/illustrations.png"
+            className={'w-full'}
           />
-          <DropDown title="canva design" src="./images/navbar/canva.png" />
           <DropDown
-            title="graphic design"
-            src="./images/navbar/graphic-design.svg"
+            title="guilds"
+            src="./images/navbar/guides.png"
+            className={'w-full'}
           />
-          <DropDown title="web design" src="./images/navbar/web-design.svg" />
+          <DropDown
+            title="design blog"
+            src="./images/navbar/design-blog.png"
+            className={'w-full'}
+          />
+          <DropDown
+            title="case studies"
+            src="./images/navbar/print-design.png"
+            className={'w-full'}
+          />
         </div>
       </div>
 
