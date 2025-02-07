@@ -73,3 +73,43 @@
 }
 
 /* hero ⬆️ */
+
+/* carousel ⬇️*/
+.slider {
+  white-space: nowrap;
+}
+
+.slide span,
+.slide2 span {
+  margin: 0 20px;
+}
+
+.slide {
+  display: inline-block;
+  animation: slideShow 20s infinite linear;
+}
+
+.slide2 {
+  display: inline-block;
+  animation: slideShow2 10s infinite linear;
+}
+
+@keyframes slideShow {
+  0% {
+    transform: translateX(0%); /* Start from the original position */
+  }
+  100% {
+    transform: translateX(-360%); /* Move the content off-screen */
+  }
+}
+
+@keyframes slideShow2 {
+  0% {
+    transform: translateX(-360%); /* Start from the original position */
+  }
+  100% {
+    transform: translateX(70%); /* Move the content off-screen */
+  }
+}
+
+/* carousel ⬆️*/
