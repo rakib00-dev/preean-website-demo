@@ -4,9 +4,9 @@ const Hero = () => {
   return (
     <>
       <header
-        className={`flex justify-center m-auto w-full items-center bg-white`}
+        className={`flex justify-center  m-auto w-full items-center bg-white`}
       >
-        <div className="flex flex-col w-[95%] p-0 md:w-4/5 md:p-4 md:flex-row">
+        <div className="flex flex-col w-[95%] gap-8 p-0 md:w-4/5 md:p-4 md:flex-row">
           {/* video */}
           <div className="">
             <div className=" relative mt-4 h-auto float-start w-full">
@@ -18,7 +18,7 @@ const Hero = () => {
               <img
                 src="./images/hero/header-video-cover.avif"
                 alt="header bg cover"
-                className="flex justify-center items-center rounded-xl absolute left-0 top-0 w-80 scale-80 md:w-[28rem]"
+                className="flex justify-center items-center rounded-xl absolute right-10 shadow-xl top-0 w-80 scale-90 md:w-[28rem]"
               />
             </div>
           </div>

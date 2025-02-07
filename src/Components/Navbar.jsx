@@ -5,6 +5,7 @@ import OutsideClickHandler from 'react-outside-click-handler';
 
 const Navbar = () => {
   const [isHovered, setIsHovered] = useState(false);
+  const [isItemHovered, setIsItemHovered] = useState(false);
   const [isResourceHovered, setIsResourceHovered] = useState(false);
 
   const NavLists = () => {
@@ -122,7 +123,7 @@ const Navbar = () => {
       <>
         <a
           href={to}
-          className={`flex gap-2 p-4 justify-start items-center w-[210px] ${className}`}
+          className={`flex gap-2 p-4 justify-start items-center w-[210px] rounded-md DropItemHover ${className}`}
         >
           <img
             src={src}
@@ -243,7 +244,7 @@ const Navbar = () => {
         </nav>
       </div>
 
-      {/* dropdown menu */}
+      {/*solutions dropdown menu */}
       <div
         className={
           isHovered
@@ -255,7 +256,7 @@ const Navbar = () => {
         onClick={() => setIsHovered((prev) => !prev)}
       >
         <div
-          className="hidden fixed bg-white top-[48px] m-auto justify-start items-start flex-wrap shadow-xl w-[40rem] lg:flex"
+          className="hidden fixed rounded-xl bg-white top-[48px] m-auto justify-start items-start flex-wrap shadow-xl w-[40rem] lg:flex"
           style={{ zIndex: 1122 }}
         >
           <DropDown
@@ -296,6 +297,35 @@ const Navbar = () => {
           >
             ENTIRE SCOPE OF SERVICE
           </a>
+        </div>
+      </div>
+
+      {/* resources droopDown menu */}
+      {/* dropdown menu */}
+      <div
+        className={
+          isResourceHovered
+            ? ` transition-all flex justify-center items-center place-items-center m-auto `
+            : 'transition-all hidden top-50 opacity-0'
+        }
+        onMouseOver={() => setIsResourceHovered(true)}
+        onMouseOut={() => setIsResourceHovered(false)}
+        onClick={() => setIsResourceHovered((prev) => !prev)}
+      >
+        <div
+          className="hidden fixed rounded-xl bg-white top-[48px] right-[30%] m-auto flex-col justify-center items-center flex-wrap shadow-xl w-[18rem] lg:flex"
+          style={{ zIndex: 1122 }}
+        >
+          <DropDown
+            title="social media"
+            src="./images/navbar/social-media.svg"
+          />
+          <DropDown title="canva design" src="./images/navbar/canva.png" />
+          <DropDown
+            title="graphic design"
+            src="./images/navbar/graphic-design.svg"
+          />
+          <DropDown title="web design" src="./images/navbar/web-design.svg" />
         </div>
       </div>
 

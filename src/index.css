@@ -14,11 +14,20 @@
   --text-white: white;
 }
 
-/* navbar */
-.dropDownMenu:hover .dropDown {
-  opacity: 1;
+/* navbar dropdown*/
+.DropItemHover,
+.DropItemHover img,
+.DropItemHover h5 {
+  transition: 0.3s ease-in-out;
 }
 
-.dropDown {
-  opacity: 0;
+.DropItemHover:hover {
+  background-color: var(--background-blue);
+}
+.DropItemHover:hover img {
+  background-color: white;
+}
+
+.DropItemHover:hover h5 {
+  color: var(--color-primary);
 }
