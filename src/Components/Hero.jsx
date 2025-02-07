@@ -8,17 +8,19 @@ const Hero = () => {
       >
         <div className="flex flex-col w-[95%] p-0 md:w-4/5 md:p-4 md:flex-row">
           {/* video */}
-          <div className=" relative mt-4 h-auto float-start w-full">
-            <img
-              src="./images/hero/header-video-bg.svg"
-              alt="header bg"
-              className="flex justify-center items-center left-0 top-0 w-80 md:w-[30rem]"
-            />
-            <img
-              src="./images/hero/header-video-cover.avif"
-              alt="header bg cover"
-              className="flex justify-center items-center rounded-xl absolute left-0 top-0 w-80 scale-80 md:scale-100 md:w-[28rem]"
-            />
+          <div className="">
+            <div className=" relative mt-4 h-auto float-start w-full">
+              <img
+                src="./images/hero/header-video-bg.svg"
+                alt="header bg"
+                className="flex justify-center items-center left-0 top-0 w-80 hue-rotate-0 md:w-[50rem]"
+              />
+              <img
+                src="./images/hero/header-video-cover.avif"
+                alt="header bg cover"
+                className="flex justify-center items-center rounded-xl absolute left-0 top-0 w-80 scale-80 md:w-[28rem]"
+              />
+            </div>
           </div>
 
           {/* content */}

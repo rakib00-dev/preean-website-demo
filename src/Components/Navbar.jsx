@@ -34,9 +34,6 @@ const Navbar = () => {
         <ListItem NavLink="/#" className={'uppercase text-sm sm:font-bold'}>
           pricing
         </ListItem>
-        {/* <ListItem NavLink="/#" className={'uppercase text-sm sm:font-bold'}>
-          resources
-        </ListItem> */}
         <ListItem
           NavLink="/#"
           className={
@@ -195,7 +192,7 @@ const Navbar = () => {
           className="relative flex justify-center items-center px-6 py-4 bg-white/60 p-4 w-full h-20 m-auto overflow-hidden lg:py-0.5"
         >
           <div className={''} style={cssStyle.blur}></div>{' '}
-          <div className="flex justify-center items-center mx-10 w-fit gap-18 min-[375px]:gap-20 min-[440px]:gap-22 min-[550px]:gap-35 min-[695px]:gap-45 md:gap-60 lg:gap-80 xl:gap-90 2xl:gap-125">
+          <div className="flex justify-center items-center w-fit gap-35 min-[375px]:gap-50 min-[440px]:gap-80 min-[550px]:gap-100 min-[695px]:gap-110 md:gap-120 md:mx-10 lg:gap-150 xl:gap-70 2xl:gap-100">
             <div
               id="logo"
               className="text-md font-medium w-32 md:w-64 md:text-lg"
@@ -212,7 +209,7 @@ const Navbar = () => {
             {/* large screen */}
             <div
               id="menu"
-              className="hidden justify-between gap-10 items-center w-full lg:flex"
+              className="hidden justify-between gap-10 items-center w-full xl:flex"
             >
               <ul className="flex justify-center items-center gap-7">
                 <NavLists />
@@ -235,7 +232,7 @@ const Navbar = () => {
               </div>
             </div>
             <div
-              className="lg:hidden"
+              className="xl:hidden"
               onClick={() => {
                 setIsNavOpen((prev) => !prev);
               }}
@@ -312,7 +309,7 @@ const Navbar = () => {
           id="menu"
           className={
             isNavOpen
-              ? 'fixed float-end top-20 flex justify-start items-center flex-col w-full h-screen p-5 gap-10 border rounded-md bg-white m-auto scale-x-100 z-1 lg:hidden'
+              ? 'fixed float-end top-20 flex justify-start items-center flex-col w-full h-screen p-5 gap-10 border rounded-md bg-white m-auto scale-x-100 z-1 xl:hidden'
               : 'hidden'
           }
         >
