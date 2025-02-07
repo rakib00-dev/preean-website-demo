@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { FaChevronDown } from 'react-icons/fa';
-import { RiMenu3Fill } from 'react-icons/ri';
+import { RiCloseFill, RiMenu3Fill } from 'react-icons/ri';
 import OutsideClickHandler from 'react-outside-click-handler';
 
 const Navbar = () => {
@@ -9,6 +9,7 @@ const Navbar = () => {
 
   const NavLists = () => {
     console.log(isHovered);
+    console.log(isResourceHovered);
 
     return (
       <>
@@ -62,8 +63,7 @@ const Navbar = () => {
           className={
             'uppercase flex justify-start items-center gap-2 sm:font-bold'
           }
-          onmouseover={() => setIsHovered(true)}
-          onmouseout={() => setIsHovered(false)}
+          style={{ padding: ' 0' }}
           onclick={() => setIsHovered((prev) => !prev)}
         >
           solutions{' '}
@@ -73,15 +73,114 @@ const Navbar = () => {
             }
           />
         </ListItem>
+        <div
+          className={
+            isHovered
+              ? `transition-all relative justify-center items-center place-items-center m-auto scale-y-100`
+              : 'transition-all scale-y-0 hidden'
+          }
+          onClick={() => setIsHovered((prev) => !prev)}
+        >
+          <div
+            className="flex rounded-xl bg-white top-[48px] pb-4 mb-4 right-[30%] m-auto flex-col justify-start items-start flex-wrap shadow-xl w-[18rem] lg:hidden"
+            style={{ zIndex: 1122 }}
+          >
+            <DropDown
+              title="social media"
+              src="./images/navbar/social-media.svg"
+            />
+            <DropDown title="canva design" src="./images/navbar/canva.png" />
+            <DropDown
+              title="graphic design"
+              src="./images/navbar/graphic-design.svg"
+            />
+            <DropDown title="web design" src="./images/navbar/web-design.svg" />
+            <DropDown
+              title="print design"
+              src="./images/navbar/print-design.png"
+            />
+            <DropDown
+              title="video editing"
+              src="./images/navbar/video-editing.png"
+            />
+            <DropDown title="branding" src="./images/navbar/branding.png" />
+            <DropDown
+              title="presentation"
+              src="./images/navbar/presentation.png"
+            />
+            <DropDown title="ad design" src="./images/navbar/ad-design.png" />
+            <DropDown
+              title="illustrations"
+              src="./images/navbar/illustrations.png"
+            />
+            <DropDown
+              title="motion graphic"
+              src="./images/navbar/motion-graphic.png"
+            />
+            <a
+              href="/#"
+              className="transition-all px-3 py-3 ml-4 mt-4 bg-blue-100/50 border-1/80 text-blue-500 font-bold rounded-md text-sm hover:border-1 hover:bg-white"
+            >
+              ENTIRE SCOPE OF SERVICE
+            </a>
+          </div>
+        </div>
         <ListItem NavLink="/#" className={'uppercase sm:font-bold'}>
           our work
         </ListItem>
         <ListItem NavLink="/#" className={'uppercase sm:font-bold'}>
           pricing
         </ListItem>
-        <ListItem NavLink="/#" className={'uppercase sm:font-bold'}>
-          resources
+        <ListItem
+          NavLink="/#"
+          className={
+            'uppercase flex justify-start items-center gap-2 sm:font-bold'
+          }
+          style={{ padding: ' 0' }}
+          onclick={() => setIsResourceHovered((prev) => !prev)}
+        >
+          resources{' '}
+          <FaChevronDown
+            className={
+              isResourceHovered ? `rotate-180 transition-all` : 'transition-all'
+            }
+          />
         </ListItem>
+
+        <div
+          className={
+            isResourceHovered
+              ? `transition-all relative justify-start items-start place-items-center m-auto scale-y-100`
+              : 'transition-all scale-y-0 hidden'
+          }
+          onClick={() => setIsResourceHovered((prev) => !prev)}
+        >
+          <div
+            className="flex rounded-xl pb-4 mb-4 bg-white top-[48px] right-[30%] m-auto flex-col justify-center items-center flex-wrap shadow-xl w-[18rem] lg:hidden"
+            style={{ zIndex: 1122 }}
+          >
+            <DropDown
+              title="Free illustrations"
+              src="./images/navbar/illustrations.png"
+              className={'w-full'}
+            />
+            <DropDown
+              title="guilds"
+              src="./images/navbar/guides.png"
+              className={'w-full'}
+            />
+            <DropDown
+              title="design blog"
+              src="./images/navbar/design-blog.png"
+              className={'w-full'}
+            />
+            <DropDown
+              title="case studies"
+              src="./images/navbar/print-design.png"
+              className={'w-full'}
+            />
+          </div>
+        </div>
       </>
     );
   };
@@ -93,13 +192,15 @@ const Navbar = () => {
     onmouseout,
     children,
     onclick,
+    style,
   }) => {
     return (
       <>
-        <li>
+        <li className="pb-5 left-0">
           <a
             href={NavLink}
-            className={`relative py-7 font-semibold cursor-pointer transition-all duration-300 uppercase hover:text-gray-500 ${className}`}
+            className={`relative text-xl font-bold cursor-pointer transition-all duration-300 uppercase hover:text-gray-500 ${className}`}
+            style={style}
             onMouseOver={onmouseover}
             onMouseOut={onmouseout}
             onClick={onclick}
@@ -134,8 +235,6 @@ const Navbar = () => {
       </>
     );
   };
-
-  console.log(isHovered);
 
   const cssStyle = {
     blur: {
@@ -232,12 +331,21 @@ const Navbar = () => {
               </div>
             </div>
             <div
-              className="xl:hidden"
+              className={!isNavOpen ? `block` : 'hidden xl:hidden'}
               onClick={() => {
                 setIsNavOpen((prev) => !prev);
               }}
             >
               <RiMenu3Fill className="text-3xl" />
+            </div>
+
+            <div
+              className={isNavOpen ? `block` : 'hidden xl:hidden'}
+              onClick={() => {
+                setIsNavOpen((prev) => prev);
+              }}
+            >
+              <RiCloseFill className="text-3xl" />
             </div>
           </div>
         </nav>
@@ -348,29 +456,29 @@ const Navbar = () => {
           id="menu"
           className={
             isNavOpen
-              ? 'fixed top-20 flex justify-start items-center flex-col w-full h-screen p-5 gap-10 border rounded-md bg-white m-auto scale-x-100 xl:hidden'
+              ? 'transition-all fixed top-20 flex justify-start items-start flex-col w-full h-full pl-5 pt-5 gap-10 border rounded-md bg-white m-auto overflow-y-auto xl:hidden'
               : 'hidden'
           }
           style={{ zIndex: 12 }}
         >
-          <ul className="flex justify-start items-start flex-col leading-12">
+          <ul className="flex justify-start items-start flex-col leading-8">
             <NavListsSmallScreen />
             <div className="flex flex-col-reverse gap-4 justify-end pr-16 sm:flex lg:pr-0">
               <a
                 href="/#"
-                className="rounded-md px-7 py-3 text-base font-medium text-blue-500 hover:bg-blue-500/90"
+                className="rounded-md px-7 text-center py-3 text-base font-medium text-blue-500 hover:bg-blue-500/90"
               >
                 Sign Up
               </a>
               <a
                 href="/#"
-                className="px-7 py-3 text-blue-500 border border-blue-500 rounded-md font-medium text-dark hover:text-blue-500"
+                className="px-7 py-3 text-center text-blue-500 border border-blue-500 rounded-md font-medium text-dark hover:text-blue-500"
               >
                 Sign in
               </a>
               <a
                 href="/#"
-                className="rounded-md bg-blue-500 px-7 py-3 text-base font-medium text-white hover:bg-blue-500/90"
+                className="rounded-md text-center bg-blue-500 px-7 py-3 text-base font-medium text-white hover:bg-blue-500/90"
               >
                 Book A Call
               </a>
