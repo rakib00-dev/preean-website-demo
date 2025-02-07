@@ -1,14 +1,24 @@
-import Hero from './Components/Hero';
-import Navbar from './Components/Navbar';
+import { createBrowserRouter, RouterProvider } from 'react-router';
+import MainLayout from './layouts/MainLayout';
+import ErrorPage from './pages/ErrorPage';
+import HomePage from './pages/HomePage';
 
 function App() {
-  return (
-    <>
-      <Navbar />
-      <Hero />
-      <Hero />
-    </>
-  );
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <MainLayout />,
+      errorElement: <ErrorPage />,
+      children: [
+        {
+          path: '/',
+          element: <HomePage />,
+        },
+      ],
+    },
+  ]);
+
+  return <RouterProvider router={router} />;
 }
 
 export default App;
