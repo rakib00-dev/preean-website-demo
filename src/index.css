@@ -14,7 +14,7 @@
   --text-white: white;
 }
 
-/* navbar dropdown*/
+/* navbar dropdown ⬇️*/
 .DropItemHover,
 .DropItemHover img,
 .DropItemHover h5 {
@@ -31,3 +31,45 @@
 .DropItemHover:hover h5 {
   color: var(--color-primary);
 }
+
+/* navbar ⬆️ */
+
+/* hero ⬇️ */
+.playWave::after {
+  border: 2px solid #0099f6;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: 0 0;
+  z-index: 1;
+  animation: 1s ease-out 0.2s infinite HeaderPlayButtonAnim;
+  border-radius: 50%;
+}
+.playWave::before {
+  border: 2px solid #0099f6;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: 0 0;
+  z-index: 1;
+  animation: 1.5s ease-out 0.2s infinite HeaderPlayButtonAnim;
+  border-radius: 50%;
+}
+
+@keyframes HeaderPlayButtonAnim {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+/* hero ⬆️ */

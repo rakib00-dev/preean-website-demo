@@ -193,7 +193,7 @@ const Navbar = () => {
           className="relative flex justify-center items-center px-6 py-4 bg-white/60 p-4 w-full h-20 m-auto overflow-hidden lg:py-0.5"
         >
           <div className={''} style={cssStyle.blur}></div>{' '}
-          <div className="flex justify-center items-center w-fit gap-35 min-[375px]:gap-50 min-[440px]:gap-80 min-[550px]:gap-100 min-[695px]:gap-110 md:gap-120 md:mx-10 lg:gap-150 xl:gap-70 2xl:gap-100">
+          <div className="flex justify-center items-center w-fit gap-35 min-[375px]:gap-50 min-[440px]:gap-60 min-[550px]:gap-85 min-[695px]:gap-110 md:gap-120 md:mx-10 lg:gap-150 xl:gap-70 2xl:gap-100">
             <div
               id="logo"
               className="text-md font-medium w-32 md:w-64 md:text-lg"
