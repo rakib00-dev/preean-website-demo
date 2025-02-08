@@ -18,11 +18,11 @@ const FirstTypeSection = ({
         </h1>
         {/* content */}
         <div
-          className={`flex flex-col-reverse justify-center items-center w-full m-auto gap-7  lg:flex-row ${contentClass}`}
+          className={`flex flex-col-reverse justify-center items-center w-4/5 m-auto gap-10 lg:flex-row ${contentClass}`}
         >
-          {/* text conent */}
+          {/* text conetent */}
           <div
-            className={`flex flex-col justify-center items-center   lg:items-start lg:gap-2 md:w-1/2`}
+            className={`flex flex-col justify-center items-center lg:items-start lg:gap-2 md:w-1/2`}
           >
             <h1
               className={`hidden w-full uppercase font-bold text-[.85rem] md:block lg:text-[1rem] lg:text-start`}
@@ -45,7 +45,7 @@ const FirstTypeSection = ({
           </div>
 
           {/* img content */}
-          <div className="flex justify-center items-center w-full m-auto min-[425px]:w-[338.5px] md:w-[400px] lg:w-[500px]">
+          <div className="flex justify-center items-center w-full mx-auto min-[425px]:w-[338.5px] md:w-[400px] lg:w-[500px]">
             <img
               src={imgSrc}
               alt="need-designer-soon"
