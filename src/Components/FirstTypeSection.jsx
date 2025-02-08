@@ -31,7 +31,7 @@ const FirstTypeSection = ({
               {smallTitle}
             </h1>
             <h2
-              className={`font-extrabold text-[1.4rem] text-center w-4/5 mb-4 leading-8 lg:text-start min-[450px]:w-full md:text-[2.1rem] lg:w-4/5 lg:text-[2.5rem] lg:leading-13`}
+              className={`font-extrabold text-[1.4rem] text-center mb-4 leading-8 lg:text-start w-4/5 md:text-[2.1rem] lg:w-4/5 lg:text-[2.5rem] lg:leading-13`}
               style={style}
             >
               {bigTitle}
