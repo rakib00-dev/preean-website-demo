@@ -3,6 +3,7 @@ import Carousel from '../Components/Carousel';
 import Hero from '../Components/Hero';
 import HowItWorks from '../Components/HowItWorks';
 import NeedDesignerSoon from '../Components/NeedDesignerSoon';
+import PowerByTechnology from '../Components/PowerByTechnology';
 
 const HomePage = () => {
   return (
@@ -12,6 +13,7 @@ const HomePage = () => {
       <NeedDesignerSoon />
       <BetterSolution />
       <HowItWorks />
+      <PowerByTechnology />
     </>
   );
 };

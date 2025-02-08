@@ -1,6 +1,6 @@
 import FirstTypeSection from './FirstTypeSection';
 
-const BetterSolution = () => {
+const PowerByTechnology = () => {
   return (
     <section className="mt-[7rem]">
       <FirstTypeSection
@@ -9,7 +9,7 @@ const BetterSolution = () => {
         para={
           'ManyPixels provides you with vetted designers for a flat monthly fee. No hiring, no contracts, no stress.'
         }
-        imgSrc={'./images/FirstTypeImg/better-solution.avif'}
+        imgSrc={'./images/FirstTypeImg/powered-by.png'}
         textContentAlign="end"
         style={{ position: 'relative' }}
         contentClass={'lg:flex-row-reverse'}
@@ -18,4 +18,4 @@ const BetterSolution = () => {
   );
 };
 
-export default BetterSolution;
+export default PowerByTechnology;
