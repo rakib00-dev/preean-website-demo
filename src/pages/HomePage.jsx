@@ -17,7 +17,7 @@ const HomePage = () => {
       <HowItWorks />
       <PowerByTechnology />
       <WhatWeOffer />
-      {/* <SendReqSection /> */}
+      <SendReqSection />
     </>
   );
 };
