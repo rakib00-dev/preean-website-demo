@@ -89,7 +89,12 @@ const Carousel = () => {
               <div className=" gap-40 mr-40 slide">
                 {images.map((e, i) => (
                   <span key={i} className="inline">
-                    <img src={e} alt={e} className="w-[7rem] inline" />
+                    <img
+                      src={e}
+                      alt={e}
+                      className="w-[7rem] inline"
+                      loading="lazy"
+                    />
                   </span>
                 ))}
               </div>

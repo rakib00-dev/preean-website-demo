@@ -29,7 +29,12 @@ const SecondTypeSection = ({
         </div>
 
         {/* card content */}
-        <div className="flex justify-center items-center w-full m-auto min-[425px]:w-[338.5px] md:w-[400px] lg:w-[500px]"></div>
+        <div className="flex justify-center items-center w-[95%] m-auto min-[425px]:w-[338.5px] md:w-[400px] lg:w-[500px]">
+          <div className="bg-gray-400">
+            <img src="" alt="" loading="lazy" />
+            <div></div>
+          </div>
+        </div>
       </div>
     </section>
   );

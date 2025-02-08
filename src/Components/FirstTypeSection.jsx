@@ -50,6 +50,7 @@ const FirstTypeSection = ({
               src={imgSrc}
               alt="need-designer-soon"
               className="" /*{hue-rotate-353} */
+              loading="lazy"
             />
           </div>
         </div>

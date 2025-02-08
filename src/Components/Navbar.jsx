@@ -226,6 +226,7 @@ const Navbar = () => {
             src={src}
             alt={title}
             className={`p-3 rounded bg-gray-100/80 h-[43.98px] ${imgClassName}`}
+            loading="lazy"
           />
           <h5 className="uppercase text-sm w-fit font-bold">{title}</h5>
         </a>
@@ -298,6 +299,7 @@ const Navbar = () => {
                   src="https://designpro.qa/img/Designpro-logo-large.png"
                   alt="logo"
                   className="w-60"
+                  loading="lazy"
                 />
               </a>
             </div>

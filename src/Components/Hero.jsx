@@ -12,17 +12,20 @@ const Hero = () => {
                 src="./images/hero/header-video-bg.svg"
                 alt="header bg"
                 className="hidden absolute justify-center items-center left-0 top-0 w-full hue-rotate-383 lg:flex"
+                loading="lazy"
               />
               <div className="relative m-auto shadow-[10px_10px_45px_5px_rgba(0,0,0,0.25)] rounded-2xl flex flex-col justify-center items-center w-full lg:scale-80">
                 <img
                   src="./images/hero/header-video-cover.avif"
                   alt="header bg cover"
                   className="flex justify-center items-center rounded-xl relative shadow-xl top-0 w-full"
+                  loading="lazy"
                 />
                 <img
                   src="./images/hero/play.png"
                   alt="play"
                   className=" flex justify-center items-center place-items-center rounded-xl absolute shadow-xl w-15 h-15 "
+                  loading="lazy"
                 />
                 <div className=" flex justify-center items-center place-items-center rounded-xl absolute shadow-xl w-15 h-15 playWave" />
               </div>
