@@ -10,6 +10,7 @@ const BetterSolution = () => {
           'ManyPixels provides you with vetted designers for a flat monthly fee. No hiring, no contracts, no stress.'
         }
         imgSrc={'./images/FirstTypeImg/better-solution.avif'}
+        textContent="end"
         contentClass={'lg:flex-row-reverse'}
       />
     </>
