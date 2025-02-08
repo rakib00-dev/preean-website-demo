@@ -3,6 +3,7 @@ import Carousel from '../Components/Carousel';
 import Hero from '../Components/Hero';
 import HowItWorks from '../Components/HowItWorks';
 import NeedDesignerSoon from '../Components/NeedDesignerSoon';
+import OurWork from '../Components/OurWork';
 import PowerByTechnology from '../Components/PowerByTechnology';
 import SendReqSection from '../Components/SendReqSection';
 import WhatWeOffer from '../Components/WhatWeOffer';
@@ -17,6 +18,7 @@ const HomePage = () => {
       <HowItWorks />
       <PowerByTechnology />
       <WhatWeOffer />
+      <OurWork />
       <SendReqSection />
     </>
   );
