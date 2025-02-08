@@ -70,7 +70,7 @@ const Carousel = () => {
         </div>
         {/* carousel */}
         <div
-          className="flex gap-4 py-6 bg-gray-100 shadow-[10px_10px_45px_5px_rgba(0,0,0,0.25)] rounded-2xl overflow-hidden boxShadow md:py-10 "
+          className="flex gap-4 mb-20 py-6 bg-gray-100 shadow-[10px_10px_45px_5px_rgba(0,0,0,0.15)] rounded-2xl overflow-hidden boxShadow md:py-10 md:shadow-[10px_10px_45px_5px_rgba(0,0,0,0.25)] "
           // style={{
           //   boxShadow:
           //     'inset 12px 0 15px -4px gray, inset -12px 0 8px -4px gray, 10px 10px 45px 5px rgba(0,0,0,0.10)',

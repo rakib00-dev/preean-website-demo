@@ -78,17 +78,19 @@
 .boxShadow {
   position: relative;
 }
-.boxShadow::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  z-index: 12;
-  box-shadow: inset 12px 0 15px -4px rgba(128, 128, 128, 0.438),
-    inset -12px 0 8px -4px rgba(128, 128, 128, 0.438);
-  /* 10px 10px 45px 5px rgba(0, 0, 0, 0.1); */
+@media (min-width: 768px) {
+  .boxShadow::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    z-index: 12;
+    box-shadow: inset 12px 0 15px -4px rgba(128, 128, 128, 0.438),
+      inset -12px 0 8px -4px rgba(128, 128, 128, 0.438);
+    /* 10px 10px 45px 5px rgba(0, 0, 0, 0.1); */
+  }
 }
 
 .slider {
