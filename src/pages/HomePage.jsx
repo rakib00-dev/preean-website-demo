@@ -10,8 +10,8 @@ const HomePage = () => {
       <Hero />
       <Carousel />
       <NeedDesignerSoon />
-      {/* <BetterSolution /> */}
-      {/* <HowItWorks /> */}
+      <BetterSolution />
+      <HowItWorks />
     </>
   );
 };
