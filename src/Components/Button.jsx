@@ -16,7 +16,7 @@ const Button = ({
     //             Book A Call
     //           </a>
     <span
-      className={` w-fit rounded-${border} font-bold text-${fontSize} bg-${bg} transition-all hover:bg- ${className}`}
+      className={` w-fit rounded-${border} font-bold text-${fontSize} bg-${bg} transition-all ${className}`}
       style={{
         background: `${bg}`,
         padding: `${py}px ${px}px`,

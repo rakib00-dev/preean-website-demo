@@ -20,86 +20,105 @@ const OurWork = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-rows-1 md:grid-cols-3 gap-4">
           <div className="grid gap-4">
-            <div>
-              <img
-                className="h-auto max-w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg"
-                alt=""
-                loading="lazy"
-              />
+            <div className="relative">
+              <a href="#">
+                <img
+                  className="h-auto max-w-full rounded-lg"
+                  src="../images/ourwork/social-media-graphic.avif"
+                  alt=""
+                  loading="lazy"
+                />
+              </a>
+              {/* <h3 className="absolute bottom-15">Social Media Graphic</h3> */}
             </div>
             <div>
-              <img
-                className="h-auto max-w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg"
-                alt=""
-                loading="lazy"
-              />
+              <a href="#">
+                <img
+                  className="h-auto max-w-full rounded-lg"
+                  src="../images/ourwork/website.avif"
+                  alt=""
+                  loading="lazy"
+                />
+              </a>
             </div>
             <div>
-              <img
-                className="h-auto max-w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg"
-                alt=""
-                loading="lazy"
-              />
+              <a href="#">
+                <img
+                  className="h-auto max-w-full rounded-lg"
+                  src="../images/ourwork/illustration.avif"
+                  alt=""
+                  loading="lazy"
+                />
+              </a>
             </div>
           </div>
           <div className="grid gap-4">
             <div>
-              <img
-                className="h-auto max-w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg"
-                alt=""
-                loading="lazy"
-              />
+              <a href="#">
+                <img
+                  className="h-auto max-w-full rounded-lg"
+                  src="../images/ourwork/logos.avif"
+                  alt=""
+                  loading="lazy"
+                />
+              </a>
             </div>
             <div>
-              <img
-                className="h-auto max-w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg"
-                alt=""
-                loading="lazy"
-              />
+              <a href="#">
+                <img
+                  className="h-auto max-w-full rounded-lg"
+                  src="../images/ourwork/motion-graphic.gif"
+                  alt=""
+                  loading="lazy"
+                />
+              </a>
             </div>
             <div>
-              <img
-                className="h-auto max-w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg"
-                alt=""
-                loading="lazy"
-              />
+              <a href="#">
+                <img
+                  className="h-auto max-w-full rounded-lg"
+                  src="../images/ourwork/display-adds.avif"
+                  alt=""
+                  loading="lazy"
+                />
+              </a>
             </div>
           </div>
           <div className="grid gap-4">
             <div>
-              <img
-                className="h-auto max-w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg"
-                alt=""
-                loading="lazy"
-              />
+              <a href="#">
+                <img
+                  className="h-auto max-w-full rounded-lg"
+                  src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg"
+                  alt=""
+                  loading="lazy"
+                />
+              </a>
             </div>
             <div>
-              <img
-                className="h-auto max-w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg"
-                alt=""
-                loading="lazy"
-              />
+              <a href="#">
+                <img
+                  className="h-auto max-w-full rounded-lg"
+                  src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg"
+                  alt=""
+                  loading="lazy"
+                />
+              </a>
             </div>
             <div>
-              <img
-                className="h-auto max-w-full rounded-lg"
-                src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg"
-                alt=""
-                loading="lazy"
-              />
+              <a href="#">
+                <img
+                  className="h-auto max-w-full rounded-lg"
+                  src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg"
+                  alt=""
+                  loading="lazy"
+                />
+              </a>
             </div>
           </div>
-          <div className="grid gap-4">
+          {/* <div className="grid gap-4">
             <div>
               <img
                 className="h-auto max-w-full rounded-lg"
@@ -124,10 +143,18 @@ const OurWork = () => {
                 loading="lazy"
               />
             </div>
-          </div>
-          <div className="flex justify-center items-center mx-auto w-full">
-            <Button text={'Get Started'} className={'text-white'} />
-          </div>
+          </div> */}
+        </div>
+        <div className="flex justify-center items-center mx-auto my-8 w-full md:my-12">
+          <a href="">
+            <Button
+              text={'All Our Works'}
+              className={
+                'transition-all border-blue-500 bg-transparent text-blue-500 border-2 hover:bg-blue-500 hover:border-black hover:text-black'
+              }
+              bg="transparent"
+            />{' '}
+          </a>
         </div>
       </div>
     </section>
