@@ -34,7 +34,7 @@ const Hero = () => {
             <h1 className="text-3xl text-center font-bold w-full md:text-[2.5rem] md:text-start">
               On-Demand Graphic & Web Design
             </h1>
-            <p className="text-xl text-center py-4 md:text-start">
+            <p className="text-xl text-center py-4 md:text-start lg:text-2xl">
               Get access to our creative team in a few clicks. Simple, fast, and
               affordable.
             </p>

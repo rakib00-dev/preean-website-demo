@@ -3,8 +3,9 @@ const FirstTypeSection = ({
   bigTitle,
   para,
   imgSrc,
+  style,
   contentClass,
-  textContent = 'start',
+  textContentAlign = 'start',
 }) => {
   return (
     <section className="flex flex-col justify-center items-center m-auto w-full my-[4rem] bg-white overflow-hidden md:w-4/5">
@@ -21,20 +22,24 @@ const FirstTypeSection = ({
         >
           {/* text conent */}
           <div
-            className={`flex flex-col justify-center items-center lg:items-${textContent} lg:gap-2`}
+            className={`flex flex-col justify-center items-center lg:items-${textContentAlign} lg:gap-2`}
           >
             <h1
-              className={`hidden uppercase font-bold text-[.85rem] md:block lg:text-[1rem] lg:text-end`}
+              className={`hidden w-full uppercase font-bold text-[.85rem] md:block lg:text-[1rem] lg:text-${textContentAlign}`}
               style={{ color: 'var(--colors-pink)' }}
             >
               {smallTitle}
             </h1>
             <h2
-              className={`font-extrabold text-[1.4rem] text-center w-4/5 mb-4 leading-8 lg:text-${textContent} min-[450px]:w-full md:text-[2.1rem] lg:w-[95%] lg:text-[2.5rem] lg:leading-13`}
+              className={`font-extrabold text-[1.4rem] text-center w-4/5 mb-4 leading-8 lg:text-${textContentAlign} min-[450px]:w-full md:text-[2.1rem] lg:w-[95%] lg:text-[2.5rem] lg:leading-13`}
+              style={style}
             >
               {bigTitle}
             </h2>
-            <p className="text-center text-sm px-13 w-[24.6rem] md:w-[26rem] md:px-0 md:text-lg lg:text-start lg:text-2xl">
+            <p
+              className={`text-center text-sm px-13 w-[24.6rem] md:w-[26rem] md:px-0 md:text-lg lg:text-${textContentAlign}  lg:text-2xl`}
+              style={style}
+            >
               {para}
             </p>
           </div>
