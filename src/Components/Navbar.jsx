@@ -196,7 +196,7 @@ const Navbar = () => {
         <li className="pb-5 left-0 lg:pb-0">
           <a
             href={NavLink}
-            className={`relative text-xl font-bold cursor-pointer transition-all duration-300 uppercase lg:text-sm hover:text-gray-500 ${className}`}
+            className={`relative text-xl font-bold cursor-pointer transition-all duration-300 uppercase  lg:text-sm hover:text-gray-500 ${className}`}
             style={style}
             onMouseOver={onmouseover}
             onMouseOut={onmouseout}
@@ -307,7 +307,7 @@ const Navbar = () => {
               id="menu"
               className="hidden justify-between  gap-10 items-center w-full xl:flex"
             >
-              <ul className="flex justify-center  items-center gap-7">
+              <ul className="flex justify-center  items-center gap-5">
                 <NavLists />
               </ul>
               <div id="contact">
