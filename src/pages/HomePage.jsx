@@ -15,9 +15,9 @@ const HomePage = () => {
       <NeedDesignerSoon />
       <BetterSolution />
       <HowItWorks />
-      <PowerByTechnology /> error
-      {/* <WhatWeOffer /> */}
-      {/* <SendReqSection /> */}
+      <PowerByTechnology />
+      <WhatWeOffer />
+      <SendReqSection />
     </>
   );
 };

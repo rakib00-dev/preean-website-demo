@@ -21,9 +21,7 @@ const SendReqSection = () => {
               />
             </a>
           </div>
-          <img src="" alt="" />
           <div className="bg-pink-500 rounded-bl-lg rounded-br-lg w-15 h-10 absolute inset-[0%_6.375rem_auto_auto] right-5 z-12 md:w-20 md:h-16 md:right-10"></div>
-
           <div className="bg-[#0a32c3] rounded-tl-lg rounded-tr-lg w-15 h-10 absolute bottom-0 left-5 z-12 md:w-20 md:h-16 md:left-10"></div>
         </div>
       </div>
