@@ -69,37 +69,29 @@ const Carousel = () => {
           </div>
         </div>
         {/* carousel */}
-        <div className="flex gap-4 overflow-hidden ">
-          <div className="inline-block slider">
+        <div
+          className="flex gap-4 py-6 bg-gray-100 shadow-[10px_10px_45px_5px_rgba(0,0,0,0.25)] rounded-2xl overflow-hidden boxShadow md:py-10 "
+          // style={{
+          //   boxShadow:
+          //     'inset 12px 0 15px -4px gray, inset -12px 0 8px -4px gray, 10px 10px 45px 5px rgba(0,0,0,0.10)',
+          // }}
+        >
+          <div className="inline-block">
             {/* slide 1 */}
             <div className="inline-block slider">
-              <div className="slide">
+              <div className=" gap-40 mr-40 slide">
                 {images.map((e, i) => (
-                  <span key={i} className="">
-                    <img src={e} alt={e} className="w-[7rem] inline" />
-                  </span>
-                ))}
-              </div>
-              <div className="slide">
-                {images.map((e, i) => (
-                  <span key={i} className="">
+                  <span key={i} className="inline">
                     <img src={e} alt={e} className="w-[7rem] inline" />
                   </span>
                 ))}
               </div>
             </div>
             {/* slide 2 */}
-            <div className="slider">
-              <div className="slide2">
+            <div className="hidden slider md:inline-block">
+              <div className=" gap-40 mr-40 slide2">
                 {images.map((e, i) => (
-                  <span key={i} className="">
-                    <img src={e} alt={e} className="w-[7rem] inline" />
-                  </span>
-                ))}
-              </div>
-              <div className="slide2">
-                {images.map((e, i) => (
-                  <span key={i} className="">
+                  <span key={i} className="inline">
                     <img src={e} alt={e} className="w-[7rem] inline" />
                   </span>
                 ))}
