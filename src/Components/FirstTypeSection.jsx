@@ -5,9 +5,10 @@ const FirstTypeSection = ({
   imgSrc,
   style,
   contentClass,
+  children,
 }) => {
   return (
-    <section className="flex flex-col justify-center items-center m-auto w-full max-w-7xl my-[4rem] bg-white overflow-hidden md:w-4/5">
+    <section className="flex flex-col justify-center items-center mx-auto w-full max-w-7xl my-[4rem] bg-white overflow-hidden ">
       <div className="flex m-auto justify-center items-center flex-col w-[95%] gap-4 md:flex-row">
         <h1
           className="uppercase font-bold text-[.85rem] md:hidden"
@@ -21,7 +22,7 @@ const FirstTypeSection = ({
         >
           {/* text conent */}
           <div
-            className={`flex flex-col justify-center items-center lg:items-start lg:gap-2`}
+            className={`flex flex-col justify-center items-center   lg:items-start lg:gap-2 md:w-1/2`}
           >
             <h1
               className={`hidden w-full uppercase font-bold text-[.85rem] md:block lg:text-[1rem] lg:text-start`}
@@ -30,7 +31,7 @@ const FirstTypeSection = ({
               {smallTitle}
             </h1>
             <h2
-              className={`font-extrabold text-[1.4rem] text-center w-4/5 mb-4 leading-8 lg:text-start min-[450px]:w-full md:text-[2.1rem] lg:w-[95%] lg:text-[2.5rem] lg:leading-13`}
+              className={`font-extrabold text-[1.4rem] text-center w-4/5 mb-4 leading-8 lg:text-start min-[450px]:w-full md:text-[2.1rem] lg:w-4/5 lg:text-[2.5rem] lg:leading-13`}
               style={style}
             >
               {bigTitle}
@@ -39,6 +40,7 @@ const FirstTypeSection = ({
               className={`text-center text-sm px-13 w-[24.6rem] md:w-[26rem] md:px-0 md:text-lg lg:text-start  lg:text-2xl`}
             >
               {para}
+              {children}
             </p>
           </div>
 
