@@ -13,7 +13,7 @@ const Carousel = () => {
 
   return (
     <section
-      className={`m-auto w-full mt-[4rem] items-center bg-white overflow-hidden`}
+      className={`m-auto w-full mt-[4rem]  items-center bg-white overflow-hidden`}
     >
       <div className="flex m-auto justify-center items-center flex-col w-[95%] gap-8 md:flex-row">
         {/* counter */}
@@ -31,16 +31,19 @@ const Carousel = () => {
                 start={135030}
                 end={150000}
                 duration={48}
-                className="text-4xl font-bold "
+                className="text-4xl font-bold md:text-[3.5rem] "
               />
               <span
-                className="text-4xl font-extrabold md:text-6xl"
-                style={{ color: 'var(--colors-pink)' }}
+                className="text-4xl font-extrabold "
+                style={{
+                  color: 'var(--colors-pink)',
+                  fontFamily: 'sans-serif',
+                }}
               >
                 +
               </span>
             </div>
-            <span className="text-xl">Designs Completed</span>
+            <span className="text-xl md:text-md">Designs Completed</span>
           </div>
 
           {/* counter 2 */}
@@ -56,21 +59,25 @@ const Carousel = () => {
                 start={1897}
                 end={3000}
                 duration={48}
-                className="text-4xl font-bold "
+                className="text-4xl font-bold md:text-[3.5rem]"
               />
               <span
-                className="text-4xl font-extrabold md:text-6xl"
-                style={{ color: 'var(--colors-pink)' }}
+                className="text-4xl font-extrabold"
+                style={{
+                  color: 'var(--colors-pink)',
+                  fontFamily: 'sans-serif',
+                }}
               >
                 +
               </span>
             </div>
-            <span className="text-xl">Customers Served</span>
+            <span className="text-xl md:text-md">Customers Served</span>
           </div>
         </div>
+
         {/* carousel */}
         <div
-          className="flex gap-4 mb-20 py-6 bg-gray-100 shadow-[10px_10px_45px_5px_rgba(0,0,0,0.15)] rounded-2xl overflow-hidden boxShadow md:py-10 md:shadow-[10px_10px_45px_5px_rgba(0,0,0,0.25)] md:mb-0 md:mt-5"
+          className="flex gap-4 mb-20 py-6 bg-gray-100 shadow-[10px_10px_45px_5px_rgba(0,0,0,0.15)] rounded-2xl overflow-hidden boxShadow md:py-20 md:shadow-[0_0_15px_15px_rgba(0,0,0,0.05)] md:mb-0 md:mt-5"
           // style={{
           //   boxShadow:
           //     'inset 12px 0 15px -4px gray, inset -12px 0 8px -4px gray, 10px 10px 45px 5px rgba(0,0,0,0.10)',
