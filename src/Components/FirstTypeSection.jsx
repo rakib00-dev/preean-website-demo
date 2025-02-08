@@ -16,7 +16,7 @@ const FirstTypeSection = ({
         </h1>
         {/* content */}
         <div
-          className={`flex flex-col justify-center items-center w-full m-auto gap-7  lg:flex-row ${contentClass}`}
+          className={`flex flex-col-reverse justify-center items-center w-full m-auto gap-7  lg:flex-row ${contentClass}`}
         >
           {/* text conent */}
           <div className="flex flex-col justify-center items-center lg:items-start lg:gap-2">
@@ -36,7 +36,11 @@ const FirstTypeSection = ({
 
           {/* img content */}
           <div className="flex justify-center items-center w-full m-auto min-[425px]:w-[338.5px] md:w-[400px] lg:w-[500px]">
-            <img src={imgSrc} alt="need-designer-soon" className="" />
+            <img
+              src={imgSrc}
+              alt="need-designer-soon"
+              className="hue-rotate-390"
+            />
           </div>
         </div>
       </div>
