@@ -30,7 +30,7 @@ const Footer = () => {
                 <p className="flex items-center text-sm font-medium text-dark gap-4">
                   <IoMailOutline className="text-xl" />
                   <a href="mailto:Govenderpreean23@gmail.com">
-                    Govenderpreean23@gmail.com
+                    Gove***n23@gmail.com
                   </a>
                 </p>
               </div>
