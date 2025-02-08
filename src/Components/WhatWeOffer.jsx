@@ -34,8 +34,8 @@ const WhatWeOffer = ({
         </div>
 
         {/* card content */}
-        <div className=" justify-center items-center w-11/12 mx-auto md:flex gap-5">
-          <div className="flex justify-center items-center w-full flex-col bg-gray-100 p-4 py-6 text-center mb-5 rounded-lg">
+        <div className=" justify-center items-stretch w-11/12 mx-auto md:flex gap-5">
+          <div className="flex justify-center items-center w-full flex-col bg-gray-100 p-4 py-6 text-center mb-5 rounded-lg gap-2 md:flex-row">
             <img
               src={workImgs[0]}
               alt={workImgs[0]}
@@ -49,7 +49,7 @@ const WhatWeOffer = ({
               </p>
             </div>
           </div>
-          <div className="flex justify-center items-center flex-col bg-gray-100 p-4 py-6 text-center w-full mb-5 rounded-lg">
+          <div className="flex justify-center items-center flex-col bg-gray-100 p-4 py-6 text-center w-full mb-5 rounded-lg gap-2 md:flex-row">
             <img
               src={workImgs[1]}
               alt={workImgs[1]}
@@ -63,7 +63,7 @@ const WhatWeOffer = ({
               </p>
             </div>
           </div>
-          <div className="flex justify-center items-center flex-col bg-gray-100 p-4 py-6 text-center w-full mb-5 rounded-lg">
+          <div className="flex justify-center items-center flex-col bg-gray-100 p-4 py-6 text-center w-full mb-5 rounded-lg gap-2 md:flex-row">
             <img
               src={workImgs[2]}
               alt={workImgs[2]}
@@ -79,7 +79,7 @@ const WhatWeOffer = ({
               </p>
             </div>
           </div>
-          <div className="flex justify-center items-center flex-col bg-gray-100 p-4 py-6 text-center w-full mb-5 rounded-lg">
+          <div className="flex justify-center items-center flex-col bg-gray-100 p-4 py-6 text-center w-full mb-5 rounded-lg gap-2 md:flex-row">
             <img
               src={workImgs[3]}
               alt={workImgs[3]}
