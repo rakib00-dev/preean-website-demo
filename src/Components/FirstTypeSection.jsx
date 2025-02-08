@@ -36,11 +36,7 @@ const FirstTypeSection = ({
 
           {/* img content */}
           <div className="flex justify-center items-center w-full m-auto min-[425px]:w-[338.5px] md:w-[400px] lg:w-[500px]">
-            <img
-              src={imgSrc}
-              alt="need-designer-soon"
-              className="hue-rotate-390"
-            />
+            <img src={imgSrc} alt="need-designer-soon" className="" />
           </div>
         </div>
       </div>
