@@ -7,7 +7,7 @@ const FirstTypeSection = ({
   contentClass,
 }) => {
   return (
-    <section className="flex flex-col justify-center items-center m-auto w-full my-[4rem] bg-white overflow-hidden md:w-4/5">
+    <section className="flex flex-col justify-center items-center m-auto w-full max-w-7xl my-[4rem] bg-white overflow-hidden md:w-4/5">
       <div className="flex m-auto justify-center items-center flex-col w-[95%] gap-4 md:flex-row">
         <h1
           className="uppercase font-bold text-[.85rem] md:hidden"

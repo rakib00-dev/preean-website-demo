@@ -13,7 +13,7 @@ const Carousel = () => {
 
   return (
     <section
-      className={`m-auto w-full mt-[4rem]  items-center bg-white overflow-hidden`}
+      className={`mx-auto w-full max-w-7xl mt-[4rem]  items-center bg-white overflow-hidden`}
     >
       <div className="flex m-auto justify-center items-center flex-col w-[95%] gap-8 md:flex-row">
         {/* counter */}

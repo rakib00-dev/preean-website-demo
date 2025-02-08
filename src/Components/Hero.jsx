@@ -3,7 +3,7 @@ import Button from './Button';
 const Hero = () => {
   return (
     <>
-      <header className={`m-auto w-full items-center bg-white `}>
+      <header className={`mx-auto w-full max-w-7xl items-center bg-white `}>
         <div className="flex m-auto justify-center items-center flex-col w-[95%] gap-8 md:flex-row">
           {/* video */}
           <div className="m-auto top-0 w-[98%] min-[420px]:w-[404px] md:w-[40%] cursor-pointer">

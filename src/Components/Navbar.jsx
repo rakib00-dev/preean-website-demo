@@ -280,7 +280,7 @@ const Navbar = () => {
   return (
     <>
       <div
-        className="m-auto transition-all w-full h-20 relative top-0 z-20"
+        className="mx-auto transition-all w-full max-w-7xl h-20 relative top-0 z-20"
         id="navBarFix"
         ref={navBarFix}
       >
