@@ -36,21 +36,25 @@ const FirstTypeSection = ({
             >
               {bigTitle}
             </h2>
-            <p
-              className={`text-center text-sm px-13 w-[24.6rem] md:w-[26rem] md:px-0 md:text-lg lg:text-start  lg:text-2xl`}
-            >
-              {para}
-              {children}
-            </p>
+            {para && (
+              <p
+                className={`text-center text-sm px-13 w-[24.6rem] md:w-[26rem] md:px-0 md:text-lg lg:text-start  lg:text-2xl`}
+              >
+                {para}
+              </p>
+            )}
+            {children}
           </div>
 
           {/* img content */}
           <div className="flex justify-center items-center w-full mx-auto min-[425px]:w-[338.5px] md:w-[400px] lg:w-[500px]">
-            <img
-              src={imgSrc}
-              alt="need-designer-soon"
-              className="" /*{hue-rotate-353} */
-            />
+            {imgSrc && (
+              <img
+                src={imgSrc}
+                alt="need-designer-soon"
+                className="" /*{hue-rotate-353} */
+              />
+            )}
           </div>
         </div>
       </div>
