@@ -1,9 +1,11 @@
+import Button from './Button';
+
 const OurWork = () => {
   return (
     <section className="mx-auto w-full wax-w-7xl my-20">
-      <div className="mx-16">
+      <div className="mx-3 md:mx-16">
         <div
-          className={`flex flex-col justify-center  gap-2 items-center lg:gap-4 md:items-start`}
+          className={`flex flex-col justify-center gap-2 items-center md:gap-4 md:items-start md:my-8`}
         >
           <h1
             className="uppercase font-extrabold text-[.85rem] md:text-[.9rem]"
@@ -122,6 +124,9 @@ const OurWork = () => {
                 loading="lazy"
               />
             </div>
+          </div>
+          <div className="flex justify-center items-center mx-auto w-full">
+            <Button text={'Get Started'} className={'text-white'} />
           </div>
         </div>
       </div>
