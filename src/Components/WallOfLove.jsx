@@ -81,7 +81,7 @@ function WallOfLove() {
 
         {/* slide container */}
 
-        <div className="mx-4 grid grid-cols-1 gap-10 md:mx-auto md:grid-cols-3">
+        <div className="mx-4 grid grid-cols-1 gap-6 md:grid-cols-3">
           {/* <Slider {...settings}> */}
           {data.map((e, i) => (
             <div
