@@ -21,7 +21,7 @@ const OurTools = () => {
               with digital and print designs
             </h2>
           </div>
-          <div className="grid grid-cols-2 mb-15 gap-5 md:mb-0 md:grid md:grid-cols-3">
+          <div className="grid grid-cols-3 mb-15 gap-5 md:mb-0 md:grid md:grid-cols-3">
             <img
               src="../images/ourtools/photoshop.svg"
               alt="this is a photohsop logo image"
