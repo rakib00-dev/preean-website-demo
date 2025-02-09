@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { FaChevronDown } from 'react-icons/fa';
 import { RiCloseFill, RiMenu3Fill } from 'react-icons/ri';
 import OutsideClickHandler from 'react-outside-click-handler';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -13,13 +13,14 @@ const Navbar = () => {
     return (
       <>
         <ListItem
-          NavLink="/#"
+          navLink={''}
           className={
             'uppercase  flex justify-start items-center gap-2  text-sm sm:font-bold'
           }
           onmouseover={() => setIsHovered(true)}
           onmouseout={() => setIsHovered(false)}
           onclick={() => setIsHovered((prev) => !prev)}
+          style={{ color: 'black' }}
         >
           solutions{' '}
           <FaChevronDown
@@ -29,25 +30,26 @@ const Navbar = () => {
           />
         </ListItem>
         <ListItem
-          NavLink="/our-work"
+          navLink="/our-work"
           className={'uppercase  text-sm sm:font-bold'}
         >
           our work
         </ListItem>
         <ListItem
-          NavLink="/pricing"
+          navLink="/pricing"
           className={'uppercase  text-sm sm:font-bold'}
         >
           pricing
         </ListItem>
         <ListItem
-          NavLink="/#"
+          navLink=""
           className={
             'uppercase  flex justify-start items-center gap-2  text-sm sm:font-bold'
           }
           onmouseover={() => setIsResourceHovered(true)}
           onmouseout={() => setIsResourceHovered(false)}
           onclick={() => setIsResourceHovered((prev) => !prev)}
+          style={{ color: 'black' }}
         >
           resources{' '}
           <FaChevronDown
@@ -65,7 +67,7 @@ const Navbar = () => {
     return (
       <>
         <ListItem
-          NavLink="/#"
+          navLink="/#"
           className={
             'uppercase flex justify-start items-center gap-2 sm:font-bold'
           }
@@ -131,14 +133,14 @@ const Navbar = () => {
             </Link>
           </div>
         </div>
-        <ListItem NavLink="/#" className={'uppercase sm:font-bold'}>
+        <ListItem navLink="/#" className={'uppercase sm:font-bold'}>
           our work
         </ListItem>
-        <ListItem NavLink="/#" className={'uppercase sm:font-bold'}>
+        <ListItem navLink="/#" className={'uppercase sm:font-bold'}>
           pricing
         </ListItem>
         <ListItem
-          NavLink="/#"
+          navLink="/#"
           className={
             'uppercase flex justify-start items-center gap-2 sm:font-bold'
           }
@@ -193,7 +195,7 @@ const Navbar = () => {
 
   const ListItem = ({
     className,
-    NavLink,
+    navLink,
     onmouseover,
     onmouseout,
     children,
@@ -203,16 +205,21 @@ const Navbar = () => {
     return (
       <>
         <li className="pb-5 left-0 lg:pb-0">
-          <Link
-            to={NavLink}
-            className={`relative text-xl font-bold cursor-pointer transition-all duration-300 uppercase  lg:text-sm hover:text-gray-500 ${className}`}
+          <NavLink
+            to={navLink}
+            // className={`relative text-xl font-bold cursor-pointer transition-all duration-300 uppercase  lg:text-sm hover:text-gray-500 ${className}`}
             style={style}
             onMouseOver={onmouseover}
             onMouseOut={onmouseout}
             onClick={onclick}
+            className={({ isActive }) =>
+              isActive
+                ? `relative text-xl font-bold cursor-pointer transition-all duration-300 uppercase text-blue-500 lg:text-sm hover:text-gray-500 ${className}`
+                : `relative text-xl font-bold cursor-pointer transition-all duration-300 uppercase  lg:text-sm hover:text-gray-500 ${className}`
+            }
           >
             {children}
-          </Link>
+          </NavLink>
         </li>
       </>
     );
