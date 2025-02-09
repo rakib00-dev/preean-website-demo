@@ -38,23 +38,30 @@ const ClientReview = () => {
             <option value="entrepreneurs">Entrepreneurs</option>
           </select>
         </div>
-        <div className="hidden md:block">
-          <div>agencies</div>
-          <div>marketing teams</div>
-          <div>entrepreneurs</div>
-        </div>
+
         {client.slice(0, 1).map((e, i) => (
-          <div className="grid gap-4" key={i}>
+          <div className="grid gap-4 md:grid-cols-2 md:gap-15" key={i}>
             {/* client img */}
             <div className=" w-full">
               <img src={e.img} alt={e.thought} loading="lazy" />
             </div>
             {/* about him/her */}
-            <article className="grid gap-3">
-              <p>{e.thought}</p>
-              <div className="leading-10">
+            <article className="grid gap-3 md:flex md:flex-col md:mt-10">
+              <div className="hidden capitalize text-lg font-bold  justify-center items-center gap-10 my-6 md:flex">
+                <div className="border-b-2 border-b-gray-200 py-2 cursor-pointer">
+                  agencies
+                </div>
+                <div className="border-b-2 border-b-gray-200 py-2 cursor-pointer">
+                  marketing teams
+                </div>
+                <div className="border-b-2 border-b-gray-200 py-2 cursor-pointer">
+                  entrepreneurs
+                </div>
+              </div>
+              <p className="md:text-xl md:mb-5">{e.thought}</p>
+              <div className="leading-10 md:grid md:gap-2">
                 <h5 className="text-xl font-extrabold">{e.name}</h5>
-                <p>{e.position}</p>
+                <p className="md:text-xl">{e.position}</p>
                 <img src={e.group} alt={e.position} loading="lazy" />
               </div>
             </article>
