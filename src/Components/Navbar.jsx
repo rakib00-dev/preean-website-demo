@@ -67,9 +67,14 @@ const Navbar = () => {
     return (
       <>
         <ListItem
-          navLink="/#"
-          className={
-            'uppercase flex justify-start items-center gap-2 sm:font-bold'
+          navLink=""
+          // className={
+          //   'uppercase flex justify-start items-center gap-2 sm:font-bold'
+          // }
+          smallClassName={({ isActive }) =>
+            isActive
+              ? `uppercase flex justify-start items-center gap-2 sm:font-bold`
+              : `relative text-xl font-bold cursor-pointer text-black transition-all duration-300 uppercase lg:text-sm hover:text-gray-500`
           }
           style={{ padding: ' 0' }}
           onclick={() => setIsHovered((prev) => !prev)}
@@ -133,19 +138,43 @@ const Navbar = () => {
             </Link>
           </div>
         </div>
-        <ListItem navLink="/#" className={'uppercase sm:font-bold'}>
+        <ListItem
+          navLink="/our-work"
+          smallClassName={({ isActive }) =>
+            isActive
+              ? `uppercase text-blue-500 sm:font-bold `
+              : `uppercase  sm:font-bold `
+          }
+          onclick={() => {
+            setIsNavOpen(false);
+          }}
+        >
           our work
         </ListItem>
-        <ListItem navLink="/#" className={'uppercase sm:font-bold'}>
+        <ListItem
+          navLink="/pricing"
+          smallClassName={({ isActive }) =>
+            isActive
+              ? `uppercasetext-blue-500 sm:font-bold `
+              : `uppercase  sm:font-bold `
+          }
+          onClick={() => {
+            setIsNavOpen((prev) => !prev);
+          }}
+        >
           pricing
         </ListItem>
         <ListItem
-          navLink="/#"
-          className={
-            'uppercase flex justify-start items-center gap-2 sm:font-bold'
+          navLink=""
+          smallClassName={({ isActive }) =>
+            isActive
+              ? 'uppercase flex justify-start items-center gap-2 sm:font-bold'
+              : `'uppercase flex justify-start items-center gap-2 sm:font-bold'`
           }
           style={{ padding: ' 0' }}
-          onclick={() => setIsResourceHovered((prev) => !prev)}
+          onclick={() => {
+            setIsResourceHovered((prev) => !prev);
+          }}
         >
           resources{' '}
           <FaChevronDown
@@ -195,6 +224,7 @@ const Navbar = () => {
 
   const ListItem = ({
     className,
+    smallClassName,
     navLink,
     onmouseover,
     onmouseout,
@@ -212,10 +242,13 @@ const Navbar = () => {
             onMouseOver={onmouseover}
             onMouseOut={onmouseout}
             onClick={onclick}
-            className={({ isActive }) =>
-              isActive
-                ? `relative text-xl font-bold cursor-pointer transition-all duration-300 uppercase text-blue-500 lg:text-sm hover:text-gray-500 ${className}`
-                : `relative text-xl font-bold cursor-pointer transition-all duration-300 uppercase  lg:text-sm hover:text-gray-500 ${className}`
+            className={
+              smallClassName
+                ? smallClassName
+                : ({ isActive }) =>
+                    isActive
+                      ? `relative text-xl font-bold cursor-pointer transition-all duration-300 uppercase text-blue-500 lg:text-sm hover:text-gray-500 ${className}`
+                      : `relative text-xl font-bold cursor-pointer transition-all duration-300 uppercase  lg:text-sm hover:text-gray-500 ${className}`
             }
           >
             {children}
