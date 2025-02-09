@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { clientArr } from '../importItems/client';
 
 const ClientReview = () => {
@@ -7,11 +7,21 @@ const ClientReview = () => {
   const [isSecondClicked, setIsSecondClicked] = useState(false);
   const [isThirdClicked, setIsThirdClicked] = useState(false);
 
-  console.log(client);
-
   const handleSelect = (e) => {
-    console.log(e);
+    if (client) {
+      console.log(e.target[0].value);
+      if (e.target.value === e.target[0].value) {
+        setClient(clientArr.slice(0, 1));
+      }
+      if (e.target.value === e.target[1].value) {
+        setClient(clientArr.slice(1, 2));
+      }
+      if (e.target.value === e.target[2].value) {
+        return setClient(clientArr.slice(2, 3));
+      }
+    }
   };
+  console.log(client);
 
   return (
     <section className="mx-auto my-12 w-full max-w-7xl md:my-16">
@@ -22,10 +32,10 @@ const ClientReview = () => {
             name="type"
             id="type"
             className="bg-gray-100 text-md py-4 px-8 rounded-md"
-            onClick={handleSelect}
+            onChange={handleSelect}
           >
             <option value="agencies">Agencies</option>
-            <option value="marketing teams">Marketing teams</option>
+            <option value="marketing">Marketing teams</option>
 
             <option value="entrepreneurs">Entrepreneurs</option>
           </select>
