@@ -1,5 +1,6 @@
 import BetterSolution from '../Components/BetterSolution';
 import Carousel from '../Components/Carousel';
+import ClientReview from '../Components/ClientReview';
 import Hero from '../Components/Hero';
 import HowItWorks from '../Components/HowItWorks';
 import NeedDesignerSoon from '../Components/NeedDesignerSoon';
@@ -23,6 +24,7 @@ const HomePage = () => {
       <OurWork />
       <OurTools />
       <WallOfLove />
+      <ClientReview />
       <SendReqSection />
     </>
   );
