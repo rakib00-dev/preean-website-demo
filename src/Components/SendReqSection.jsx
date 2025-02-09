@@ -11,12 +11,17 @@ const SendReqSection = () => {
           </h1>
           <div className="flex flex-col mb-15 gap-5 md:mb-0 md:flex-row">
             <a href="">
-              <Button text={'Get Started'} className={'text-white'} />
+              <Button
+                text={'Get Started'}
+                className={'text-white hover:bg-white hover:text-black'}
+              />
             </a>
             <a href="">
               <Button
                 text={'Book A Call'}
-                className={'border-gray-700 border-2'}
+                className={
+                  'border-gray-700 border-2 hover:border-blue-500 hover:text-blue-500'
+                }
                 bg="transparent"
               />
             </a>
