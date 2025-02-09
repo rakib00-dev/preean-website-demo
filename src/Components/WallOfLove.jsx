@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
-// Import Swiper React components
-import Slider from 'react-slick';
+// Swiper React components
+// import Slider from 'react-slick';
 
-// Import slider styles
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+// slider styles
+// import 'slick-carousel/slick/slick.css';
+// import 'slick-carousel/slick/slick-theme.css';
 
 function WallOfLove() {
   const data = [
