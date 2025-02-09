@@ -91,13 +91,13 @@ function WallOfLove() {
               <img src={e.img} alt="" loading="lazy" className="w-32" />
 
               <div className="flex flex-col gap-2">
-                <h3 className="text-xl font-extrabold text-center md:text-start md:text-2xl  ">
+                <h3 className="text-xl font-extrabold text-start md:text-start md:text-2xl  ">
                   {e.title}
                 </h3>
-                <p className="text-md leading-6 text-center md:text-start">
+                <p className="text-md leading-6 text-start md:text-start">
                   {e.p}
                 </p>
-                <p className="text-md font-bold text-center md:text-start">
+                <p className="text-md font-bold text-start md:text-start">
                   {' '}
                   {e.name}
                 </p>
