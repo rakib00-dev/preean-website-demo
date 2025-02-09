@@ -24,10 +24,21 @@ const ClientReview = () => {
   ];
 
   return (
-    <section className="mx-auto w-full max-w-7xl">
+    <section className="mx-auto my-12 w-full max-w-7xl md:my-16">
       <div className="mx-2 md:mx-10">
         {/* selection */}
-        <div className="">
+        <div className=" mx-auto place-items-center my-6 w-full md:hidden">
+          <select
+            name="type"
+            id="type"
+            className="bg-gray-100 py-4 px-8 rounded-sm"
+          >
+            <option value="agencies">Agencies</option>
+            <option value="marketing teams">Marketing teams</option>
+            <option value="entrepreneurs">Entrepreneurs</option>
+          </select>
+        </div>
+        <div className="hidden md:block">
           <div>agencies</div>
           <div>marketing teams</div>
           <div>entrepreneurs</div>
