@@ -303,7 +303,7 @@ const Navbar = () => {
               id="logo"
               className="text-md font-medium w-32 md:w-64 md:text-lg"
             >
-              <Link to="#" className="flex items-center">
+              <Link to="/" className="flex items-center">
                 <img
                   src="https://designpro.qa/img/Designpro-logo-large.png"
                   alt="logo"
