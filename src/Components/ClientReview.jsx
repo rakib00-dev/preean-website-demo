@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { clientArr } from '../importItems/client';
 
 const ClientReview = () => {
@@ -21,7 +21,6 @@ const ClientReview = () => {
       }
     }
   };
-  console.log(client);
 
   return (
     <section className="mx-auto my-12 w-full max-w-7xl md:my-16">

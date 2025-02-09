@@ -1,31 +1,38 @@
-import BetterSolution from '../Components/BetterSolution';
-import Carousel from '../Components/Carousel';
-import ClientReview from '../Components/ClientReview';
-import Hero from '../Components/Hero';
-import HowItWorks from '../Components/HowItWorks';
-import NeedDesignerSoon from '../Components/NeedDesignerSoon';
-import OurTools from '../Components/OurTools';
-import OurWork from '../Components/OurWork';
-import PowerByTechnology from '../Components/PowerByTechnology';
-import SendReqSection from '../Components/SendReqSection';
-import WallOfLove from '../Components/WallOfLove';
-import WhatWeOffer from '../Components/WhatWeOffer';
+import React, { Suspense } from 'react';
+const BetterSolution = React.lazy(() => import('../Components/BetterSolution'));
+const Carousel = React.lazy(() => import('../Components/Carousel'));
+const ClientReview = React.lazy(() => import('../Components/ClientReview'));
+const Hero = React.lazy(() => import('../Components/Hero'));
+const HowItWorks = React.lazy(() => import('../Components/HowItWorks'));
+const NeedDesignerSoon = React.lazy(() =>
+  import('../Components/NeedDesignerSoon')
+);
+const OurTools = React.lazy(() => import('../Components/OurTools'));
+const OurWork = React.lazy(() => import('../Components/OurWork'));
+const PowerByTechnology = React.lazy(() =>
+  import('../Components/PowerByTechnology')
+);
+const SendReqSection = React.lazy(() => import('../Components/SendReqSection'));
+const WallOfLove = React.lazy(() => import('../Components/WallOfLove'));
+const WhatWeOffer = React.lazy(() => import('../Components/WhatWeOffer'));
 
 const HomePage = () => {
   return (
     <>
       <Hero />
       <Carousel />
-      <NeedDesignerSoon />
-      <BetterSolution />
-      <HowItWorks />
-      <PowerByTechnology />
-      <WhatWeOffer />
-      <OurWork />
-      <OurTools />
-      <WallOfLove />
-      <ClientReview />
-      <SendReqSection />
+      <Suspense fallback={<p>Loading...</p>}>
+        <NeedDesignerSoon />
+        <BetterSolution />
+        <HowItWorks />
+        <PowerByTechnology />
+        <WhatWeOffer />
+        <OurWork />
+        <OurTools />
+        <WallOfLove />
+        <ClientReview />
+        <SendReqSection />
+      </Suspense>
     </>
   );
 };

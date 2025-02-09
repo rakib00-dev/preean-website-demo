@@ -2,11 +2,13 @@ import React, { useEffect, useRef, useState } from 'react';
 import { FaChevronDown } from 'react-icons/fa';
 import { RiCloseFill, RiMenu3Fill } from 'react-icons/ri';
 import OutsideClickHandler from 'react-outside-click-handler';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isHovered, setIsHovered] = useState(false);
   const [isResourceHovered, setIsResourceHovered] = useState(false);
 
+  // large screen nav list
   const NavLists = () => {
     return (
       <>
@@ -26,10 +28,16 @@ const Navbar = () => {
             }
           />
         </ListItem>
-        <ListItem NavLink="/#" className={'uppercase  text-sm sm:font-bold'}>
+        <ListItem
+          NavLink="/our-work"
+          className={'uppercase  text-sm sm:font-bold'}
+        >
           our work
         </ListItem>
-        <ListItem NavLink="/#" className={'uppercase  text-sm sm:font-bold'}>
+        <ListItem
+          NavLink="/pricing"
+          className={'uppercase  text-sm sm:font-bold'}
+        >
           pricing
         </ListItem>
         <ListItem
@@ -52,6 +60,7 @@ const Navbar = () => {
     );
   };
 
+  // small screen nav list
   const NavListsSmallScreen = () => {
     return (
       <>
@@ -114,12 +123,12 @@ const Navbar = () => {
               title="motion graphic"
               src="./images/navbar/motion-graphic.png"
             />
-            <a
-              href="/#"
+            <Link
+              to="/#"
               className="transition-all px-3 py-3 ml-4 mt-4 bg-blue-100/50 border-1/80 text-blue-500 font-bold rounded-md text-sm hover:border-1 hover:bg-white"
             >
               ENTIRE SCOPE OF SERVICE
-            </a>
+            </Link>
           </div>
         </div>
         <ListItem NavLink="/#" className={'uppercase sm:font-bold'}>
@@ -194,8 +203,8 @@ const Navbar = () => {
     return (
       <>
         <li className="pb-5 left-0 lg:pb-0">
-          <a
-            href={NavLink}
+          <Link
+            to={NavLink}
             className={`relative text-xl font-bold cursor-pointer transition-all duration-300 uppercase  lg:text-sm hover:text-gray-500 ${className}`}
             style={style}
             onMouseOver={onmouseover}
@@ -203,7 +212,7 @@ const Navbar = () => {
             onClick={onclick}
           >
             {children}
-          </a>
+          </Link>
         </li>
       </>
     );
@@ -218,8 +227,8 @@ const Navbar = () => {
   }) => {
     return (
       <>
-        <a
-          href={to}
+        <Link
+          to={to}
           className={`flex gap-2 p-4 justify-start items-center w-[210px] rounded-md DropItemHover ${className}`}
         >
           <img
@@ -229,7 +238,7 @@ const Navbar = () => {
             loading="lazy"
           />
           <h5 className="uppercase text-sm w-fit font-bold">{title}</h5>
-        </a>
+        </Link>
       </>
     );
   };
@@ -294,14 +303,14 @@ const Navbar = () => {
               id="logo"
               className="text-md font-medium w-32 md:w-64 md:text-lg"
             >
-              <a href="#" className="flex items-center">
+              <Link to="#" className="flex items-center">
                 <img
                   src="https://designpro.qa/img/Designpro-logo-large.png"
                   alt="logo"
                   className="w-60"
                   loading="lazy"
                 />
-              </a>
+              </Link>
             </div>
 
             {/* large screen */}
@@ -314,18 +323,18 @@ const Navbar = () => {
               </ul>
               <div id="contact">
                 <div className="flex flex-row gap-4 justify-end pr-16 sm:flex lg:pr-0">
-                  <a
-                    href="/#"
+                  <Link
+                    to="/#"
                     className="transition-all px-7 py-3 text-blue-500 border border-blue-500 rounded-md font-medium text-dark hover:text-white hover:bg-blue-300"
                   >
                     Sign in
-                  </a>
-                  <a
-                    href="/#"
+                  </Link>
+                  <Link
+                    to="/#"
                     className="transition-all rounded-md bg-blue-500 px-7 py-3 text-base font-medium text-white hover:bg-blue-500/90"
                   >
                     Book A Call
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -397,12 +406,12 @@ const Navbar = () => {
             title="motion graphic"
             src="./images/navbar/motion-graphic.png"
           />
-          <a
-            href="/#"
+          <Link
+            to="/#"
             className="transition-all px-3 py-3 mt-4 bg-blue-100/50 border-1/80 text-blue-500 font-bold rounded-md text-sm hover:border-1 hover:bg-white"
           >
             ENTIRE SCOPE OF SERVICE
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -463,24 +472,24 @@ const Navbar = () => {
           <ul className="flex justify-start items-start flex-col leading-8">
             <NavListsSmallScreen />
             <div className="flex flex-col-reverse gap-4 justify-end pr-16 sm:flex lg:pr-0">
-              <a
-                href="/#"
+              <Link
+                to="/#"
                 className="rounded-md px-7 text-center py-3 text-base font-medium text-blue-500 hover:bg-blue-500/90"
               >
                 Sign Up
-              </a>
-              <a
-                href="/#"
+              </Link>
+              <Link
+                to="/#"
                 className="px-7 py-3 text-center text-blue-500 border border-blue-500 rounded-md font-medium text-dark hover:text-blue-500"
               >
                 Sign in
-              </a>
-              <a
-                href="/#"
+              </Link>
+              <Link
+                to="/#"
                 className="rounded-md text-center bg-blue-500 px-7 py-3 text-base font-medium text-white hover:bg-blue-500/90"
               >
                 Book A Call
-              </a>
+              </Link>
             </div>
           </ul>
         </div>
