@@ -7,6 +7,7 @@ import OurTools from '../Components/OurTools';
 import OurWork from '../Components/OurWork';
 import PowerByTechnology from '../Components/PowerByTechnology';
 import SendReqSection from '../Components/SendReqSection';
+import WallOfLove from '../Components/WallOfLove';
 import WhatWeOffer from '../Components/WhatWeOffer';
 
 const HomePage = () => {
@@ -21,6 +22,7 @@ const HomePage = () => {
       <WhatWeOffer />
       <OurWork />
       <OurTools />
+      <WallOfLove />
       <SendReqSection />
     </>
   );
