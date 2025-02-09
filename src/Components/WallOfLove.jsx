@@ -10,14 +10,14 @@ function WallOfLove() {
   const data = [
     {
       img: 'https://cdn.prod.website-files.com/63a9cb71c629474d4ae334b9/64771ca81ca155824e1c4c08_Group%204818.svg',
-      title: 'manypixels is the best place to find…',
-      p: 'manypixels is the best place to find illustrations that fit my apps and websites. There are a lot of free stuff too. Keep up the good work!',
+      title: 'Design pro is the best place to find…',
+      p: 'Design pro is the best place to find illustrations that fit my apps and websites. There are a lot of free stuff too. Keep up the good work!',
       name: 'Arman Mohamed',
     },
     {
       img: 'https://cdn.prod.website-files.com/63a9cb71c629474d4ae334b9/64771ca82bfc836b6eb7307e_Group%204819.svg',
       title: 'Professional and creative solution.',
-      p: 'I have been working with Many Pixels for the past 4 months and their service and quality of work has been outstanding. As a startup company great design and illustration work can cost prohibitive, ManyPixels provides an affordable, professional and creative solution.',
+      p: 'I have been working with Many Pixels for the past 4 months and their service and quality of work has been outstanding. As a startup company great design and illustration work can cost prohibitive, Design pro provides an affordable, professional and creative solution.',
       name: 'Gary Turner',
     },
     {
@@ -32,15 +32,27 @@ function WallOfLove() {
       p: "I am extremely pleased by the collaboration. I've been working for more than a vear with them now and we love their designs. They reply fast, and understand our needs and ideas, which they turn into eye-popping graphics.",
       name: 'Charlie GM',
     },
+    {
+      img: 'https://cdn.prod.website-files.com/63a9cb71c629474d4ae334b9/64771ca81ca155824e1c4c08_Group%204818.svg',
+      title: "It's worth every penny",
+      p: "I've been a designer for 8 years and Design pro allows me to be more of a creative director which I love. I don't think I could go back to not having a subscription, it's worth every penny and frees up my time to focus on growing my business.",
+      name: 'Laura Elizabeth',
+    },
+    {
+      img: 'https://cdn.prod.website-files.com/63a9cb71c629474d4ae334b9/64771ca81ca155824e1c4c08_Group%204818.svg',
+      title: 'We really enjoy their quality',
+      p: 'We are using ManyPixels for quite a long time now and we really enjoy their quality!',
+      name: 'Flowdee',
+    },
   ];
 
-  let settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-  };
+  // let settings = {
+  //   dots: true,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 3,
+  //   slidesToScroll: 1,
+  // };
 
   return (
     <section className="flex flex-col justify-center items-center mx-auto w-full max-w-7xl md:mt-16 md:pt-10 bg-white  ">
@@ -69,12 +81,12 @@ function WallOfLove() {
 
         {/* slide container */}
 
-        <div className="mx-4 grid grid-cols-3 gap-10 md:mx-auto">
+        <div className="mx-4 grid grid-cols-1 gap-10 md:mx-auto md:grid-cols-3">
           {/* <Slider {...settings}> */}
           {data.map((e, i) => (
             <div
               key={i}
-              className="flex justify-center items-start w-full h-[400px] flex-col bg-gray-100 p-7 py-8 text-center mb-5 rounded-lg gap-2 leading-10"
+              className="flex top-0 justify-center items-start w-full h-[400px] flex-col bg-gray-100 p-7  pt-0 text-center mb-5 rounded-lg gap-2 leading-10"
             >
               <img src={e.img} alt="" loading="lazy" className="w-32" />
 
