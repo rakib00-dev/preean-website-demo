@@ -58,7 +58,7 @@ const OurWork = () => {
             <div>
               <a href="#">
                 <img
-                  className="h-auto max-w-full rounded-lg"
+                  className="h-full max-w-full rounded-lg"
                   src="../images/ourwork/logos.avif"
                   alt=""
                   loading="lazy"
@@ -68,7 +68,7 @@ const OurWork = () => {
             <div>
               <a href="#">
                 <img
-                  className="h-auto max-w-full rounded-lg"
+                  className="h-full max-w-full rounded-lg"
                   src="../images/ourwork/motion-graphic.gif"
                   alt=""
                   loading="lazy"
@@ -79,7 +79,7 @@ const OurWork = () => {
               <a href="#">
                 <img
                   className="h-auto max-w-full rounded-lg"
-                  src="../images/ourwork/display-adds.avif"
+                  src="./images/ourwork/add.jpg"
                   alt=""
                   loading="lazy"
                 />
@@ -90,8 +90,8 @@ const OurWork = () => {
             <div>
               <a href="#">
                 <img
-                  className="h-auto max-w-full rounded-lg"
-                  src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg"
+                  className="h-full w-full rounded-lg"
+                  src="./images/ourwork/cream.jpg"
                   alt=""
                   loading="lazy"
                 />
@@ -100,8 +100,8 @@ const OurWork = () => {
             <div>
               <a href="#">
                 <img
-                  className="h-auto max-w-full rounded-lg"
-                  src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg"
+                  className="max-h-full w-full rounded-lg"
+                  src="./images/ourwork/hoodie.jpg"
                   alt=""
                   loading="lazy"
                 />
@@ -110,8 +110,8 @@ const OurWork = () => {
             <div>
               <a href="#">
                 <img
-                  className="h-auto max-w-full rounded-lg"
-                  src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg"
+                  className="max-h-full max-w-full rounded-lg"
+                  src="../images/ourwork/display-adds.avif"
                   alt=""
                   loading="lazy"
                 />
