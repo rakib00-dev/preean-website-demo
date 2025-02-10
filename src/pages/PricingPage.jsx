@@ -16,7 +16,16 @@ const PricingPage = () => {
       </section>
       <OurWork />
       <WallOfLove />
-      <SendReqSection />
+      <SendReqSection
+        title={
+          <>
+            <h1 className="text-xl px-8 mt-15 mb-4 font-extrabold md:text-4xl xl:text-6xl">
+              Still have some questions? <br />
+              Jump on a quick call with our team.
+            </h1>
+          </>
+        }
+      />
     </>
   );
 };
@@ -36,7 +45,7 @@ const PricingBoxes = () => {
         src="./images/ourpricingpage/red-ring.svg"
         alt="this is a red ring element which is use to inchnge the design quality"
         loading="lazy"
-        className=" top-30 absolute left-[20%] md:-top-5 md:left-[60%]"
+        className="hidden top-30 absolute left-[20%] md:-top-5 md:left-[60%] md:block"
       />
       <img
         src="./images/ourpricingpage/deep-blue-tringle.svg"

@@ -158,7 +158,7 @@ const Navbar = () => {
               ? `uppercasetext-blue-500 sm:font-bold `
               : `uppercase  sm:font-bold `
           }
-          onClick={() => {
+          onclick={() => {
             setIsNavOpen((prev) => !prev);
           }}
         >

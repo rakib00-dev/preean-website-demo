@@ -1,14 +1,18 @@
 import Button from './Button';
 
-const SendReqSection = () => {
+const SendReqSection = ({ title }) => {
   return (
     <section className="mx-auto my-15 w-full max-w-7xl">
       <div className="mx-5">
         <div className="w-full relative text-center py-6 rounded-md flex-col gap-10 leading-10 bg-yellow-400 h-auto justify-center items-center md:flex md:rounded-xl xl:rounded-2xl">
-          <h1 className="text-xl px-8 mt-15 mb-4 font-extrabold md:text-4xl xl:text-6xl">
-            Send your request today. <br />
-            Get your design tomorrow.
-          </h1>
+          {title ? (
+            title
+          ) : (
+            <h1 className="text-xl px-8 mt-15 mb-4 font-extrabold md:text-4xl xl:text-6xl">
+              Send your request today. <br />
+              Get your design tomorrow.
+            </h1>
+          )}
           <div className="flex flex-col mb-15 gap-5 md:mb-0 md:flex-row">
             <a href="">
               <Button
