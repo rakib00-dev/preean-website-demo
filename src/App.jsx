@@ -1,9 +1,10 @@
 import React, { Suspense } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router';
 import MainLayout from './layouts/MainLayout';
-import ErrorPage from './pages/ErrorPage';
 import HomePage from './pages/HomePage';
 
+const PricingPage = React.lazy(() => import('./pages/PricingPage'));
+const ErrorPage = React.lazy(() => import('./pages/ErrorPage'));
 const OurWorkPage = React.lazy(() => import('./pages/OurWorkPage'));
 
 function App() {
@@ -22,6 +23,14 @@ function App() {
           element: (
             <Suspense fallback={<p>Loading...</p>}>
               <OurWorkPage />
+            </Suspense>
+          ),
+        },
+        {
+          path: '/pricing',
+          element: (
+            <Suspense fallback={<p>Loading...</p>}>
+              <PricingPage />
             </Suspense>
           ),
         },

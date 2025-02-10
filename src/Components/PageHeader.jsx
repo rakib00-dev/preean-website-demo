@@ -1,4 +1,7 @@
-const PageHeader = () => {
+const PageHeader = ({
+  pageTitle = 'Our Work',
+  pagePara = 'Check out some of the latest creations we did for our customers',
+}) => {
   return (
     <section className="mx-auto w-full max-w-7xl ">
       <div className="relative">
@@ -8,10 +11,10 @@ const PageHeader = () => {
           <h2
             className={`font-extrabold text-[1.85rem] text-center w-full mb-4 leading-8 lg:text-center min-[450px]:w-full md:text-[3rem] lg:w-full lg:leading-13`}
           >
-            Our Work
+            {pageTitle}
           </h2>
           <p className={`text-center text-xl px-2 w-full md:px-0 md:text-2xl `}>
-            Check out some of the latest creations we did for our customers
+            {pagePara}
           </p>
           <div className="flex absolute px-5 top-0 items-center justify-between -z-10 w-full">
             <img
