@@ -2,7 +2,10 @@ import React, { Suspense } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router';
 import MainLayout from './layouts/MainLayout';
 import HomePage from './pages/HomePage';
-
+// import AllImgWorks from './Components/WorkPage/AllOurImgWorks';
+const AllImgWorks = React.lazy(() =>
+  import('./Components/WorkPage/AllOurImgWorks')
+);
 const PricingPage = React.lazy(() => import('./pages/PricingPage'));
 const ErrorPage = React.lazy(() => import('./pages/ErrorPage'));
 const OurWorkPage = React.lazy(() => import('./pages/OurWorkPage'));
@@ -12,7 +15,11 @@ function App() {
     {
       path: '/',
       element: <MainLayout />,
-      errorElement: <ErrorPage />,
+      errorElement: (
+        <Suspense fallback={<p>Loading...</p>}>
+          <ErrorPage />
+        </Suspense>
+      ),
       children: [
         {
           path: '/',
@@ -25,6 +32,16 @@ function App() {
               <OurWorkPage />
             </Suspense>
           ),
+          children: [
+            {
+              path: '/our-work/all',
+              element: (
+                <Suspense fallback={<p>Loading...</p>}>
+                  <AllImgWorks />
+                </Suspense>
+              ),
+            },
+          ],
         },
         {
           path: '/pricing',
