@@ -507,7 +507,7 @@ const Navbar = () => {
               ? 'transition-all fixed top-20 flex justify-start items-start flex-col w-full h-full pl-5 pt-5 gap-10 border rounded-md bg-white m-auto overflow-y-auto xl:hidden'
               : 'hidden'
           }
-          style={{ zIndex: 12 }}
+          style={{ zIndex: 122 }}
         >
           <ul className="flex justify-start items-start flex-col leading-8">
             <NavListsSmallScreen />
