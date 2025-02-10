@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router';
 import MainLayout from './layouts/MainLayout';
 import HomePage from './pages/HomePage';
 // import AllImgWorks from './Components/WorkPage/AllOurImgWorks';
-const AllImgWorks = React.lazy(() =>
+const AllOurImgWorks = React.lazy(() =>
   import('./Components/WorkPage/AllOurImgWorks')
 );
 const PricingPage = React.lazy(() => import('./pages/PricingPage'));
@@ -37,7 +37,7 @@ function App() {
               path: '/our-work/all',
               element: (
                 <Suspense fallback={<p>Loading...</p>}>
-                  <AllImgWorks />
+                  <AllOurImgWorks />
                 </Suspense>
               ),
             },
