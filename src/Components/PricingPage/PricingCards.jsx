@@ -55,53 +55,65 @@ export default PricingCards;
 
 const PriceCards = () => {
   return (
-    <div className="container mx-auto">
-      <div className="-mx-4 flex flex-wrap justify-center">
-        <div className="-mx-4 flex flex-wrap">
-          <PricingCard
-            type="Personal"
-            price="$59"
-            subscription="year"
-            description="Perfect for using in a personal website or a client project."
-            buttonText="Choose Personal"
-          >
-            <List>1 User</List>
-            <List>All UI components</List>
-            <List>Lifetime access</List>
-            <List>Free updates</List>
-            <List>Use on 1 (one) project</List>
-            <List>3 Months support</List>
-          </PricingCard>
-          <PricingCard
-            type="Business"
-            price="$199"
-            subscription="year"
-            description="Perfect for using in a personal website or a client project."
-            buttonText="Choose Business"
-            active
-          >
-            <List>5 User</List>
-            <List>All UI components</List>
-            <List>Lifetime access</List>
-            <List>Free updates</List>
-            <List>Use on31 (Three) project</List>
-            <List>4 Months support</List>
-          </PricingCard>
-          <PricingCard
-            type="Professional"
-            price="$256"
-            subscription="year"
-            description="Perfect for using in a personal website or a client project."
-            buttonText="Choose Professional"
-          >
-            <List>Unlimited User</List>
-            <List>All UI components</List>
-            <List>Lifetime access</List>
-            <List>Free updates</List>
-            <List>Unlimited project</List>
-            <List>12 Months support</List>
-          </PricingCard>
-        </div>
+    <div className="flex justify-center items-center mx-auto">
+      <div className="-mx-4 flex flex-wrap">
+        <PricingCard
+          type="Personal"
+          price="$59"
+          subscription="year"
+          description="Perfect for using in a personal website or a client project."
+          buttonText="Choose Personal"
+        >
+          <List>1 User</List>
+          <List>All UI components</List>
+          <List>Lifetime access</List>
+          <List>Free updates</List>
+          <List>Use on 1 (one) project</List>
+          <List>3 Months support</List>
+        </PricingCard>
+        <PricingCard
+          type="Personal"
+          price="$59"
+          subscription="year"
+          description="Perfect for using in a personal website or a client project."
+          buttonText="Choose Personal"
+        >
+          <List>1 User</List>
+          <List>All UI components</List>
+          <List>Lifetime access</List>
+          <List>Free updates</List>
+          <List>Use on 1 (one) project</List>
+          <List>3 Months support</List>
+        </PricingCard>
+        <PricingCard
+          type="Business"
+          price="$199"
+          subscription="year"
+          description="Perfect for using in a personal website or a client project."
+          buttonText="Choose Business"
+          active
+        >
+          <List>5 User</List>
+          <List>All UI components</List>
+          <List>Lifetime access</List>
+          <List>Free updates</List>
+          <List>Use on31 (Three) project</List>
+          <List>4 Months support</List>
+        </PricingCard>
+        <PricingCard
+          type="Professional"
+          price="$256"
+          subscription="year"
+          description="Perfect for using in a personal website or a client project."
+          buttonText="Choose Professional"
+        >
+          <List>Unlimited User</List>
+          <List>All UI components</List>
+          <List>Lifetime access</List>
+          <List>Free updates</List>
+          <List>Unlimited project</List>
+          <List>12 Months support</List>
+        </PricingCard>
       </div>
     </div>
   );
@@ -118,7 +130,7 @@ const PricingCard = ({
 }) => {
   return (
     <>
-      <div className="w-full px-4 md:w-1/2 lg:w-1/3">
+      <div className="w-[330px] px-4 ">
         <div className="relative z-10 mb-10 overflow-hidden rounded-[10px] border-2 border-stroke bg-white px-8 py-10 shadow-pricing dark:border-dark-3 dark:bg-dark-2 sm:p-12 lg:px-6 lg:py-10 xl:p-[50px]">
           <span className="mb-3 block text-lg font-semibold text-primary">
             {type}
