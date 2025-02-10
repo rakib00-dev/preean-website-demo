@@ -1,13 +1,14 @@
 import Button from '../Components/Button';
 import OurWork from '../Components/OurWork';
 import PageHeader from '../Components/PageHeader';
+import PricingCards from '../Components/PricingPage/PricingCards';
 import SendReqSection from '../Components/SendReqSection';
 import WallOfLove from '../Components/WallOfLove';
 
 const PricingPage = () => {
   return (
     <>
-      <section className="my-16 mb-34">
+      <section className="my-16">
         <PageHeader
           pageTitle="Pricing"
           pagePara="All-inclusive plans. No contract. Cancel anytime."
@@ -15,6 +16,7 @@ const PricingPage = () => {
           <PricingBoxes />
         </PageHeader>
       </section>
+      <PricingCards />
       <OurWork />
       <WallOfLove />
       <SendReqSection
