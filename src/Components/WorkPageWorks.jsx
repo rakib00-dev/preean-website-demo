@@ -4,7 +4,7 @@ import { Link, Outlet } from 'react-router-dom';
 
 const WorkPageWorks = () => {
   const [filterLists, setFilterLists] = useState([...workPageFilterList]);
-  console.log(filterLists?.map((e) => e.display));
+  const [currentItem, setcurrentItem] = useState('All');
 
   return (
     <section className="mx-auto w-full max-w-7xl overflow-hidden">
@@ -27,15 +27,23 @@ const WorkPageWorks = () => {
           ))}
         </div>
         {/* small screen */}
-        <div className="hidden uppercase flex-wrap justify-center items-center mx-auto place-items-center w-11/12 gap-2 lg:hidden">
+        <div className="grid place-items-center ">
+          <button className="Capitalize cursor-pointer py-4 my-6 rounded px-10 border-gray-200 border-1">
+            {currentItem}
+          </button>
+        </div>
+        <div className="grid uppercase flex-wrap border-gray-200 transition-all  border-1 justify-center rounded-2xl items-start mx-auto w-11/12 gap-2 lg:hidden">
           {filterLists.map((e, i) => (
             <div
               key={i}
-              className="transition-all py-4 border-gray-200 border-1 rounded-md hover:bg-blue-400 hover:text-white"
+              className="transition-all py-4  rounded-md hover:bg-blue-400 hover:text-white"
+              onClick={() => {
+                setcurrentItem(e.display);
+              }}
             >
               <Link
                 to={e.path}
-                className="px-6 font-bold text-xs py-4"
+                className="px-auto font-bold py-4"
                 style={{ fontFamily: 'Mulish' }}
               >
                 {e.display}
