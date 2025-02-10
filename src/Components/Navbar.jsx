@@ -155,7 +155,7 @@ const Navbar = () => {
           navLink="/pricing"
           smallClassName={({ isActive }) =>
             isActive
-              ? `uppercasetext-blue-500 sm:font-bold `
+              ? `uppercase text-blue-500 sm:font-bold `
               : `uppercase  sm:font-bold `
           }
           onclick={() => {
