@@ -10,7 +10,7 @@ const PricingPage = () => {
       <section className="my-16 mb-34">
         <PageHeader
           pageTitle="Pricing"
-          PagePara="All-inclusive plans. No contract. Cancel anytime."
+          pagePara="All-inclusive plans. No contract. Cancel anytime."
         >
           <PricingBoxes />
         </PageHeader>
@@ -50,26 +50,26 @@ const PricingBoxes = () => {
         src="./images/ourpricingpage/deep-blue-squre.svg"
         alt="this is a deep blue squre element which is use to inchnge the design quality"
         loading="lazy"
-        className="hidden w-10 left-[10%] absolute top-25 md:w-24 md:block"
+        className="hidden w-10 left-[10%] absolute top-25 md:w-24 lg:block"
       />
       <img
         src="./images/ourpricingpage/red-ring.svg"
         alt="this is a red ring element which is use to inchnge the design quality"
         loading="lazy"
-        className="hidden top-30 absolute left-[20%] md:-top-5 md:left-[60%] md:block"
+        className="top-2 w-8 absolute left-[10%] lg:block lg:left-[60%] lg:w-auto"
       />
       <img
         src="./images/ourpricingpage/deep-blue-tringle.svg"
         alt="this is a deep blue tringle squre element which is use to inchnge the design quality"
         loading="lazy"
-        className="bottom-5 left-[35%] absolute"
+        className="hidden bottom-5 left-[35%] absolute lg:block"
       />
 
       <img
         src="./images/ourpricingpage/yellow-squre.svg"
         alt="this is a yello element which is use to inchnge the design quality"
         loading="lazy"
-        className="w-10 absolute top-5 right-[10%] md:w-24"
+        className="w-12 absolute top-2 right-[10%] lg:w-24 lg:top-9 "
       />
     </div>
   );
