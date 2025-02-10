@@ -1,3 +1,4 @@
+import Button from '../Components/Button';
 import OurWork from '../Components/OurWork';
 import PageHeader from '../Components/PageHeader';
 import SendReqSection from '../Components/SendReqSection';
@@ -18,12 +19,22 @@ const PricingPage = () => {
       <WallOfLove />
       <SendReqSection
         title={
-          <>
-            <h1 className="text-xl px-8 mt-15 mb-4 font-extrabold md:text-4xl xl:text-6xl">
-              Still have some questions? <br />
-              Jump on a quick call with our team.
-            </h1>
-          </>
+          <h1 className="text-xl px-8 mt-15 mb-4 font-extrabold md:text-4xl xl:text-6xl">
+            Still have some questions? <br />
+            Jump on a quick call with our team.
+          </h1>
+        }
+        button={
+          <div className="flex flex-col mb-15 gap-5 md:mb-0 md:flex-row">
+            <a href="">
+              <Button
+                text={'Book A Call'}
+                className={
+                  'transition-all rounded-md bg-blue-500 px-7 py-3 text-base font-medium text-white hover:bg-blue-500/90 md:font-bold md:text-xl'
+                }
+              />
+            </a>
+          </div>
         }
       />
     </>
