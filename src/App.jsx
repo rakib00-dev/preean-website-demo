@@ -2,7 +2,6 @@ import React, { Suspense } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router';
 import MainLayout from './layouts/MainLayout';
 import HomePage from './pages/HomePage';
-// import AllImgWorks from './Components/WorkPage/AllOurImgWorks';
 const AllOurImgWorks = React.lazy(() =>
   import('./Components/WorkPage/AllOurImgWorks')
 );
@@ -32,16 +31,16 @@ function App() {
               <OurWorkPage />
             </Suspense>
           ),
-          children: [
-            {
-              path: '/our-work/all',
-              element: (
-                <Suspense fallback={<p>Loading...</p>}>
-                  <AllOurImgWorks />
-                </Suspense>
-              ),
-            },
-          ],
+          // children: [
+          //   {
+          //     path: '/our-work/all',
+          //     element: (
+          //       <Suspense fallback={<p>Loading...</p>}>
+          //         <AllOurImgWorks />
+          //       </Suspense>
+          //     ),
+          //   },
+          // ],
         },
         {
           path: '/pricing',
