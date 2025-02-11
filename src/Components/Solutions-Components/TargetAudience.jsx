@@ -9,7 +9,7 @@ const TargetAudience = () => {
         para={
           'Attract, engage, and convert potential clients with a professionally designed graphics and videos for all your social media platforms.'
         }
-        imgSrc={'./images/FirstTypeImg/better-solution.avif'}
+        imgSrc={'./images/solutionPage/social-media/agencies-worldwide.webp'}
         textContentAlign="end"
         style={{ position: 'relative' }}
         contentClass={'lg:flex-row-reverse'}

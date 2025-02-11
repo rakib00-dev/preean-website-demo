@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import Button from '../Components/Button';
+import Button from '../Button';
 
 const OurSoluWork = ({
   smallTitle = 'our work',
