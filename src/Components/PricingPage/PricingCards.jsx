@@ -112,7 +112,7 @@ const FilterCardPackage = ({
   fourthPrice = '599',
 }) => {
   return (
-    <div className="md:-left-14 relative grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-30">
+    <div className=" relative grid grid-cols-1 md:grid-cols-3 gap-5 lg:grid-cols-4 lg:gap-30">
       <PricingCard
         price={firstPrice}
         subscription="year"
@@ -192,10 +192,10 @@ const PricingCard = ({
 }) => {
   return (
     <>
-      <div className={`md:w-[330px] mx-2 left-0 relative `}>
+      <div className={`md:w-[330px] md:h-[925px] mx-2 left-0 relative`}>
         {/* initial wraper */}
         <div
-          className={`border-2 rounded-2xl p-6 border-gray-300 gap-4 grid ${bgColor}`}
+          className={`border-2 rounded-2xl border-gray-300 p-4 gap-4 grid ${bgColor} `}
         >
           {children}
           <div className="grid gap-4 border-b-1 border-gray-300 pb-8">
