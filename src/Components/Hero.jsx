@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Button from './Button';
 
 const Hero = () => {
@@ -41,14 +42,17 @@ const Hero = () => {
               Get access to our creative team in a few clicks. Simple, fast, and
               affordable.
             </p>
-            <a href="#" className="flex justify-center md:justify-start">
+            <Link
+              to="/pricing"
+              className="flex justify-center md:justify-start"
+            >
               <Button
                 text={'pick your plan'}
                 px="30"
                 py="0"
                 className={'text-white uppercase '}
               />
-            </a>
+            </Link>
           </div>
         </div>
       </header>

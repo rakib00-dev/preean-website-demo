@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router';
 import MainLayout from './layouts/MainLayout';
 import HomePage from './pages/HomePage';
 
+const BookACall = React.lazy(() => import('./Components/BookACall'));
 const SocialMediaPage = React.lazy(() => import('./pages/SocialMediaPage'));
 const AllOurImgWorks = React.lazy(() =>
   import('./Components/WorkPage/AllOurImgWorks')
@@ -31,6 +32,14 @@ function App() {
           element: (
             <Suspense fallback={<p>Loading...</p>}>
               <SocialMediaPage />
+            </Suspense>
+          ),
+        },
+        {
+          path: '/book-a-call',
+          element: (
+            <Suspense fallback={<p>Loading...</p>}>
+              <BookACall />
             </Suspense>
           ),
         },

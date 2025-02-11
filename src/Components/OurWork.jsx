@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Button from './Button';
 
 const OurWork = () => {
@@ -146,7 +147,7 @@ const OurWork = () => {
           </div> */}
         </div>
         <div className="flex justify-center items-center mx-auto my-8 w-full md:my-12">
-          <a href="">
+          <Link to={'our-work'}>
             <Button
               text={'All Our Works'}
               className={
@@ -154,7 +155,7 @@ const OurWork = () => {
               }
               bg="transparent"
             />{' '}
-          </a>
+          </Link>
         </div>
       </div>
     </section>

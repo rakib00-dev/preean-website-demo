@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Button from './Button';
 
 const SendReqSection = ({ title, button }) => {
@@ -23,7 +24,7 @@ const SendReqSection = ({ title, button }) => {
                   className={'text-white hover:bg-white hover:text-black'}
                 />
               </a>
-              <a href="">
+              <Link to="book-a-call">
                 <Button
                   text={'Book A Call'}
                   className={
@@ -31,7 +32,7 @@ const SendReqSection = ({ title, button }) => {
                   }
                   bg="transparent"
                 />
-              </a>
+              </Link>
             </div>
           )}
           <div className="bg-pink-500 rounded-bl-lg rounded-br-lg w-15 h-10 absolute inset-[0%_6.375rem_auto_auto] right-5 z-12 md:w-20 md:h-16 md:right-10"></div>

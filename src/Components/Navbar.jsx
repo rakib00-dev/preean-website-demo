@@ -374,7 +374,7 @@ const Navbar = () => {
                     Sign in
                   </Link>
                   <Link
-                    to="/#"
+                    to="/book-a-call"
                     className="transition-all rounded-md bg-blue-500 px-7 py-3 text-base font-medium text-white hover:bg-blue-500/90"
                   >
                     Book A Call
