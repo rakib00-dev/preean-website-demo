@@ -24,7 +24,7 @@ const SendReqSection = ({ title, button }) => {
                   className={'text-white hover:bg-white hover:text-black'}
                 />
               </a>
-              <Link to="book-a-call">
+              <Link to="/book-a-call">
                 <Button
                   text={'Book A Call'}
                   className={

@@ -137,7 +137,7 @@ const PricingCards = () => {
                     : 'USD $100/wk'}
                 </span>
               </div>
-              <a href="">
+              <Link to={'/book-a-call'}>
                 <button
                   className={
                     'py-2 px-6 rounded-md font-extrabold text-black text-lg bg-amber-300 hover:bg-amber-100 cursor-pointer'
@@ -145,7 +145,7 @@ const PricingCards = () => {
                 >
                   Book A Call
                 </button>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -365,7 +365,7 @@ const PricingCard = ({
             </div>
           </div>
           <div className="grid place-items-center my-5 gap-4">
-            <Link to={'book-a-call'}>
+            <Link to={'/book-a-call'}>
               <Button
                 className={'text-white md:text-xl bg-black'}
                 px="60"

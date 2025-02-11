@@ -1,6 +1,8 @@
 import { FaPlayCircle } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const SolutionHeader = ({
+  solutionLink = '/book-a-call',
   page1stTitle = 'Social Media',
   page2ndTitle = 'Design Services',
   pagePara = 'Create original and eye-catching designs tailored to each social media platforms, be it Instagram, YouTube, Pinterest or beyond. Wether it’s static images or animated posts, boost your marketing efforts with the help our of design team.',
@@ -27,7 +29,7 @@ const SolutionHeader = ({
           {done ? (
             done
           ) : (
-            <a href="">
+            <Link to={solutionLink}>
               <button
                 className={
                   'py-2 px-6 rounded-md font-extrabold text-black flex justify-center items-center gap-2 text-lg bg-blue-300 hover:bg-blue-100 cursor-pointer'
@@ -36,7 +38,7 @@ const SolutionHeader = ({
                 <FaPlayCircle />
                 Book A Call
               </button>
-            </a>
+            </Link>
           )}
           {children ? (
             children

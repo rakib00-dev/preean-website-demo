@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Button from '../Components/Button';
 import OurWork from '../Components/OurWork';
 import PageHeader from '../Components/PageHeader';
@@ -32,14 +33,14 @@ const PricingPage = () => {
         }
         button={
           <div className="flex flex-col mb-15 gap-5 md:mb-0 md:flex-row">
-            <a href="">
+            <Link to={'/book-a-call'}>
               <Button
                 text={'Book A Call'}
                 className={
                   'transition-all rounded-md bg-blue-500 px-7 py-3 text-base font-medium text-white hover:bg-blue-500/90 md:font-bold md:text-xl'
                 }
               />
-            </a>
+            </Link>
           </div>
         }
       />

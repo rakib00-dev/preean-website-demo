@@ -147,7 +147,7 @@ const OurWork = () => {
           </div> */}
         </div>
         <div className="flex justify-center items-center mx-auto my-8 w-full md:my-12">
-          <Link to={'our-work'}>
+          <Link to={'/our-work'}>
             <Button
               text={'All Our Works'}
               className={
