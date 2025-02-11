@@ -59,32 +59,59 @@ const PriceCards = () => {
     <div className="flex justify-center items-center mx-auto">
       <div className="md:-left-14 relative grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-30">
         <PricingCard
-          type="Personal"
           subscription="year"
-          description="Perfect for using in a personal website or a client project."
+          description="Create all of your everyday designs."
           buttonText="Choose Personal"
         ></PricingCard>
         <PricingCard
-          type="Personal"
-          price="$59"
-          subscription="year"
-          description="Perfect for using in a personal website or a client project."
-          buttonText="Choose Personal"
+          title="Business"
+          description="Get double the output everyday."
+          price="225"
+          feature1stList="2 Daily Output"
+          feature2ndList="Next-Day Delivery"
+          DesignLockImg="./images/ourpricingpage/card-images/done.svg"
+          DesignLockColor="black"
         ></PricingCard>
         <PricingCard
-          type="Business"
-          price="$199"
-          subscription="year"
-          description="Perfect for using in a personal website or a client project."
-          buttonText="Choose Business"
-          active
-        ></PricingCard>
+          title="Designated Designer"
+          description="Collaborate in real time with your designer."
+          price="293"
+          feature1stList="1 Designated Designer"
+          feature2stList="Same-Day Delivery"
+          bgColor="bg-[#ffa500]"
+          btnColor="black"
+          priceColor="black text-extrabold"
+          featurLockImg="./images/ourpricingpage/card-images/done.svg"
+          DesignLockImg="./images/ourpricingpage/card-images/done.svg"
+          featureLockColor="black"
+          DesignLockColor="black"
+          doneImgStyle={{
+            filter: 'hue-rotate(180deg) saturate(0%) brightness(189%)',
+          }}
+        >
+          <img
+            src="./images/ourpricingpage/card-images/most-popular.webp"
+            alt=""
+            loading="lazy"
+            className="absolute w-45 -top-10 -right-0 md:-right-14 md:-top-14 md:w-55"
+          />
+        </PricingCard>
         <PricingCard
-          type="Professional"
-          price="$256"
-          subscription="year"
-          description="Perfect for using in a personal website or a client project."
-          buttonText="Choose Professional"
+          title="Design Team"
+          description="Collaborate in real time with your designer."
+          price="540"
+          bgColor="bg-[#ffa500]"
+          btnColor="black"
+          priceColor="black text-extrabold"
+          feature1stList="2 Designated Designer"
+          feature2stList="Same-Day Delivery"
+          featurLockImg="./images/ourpricingpage/card-images/done.svg"
+          DesignLockImg="./images/ourpricingpage/card-images/done.svg"
+          featureLockColor="black"
+          DesignLockColor="black"
+          doneImgStyle={{
+            filter: 'hue-rotate(180deg) saturate(0%) brightness(189%)',
+          }}
         ></PricingCard>
       </div>
     </div>
@@ -92,29 +119,37 @@ const PriceCards = () => {
 };
 
 const PricingCard = ({
-  children,
   title = 'Advanced',
-  price = '$439/wk',
+  description = 'Create all of your everyday designs.',
+  price = '124',
   done = './images/ourpricingpage/card-images/done.svg',
   feature1stList = '1 Daily Output',
   feature2ndList = '1-2 Day Delivery',
-  feature3rdListColor = 'gray-400',
-  feature3rdListImg = './images/ourpricingpage/card-images/lock.svg',
-  description = 'Create all of your everyday designs.',
-  subscription,
-  buttonText,
-  active,
+  featureLockColor = 'gray-400',
+  DesignLockColor = 'gray-400',
+  featurLockImg = './images/ourpricingpage/card-images/lock.svg',
+  DesignLockImg = './images/ourpricingpage/card-images/lock.svg',
+  bgColor = 'bg-white',
+  priceColor = 'blue-500',
+  doneImgStyle,
+  btnColor,
+  children,
 }) => {
   return (
     <>
-      <div className="md:w-[330px] mx-2 left-0 ">
+      <div className={`md:w-[330px] mx-2 left-0 relative `}>
         {/* initial wraper */}
-        <div className="border-2 rounded-2xl p-6 border-gray-300 gap-4 grid">
+        <div
+          className={`border-2 rounded-2xl p-6 border-gray-300 gap-4 grid ${bgColor}`}
+        >
+          {children}
           <div className="grid gap-4 border-b-1 border-gray-300 pb-8">
-            <h5 className="text-2xl font-extrabold ">{title}</h5>
-            <p className="text-lg">{description}</p>
-            <h5 className="text-[27px] mt-2 font-extrabold text-blue-500">
-              USD {price}
+            <h5 className="text-[27px] font-extrabold ">{title}</h5>
+            <p className="text-xl">{description}</p>
+            <h5
+              className={`text-[27px] mt-2 font-extrabold text-${priceColor}`}
+            >
+              USD ${price}/wk
             </h5>
           </div>
           <div className="grid gap-4 pt-3">
@@ -125,6 +160,7 @@ const PricingCard = ({
                   loading="lazy"
                   src={done}
                   alt="done meaning it will given to client"
+                  style={doneImgStyle}
                 />
                 {feature1stList}
               </li>
@@ -133,15 +169,18 @@ const PricingCard = ({
                   loading="lazy"
                   src={done}
                   alt="done meaning it will given to client"
+                  style={doneImgStyle}
                 />
                 {feature2ndList}
               </li>
-              <li className={`flex text-xl gap-2 text-${feature3rdListColor}`}>
+              <li className={`flex text-xl gap-2 text-${featureLockColor}`}>
                 <img
                   loading="lazy"
-                  src={feature3rdListImg}
+                  src={featurLockImg}
                   alt="lock meaning it will not given to client"
-                />
+                  style={doneImgStyle}
+                />{' '}
+                Real Time Slack Communication
               </li>
             </ul>
           </div>
@@ -153,6 +192,7 @@ const PricingCard = ({
                   loading="lazy"
                   src={done}
                   alt="done meaning it will given to client"
+                  style={doneImgStyle}
                 />
                 Design Services
               </li>
@@ -161,6 +201,7 @@ const PricingCard = ({
                   loading="lazy"
                   src={done}
                   alt="done meaning it will given to client"
+                  style={doneImgStyle}
                 />
                 Web Design
               </li>
@@ -169,22 +210,25 @@ const PricingCard = ({
                   loading="lazy"
                   src={done}
                   alt="done meaning it will given to client"
+                  style={doneImgStyle}
                 />
                 Illustrations
               </li>
-              <li className="flex text-xl gap-2">
+              <li className={`flex text-xl gap-2 text-${DesignLockColor}`}>
                 <img
                   loading="lazy"
-                  src="./images/ourpricingpage/card-images/lock.svg"
+                  src={DesignLockImg}
                   alt="lock meaning it will not given to client"
+                  style={doneImgStyle}
                 />
                 Motion Graphics
               </li>
-              <li className="flex text-xl gap-2">
+              <li className={`flex text-xl gap-2 text-${DesignLockColor}`}>
                 <img
                   loading="lazy"
-                  src="./images/ourpricingpage/card-images/lock.svg"
+                  src={DesignLockImg}
                   alt="lock meaning it will not given to client"
+                  style={doneImgStyle}
                 />
                 Video Editing
               </li>
@@ -215,7 +259,11 @@ const PricingCard = ({
           </div>
           <div className="grid place-items-center my-5 gap-4">
             <a href="">
-              <Button className={'text-white md:text-2xl'} px="60">
+              <Button
+                className={'text-white md:text-2xl bg-black'}
+                px="60"
+                bg={btnColor}
+              >
                 Get Started
               </Button>
             </a>
