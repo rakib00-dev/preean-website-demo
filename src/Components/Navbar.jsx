@@ -415,6 +415,7 @@ const Navbar = () => {
           style={{ zIndex: 1122 }}
         >
           <DropDown
+            to="social-media"
             title="social media"
             src="./images/navbar/social-media.svg"
           />

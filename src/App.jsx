@@ -2,6 +2,10 @@ import React, { Suspense } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router';
 import MainLayout from './layouts/MainLayout';
 import HomePage from './pages/HomePage';
+
+const SocialMedia = React.lazy(() =>
+  import('./Components/SolutionsPages/SocialMedia')
+);
 const AllOurImgWorks = React.lazy(() =>
   import('./Components/WorkPage/AllOurImgWorks')
 );
@@ -23,6 +27,14 @@ function App() {
         {
           path: '/',
           element: <HomePage />,
+        },
+        {
+          path: '/social-media',
+          element: (
+            <Suspense fallback={<p>Loading...</p>}>
+              <SocialMedia />
+            </Suspense>
+          ),
         },
         {
           path: '/our-work',
