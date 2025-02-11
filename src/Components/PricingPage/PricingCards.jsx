@@ -198,10 +198,10 @@ const PricingCard = ({
           className={`border-2 rounded-2xl border-gray-300 p-4 gap-4 grid ${bgColor} `}
         >
           {children}
-          <div className="grid gap-4 border-b-1 border-gray-300 pb-8">
+          <div className="grid gap-4 border-b-1 border-gray-300 pb-5">
             <h5 className="text-xl font-extrabold ">{title}</h5>
             <p className="text-lg">{description}</p>
-            <h5 className={`text-2xl mt-2 font-extrabold text-${priceColor}`}>
+            <h5 className={`text-xl mt-2 font-extrabold text-${priceColor}`}>
               USD ${price}/wk
             </h5>
           </div>
