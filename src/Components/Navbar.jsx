@@ -99,6 +99,7 @@ const Navbar = () => {
             style={{ zIndex: 1122 }}
           >
             <DropDown
+              to="social-media"
               title="social media"
               src="./images/navbar/social-media.svg"
             />
@@ -270,6 +271,9 @@ const Navbar = () => {
         <Link
           to={to}
           className={`flex gap-2 p-4 justify-start items-center w-[210px] rounded-md DropItemHover ${className}`}
+          onClick={() => {
+            setIsNavOpen(false);
+          }}
         >
           <img
             src={src}
