@@ -2,19 +2,55 @@ import { useState } from 'react';
 import Button from '../Button';
 
 const PricingCards = () => {
-  const [isFirstClicked, setIsFirstClicked] = useState(true);
-  const [isSecondClicked, setIsSecondClicked] = useState(false);
-  const [isThirdClicked, setIsThirdClicked] = useState(false);
+  const [isFirstBtnActive, setIsFirstBtnActive] = useState(true);
+  const [isSecondBtnActive, setIsSecondBtnActive] = useState(false);
+  const [isThirdBtnActive, setIsThirdBtnActive] = useState(false);
+
+  const PriceCards = () => {
+    return (
+      <div className="flex justify-center items-center mx-auto">
+        {isFirstBtnActive ? (
+          <FilterCardPackage />
+        ) : isSecondBtnActive ? (
+          <FilterCardPackage />
+        ) : (
+          <FilterCardPackage />
+        )}
+      </div>
+    );
+  };
 
   return (
     <section className="bg-white mx-auto w-full max-w-7xl ">
       <div className="py-8 px-4 mx-auto lg:py-16">
         <div className="mx-auto w-fit max-w-screen-md text-center mb-8 lg:mb-12">
           <div className="uppercase gap-2 flex justify-center items-center bg-gray-100 py-2 px-1 rounded-xl">
-            <button className="uppercase font-extrabold cursor-pointer text-xs text-blue-400 bg-white py-2 px-4 rounded-xl md:text-lg ">
+            <button
+              className={
+                isFirstBtnActive
+                  ? `uppercase font-extrabold cursor-pointer text-xs text-blue-400 bg-white py-2 px-4 rounded-xl md:text-lg`
+                  : `uppercase font-extrabold cursor-pointer text-xs text-black  py-2 px-4 rounded-xl md:text-lg`
+              }
+              onClick={() => {
+                setIsFirstBtnActive(true);
+                setIsSecondBtnActive(false);
+                setIsThirdBtnActive(false);
+              }}
+            >
               weekly
             </button>
-            <button className=" relative uppercase font-extrabold cursor-pointer text-xs  py-2 px-4 rounded-xl md:text-lg ">
+            <button
+              className={
+                isSecondBtnActive
+                  ? `relative uppercase font-extrabold cursor-pointer text-xs text-blue-400 bg-white py-2 px-4 rounded-xl md:text-lg`
+                  : `relative uppercase font-extrabold cursor-pointer text-xs text-black  py-2 px-4 rounded-xl md:text-lg`
+              }
+              onClick={() => {
+                setIsFirstBtnActive(false);
+                setIsSecondBtnActive(true);
+                setIsThirdBtnActive(false);
+              }}
+            >
               monthly
               <img
                 loading="lazy"
@@ -29,7 +65,18 @@ const PricingCards = () => {
                 className=" absolute -top-6 md:hidden"
               />
             </button>
-            <button className=" relative uppercase font-extrabold cursor-pointer text-xs  py-2 px-4 rounded-xl md:text-lg ">
+            <button
+              className={
+                isThirdBtnActive
+                  ? `relative uppercase font-extrabold cursor-pointer text-xs text-blue-400 bg-white py-2 px-4 rounded-xl md:text-lg`
+                  : `relative uppercase font-extrabold cursor-pointer text-xs text-black  py-2 px-4 rounded-xl md:text-lg`
+              }
+              onClick={() => {
+                setIsFirstBtnActive(false);
+                setIsSecondBtnActive(false);
+                setIsThirdBtnActive(true);
+              }}
+            >
               quarterly
               <img
                 loading="lazy"
@@ -54,66 +101,64 @@ const PricingCards = () => {
 
 export default PricingCards;
 
-const PriceCards = () => {
+const FilterCardPackage = () => {
   return (
-    <div className="flex justify-center items-center mx-auto">
-      <div className="md:-left-14 relative grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-30">
-        <PricingCard
-          subscription="year"
-          description="Create all of your everyday designs."
-          buttonText="Choose Personal"
-        ></PricingCard>
-        <PricingCard
-          title="Business"
-          description="Get double the output everyday."
-          price="225"
-          feature1stList="2 Daily Output"
-          feature2ndList="Next-Day Delivery"
-          DesignLockImg="./images/ourpricingpage/card-images/done.svg"
-          DesignLockColor="black"
-        ></PricingCard>
-        <PricingCard
-          title="Designated Designer"
-          description="Collaborate in real time with your designer."
-          price="293"
-          feature1stList="1 Designated Designer"
-          feature2stList="Same-Day Delivery"
-          bgColor="bg-[#ffa500]"
-          btnColor="black"
-          priceColor="black text-extrabold"
-          featurLockImg="./images/ourpricingpage/card-images/done.svg"
-          DesignLockImg="./images/ourpricingpage/card-images/done.svg"
-          featureLockColor="black"
-          DesignLockColor="black"
-          doneImgStyle={{
-            filter: 'hue-rotate(180deg) saturate(0%) brightness(189%)',
-          }}
-        >
-          <img
-            src="./images/ourpricingpage/card-images/most-popular.webp"
-            alt=""
-            loading="lazy"
-            className="absolute w-45 -top-10 -right-0 md:-right-14 md:-top-14 md:w-55"
-          />
-        </PricingCard>
-        <PricingCard
-          title="Design Team"
-          description="Collaborate in real time with your designer."
-          price="540"
-          bgColor="bg-[#ffa500]"
-          btnColor="black"
-          priceColor="black text-extrabold"
-          feature1stList="2 Designated Designer"
-          feature2stList="Same-Day Delivery"
-          featurLockImg="./images/ourpricingpage/card-images/done.svg"
-          DesignLockImg="./images/ourpricingpage/card-images/done.svg"
-          featureLockColor="black"
-          DesignLockColor="black"
-          doneImgStyle={{
-            filter: 'hue-rotate(180deg) saturate(0%) brightness(189%)',
-          }}
-        ></PricingCard>
-      </div>
+    <div className="md:-left-14 relative grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-30">
+      <PricingCard
+        subscription="year"
+        description="Create all of your everyday designs."
+        buttonText="Choose Personal"
+      ></PricingCard>
+      <PricingCard
+        title="Business"
+        description="Get double the output everyday."
+        price="225"
+        feature1stList="2 Daily Output"
+        feature2ndList="Next-Day Delivery"
+        DesignLockImg="./images/ourpricingpage/card-images/done.svg"
+        DesignLockColor="black"
+      ></PricingCard>
+      <PricingCard
+        title="Designated Designer"
+        description="Collaborate in real time with your designer."
+        price="293"
+        feature1stList="1 Designated Designer"
+        feature2stList="Same-Day Delivery"
+        bgColor="bg-[#ffa500]"
+        btnColor="black"
+        priceColor="black text-extrabold"
+        featurLockImg="./images/ourpricingpage/card-images/done.svg"
+        DesignLockImg="./images/ourpricingpage/card-images/done.svg"
+        featureLockColor="black"
+        DesignLockColor="black"
+        doneImgStyle={{
+          filter: 'hue-rotate(180deg) saturate(0%) brightness(189%)',
+        }}
+      >
+        <img
+          src="./images/ourpricingpage/card-images/most-popular.webp"
+          alt=""
+          loading="lazy"
+          className="absolute w-45 -top-10 -right-0 md:-right-14 md:-top-14 md:w-55"
+        />
+      </PricingCard>
+      <PricingCard
+        title="Design Team"
+        description="Collaborate in real time with your designer."
+        price="540"
+        bgColor="bg-[#ffa500]"
+        btnColor="black"
+        priceColor="black text-extrabold"
+        feature1stList="2 Designated Designer"
+        feature2stList="Same-Day Delivery"
+        featurLockImg="./images/ourpricingpage/card-images/done.svg"
+        DesignLockImg="./images/ourpricingpage/card-images/done.svg"
+        featureLockColor="black"
+        DesignLockColor="black"
+        doneImgStyle={{
+          filter: 'hue-rotate(180deg) saturate(0%) brightness(189%)',
+        }}
+      ></PricingCard>
     </div>
   );
 };
