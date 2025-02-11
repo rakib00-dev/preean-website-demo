@@ -3,6 +3,7 @@ import OurWork from '../Components/OurWork';
 import PageHeader from '../Components/PageHeader';
 import AllPlans from '../Components/PricingPage/AllPlans';
 import PricingCards from '../Components/PricingPage/PricingCards';
+import PricingFaq from '../Components/PricingPage/PricingFaq';
 import SendReqSection from '../Components/SendReqSection';
 import WallOfLove from '../Components/WallOfLove';
 
@@ -21,6 +22,7 @@ const PricingPage = () => {
       <AllPlans />
       <OurWork />
       <WallOfLove />
+      <PricingFaq />
       <SendReqSection
         title={
           <h1 className="text-xl px-8 mt-15 mb-4 font-extrabold md:text-4xl xl:text-6xl">
