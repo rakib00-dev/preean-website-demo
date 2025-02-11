@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Button from '../Button';
+import { Link } from 'react-router-dom';
 
 const PricingCards = () => {
   const [isFirstBtnActive, setIsFirstBtnActive] = useState(true);
@@ -185,6 +186,7 @@ const FilterCardPackage = ({
         feature1stList="1 Designated Designer"
         feature2stList="Same-Day Delivery"
         bgColor="bg-[#ffa500]"
+        btnText="Book A Call"
         btnColor="black"
         priceColor="black text-extrabold"
         featurLockImg="./images/ourpricingpage/card-images/done.svg"
@@ -207,6 +209,7 @@ const FilterCardPackage = ({
         description="Collaborate in real time with your designer."
         price={fourthPrice}
         bgColor="bg-[#ffa500]"
+        btnText="Book A Call"
         btnColor="black"
         priceColor="black text-extrabold"
         feature1stList="2 Designated Designer"
@@ -237,6 +240,7 @@ const PricingCard = ({
   bgColor = 'bg-white',
   priceColor = 'blue-500',
   doneImgStyle,
+  btnText = 'Get Started',
   btnColor,
   children,
 }) => {
@@ -361,15 +365,15 @@ const PricingCard = ({
             </div>
           </div>
           <div className="grid place-items-center my-5 gap-4">
-            <a href="">
+            <Link to={'book-a-call'}>
               <Button
                 className={'text-white md:text-xl bg-black'}
                 px="60"
                 bg={btnColor}
               >
-                Get Started
+                {btnText}
               </Button>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
