@@ -13,7 +13,7 @@ const Navbar = () => {
     return (
       <>
         <ListItem
-          navLink={''}
+          navLink={'#'}
           className={
             'uppercase  flex justify-start items-center gap-2  text-sm sm:font-bold'
           }
@@ -42,7 +42,7 @@ const Navbar = () => {
           pricing
         </ListItem>
         <ListItem
-          navLink=""
+          navLink="#"
           className={
             'uppercase  flex justify-start items-center gap-2  text-sm sm:font-bold'
           }
@@ -67,7 +67,7 @@ const Navbar = () => {
     return (
       <>
         <ListItem
-          navLink=""
+          navLink="#"
           // className={
           //   'uppercase flex justify-start items-center gap-2 sm:font-bold'
           // }
@@ -165,7 +165,7 @@ const Navbar = () => {
           pricing
         </ListItem>
         <ListItem
-          navLink=""
+          navLink="#"
           smallClassName={({ isActive }) =>
             isActive
               ? 'uppercase flex justify-start items-center gap-2 sm:font-bold'
