@@ -2,7 +2,6 @@ import Button from '../Components/Button';
 import OurWork from '../Components/OurWork';
 import PageHeader from '../Components/PageHeader';
 import PricingCards from '../Components/PricingPage/PricingCards';
-import WebflowDevelopment from '../Components/PricingPage/WebflowDevelopment';
 import SendReqSection from '../Components/SendReqSection';
 import WallOfLove from '../Components/WallOfLove';
 
@@ -18,7 +17,6 @@ const PricingPage = () => {
         </PageHeader>
       </section>
       <PricingCards />
-      <WebflowDevelopment />
       <OurWork />
       <WallOfLove />
       <SendReqSection
