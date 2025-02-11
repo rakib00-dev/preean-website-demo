@@ -112,7 +112,7 @@ const FilterCardPackage = ({
   fourthPrice = '599',
 }) => {
   return (
-    <div className=" relative grid grid-cols-1 md:grid-cols-3 gap-5 lg:grid-cols-4 lg:gap-30">
+    <div className=" relative grid grid-cols-1 md:grid-cols-3 gap-5 2xl:grid-cols-4 2xl:gap-30">
       <PricingCard
         price={firstPrice}
         subscription="year"
@@ -192,25 +192,23 @@ const PricingCard = ({
 }) => {
   return (
     <>
-      <div className={`md:w-[330px] md:h-[925px] mx-2 left-0 relative`}>
+      <div className={`md:w-[330px]  mx-2 left-0 relative`}>
         {/* initial wraper */}
         <div
           className={`border-2 rounded-2xl border-gray-300 p-4 gap-4 grid ${bgColor} `}
         >
           {children}
           <div className="grid gap-4 border-b-1 border-gray-300 pb-8">
-            <h5 className="text-[27px] font-extrabold ">{title}</h5>
-            <p className="text-xl">{description}</p>
-            <h5
-              className={`text-[27px] mt-2 font-extrabold text-${priceColor}`}
-            >
+            <h5 className="text-xl font-extrabold ">{title}</h5>
+            <p className="text-lg">{description}</p>
+            <h5 className={`text-2xl mt-2 font-extrabold text-${priceColor}`}>
               USD ${price}/wk
             </h5>
           </div>
           <div className="grid gap-4 pt-3">
-            <h5 className="text-2xl font-extrabold ">Features</h5>
+            <h5 className="text-xl font-extrabold ">Features</h5>
             <ul className="grid gap-4">
-              <li className="flex text-xl gap-2">
+              <li className="flex text-md gap-2">
                 <img
                   loading="lazy"
                   src={done}
@@ -219,7 +217,7 @@ const PricingCard = ({
                 />
                 {feature1stList}
               </li>
-              <li className="flex text-xl gap-2">
+              <li className="flex text-md gap-2">
                 <img
                   loading="lazy"
                   src={done}
@@ -228,7 +226,7 @@ const PricingCard = ({
                 />
                 {feature2ndList}
               </li>
-              <li className={`flex text-xl gap-2 text-${featureLockColor}`}>
+              <li className={`flex text-md gap-2 text-${featureLockColor}`}>
                 <img
                   loading="lazy"
                   src={featurLockImg}
@@ -240,9 +238,9 @@ const PricingCard = ({
             </ul>
           </div>
           <div className="grid gap-4">
-            <h5 className="text-2xl font-extrabold ">Design Services</h5>
+            <h5 className="text-xl font-extrabold ">Design Services</h5>
             <ul className="grid gap-4">
-              <li className="flex text-xl gap-2">
+              <li className="flex text-md gap-2">
                 <img
                   loading="lazy"
                   src={done}
@@ -251,7 +249,7 @@ const PricingCard = ({
                 />
                 Design Services
               </li>
-              <li className="flex text-xl gap-2">
+              <li className="flex text-md gap-2">
                 <img
                   loading="lazy"
                   src={done}
@@ -260,7 +258,7 @@ const PricingCard = ({
                 />
                 Web Design
               </li>
-              <li className="flex text-xl gap-2">
+              <li className="flex text-md gap-2">
                 <img
                   loading="lazy"
                   src={done}
@@ -269,7 +267,7 @@ const PricingCard = ({
                 />
                 Illustrations
               </li>
-              <li className={`flex text-xl gap-2 text-${DesignLockColor}`}>
+              <li className={`flex text-md gap-2 text-${DesignLockColor}`}>
                 <img
                   loading="lazy"
                   src={DesignLockImg}
@@ -278,7 +276,7 @@ const PricingCard = ({
                 />
                 Motion Graphics
               </li>
-              <li className={`flex text-xl gap-2 text-${DesignLockColor}`}>
+              <li className={`flex text-md gap-2 text-${DesignLockColor}`}>
                 <img
                   loading="lazy"
                   src={DesignLockImg}
@@ -290,7 +288,7 @@ const PricingCard = ({
             </ul>
           </div>
           <div className="grid gap-4">
-            <h5 className="text-2xl font-extrabold ">Tools</h5>
+            <h5 className="text-xl font-extrabold ">Tools</h5>
             <div className="flex gap-2">
               <img
                 loading="lazy"
@@ -315,7 +313,7 @@ const PricingCard = ({
           <div className="grid place-items-center my-5 gap-4">
             <a href="">
               <Button
-                className={'text-white md:text-2xl bg-black'}
+                className={'text-white md:text-xl bg-black'}
                 px="60"
                 bg={btnColor}
               >
