@@ -1,7 +1,18 @@
 import { useState } from 'react';
 import { FaChevronDown } from 'react-icons/fa';
 
-const PricingFaq = () => {
+const PricingFaq = ({
+  firstTile = 'What does unlimited really mean?',
+  secondTitle = "What's the turnaround time?",
+  thirdTitle = 'What type of designs can I request?',
+  fourthTitle = 'Do I own the rights to the designs?',
+  fifthTitle = 'Are there any hidden fees?',
+  p1 = 'With all our plans, you can submit as many design requests as you like and our designers will work on it every business day. Revisions are unlimited too! No matter how many requests or revisions you submit, the price stays the same. You are only limited in terms of speed as we are real humans doing real work. You can read more about the amount of design you can expect to receive on a daily basis here.',
+  p2 = 'Turnaround time depends on various factors, including the type and complexity of the task, the quality of the design brief and the number of revisions needed. On average, you can expect to receive your design the next business day with our Advanced and Business plans and on the same day with our Dedicated Designer plan.',
+  p3 = 'The answer is a lot ! If you can clearly explain or show it, then we can design it. If you feel like you don’t know what you want and would need multiple meetings with a brand strategist to figure it out, then ManyPixels might not be the right fit for you at this time. Note that we do NOT offer 3D design, complex UI/UX, prototyping and coding. You can review our full Scope of Service here.',
+  p4 = 'Yes. All of our work is done for you and for you only. You have complete ownership of the files as soon as you received them and are free to use them as you please. Source files (PSD, AI, INDD, FIG) are always included along with PNG, JPEG, SVG & PDF.',
+  p5 = 'No! What you see is what you pay! Everything is included.',
+}) => {
   const [isFristClicked, setIsFristClicked] = useState(false);
   const [isSecondClicked, setIsSecondClicked] = useState(false);
   const [isThirdClicked, setIsThirdClicked] = useState(false);
@@ -17,12 +28,12 @@ const PricingFaq = () => {
             F.A.Q
           </h1>
           <p className=" text-lg text-start w-70 md:text-2xl md:w-[25.5rem]">
-            Can’t find the info your are looking for? Visit our Help Center or
-            send us an email at Govenderpreean23@gmail.com
+            Can’t find the info your are looking for? send us an email at
+            Govenderpreean23@gmail.com
           </p>
         </div>
         {/* FAQS */}
-        <div className="grid w-full md:mr-3 gap-6">
+        <div className="grid w-full md:mt-20 md:mr-3 gap-6">
           <div className="bg-gray-100 h-auto w- text-md md:text-xl py-4 pr-10 pl-4 font-bold rounded-2xl cursor-pointer">
             <h1
               className="flex gap-5 "
@@ -30,7 +41,7 @@ const PricingFaq = () => {
                 setIsFristClicked((prev) => !prev);
               }}
             >
-              What does unlimited really mean?{' '}
+              {firstTile}{' '}
               <FaChevronDown
                 className={
                   isFristClicked
@@ -46,13 +57,7 @@ const PricingFaq = () => {
                   : `transition-all scale-y-0 hidden text-[1.1rem] font-light mt-4`
               }
             >
-              With all our plans, you can submit as many design requests as you
-              like and our designers will work on it every business day.
-              Revisions are unlimited too! No matter how many requests or
-              revisions you submit, the price stays the same. You are only
-              limited in terms of speed as we are real humans doing real work.
-              You can read more about the amount of design you can expect to
-              receive on a daily basis here.
+              {p1}
             </p>
           </div>
           <div className="bg-gray-100 text-md md:text-xl py-4 pr-10 pl-4 font-bold rounded-2xl cursor-pointer">
@@ -62,7 +67,7 @@ const PricingFaq = () => {
                 setIsSecondClicked((prev) => !prev);
               }}
             >
-              What's the turnaround time?{' '}
+              {secondTitle}{' '}
               <FaChevronDown
                 className={
                   isSecondClicked
@@ -78,11 +83,7 @@ const PricingFaq = () => {
                   : `transition-all scale-y-0 hidden text-[1.1rem] font-light mt-4`
               }
             >
-              Turnaround time depends on various factors, including the type and
-              complexity of the task, the quality of the design brief and the
-              number of revisions needed. On average, you can expect to receive
-              your design the next business day with our Advanced and Business
-              plans and on the same day with our Dedicated Designer plan.
+              {p2}
             </p>
           </div>
           <div className="bg-gray-100 text-md md:text-xl py-4 pr-10 pl-4 font-bold rounded-2xl cursor-pointer">
@@ -92,7 +93,7 @@ const PricingFaq = () => {
                 setIsThirdClicked((prev) => !prev);
               }}
             >
-              What type of designs can I request?{' '}
+              {thirdTitle}{' '}
               <FaChevronDown
                 className={
                   isThirdClicked
@@ -108,11 +109,7 @@ const PricingFaq = () => {
                   : `transition-all scale-y-0 hidden text-[1.1rem] font-light mt-4`
               }
             >
-              Turnaround time depends on various factors, including the type and
-              complexity of the task, the quality of the design brief and the
-              number of revisions needed. On average, you can expect to receive
-              your design the next business day with our Advanced and Business
-              plans and on the same day with our Dedicated Designer plan.
+              {p3}
             </p>
           </div>
           <div className="bg-gray-100 text-md md:text-xl py-4 pr-10 pl-4 font-bold rounded-2xl cursor-pointer">
@@ -122,7 +119,7 @@ const PricingFaq = () => {
                 setIsFourthClicked((prev) => !prev);
               }}
             >
-              Do I own the rights to the designs?{' '}
+              {fourthTitle}{' '}
               <FaChevronDown
                 className={
                   isFourthClicked
@@ -138,11 +135,7 @@ const PricingFaq = () => {
                   : `transition-all scale-y-0 hidden text-[1.1rem] font-light mt-4`
               }
             >
-              Turnaround time depends on various factors, including the type and
-              complexity of the task, the quality of the design brief and the
-              number of revisions needed. On average, you can expect to receive
-              your design the next business day with our Advanced and Business
-              plans and on the same day with our Dedicated Designer plan.
+              {p4}
             </p>
           </div>
           <div className="bg-gray-100 text-md md:text-xl py-4 pr-10 pl-4 font-bold rounded-2xl cursor-pointer">
@@ -152,7 +145,7 @@ const PricingFaq = () => {
                 setIsFifthClicked((prev) => !prev);
               }}
             >
-              Are there any hidden fees?{' '}
+              {fifthTitle}{' '}
               <FaChevronDown
                 className={
                   isFifthClicked
@@ -168,11 +161,7 @@ const PricingFaq = () => {
                   : `transition-all scale-y-0 hidden text-[1.1rem] font-light mt-4`
               }
             >
-              Turnaround time depends on various factors, including the type and
-              complexity of the task, the quality of the design brief and the
-              number of revisions needed. On average, you can expect to receive
-              your design the next business day with our Advanced and Business
-              plans and on the same day with our Dedicated Designer plan.
+              {p5}
             </p>
           </div>
         </div>
