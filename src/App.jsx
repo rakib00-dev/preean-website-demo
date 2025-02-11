@@ -3,9 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router';
 import MainLayout from './layouts/MainLayout';
 import HomePage from './pages/HomePage';
 
-const SocialMedia = React.lazy(() =>
-  import('./Components/SolutionsPages/SocialMedia')
-);
+const SocialMediaPage = React.lazy(() => import('./pages/SocialMediaPage'));
 const AllOurImgWorks = React.lazy(() =>
   import('./Components/WorkPage/AllOurImgWorks')
 );
@@ -32,7 +30,7 @@ function App() {
           path: '/social-media',
           element: (
             <Suspense fallback={<p>Loading...</p>}>
-              <SocialMedia />
+              <SocialMediaPage />
             </Suspense>
           ),
         },
