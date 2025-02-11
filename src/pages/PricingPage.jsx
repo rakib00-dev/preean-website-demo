@@ -1,6 +1,7 @@
 import Button from '../Components/Button';
 import OurWork from '../Components/OurWork';
 import PageHeader from '../Components/PageHeader';
+import AllPlans from '../Components/PricingPage/AllPlans';
 import PricingCards from '../Components/PricingPage/PricingCards';
 import SendReqSection from '../Components/SendReqSection';
 import WallOfLove from '../Components/WallOfLove';
@@ -17,6 +18,7 @@ const PricingPage = () => {
         </PageHeader>
       </section>
       <PricingCards />
+      <AllPlans />
       <OurWork />
       <WallOfLove />
       <SendReqSection
