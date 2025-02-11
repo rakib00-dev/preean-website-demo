@@ -139,7 +139,7 @@ const PricingCards = () => {
               <a href="">
                 <button
                   className={
-                    'py-2 px-6 rounded-md font-bold text-black text-lg bg-amber-300'
+                    'py-2 px-6 rounded-md font-extrabold text-black text-lg bg-amber-300'
                   }
                 >
                   Book A Call
