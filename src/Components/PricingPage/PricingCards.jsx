@@ -6,20 +6,6 @@ const PricingCards = () => {
   const [isSecondBtnActive, setIsSecondBtnActive] = useState(false);
   const [isThirdBtnActive, setIsThirdBtnActive] = useState(false);
 
-  const PriceCards = () => {
-    return (
-      <div className="flex justify-center items-center mx-auto">
-        {isFirstBtnActive ? (
-          <FilterCardPackage />
-        ) : isSecondBtnActive ? (
-          <FilterCardPackage />
-        ) : (
-          <FilterCardPackage />
-        )}
-      </div>
-    );
-  };
-
   return (
     <section className="bg-white mx-auto w-full max-w-7xl ">
       <div className="py-8 px-4 mx-auto lg:py-16">
@@ -93,7 +79,25 @@ const PricingCards = () => {
             </button>
           </div>
         </div>
-        <PriceCards />
+        <div className="flex justify-center items-center mx-auto">
+          {isFirstBtnActive ? (
+            <FilterCardPackage />
+          ) : isSecondBtnActive ? (
+            <FilterCardPackage
+              firstPrice="124"
+              secondPrice="225"
+              thirdPrice="293"
+              fourthPrice="540"
+            />
+          ) : (
+            <FilterCardPackage
+              firstPrice="110"
+              secondPrice="200"
+              thirdPrice="250"
+              fourthPrice="480"
+            />
+          )}
+        </div>
       </div>
     </section>
   );
@@ -101,10 +105,16 @@ const PricingCards = () => {
 
 export default PricingCards;
 
-const FilterCardPackage = () => {
+const FilterCardPackage = ({
+  firstPrice = '138',
+  secondPrice = '250',
+  thirdPrice = '325',
+  fourthPrice = '599',
+}) => {
   return (
     <div className="md:-left-14 relative grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-30">
       <PricingCard
+        price={firstPrice}
         subscription="year"
         description="Create all of your everyday designs."
         buttonText="Choose Personal"
@@ -112,7 +122,7 @@ const FilterCardPackage = () => {
       <PricingCard
         title="Business"
         description="Get double the output everyday."
-        price="225"
+        price={secondPrice}
         feature1stList="2 Daily Output"
         feature2ndList="Next-Day Delivery"
         DesignLockImg="./images/ourpricingpage/card-images/done.svg"
@@ -121,7 +131,7 @@ const FilterCardPackage = () => {
       <PricingCard
         title="Designated Designer"
         description="Collaborate in real time with your designer."
-        price="293"
+        price={thirdPrice}
         feature1stList="1 Designated Designer"
         feature2stList="Same-Day Delivery"
         bgColor="bg-[#ffa500]"
@@ -145,7 +155,7 @@ const FilterCardPackage = () => {
       <PricingCard
         title="Design Team"
         description="Collaborate in real time with your designer."
-        price="540"
+        price={fourthPrice}
         bgColor="bg-[#ffa500]"
         btnColor="black"
         priceColor="black text-extrabold"
