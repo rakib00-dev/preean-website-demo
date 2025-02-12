@@ -5,9 +5,9 @@ const Hero = () => {
   return (
     <>
       <header
-        className={`md:mx-auto w-full my-6 mx-4 overflow-hidden md:my-20 pb-20 max-w-7xl items-center bg-white `}
+        className={`md:mx-auto w-full my-6 mx-4 overflow-hidden md:my-20 pb-20 max-w-7xl items-center  `}
       >
-        <div className="flex mx-2 flex-col-reverse top-0 justify-center items-center md:flex-row-reverse md:mx-19">
+        <div className=" relative flex mx-2 flex-col-reverse top-0 justify-center items-center md:flex-row-reverse md:mx-19 ">
           {/* imges */}
           <div className="mx-auto grid place-items-center top-0 mt-44 mb-50 w-full cursor-pointer md:mt-20 md:mb-20 md:w-4/5">
             <div className="relative m-auto mt-4 h-auto w-full">
@@ -41,13 +41,8 @@ const Hero = () => {
                     loading="lazy"
                   />
                 </div>
-                {/* <img
-                  src="./images/hero/play.png"
-                  alt="play"
-                  className=" flex justify-center items-center place-items-center rounded-xl absolute shadow-xl w-15 h-15 "
-                  loading="lazy"
-                />
-                <div className=" flex justify-center items-center place-items-center rounded-xl absolute shadow-xl w-15 h-15 playWave" /> */}
+
+                {/* <div className=" flex justify-center items-center place-items-center rounded-xl absolute shadow-xl w-15 h-15 playWave" />  */}
               </div>
             </div>
           </div>
@@ -73,6 +68,12 @@ const Hero = () => {
               />
             </Link>
           </div>
+          {/* <img
+            src="./images/ourpricingpage/deep-blue-squre.svg"
+            alt="play"
+            className=" flex justify-center items-center place-items-center rounded-xl absolute shadow-xl w-[1000px] -top-40 -right-64 -z-30 rotateAnimation"
+            loading="lazy"
+          /> */}
         </div>
       </header>
     </>
