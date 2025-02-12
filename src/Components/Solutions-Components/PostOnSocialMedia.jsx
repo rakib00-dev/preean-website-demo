@@ -6,7 +6,7 @@ const PostOnSocialMedia = () => {
       smallTitle="POST ON ALL SOCIAL MEDIA CHANNELS"
       bigTitle="Social media graphics for all platforms"
     >
-      <div className=" grid grid-cols-1 place-items-center relative w-11/12  md:grid-cols-3">
+      <div className=" grid grid-cols-1 place-items-center relative w-11/12 gap-10 md:gap-0  md:grid-cols-3">
         {/* cards */}
         <div className=" grid gap-4 relative text-center mb-5 rounded-lg md:mb-15">
           <div className="md:w-[320px]">
