@@ -19,7 +19,7 @@ const Hero = () => {
               /> */}
               <div className="relative m-auto shadow-[10px_10px_45px_5px_rgba(0,0,0,0.25)] rounded-2xl flex flex-col justify-center items-center w-full lg:scale-80">
                 <div className="px-6 pb-6 pt-2 grid gap-5 bg-white rounded-xl border-gray-200 border-2 shadow-2xl absolute cardOne">
-                  <h1 className="md:text-2xl font-bold bg-gray-100 p-4 rounded-2xl ">
+                  <h1 className="md:text-2xl text-xs font-bold bg-gray-100 p-4 rounded-2xl ">
                     Reduce no-shows and stay on track
                   </h1>
                   <img
@@ -31,7 +31,7 @@ const Hero = () => {
                 </div>
 
                 <div className="px-6 pb-6 pt-2 grid gap-5 bg-white rounded-xl border-gray-200 border-2 shadow-2xl absolute cardTwo ">
-                  <h1 className="md:text-2xl font-bold bg-gray-100 p-4 rounded-2xl ">
+                  <h1 className="md:text-2xl text-xs font-bold bg-gray-100 p-4 rounded-2xl ">
                     Share your booking page
                   </h1>
                   <img
