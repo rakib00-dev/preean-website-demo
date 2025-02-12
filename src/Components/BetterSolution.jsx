@@ -7,7 +7,7 @@ const BetterSolution = () => {
         smallTitle={'what if there was a solution?'}
         bigTitle={'Meet your virtual design team'}
         para={
-          'ManyPixels provides you with vetted designers for a flat monthly fee. No hiring, no contracts, no stress.'
+          'DesignPro provides you with vetted designers for a flat monthly fee. No hiring, no contracts, no stress.'
         }
         imgSrc={'./images/FirstTypeImg/better-solution.avif'}
         textContentAlign="end"

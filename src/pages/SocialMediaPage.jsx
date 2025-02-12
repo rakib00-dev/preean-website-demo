@@ -7,6 +7,9 @@ import AgenciesWordwide from '../Components/Solutions-Components/AgenciesWordwid
 import WhyChoose from '../Components/Solutions-Components/WhyChoose';
 import SocialMediaWallOfLove from '../Components/Solutions-Components/SocialMediaWallOfLove';
 
+const AnimatedPost = React.lazy(() =>
+  import('../Components/Solutions-Components/AnimatedPost')
+);
 const PostOnSocialMedia = React.lazy(() =>
   import('../Components/Solutions-Components/PostOnSocialMedia')
 );
@@ -29,6 +32,9 @@ const SocialMediaPage = () => {
         <PostOnSocialMedia />
       </Suspense>
       <SocialMediaWallOfLove />
+      <Suspense fallback={<p>Loading...</p>}>
+        <AnimatedPost />
+      </Suspense>
       <PricingFaq
         firstTile="What's the turnaround time?"
         p1="Turnaround time depends on various factors, including the type and complexity of the task, the quality of the design brief and the number of revisions needed. On average, you can expect to receive your design the next business day with our Advanced and Business plans and on the same day with our Dedicated Designer plan."

@@ -35,7 +35,7 @@ function WallOfLove() {
     {
       img: './images/walloflove/4star.svg',
       title: 'We really enjoy their quality',
-      p: 'We are using ManyPixels for quite a long time now and we really enjoy their quality!',
+      p: 'We are using DesignPro for quite a long time now and we really enjoy their quality!',
       name: 'Flowdee',
     },
   ];

@@ -7,6 +7,7 @@ const SecondTypeSection = ({
   imgSrc = './images/FirstTypeImg/need-designer-soon.avif',
   style,
   children,
+  btnChild,
   paraChildren,
   textContentAlign = 'center',
 }) => {
@@ -92,9 +93,13 @@ const SecondTypeSection = ({
             </div>
           </div>
         )}
-        <Link to="/book-a-call" className="my-5">
-          <Button text={'Get Started'} className={'text-white'} />
-        </Link>
+        {btnChild ? (
+          btnChild
+        ) : (
+          <Link to="/book-a-call" className="my-5">
+            <Button text={'Get Started'} className={'text-white'} />
+          </Link>
+        )}
       </div>
     </section>
   );

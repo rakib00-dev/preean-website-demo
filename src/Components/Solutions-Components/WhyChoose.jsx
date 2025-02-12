@@ -3,13 +3,13 @@ import SecondTypeSection from '../SecondTypeSection';
 const WhyChoose = () => {
   return (
     <SecondTypeSection
-      smallTitle="why choose manypixels"
+      smallTitle="why choose designPro"
       bigTitle="A smarter way to outsource your designs"
       paraChildren={
         <p className="mx-auto text-xl text-center mb-5 md:w-[80%]">
-          ManyPixels is an all-in-one creative service. For a flat and
-          affordable monthly price you get access to a team of talented
-          designers who can help with all your design projects.
+          DesignPro is an all-in-one creative service. For a flat and affordable
+          monthly price you get access to a team of talented designers who can
+          help with all your design projects.
         </p>
       }
     >
