@@ -4,6 +4,7 @@ import SolutionHeader from '../Components/Solutions-Components/SolutionHeader';
 import React, { Suspense } from 'react';
 import TargetAudience from '../Components/Solutions-Components/TargetAudience';
 import AgenciesWordwide from '../Components/Solutions-Components/AgenciesWordwide';
+import WhyChoose from '../Components/Solutions-Components/WhyChoose';
 
 const OurSoluWork = React.lazy(() =>
   import('../Components/Solutions-Components/OurSoluWork')
@@ -19,6 +20,7 @@ const SocialMediaPage = () => {
       </Suspense>
       <TargetAudience />
       <AgenciesWordwide />
+      <WhyChoose />
       <PricingFaq
         firstTile="What's the turnaround time?"
         p1="Turnaround time depends on various factors, including the type and complexity of the task, the quality of the design brief and the number of revisions needed. On average, you can expect to receive your design the next business day with our Advanced and Business plans and on the same day with our Dedicated Designer plan."

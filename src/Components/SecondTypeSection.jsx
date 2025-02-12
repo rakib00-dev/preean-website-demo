@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Button from './Button';
 
 const SecondTypeSection = ({
@@ -5,6 +6,7 @@ const SecondTypeSection = ({
   bigTitle = 'Get your designs done in 1-2 days, not weeks',
   imgSrc = './images/FirstTypeImg/need-designer-soon.avif',
   style,
+  children,
   textContentAlign = 'center',
 }) => {
   const workImgs = [];
@@ -36,55 +38,61 @@ const SecondTypeSection = ({
         </div>
 
         {/* card content */}
-        <div className=" justify-center items-center w-11/12 mx-auto md:flex gap-5">
-          <div className="flex justify-center items-center w-full flex-col bg-gray-100 p-4 py-6 text-center mb-5 rounded-lg">
-            <img
-              src={workImgs[0]}
-              alt={workImgs[0]}
-              loading="lazy"
-              className="w-24"
-            />
-            <div className="flex flex-col gap-2">
-              <h3 className="text-xl font-extrabold ">Submit your request</h3>
-              <p className="text-md ">
-                Let us know what you need. Share references and upload your
-                brand assets.
-              </p>
+        {children ? (
+          children
+        ) : (
+          <div className=" justify-center items-center w-11/12 mx-auto md:flex gap-5">
+            <div className="flex justify-center items-center w-full flex-col bg-gray-100 p-4 py-6 text-center mb-5 rounded-lg">
+              <img
+                src={workImgs[0]}
+                alt={workImgs[0]}
+                loading="lazy"
+                className="w-24"
+              />
+              <div className="flex flex-col gap-2">
+                <h3 className="text-xl font-extrabold ">Submit your request</h3>
+                <p className="text-md ">
+                  Let us know what you need. Share references and upload your
+                  brand assets.
+                </p>
+              </div>
+            </div>
+            <div className="flex justify-center items-center flex-col bg-gray-100 p-4 py-6 text-center w-full mb-5 rounded-lg">
+              <img
+                src={workImgs[1]}
+                alt={workImgs[1]}
+                loading="lazy"
+                className="w-24"
+              />
+              <div className="flex flex-col gap-2">
+                <h3 className="text-xl font-extrabold ">
+                  Your designers gets to work
+                </h3>
+                <p className="text-md ">
+                  Get instantly matched with the best designers for the job.
+                </p>
+              </div>
+            </div>
+            <div className="flex justify-center items-center flex-col bg-gray-100 p-4 py-6 text-center w-full mb-5 rounded-lg">
+              <img
+                src={workImgs[2]}
+                alt={workImgs[2]}
+                loading="lazy"
+                className="w-24"
+              />
+              <div className="flex flex-col gap-2">
+                <h3 className="text-xl font-extrabold ">Receive your design</h3>
+                <p className="text-md ">
+                  Give us your feedback. We will revise your designs as many
+                  times as needed.
+                </p>
+              </div>
             </div>
           </div>
-          <div className="flex justify-center items-center flex-col bg-gray-100 p-4 py-6 text-center w-full mb-5 rounded-lg">
-            <img
-              src={workImgs[1]}
-              alt={workImgs[1]}
-              loading="lazy"
-              className="w-24"
-            />
-            <div className="flex flex-col gap-2">
-              <h3 className="text-xl font-extrabold ">
-                Your designers gets to work
-              </h3>
-              <p className="text-md ">
-                Get instantly matched with the best designers for the job.
-              </p>
-            </div>
-          </div>
-          <div className="flex justify-center items-center flex-col bg-gray-100 p-4 py-6 text-center w-full mb-5 rounded-lg">
-            <img
-              src={workImgs[2]}
-              alt={workImgs[2]}
-              loading="lazy"
-              className="w-24"
-            />
-            <div className="flex flex-col gap-2">
-              <h3 className="text-xl font-extrabold ">Receive your design</h3>
-              <p className="text-md ">
-                Give us your feedback. We will revise your designs as many times
-                as needed.
-              </p>
-            </div>
-          </div>
-        </div>
-        <Button text={'Get Started'} className={'text-white'} />
+        )}
+        <Link to="/book-a-call" className="my-5">
+          <Button text={'Get Started'} className={'text-white'} />
+        </Link>
       </div>
     </section>
   );
