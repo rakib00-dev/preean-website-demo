@@ -7,6 +7,7 @@ const SecondTypeSection = ({
   imgSrc = './images/FirstTypeImg/need-designer-soon.avif',
   style,
   children,
+  paraChildren,
   textContentAlign = 'center',
 }) => {
   const workImgs = [];
@@ -35,6 +36,7 @@ const SecondTypeSection = ({
           >
             {bigTitle}
           </h2>
+          {paraChildren}
         </div>
 
         {/* card content */}

@@ -1,18 +1,8 @@
 import SecondTypeSection from '../SecondTypeSection';
 
-const WhyChoose = () => {
+const PostOnSocialMedia = () => {
   return (
-    <SecondTypeSection
-      smallTitle="why choose manypixels"
-      bigTitle="A smarter way to outsource your designs"
-      paraChildren={
-        <p className="mx-auto text-xl text-center mb-5 md:w-[80%]">
-          ManyPixels is an all-in-one creative service. For a flat and
-          affordable monthly price you get access to a team of talented
-          designers who can help with all your design projects.
-        </p>
-      }
-    >
+    <SecondTypeSection>
       <div className=" justify-center items-center w-11/12 mx-auto md:flex gap-5">
         <div className="h-[204px] flex justify-center gap-5 items-center w-full flex-col bg-gray-100 p-4 py-6 text-center mb-5 rounded-lg">
           <h5 className="font-extrabold text-lg">STRESS LESS</h5>
@@ -34,4 +24,4 @@ const WhyChoose = () => {
   );
 };
 
-export default WhyChoose;
+export default PostOnSocialMedia;
