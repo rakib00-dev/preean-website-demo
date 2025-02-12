@@ -39,6 +39,16 @@ const CanvaDesignPage = () => {
         imgSrc="./images/solutionPage/canva-design/canva_pro_photo.avif"
         listChild={<OrderedList3 />}
       />
+      <PowerByTechnology
+        smallTitle="DESIGN FOR EVERY PLATFORM"
+        bigTitle="Elevate your brand with spot-on designs"
+        contentClass="sm:flex-col lg:flex-row-reverse w-11/12 mx-20"
+        imgSrc="./images/solutionPage/canva-design/every-platform.avif"
+        para={
+          'Create dozens of new Canva designs that will make your business stand out across all different platforms.'
+        }
+        listChild={<></>}
+      />
       <AgenciesWordwide />
       <Suspense fallback={<p>Loading...</p>}>
         <PostOnSocialMedia />

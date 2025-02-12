@@ -6,6 +6,7 @@ const PowerByTechnology = ({
   bigTitle = 'Manage everything from one simple platform',
   imgSrc = './images/FirstTypeImg/powered-by.png',
   listChild,
+  para,
 }) => {
   return (
     <section className="mt-[7rem]">
@@ -16,6 +17,7 @@ const PowerByTechnology = ({
         textContentAlign="end"
         style={{ position: 'relative' }}
         contentClass={contentClass}
+        para={para}
         children={listChild ? listChild : <OrderedList3 />}
       />
     </section>
