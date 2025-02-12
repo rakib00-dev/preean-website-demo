@@ -13,13 +13,13 @@ const Carousel = () => {
 
   return (
     <section
-      className={`mx-auto w-full max-w-7xl mt-[4rem]  items-center bg-white overflow-hidden`}
+      className={`mx-auto w-full max-w-7xl my-16 items-center bg-white overflow-hidden`}
     >
-      <div className="flex m-auto justify-center items-center flex-col w-[95%] gap-8 md:flex-row">
+      <div className="flex m-auto justify-center items-center flex-col w-[95%] gap-8">
         {/* counter */}
-        <div className="">
+        <div className="grid md:grid-cols-2 ">
           {/* counter 1 */}
-          <div className="flex pt-10 flex-col justify-center items-center">
+          <div className="flex flex-col justify-center items-center">
             <div
               className="mb-4 py-4"
               style={{
@@ -47,7 +47,7 @@ const Carousel = () => {
           </div>
 
           {/* counter 2 */}
-          <div className="flex pb-10 flex-col justify-center items-center">
+          <div className="flex flex-col justify-center items-center">
             <div
               className="mb-4 py-4"
               style={{
@@ -77,7 +77,7 @@ const Carousel = () => {
 
         {/* carousel */}
         <div
-          className="flex gap-4 mb-20 py-6 bg-gray-100 shadow-[10px_10px_45px_5px_rgba(0,0,0,0.15)] rounded-2xl overflow-hidden boxShadow md:py-20 md:shadow-[0_0_15px_15px_rgba(0,0,0,0.05)] md:mb-0 md:mt-5"
+          className="flex gap-4 mb-20  py-6 bg-gray-50 shadow-[10px_10px_45px_5px_rgba(0,0,0,0.15)] rounded-2xl overflow-hidden boxShadow md:mt-5"
           // style={{
           //   boxShadow:
           //     'inset 12px 0 15px -4px gray, inset -12px 0 8px -4px gray, 10px 10px 45px 5px rgba(0,0,0,0.10)',
@@ -95,16 +95,6 @@ const Carousel = () => {
                       className="w-[7rem] inline"
                       loading="lazy"
                     />
-                  </span>
-                ))}
-              </div>
-            </div>
-            {/* slide 2 */}
-            <div className="hidden slider md:inline-block">
-              <div className=" gap-40 mr-40 slide2">
-                {images.map((e, i) => (
-                  <span key={i} className="inline">
-                    <img src={e} alt={e} className="w-[7rem] inline" />
                   </span>
                 ))}
               </div>
