@@ -99,11 +99,15 @@ const Navbar = () => {
             style={{ zIndex: 1122 }}
           >
             <DropDown
-              to="social-media"
+              to="/social-media"
               title="social media"
               src="./images/navbar/social-media.svg"
             />
-            <DropDown title="canva design" src="./images/navbar/canva.png" />
+            <DropDown
+              to="/canva-design"
+              title="canva design"
+              src="./images/navbar/canva.png"
+            />
             <DropDown
               title="graphic design"
               src="./images/navbar/graphic-design.svg"
@@ -419,11 +423,15 @@ const Navbar = () => {
           style={{ zIndex: 1122 }}
         >
           <DropDown
-            to="social-media"
+            to="/social-media"
             title="social media"
             src="./images/navbar/social-media.svg"
           />
-          <DropDown title="canva design" src="./images/navbar/canva.png" />
+          <DropDown
+            to="/canva-design"
+            title="canva design"
+            src="./images/navbar/canva.png"
+          />
           <DropDown
             title="graphic design"
             src="./images/navbar/graphic-design.svg"

@@ -1,16 +1,22 @@
 import FirstTypeSection from './FirstTypeSection';
 
-const PowerByTechnology = () => {
+const PowerByTechnology = ({
+  contentClass = 'sm:flex-col lg:flex-row-reverse',
+  smallTitle = 'POWERED BY TECHNOLOGY',
+  bigTitle = 'Manage everything from one simple platform',
+  imgSrc = './images/FirstTypeImg/powered-by.png',
+  listChild,
+}) => {
   return (
     <section className="mt-[7rem]">
       <FirstTypeSection
-        smallTitle={'POWERED BY TECHNOLOGY'}
-        bigTitle={'Manage everything from one simple platform'}
-        imgSrc={'./images/FirstTypeImg/powered-by.png'}
+        smallTitle={smallTitle}
+        bigTitle={bigTitle}
+        imgSrc={imgSrc}
         textContentAlign="end"
         style={{ position: 'relative' }}
-        contentClass={'sm:flex-col lg:flex-row-reverse'}
-        children={<OrderedList3 />}
+        contentClass={contentClass}
+        children={listChild ? listChild : <OrderedList3 />}
       />
     </section>
   );
