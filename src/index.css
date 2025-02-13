@@ -180,7 +180,7 @@ a {
 .slide {
   display: inline-block;
   /* transform: translateX(120%); */
-  animation: slideShow 15s infinite linear;
+  animation: slideShow 20s infinite linear;
 }
 
 /* .slide2 {

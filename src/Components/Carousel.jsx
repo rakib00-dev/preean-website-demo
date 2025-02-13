@@ -30,7 +30,7 @@ const Carousel = () => {
               <CountUp
                 start={135030}
                 end={150000}
-                duration={28}
+                duration={8}
                 className="text-4xl font-bold md:text-[3.5rem] "
               />
               <span
