@@ -1,4 +1,5 @@
 import React, { Suspense } from 'react';
+import SolutionHeader from '../Components/Solutions-Components/SolutionHeader';
 const BetterSolution = React.lazy(() => import('../Components/BetterSolution'));
 const Carousel = React.lazy(() => import('../Components/Carousel'));
 const ClientReview = React.lazy(() => import('../Components/ClientReview'));
@@ -12,6 +13,10 @@ const OurWork = React.lazy(() => import('../Components/OurWork'));
 const PowerByTechnology = React.lazy(() =>
   import('../Components/PowerByTechnology')
 );
+
+const SolutionHomeSection = React.lazy(() =>
+  import('../Components/SolutionHomeSection')
+);
 const SendReqSection = React.lazy(() => import('../Components/SendReqSection'));
 const WallOfLove = React.lazy(() => import('../Components/WallOfLove'));
 const WhatWeOffer = React.lazy(() => import('../Components/WhatWeOffer'));
@@ -21,6 +26,9 @@ const HomePage = () => {
     <>
       <Hero />
       <Carousel />
+      <Suspense fallback={<p>Loading...</p>}>
+        <SolutionHomeSection />
+      </Suspense>
       <Suspense fallback={<p>Loading...</p>}>
         <NeedDesignerSoon />
         <BetterSolution />
