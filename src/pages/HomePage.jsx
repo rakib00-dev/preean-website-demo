@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import SolutionHeader from '../Components/Solutions-Components/SolutionHeader';
-const BetterSolution = React.lazy(() => import('../Components/BetterSolution'));
+// const BetterSolution = React.lazy(() => import('../Components/BetterSolution'));
 const Carousel = React.lazy(() => import('../Components/Carousel'));
 const ClientReview = React.lazy(() => import('../Components/ClientReview'));
 const Hero = React.lazy(() => import('../Components/Hero'));
