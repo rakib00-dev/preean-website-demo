@@ -97,7 +97,7 @@ const PickPerfectPlan = () => {
               </button>
             </div>
           </div>
-          <div className="grid place-items-center md:grid-cols-4">
+          <div className="grid place-items-center gap-5 md:gap-0 md:grid-cols-4">
             <HomePagePricing />
             <HomePagePricing
               title="Business"
