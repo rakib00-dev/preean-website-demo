@@ -14,6 +14,9 @@ const PowerByTechnology = React.lazy(() =>
   import('../Components/PowerByTechnology')
 );
 
+const PickPerfectPlan = React.lazy(() =>
+  import('../Components/PickPerfectPlan')
+);
 const SolutionHomeSection = React.lazy(() =>
   import('../Components/SolutionHomeSection')
 );
@@ -28,6 +31,9 @@ const HomePage = () => {
       <Carousel />
       <Suspense fallback={<p>Loading...</p>}>
         <SolutionHomeSection />
+      </Suspense>
+      <Suspense fallback={<p>Loading...</p>}>
+        <PickPerfectPlan />
       </Suspense>
       <Suspense fallback={<p>Loading...</p>}>
         <NeedDesignerSoon />
