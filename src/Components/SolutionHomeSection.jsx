@@ -17,9 +17,9 @@ const SolutionHomeSection = () => {
             our solutions
           </h1>
           <h2
-            className={`font-extrabold text-[1.55rem] text-center w-[95%] mb-4 leading-8 lg:text-start md:text-[2.1rem] lg:w-full lg:text-[2.5rem] lg:leading-13`}
+            className={`font-extrabold text-[1.55rem] text-center w-full mb-4 leading-8 lg:text-start md:text-[2.1rem] md:w-4/5 lg:text-[2.5rem] lg:leading-13`}
           >
-            Check Out Our Solutions That We Provide
+            Check out our solutions and resources we provide
           </h2>
         </div>
 
