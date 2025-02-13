@@ -17,14 +17,26 @@ const Carousel = () => {
     >
       <div className="flex m-auto justify-center items-center flex-col w-[95%] gap-8">
         {/* counter */}
-        <div className="grid md:grid-cols-2 ">
+        <div className="grid place-items-center ">
           {/* counter 1 */}
-          <div className="flex flex-col justify-center items-center">
+          <h5 className="text-md flex justify-center items-center">
+            Trusted by more than{' '}
+            <span className="px-1">
+              <CountUp
+                start={135030}
+                end={150000}
+                duration={8}
+                className="text-sm font-bold"
+              />
+            </span>{' '}
+            of the world’s leading organizations
+          </h5>
+          {/* <div className="flex flex-col justify-center items-center">
             <div
-              className="mb-4 py-4"
+              className="mb-4 py-4 text-blue-500"
               style={{
-                color: 'var(--colors-pink)',
-                borderBottom: '.25rem solid #ef457e33',
+                color: '',
+                borderBottom: '.25rem solid blue/50',
               }}
             >
               <CountUp
@@ -34,9 +46,9 @@ const Carousel = () => {
                 className="text-4xl font-bold md:text-[3.5rem] "
               />
               <span
-                className="text-4xl font-extrabold "
+                className="text-4xl font-extrabold text-blue-500"
                 style={{
-                  color: 'var(--colors-pink)',
+                  color: '',
                   fontFamily: 'sans-serif',
                 }}
               >
@@ -44,15 +56,15 @@ const Carousel = () => {
               </span>
             </div>
             <span className="text-xl md:text-md">Designs Completed</span>
-          </div>
+          </div> */}
 
           {/* counter 2 */}
-          <div className="flex flex-col justify-center items-center">
+          {/* <div className="flex flex-col justify-center items-center">
             <div
-              className="mb-4 py-4"
+              className="mb-4 py-4 text-blue-500"
               style={{
-                color: 'var(--colors-pink)',
-                borderBottom: '.25rem solid #ef457e33',
+                color: '',
+                borderBottom: '.25rem solid blue',
               }}
             >
               <CountUp
@@ -62,9 +74,9 @@ const Carousel = () => {
                 className="text-4xl font-bold md:text-[3.5rem]"
               />
               <span
-                className="text-4xl font-extrabold"
+                className="text-4xl font-extrabold text-blue-500"
                 style={{
-                  color: 'var(--colors-pink)',
+                  color: '',
                   fontFamily: 'sans-serif',
                 }}
               >
@@ -72,12 +84,12 @@ const Carousel = () => {
               </span>
             </div>
             <span className="text-xl md:text-md">Customers Served</span>
-          </div>
+          </div> */}
         </div>
 
         {/* carousel */}
         <div
-          className="flex gap-4 mb-20  py-6 bg-gray-50 shadow-[10px_10px_45px_5px_rgba(0,0,0,0.15)] rounded-2xl overflow-hidden boxShadow md:mt-5"
+          className="flex gap-4 mb-20  py-6 rounded-2xl overflow-hidden boxShadow md:mt-5"
           // style={{
           //   boxShadow:
           //     'inset 12px 0 15px -4px gray, inset -12px 0 8px -4px gray, 10px 10px 45px 5px rgba(0,0,0,0.10)',

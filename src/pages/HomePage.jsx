@@ -36,10 +36,10 @@ const HomePage = () => {
         <PickPerfectPlan />
       </Suspense>
       <Suspense fallback={<p>Loading...</p>}>
-        <NeedDesignerSoon />
-        <BetterSolution />
+        {/* <NeedDesignerSoon /> */}
+        {/* <BetterSolution /> */}
         <HowItWorks />
-        <PowerByTechnology />
+        {/* <PowerByTechnology /> */}
         <WhatWeOffer />
         <OurWork />
         <OurTools />
