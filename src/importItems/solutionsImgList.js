@@ -54,4 +54,25 @@ export const SoluImgList = [
     alt: 'motion graphic',
     src: './images/navbar/motion-graphic.png',
   },
+  // resources
+  {
+    to: 'free-illustrations',
+    alt: 'Free illustrations',
+    src: './images/navbar/illustrations.png',
+  },
+  {
+    to: 'guilds',
+    alt: 'guilds',
+    src: './images/navbar/guides.png',
+  },
+  {
+    to: 'design-blog',
+    alt: 'design blog',
+    src: './images/navbar/design-blog.png',
+  },
+  {
+    to: 'case-studies',
+    alt: 'case studies',
+    src: './images/navbar/print-design.png',
+  },
 ];
