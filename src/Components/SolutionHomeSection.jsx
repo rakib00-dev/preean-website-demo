@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { SoluImgList } from '../importItems/solutionsImgList';
+import { FaQuoteRight } from 'react-icons/fa';
 
 const SolutionHomeSection = () => {
   const imgList = [...SoluImgList];
@@ -27,6 +28,33 @@ const SolutionHomeSection = () => {
           {imgList.map((e, i) => (
             <ImagesAndLinks alt={e.alt} src={e.src} to={e.to} key={i} />
           ))}
+        </div>
+
+        <div className="grid my-7 justify-center mt-10 items-start md:gap-4 md:mx-12 md:grid-cols-2 md:mt-4">
+          <div className="p-4 grid gap-2 border border-gray-200 shadow-xl md:my-4 rounded-xl">
+            <h2 className="font-bold flex justify-between text-lg">
+              Mr. Preean
+              <FaQuoteRight className="mr-3 mt-1 text-gray-500" />
+            </h2>
+
+            <p className="text-gray-500">
+              Check out our solutions and contact us if you want to know more
+              about us. Explore our innovative solutions and reach out to us for
+              more information or to discuss how we can help you succeed.
+            </p>
+          </div>
+          <div className="p-4 grid gap-2 border border-gray-200 shadow-xl my-4 rounded-xl">
+            <h2 className="font-bold flex justify-between text-lg">
+              Mr. Preean
+              <FaQuoteRight className="mr-3 mt-1 text-gray-500" />
+            </h2>
+
+            <p className="text-gray-500">
+              Explore our solutions and don’t hesitate to contact our team if
+              you have any questions or need more details. We're here to help
+              and guide you toward success.
+            </p>
+          </div>
         </div>
       </div>
     </section>
