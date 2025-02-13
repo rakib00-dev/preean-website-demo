@@ -33,6 +33,7 @@ const SolutionHomeSection = () => {
         <div className="grid my-7 justify-center mt-10 items-start md:gap-4 md:mx-12 md:grid-cols-2 md:mt-4">
           <div className="p-4 grid gap-2 border border-gray-200 shadow-xl md:my-4 rounded-xl">
             <h2 className="font-bold flex justify-between text-lg">
+              {/* CEO, Founder */}
               Mr. Preean
               <FaQuoteRight className="mr-3 mt-1 text-gray-500" />
             </h2>
@@ -45,6 +46,7 @@ const SolutionHomeSection = () => {
           </div>
           <div className="p-4 grid gap-2 border border-gray-200 shadow-xl my-4 rounded-xl">
             <h2 className="font-bold flex justify-between text-lg">
+              {/* CTO, Co-Founder */}
               Mr. Preean
               <FaQuoteRight className="mr-3 mt-1 text-gray-500" />
             </h2>
