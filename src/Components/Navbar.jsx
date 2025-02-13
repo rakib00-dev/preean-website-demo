@@ -218,7 +218,7 @@ const Navbar = () => {
             />
             <DropDown
               title="case studies"
-              src="./images/navbar/print-design.png"
+              src="./images/navbar/case-study.png"
               className={'w-full'}
             />
           </div>
@@ -501,7 +501,7 @@ const Navbar = () => {
           />
           <DropDown
             title="case studies"
-            src="./images/navbar/print-design.png"
+            src="./images/navbar/case-study.png"
             className={'w-full'}
           />
         </div>

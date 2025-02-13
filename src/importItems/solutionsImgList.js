@@ -73,6 +73,6 @@ export const SoluImgList = [
   {
     to: 'case-studies',
     alt: 'case studies',
-    src: './images/navbar/print-design.png',
+    src: './images/navbar/case-study.png',
   },
 ];
