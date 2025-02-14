@@ -136,6 +136,7 @@ const WeeklyCards = () => {
       <HomePagePricing
         price="599"
         title="Design Team"
+        priceColor="white"
         bgColor="bg-[#0b3558]"
         lastColor={'text-white'}
         descColor="white"
@@ -172,6 +173,7 @@ const MonthlyCards = () => {
       <HomePagePricing
         price="540"
         title="Design Team"
+        priceColor="white"
         bgColor="bg-[#0b3558]"
         lastColor={'text-white'}
         descColor="white"
@@ -208,6 +210,7 @@ const QuarterlyCards = () => {
       <HomePagePricing
         price="480"
         title="Design Team"
+        priceColor="white"
         bgColor="bg-[#0b3558]"
         lastColor={'text-white'}
         descColor="white"
