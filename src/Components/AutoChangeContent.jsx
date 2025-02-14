@@ -11,13 +11,18 @@ const AutoChangeContent = () => {
             className="uppercase font-extrabold text-[.85rem] md:text-[.9rem]"
             style={{ color: 'var(--colors-pink)' }}
           >
-            enjoy best plans
+            watch our content
           </h1>
           <h2
             className={`font-extrabold text-[1.55rem] text-center w-full mb-4 leading-8 lg:text-start md:text-[2.1rem] md:w-4/5 lg:text-[2.5rem] lg:leading-13`}
           >
-            Choose the ideal plan that suits your team's needs.
+            Calendly makes scheduling simple
           </h2>
+          <p className="">
+            Calendly’s easy enough for individual users, and powerful enough to
+            meet the needs of enterprise organizations — including 86% of the
+            Fortune 500 companies.
+          </p>
         </div>
       </div>
     </section>

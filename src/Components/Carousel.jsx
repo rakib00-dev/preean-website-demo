@@ -19,7 +19,7 @@ const Carousel = () => {
         {/* counter */}
         <div className="grid place-items-center ">
           {/* counter 1 */}
-          <h5 className="text-md flex justify-center items-center">
+          <h5 className="text-md flex justify-center items-center flex-wrap">
             Trusted by more than{' '}
             <span className="px-1">
               <CountUp
