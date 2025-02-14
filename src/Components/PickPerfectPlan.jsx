@@ -117,10 +117,11 @@ export default PickPerfectPlan;
 const WeeklyCards = () => {
   return (
     <>
-      <HomePagePricing />
+      <HomePagePricing btnColor="bg-transparent border sm:text-black hover:text-gray-400" />
       <HomePagePricing
         price="250"
         title="Business"
+        btnColor="bg-black hover:bg-black/80"
         borderColor="gray-900"
         description="Get double the output everyday."
       />
@@ -130,6 +131,7 @@ const WeeklyCards = () => {
         titleSize="text-[19px]"
         borderColor="[#0099f6]"
         description="Collaborate in real time with your designer."
+        btnColor="bg-blue-500 hover:bg-blue-400"
       />
       <HomePagePricing
         price="599"
@@ -138,6 +140,7 @@ const WeeklyCards = () => {
         lastColor={'text-white'}
         descColor="white"
         borderColor="gray-900"
+        btnColor="bg-transparent border hover:text-gray-300"
         description="Collaborate in real time with your designer."
       />
     </>
@@ -147,10 +150,14 @@ const WeeklyCards = () => {
 const MonthlyCards = () => {
   return (
     <>
-      <HomePagePricing price="124" />
+      <HomePagePricing
+        price="124"
+        btnColor="bg-transparent border sm:text-black hover:text-gray-400"
+      />
       <HomePagePricing
         price="225"
         title="Business"
+        btnColor="bg-black hover:bg-black/80"
         borderColor="gray-900"
         description="Get double the output everyday."
       />
@@ -160,6 +167,7 @@ const MonthlyCards = () => {
         titleSize="text-[19px]"
         borderColor="[#0099f6]"
         description="Collaborate in real time with your designer."
+        btnColor="bg-blue-500 hover:bg-blue-400"
       />
       <HomePagePricing
         price="540"
@@ -168,6 +176,7 @@ const MonthlyCards = () => {
         lastColor={'text-white'}
         descColor="white"
         borderColor="gray-900"
+        btnColor="bg-transparent border hover:text-gray-300"
         description="Collaborate in real time with your designer."
       />
     </>
@@ -177,10 +186,14 @@ const MonthlyCards = () => {
 const QuarterlyCards = () => {
   return (
     <>
-      <HomePagePricing price="110" />
+      <HomePagePricing
+        price="110"
+        btnColor="bg-transparent border sm:text-black hover:text-gray-400"
+      />
       <HomePagePricing
         price="200"
         title="Business"
+        btnColor="bg-black hover:bg-black/80"
         borderColor="gray-900"
         description="Get double the output everyday."
       />
@@ -190,6 +203,7 @@ const QuarterlyCards = () => {
         titleSize="text-[19px]"
         borderColor="[#0099f6]"
         description="Collaborate in real time with your designer."
+        btnColor="bg-blue-500 hover:bg-blue-400"
       />
       <HomePagePricing
         price="480"
@@ -198,6 +212,7 @@ const QuarterlyCards = () => {
         lastColor={'text-white'}
         descColor="white"
         borderColor="gray-900"
+        btnColor="bg-transparent border hover:text-gray-300"
         description="Collaborate in real time with your designer."
       />
     </>
@@ -235,7 +250,7 @@ const HomePagePricing = ({
         <div className="grid w-full place-items-center mb-5">
           <Link
             to={'/pricing'}
-            className={`text-white text-center py-2 px-4 rounded-xl md:text-md sm:w-full ${btnColor}`}
+            className={`transition-all text-white text-center py-2 px-4 rounded-xl md:text-md sm:w-full ${btnColor}`}
           >
             {btnText}
           </Link>
