@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
-const AutoChangeContent = () => {
+const AutoChangeContent = ({
+  changeAlignment = 'grid-cols-2',
+  // changeAlignment = 'md:flex md:flex-row-reverse md:gap-10',
+}) => {
   const imagesArr = [
     { src: './images/autochange/add-your-availability.png' },
     { src: './images/autochange/connect-conferencing-tools.png' },
@@ -89,7 +92,7 @@ const AutoChangeContent = () => {
   const ChangingCards = () => {
     return (
       <>
-        <div className="w-full top-0">
+        <div className="w-full  top-0">
           <div
             className={
               isFirstActive
@@ -108,8 +111,8 @@ const AutoChangeContent = () => {
             <h2
               className={
                 isFirstActive
-                  ? `flex justify-start items-center gap-4 md:text-4xl font-bold text-gray-800`
-                  : `flex justify-start items-center gap-4 md:text-2xl font-bold text-gray-400`
+                  ? `flex justify-start items-center gap-4 md:text-2xl font-bold text-gray-800`
+                  : `flex justify-start items-center gap-4 md:text-xl font-bold text-gray-400`
               }
             >
               <img
@@ -147,8 +150,8 @@ const AutoChangeContent = () => {
             <h2
               className={
                 isSecondActive
-                  ? `flex justify-start items-center gap-4 md:text-4xl font-bold text-gray-800`
-                  : `flex justify-start items-center gap-4 md:text-2xl font-bold text-gray-400`
+                  ? `flex justify-start items-center gap-4 md:text-2xl font-bold text-gray-800`
+                  : `flex justify-start items-center gap-4 md:text-xl font-bold text-gray-400`
               }
             >
               <img
@@ -187,8 +190,8 @@ const AutoChangeContent = () => {
             <h2
               className={
                 isThirdActive
-                  ? `flex justify-start items-center gap-4 md:text-4xl font-bold text-gray-800`
-                  : `flex justify-start items-center gap-4 md:text-2xl font-bold text-gray-400`
+                  ? `flex justify-start items-center gap-4 md:text-2xl font-bold text-gray-800`
+                  : `flex justify-start items-center gap-4 md:text-xl font-bold text-gray-400`
               }
             >
               <img
@@ -226,12 +229,12 @@ const AutoChangeContent = () => {
             <h2
               className={
                 isFourthActive
-                  ? `flex justify-start items-center gap-4 md:text-4xl font-bold text-gray-800`
-                  : `flex justify-start items-center gap-4 md:text-2xl font-bold text-gray-400`
+                  ? `flex justify-start items-center gap-4 md:text-2xl font-bold text-gray-800`
+                  : `flex justify-start items-center gap-4 md:text-xl font-bold text-gray-400`
               }
             >
               <img
-                src="./images/autochange/cube.png"
+                src="./images/autochange/wave.png"
                 alt=""
                 loading="lazy"
                 className={
@@ -265,12 +268,12 @@ const AutoChangeContent = () => {
             <h2
               className={
                 isFifthActive
-                  ? `flex justify-start items-center gap-4 md:text-4xl font-bold text-gray-800`
-                  : `flex justify-start items-center gap-4 md:text-2xl font-bold text-gray-400`
+                  ? `flex justify-start items-center gap-4 md:text-2xl font-bold text-gray-800`
+                  : `flex justify-start items-center gap-4 md:text-xl font-bold text-gray-400`
               }
             >
               <img
-                src="./images/autochange/cube.png"
+                src="./images/autochange/send.png"
                 alt=""
                 loading="lazy"
                 className={
@@ -287,7 +290,7 @@ const AutoChangeContent = () => {
             </p>
           </div>
         </div>
-        <div className="py-8 px-4 md:h-[38rem] bg-gray-100 w-full rounded-2xl">
+        <div className="py-8 px-4 mt-10 md:mt-0 md:h-[38rem] bg-gray-100 w-full rounded-2xl">
           {images.map((e, i) => (
             <img src={e.src} alt="" loading="lazy" key={i} />
           ))}
@@ -321,7 +324,7 @@ const AutoChangeContent = () => {
         </div>
 
         {/* cards */}
-        <div className="grid  grid-cols-1 place-items-center md:grid-cols-2">
+        <div className={`grid place-items-center md:${changeAlignment}`}>
           <ChangingCards />
         </div>
       </div>

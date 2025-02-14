@@ -45,6 +45,7 @@ const HomePage = () => {
         {/* <NeedDesignerSoon /> */}
         {/* <BetterSolution /> */}
         <HowItWorks />
+        <AutoChangeContent changeAlignment="flex md:flex-row-reverse md:gap-10" />
         {/* <PowerByTechnology /> */}
         <WhatWeOffer />
         <OurWork />
