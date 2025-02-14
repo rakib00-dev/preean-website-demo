@@ -4,7 +4,7 @@ const Button = ({
   border = 'md',
   fontSize,
   text,
-  bg = 'var(--color-primary)',
+  bg = 'var(--blue-primary)',
   className,
   children,
 }) => {

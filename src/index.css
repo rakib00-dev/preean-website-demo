@@ -5,7 +5,9 @@
 :root {
   --text-primary: #07122b;
   /* --color-primary: #ff5757; */
-  --color-primary: #0099f6;
+  --black-primary: #0b3558;
+  --black-secondary: rgb(71, 103, 136);
+  --blue-primary: #0099f6;
   --colors-pink: #ef457e;
   --background-gray: #f8f8f8;
   --colors-yellow: #ffd44d;

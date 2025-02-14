@@ -98,19 +98,13 @@ const PickPerfectPlan = () => {
             </div>
           </div>
           <div className="grid place-items-center gap-5 md:gap-0 md:grid-cols-4">
-            <HomePagePricing />
-            <HomePagePricing
-              title="Business"
-              description="Get double the output everyday."
-            />
-            <HomePagePricing
-              title="Designated Designer"
-              description="Collaborate in real time with your designer."
-            />
-            <HomePagePricing
-              title="Design Team"
-              description="Collaborate in real time with your designer."
-            />
+            {isFirstBtnActive ? (
+              <WeeklyCards />
+            ) : isSecondBtnActive ? (
+              <MonthlyCards />
+            ) : (
+              <QuarterlyCards />
+            )}
           </div>
         </div>
       </div>
@@ -120,40 +114,130 @@ const PickPerfectPlan = () => {
 
 export default PickPerfectPlan;
 
+const WeeklyCards = () => {
+  return (
+    <>
+      <HomePagePricing />
+      <HomePagePricing
+        price="250"
+        title="Business"
+        borderColor="gray-900"
+        description="Get double the output everyday."
+      />
+      <HomePagePricing
+        price="325"
+        title="Designated Designer"
+        titleSize="text-[19px]"
+        borderColor="[#0099f6]"
+        description="Collaborate in real time with your designer."
+      />
+      <HomePagePricing
+        price="599"
+        title="Design Team"
+        bgColor="bg-[#0b3558]"
+        lastColor={'text-white'}
+        descColor="white"
+        borderColor="gray-900"
+        description="Collaborate in real time with your designer."
+      />
+    </>
+  );
+};
+
+const MonthlyCards = () => {
+  return (
+    <>
+      <HomePagePricing price="124" />
+      <HomePagePricing
+        price="225"
+        title="Business"
+        borderColor="gray-900"
+        description="Get double the output everyday."
+      />
+      <HomePagePricing
+        price="293"
+        title="Designated Designer"
+        titleSize="text-[19px]"
+        borderColor="[#0099f6]"
+        description="Collaborate in real time with your designer."
+      />
+      <HomePagePricing
+        price="540"
+        title="Design Team"
+        bgColor="bg-[#0b3558]"
+        lastColor={'text-white'}
+        descColor="white"
+        borderColor="gray-900"
+        description="Collaborate in real time with your designer."
+      />
+    </>
+  );
+};
+
+const QuarterlyCards = () => {
+  return (
+    <>
+      <HomePagePricing price="110" />
+      <HomePagePricing
+        price="200"
+        title="Business"
+        borderColor="gray-900"
+        description="Get double the output everyday."
+      />
+      <HomePagePricing
+        price="250"
+        title="Designated Designer"
+        titleSize="text-[19px]"
+        borderColor="[#0099f6]"
+        description="Collaborate in real time with your designer."
+      />
+      <HomePagePricing
+        price="480"
+        title="Design Team"
+        bgColor="bg-[#0b3558]"
+        lastColor={'text-white'}
+        descColor="white"
+        borderColor="gray-900"
+        description="Collaborate in real time with your designer."
+      />
+    </>
+  );
+};
+
 const HomePagePricing = ({
   title = 'Advanced',
   description = 'Create all of your everyday designs.',
   titleSize = 'text-xl',
-  price = '124',
+  price = '138',
   bgColor = 'bg-white',
   priceColor = 'gray-900',
   btnText = 'View More',
-  btnColor,
+  borderColor = 'gray-300',
+  descColor = 'gray-500',
+  lastColor,
+  btnColor = 'bg-black',
   children,
 }) => {
   return (
-    <div className={`w-[230px] mx-2 left-0 relative`}>
+    <div className={`w-[230px] mx-2  rounded-2xl left-0 relative`}>
       {/* initial wraper */}
       <div
-        className={`border-2 rounded-2xl h-[337px] border-gray-300 px-4 py-5 gap-4 grid ${bgColor} `}
+        className={`border border-t-8 rounded-2xl h-[337px] px-4 py-5 gap-4 grid ${bgColor} border-${borderColor}`}
       >
         {children}
-        <div className="grid gap-4 pb-5">
+        <div className={`grid gap-4 pb-5 ${lastColor}`}>
           <h5 className={`font-extrabold ${titleSize}`}>{title}</h5>
-          <p className="text-lg text-gray-500">{description}</p>
+          <p className={`text-lg text-${descColor}`}>{description}</p>
           <h5 className={`text-3xl mt-8 font-extrabold text-${priceColor}`}>
             ${price}/wk
           </h5>
         </div>
         <div className="grid w-full place-items-center mb-5">
-          <Link to={'/pricing'}>
-            <Button
-              className={'text-white md:text-md sm:w-full bg-black'}
-              px="55"
-              bg={btnColor}
-            >
-              {btnText}
-            </Button>
+          <Link
+            to={'/pricing'}
+            className={`text-white text-center py-2 px-4 rounded-xl md:text-md sm:w-full ${btnColor}`}
+          >
+            {btnText}
           </Link>
         </div>
       </div>
