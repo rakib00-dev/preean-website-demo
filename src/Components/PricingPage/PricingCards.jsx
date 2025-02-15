@@ -244,6 +244,8 @@ const PricingCard = ({
   btnColor,
   children,
 }) => {
+  const [isViewMore, setIsViewMore] = useState(false);
+
   return (
     <>
       <div className={`md:w-[230px]  mx-2 left-0 relative`}>
@@ -253,14 +255,30 @@ const PricingCard = ({
         >
           {children}
           <div className="grid gap-4 border-b-1 border-gray-300 pb-5">
-            <h5 className="text-xl font-extrabold ">{title}</h5>
+            <h5 className=" font-extrabold text-lg">{title}</h5>
             <p className="text-lg">{description}</p>
-            <h5 className={`text-xl mt-2 font-extrabold text-${priceColor}`}>
-              USD ${price}/wk
+            <h5 className={`text-3xl mt-2 font-extrabold text-${priceColor}`}>
+              ${price}/wk
             </h5>
+            <div className="grid place-items-center my-5 gap-4">
+              <Link to={'/book-a-call'}>
+                <Button
+                  className={'text-white md:text-xl bg-black sm:px-56'}
+                  px="40"
+                  bg={btnColor}
+                >
+                  {btnText}
+                </Button>
+              </Link>
+            </div>
           </div>
-          <div className="grid gap-4 pt-3">
-            <h5 className="text-xl font-extrabold ">Features</h5>
+
+          <div
+            className={`transition-all duration-300 grid gap-4 pt-3 overflow-hidden ${
+              isViewMore ? 'h-96' : 'h-56'
+            }`}
+          >
+            <h5 className="text-xl font-extrabold">Features</h5>
             <ul className="grid gap-4">
               <li className="flex text-md gap-2">
                 <img
@@ -289,11 +307,6 @@ const PricingCard = ({
                 />{' '}
                 Real Time Slack Communication
               </li>
-            </ul>
-          </div>
-          <div className="grid gap-4">
-            <h5 className="text-xl font-extrabold ">Design Services</h5>
-            <ul className="grid gap-4">
               <li className="flex text-md gap-2">
                 <img
                   loading="lazy"
@@ -341,6 +354,14 @@ const PricingCard = ({
               </li>
             </ul>
           </div>
+          <span
+            className="text-white text-center cursor-pointer rounded-2xl py-3 bg-black"
+            onClick={() => {
+              setIsViewMore((prev) => !prev);
+            }}
+          >
+            {isViewMore ? 'view Less...' : 'view More...'}
+          </span>
           <div className="grid gap-4">
             <h5 className="text-xl font-extrabold ">Tools</h5>
             <div className="flex gap-2">
@@ -363,17 +384,6 @@ const PricingCard = ({
                 className="w-10"
               />
             </div>
-          </div>
-          <div className="grid place-items-center my-5 gap-4">
-            <Link to={'/book-a-call'}>
-              <Button
-                className={'text-white md:text-xl bg-black'}
-                px="40"
-                bg={btnColor}
-              >
-                {btnText}
-              </Button>
-            </Link>
           </div>
         </div>
       </div>
