@@ -33,7 +33,7 @@ const PricingFaq = ({
           </p>
         </div>
         {/* FAQS */}
-        <div className="grid w-full md:mt-20 md:mr-3 gap-6">
+        <div className="transition-all duration-300 grid w-full md:mt-20 md:mr-3 gap-6">
           <div className="bg-gray-100 h-auto w- text-md md:text-xl py-4 pr-10 pl-4 font-bold rounded-2xl cursor-pointer">
             <h1
               className="flex gap-5 "
@@ -45,16 +45,16 @@ const PricingFaq = ({
               <FaChevronDown
                 className={
                   isFristClicked
-                    ? `rotate-180 transition-all mt-1`
-                    : 'transition-all mt-1'
+                    ? `rotate-180 transition-all duration-300 mt-1`
+                    : 'transition-all duration-300 mt-1'
                 }
               />
             </h1>
             <p
               className={
                 isFristClicked
-                  ? `transition-all scale-y-100 text-[1.1rem] font-light mt-4`
-                  : `transition-all scale-y-0 hidden text-[1.1rem] font-light mt-4`
+                  ? `transition-all duration-300 scale-y-100 text-[1.1rem] font-light mt-4`
+                  : `transition-all duration-300 scale-y-0 hidden text-[1.1rem] font-light mt-4`
               }
             >
               {p1}
@@ -71,16 +71,16 @@ const PricingFaq = ({
               <FaChevronDown
                 className={
                   isSecondClicked
-                    ? `rotate-180 transition-all mt-1`
-                    : 'transition-all mt-1'
+                    ? `rotate-180 transition-all duration-300 mt-1`
+                    : 'transition-all duration-300 mt-1'
                 }
               />
             </h1>
             <p
               className={
                 isSecondClicked
-                  ? `transition-all scale-y-100 text-[1.1rem] font-light mt-4`
-                  : `transition-all scale-y-0 hidden text-[1.1rem] font-light mt-4`
+                  ? `transition-all duration-300 scale-y-100 text-[1.1rem] font-light mt-4`
+                  : `transition-all duration-300 scale-y-0 hidden text-[1.1rem] font-light mt-4`
               }
             >
               {p2}
@@ -97,16 +97,16 @@ const PricingFaq = ({
               <FaChevronDown
                 className={
                   isThirdClicked
-                    ? `rotate-180 transition-all mt-1`
-                    : 'transition-all mt-1'
+                    ? `rotate-180 transition-all duration-300 mt-1`
+                    : 'transition-all duration-300 mt-1'
                 }
               />
             </h1>
             <p
               className={
                 isThirdClicked
-                  ? `transition-all scale-y-100 text-[1.1rem] font-light mt-4`
-                  : `transition-all scale-y-0 hidden text-[1.1rem] font-light mt-4`
+                  ? `transition-all duration-300 scale-y-100 text-[1.1rem] font-light mt-4`
+                  : `transition-all duration-300 scale-y-0 hidden text-[1.1rem] font-light mt-4`
               }
             >
               {p3}
@@ -123,16 +123,16 @@ const PricingFaq = ({
               <FaChevronDown
                 className={
                   isFourthClicked
-                    ? `rotate-180 transition-all mt-1`
-                    : 'transition-all mt-1'
+                    ? `rotate-180 transition-all duration-300 mt-1`
+                    : 'transition-all duration-300 mt-1'
                 }
               />
             </h1>
             <p
               className={
                 isFourthClicked
-                  ? `transition-all scale-y-100 text-[1.1rem] font-light mt-4`
-                  : `transition-all scale-y-0 hidden text-[1.1rem] font-light mt-4`
+                  ? `transition-all duration-300 scale-y-100 text-[1.1rem] font-light mt-4`
+                  : `transition-all duration-300 scale-y-0 hidden text-[1.1rem] font-light mt-4`
               }
             >
               {p4}
@@ -149,16 +149,16 @@ const PricingFaq = ({
               <FaChevronDown
                 className={
                   isFifthClicked
-                    ? `rotate-180 transition-all mt-1`
-                    : 'transition-all mt-1'
+                    ? `rotate-180 transition-all duration-300 mt-1`
+                    : 'transition-all duration-300 mt-1'
                 }
               />
             </h1>
             <p
               className={
                 isFifthClicked
-                  ? `transition-all scale-y-100 text-[1.1rem] font-light mt-4`
-                  : `transition-all scale-y-0 hidden text-[1.1rem] font-light mt-4`
+                  ? `transition-all duration-300 scale-y-100 text-[1.1rem] font-light mt-4`
+                  : `transition-all duration-300 scale-y-0 hidden text-[1.1rem] font-light mt-4`
               }
             >
               {p5}
