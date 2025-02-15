@@ -1,14 +1,29 @@
 import { Link } from 'react-router-dom';
 import { SoluImgList } from '../importItems/solutionsImgList';
 import { FaQuoteRight } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 const SolutionHomeSection = () => {
   const imgList = [...SoluImgList];
 
   return (
-    <section className="mx-auto w-full max-w-7xl my-20">
+    <motion.section
+      initial={{ y: 100, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{
+        delay: 0.4,
+        type: 'spring',
+      }}
+      className="mx-auto w-full max-w-7xl my-20"
+    >
       <div className="mx-3 md:mx-16">
-        <div
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{
+            delay: 0.3,
+            type: 'spring',
+          }}
           className={`flex flex-col justify-center gap-2 items-center md:gap-4 md:items-start md:my-8 md:mx-12`}
         >
           <h1
@@ -22,16 +37,32 @@ const SolutionHomeSection = () => {
           >
             Check out our solutions and resources we provide
           </h2>
-        </div>
+        </motion.div>
 
-        <div className="flex flex-wrap justify-center items-start gap-4 md:mx-12 md:justify-start">
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{
+            delay: 0.4,
+            type: 'spring',
+          }}
+          className="flex flex-wrap justify-center items-start gap-4 md:mx-12 md:justify-start"
+        >
           {imgList.map((e, i) => (
             <ImagesAndLinks alt={e.alt} src={e.src} to={e.to} key={i} />
           ))}
-        </div>
+        </motion.div>
 
         <div className="grid my-7 justify-center mt-10 items-start md:gap-4 md:mx-12 md:grid-cols-2 md:mt-4">
-          <div className="p-4 grid gap-2 border border-gray-200 shadow-xl md:my-4 rounded-xl">
+          <motion.div
+            initial={{ x: 100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 0.6,
+              type: 'spring',
+            }}
+            className="p-4 grid gap-2 border border-gray-200 shadow-xl md:my-4 rounded-xl"
+          >
             <h2 className="font-bold flex justify-between text-lg">
               {/* CEO, Founder */}
               Mr. Preean
@@ -43,8 +74,16 @@ const SolutionHomeSection = () => {
               about us. Explore our innovative solutions and reach out to us for
               more information or to discuss how we can help you succeed.
             </p>
-          </div>
-          <div className="p-4 grid gap-2 border border-gray-200 shadow-xl my-4 rounded-xl">
+          </motion.div>
+          <motion.div
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 0.6,
+              type: 'spring',
+            }}
+            className="p-4 grid gap-2 border border-gray-200 shadow-xl my-4 rounded-xl"
+          >
             <h2 className="font-bold flex justify-between text-lg">
               {/* CTO, Co-Founder */}
               Mr. Preean
@@ -56,10 +95,10 @@ const SolutionHomeSection = () => {
               you have any questions or need more details. We're here to help
               and guide you toward success.
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
