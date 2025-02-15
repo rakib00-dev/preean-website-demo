@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Button from './Button';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 const PickPerfectPlan = () => {
@@ -8,9 +8,25 @@ const PickPerfectPlan = () => {
   const [isThirdBtnActive, setIsThirdBtnActive] = useState(false);
 
   return (
-    <section className="mx-auto w-full max-w-7xl my-20">
+    <motion.section
+      initial={{ y: 100, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{
+        delay: 0.4,
+        type: 'spring',
+      }}
+      className="mx-auto w-full max-w-7xl my-20"
+    >
       <div className="mx-3 md:mx-16">
-        <div
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.3,
+            type: 'spring',
+          }}
           className={`flex flex-col justify-center gap-2 items-center md:gap-4 md:items-start md:my-8 md:mx-12`}
         >
           <h1
@@ -24,10 +40,19 @@ const PickPerfectPlan = () => {
           >
             Choose the ideal plan that suits your team's needs.
           </h2>
-        </div>
+        </motion.div>
 
         <div className="flex flex-col flex-wrap justify-center items-center gap-4 md:mx-12 md:justify-start">
-          <div className="mx-auto my-8  w-fit max-w-screen-md text-center mb-8 lg:mb-12">
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{
+              delay: 0.4,
+              type: 'spring',
+            }}
+            className="mx-auto my-8  w-fit max-w-screen-md text-center mb-8 lg:mb-12"
+          >
             <div className="uppercase gap-2 flex justify-center items-center bg-gray-100 py-2 px-1 rounded-xl">
               <button
                 className={
@@ -96,8 +121,17 @@ const PickPerfectPlan = () => {
                 />
               </button>
             </div>
-          </div>
-          <div className="grid place-items-center gap-5 md:gap-0 md:grid-cols-4">
+          </motion.div>
+          <motion.div
+            initial={{ scaleX: 0, opacity: 0 }}
+            whileInView={{ scaleX: 1, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{
+              delay: 0.4,
+              type: 'spring',
+            }}
+            className="grid place-items-center gap-5 md:gap-0 md:grid-cols-4"
+          >
             {isFirstBtnActive ? (
               <WeeklyCards />
             ) : isSecondBtnActive ? (
@@ -105,10 +139,10 @@ const PickPerfectPlan = () => {
             ) : (
               <QuarterlyCards />
             )}
-          </div>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

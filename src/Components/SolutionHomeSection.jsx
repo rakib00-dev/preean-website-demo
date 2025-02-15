@@ -10,16 +10,18 @@ const SolutionHomeSection = () => {
     <motion.section
       initial={{ y: 100, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true }}
       transition={{
         delay: 0.4,
         type: 'spring',
       }}
-      className="mx-auto w-full max-w-7xl my-20"
+      className="mx-auto w-full max-w-7xl my-20 overflow-hidden"
     >
       <div className="mx-3 md:mx-16">
         <motion.div
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
           transition={{
             delay: 0.3,
             type: 'spring',
@@ -42,6 +44,7 @@ const SolutionHomeSection = () => {
         <motion.div
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
           transition={{
             delay: 0.4,
             type: 'spring',
@@ -57,6 +60,7 @@ const SolutionHomeSection = () => {
           <motion.div
             initial={{ x: 100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
             transition={{
               delay: 0.6,
               type: 'spring',
@@ -78,6 +82,7 @@ const SolutionHomeSection = () => {
           <motion.div
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
             transition={{
               delay: 0.6,
               type: 'spring',
