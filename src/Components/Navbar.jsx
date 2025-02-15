@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import React, { useEffect, useRef, useState } from 'react';
 import { FaChevronDown } from 'react-icons/fa';
 import { RiCloseFill, RiMenu3Fill } from 'react-icons/ri';
@@ -336,7 +337,13 @@ const Navbar = () => {
 
   return (
     <>
-      <div
+      <motion.div
+        initial={{ y: -50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{
+          delay: 0.2,
+          type: 'spring',
+        }}
         className="mx-auto transition-all bg-white/60 w-full h-20 relative top-0 border-b-1  border-gray-200 z-20"
         id="navBarFix"
         ref={navBarFix}
@@ -405,7 +412,7 @@ const Navbar = () => {
             </div>
           </div>
         </nav>
-      </div>
+      </motion.div>
 
       {/*solutions dropdown menu */}
       <div

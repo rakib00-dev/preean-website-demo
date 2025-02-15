@@ -1,4 +1,5 @@
 import CountUp from 'react-countup';
+import { motion } from 'framer-motion';
 
 const Carousel = () => {
   const images = [];
@@ -12,7 +13,13 @@ const Carousel = () => {
   images[8] = '../images/carousel/tech-able.svg';
 
   return (
-    <section
+    <motion.section
+      initial={{ y: 50, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{
+        delay: 0.4,
+        type: 'spring',
+      }}
       className={`mx-auto w-full max-w-7xl my-16 items-center bg-white overflow-hidden`}
     >
       <div className="flex m-auto justify-center items-center flex-col w-[95%] gap-8">
@@ -114,7 +121,7 @@ const Carousel = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -1,10 +1,17 @@
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import Button from './Button';
 
 const Hero = () => {
   return (
     <>
-      <header
+      <motion.header
+        initial={{ y: -50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{
+          delay: 0.2,
+          type: 'spring',
+        }}
         className={`md:mx-auto w-full my-6 mx-0 overflow-hidden md:my-20 pb-20 max-w-7xl items-center  `}
       >
         <div className=" relative flex mx-2 flex-col-reverse top-0 justify-center items-center md:flex-row-reverse md:mx-19 ">
@@ -75,7 +82,7 @@ const Hero = () => {
             loading="lazy"
           /> */}
         </div>
-      </header>
+      </motion.header>
     </>
   );
 };
