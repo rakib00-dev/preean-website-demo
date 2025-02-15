@@ -96,8 +96,8 @@ const AutoChangeContent = ({
           <div
             className={
               isFirstActive
-                ? `transition-all h-auto border-b py-6 grid gap-5 duration-300 w-11/12 cursor-pointer overflow-hidden`
-                : `transition-all h-20 border-b py-6 grid gap-5 duration-300 w-11/12 cursor-pointer overflow-hidden`
+                ? 'AutoChangeContent Active'
+                : `AutoChangeContent Hidden`
             }
             onClick={() => {
               setIsFirstActive(true);
@@ -127,16 +127,16 @@ const AutoChangeContent = ({
               />
               Connect your calendars
             </h2>
-            <p className="w-4/5">
-              Calendly connects up to six calendars to automate scheduling with
+            <p className="w-full md:w-4/5">
+              DesignPro connects up to six calendars to automate scheduling with
               real-time availability.
             </p>
           </div>
           <div
             className={
               isSecondActive
-                ? `transition-all h-auto border-b py-6 grid gap-5 duration-300 w-11/12 cursor-pointer overflow-hidden`
-                : `transition-all h-20 border-b py-6 grid gap-5 duration-300 w-11/12 cursor-pointer overflow-hidden`
+                ? 'AutoChangeContent Active'
+                : `AutoChangeContent Hidden`
             }
             onClick={() => {
               setIsFirstActive(false);
@@ -166,7 +166,7 @@ const AutoChangeContent = ({
               />
               Add your availability
             </h2>
-            <p className="w-4/5">
+            <p className="w-full md:w-4/5">
               Keep invitees informed of your availability. Take control of your
               calendar with detailed availability settings, scheduling rules,
               buffers, and more.
@@ -175,8 +175,8 @@ const AutoChangeContent = ({
           <div
             className={
               isThirdActive
-                ? `transition-all h-auto border-b py-6 grid gap-5 duration-300 w-11/12 cursor-pointer overflow-hidden`
-                : `transition-all h-20 border-b py-6 grid gap-5 duration-300 w-11/12 cursor-pointer overflow-hidden`
+                ? 'AutoChangeContent Active'
+                : `AutoChangeContent Hidden`
             }
             onClick={() => {
               setIsFirstActive(false);
@@ -206,7 +206,7 @@ const AutoChangeContent = ({
               />
               Connect conferencing tools
             </h2>
-            <p className="w-4/5">
+            <p className="w-full md:w-4/5">
               Sync your video conferencing tools and set preferences for
               in-person meetings or calls.
             </p>
@@ -214,8 +214,8 @@ const AutoChangeContent = ({
           <div
             className={
               isFourthActive
-                ? `transition-all h-auto border-b py-6 grid gap-5 duration-300 w-11/12 cursor-pointer overflow-hidden`
-                : `transition-all h-20 border-b py-6 grid gap-5 duration-300 w-11/12 cursor-pointer overflow-hidden`
+                ? 'AutoChangeContent Active'
+                : `AutoChangeContent Hidden`
             }
             onClick={() => {
               setIsFirstActive(false);
@@ -245,7 +245,7 @@ const AutoChangeContent = ({
               />
               Customize your event type
             </h2>
-            <p className="w-4/5">
+            <p className="w-full md:w-4/5">
               Choose from pre-built templates or quickly create custom event
               types for any meeting you need to schedule.
             </p>
@@ -253,8 +253,8 @@ const AutoChangeContent = ({
           <div
             className={
               isFifthActive
-                ? `transition-all h-auto border-b py-6 grid gap-5 duration-300 w-11/12 cursor-pointer overflow-hidden`
-                : `transition-all h-20 border-b py-6 grid gap-5 duration-300 w-11/12 cursor-pointer overflow-hidden`
+                ? 'AutoChangeContent Active'
+                : `AutoChangeContent Hidden`
             }
             onClick={() => {
               setIsFirstActive(false);
@@ -284,7 +284,7 @@ const AutoChangeContent = ({
               />
               Share your scheduling link
             </h2>
-            <p className="w-4/5">
+            <p className="w-full md:w-4/5">
               Easily book meetings by embedding scheduling links on your
               website, landing pages, or emails.
             </p>
@@ -314,17 +314,19 @@ const AutoChangeContent = ({
           <h2
             className={`font-extrabold text-[1.55rem] text-center w-full mb-4 leading-8 lg:text-start md:text-[2.1rem] md:w-4/5 lg:text-[2.5rem] lg:leading-13`}
           >
-            Calendly makes scheduling simple
+            DesignPro makes your work simple
           </h2>
           <p className="">
-            Calendly’s easy enough for individual users, and powerful enough to
+            DesignPro’s easy enough for individual users, and powerful enough to
             meet the needs of enterprise organizations — including 86% of the
             Fortune 500 companies.
           </p>
         </div>
 
         {/* cards */}
-        <div className={`grid place-items-center md:${changeAlignment}`}>
+        <div
+          className={`grid place-items-center md:mx-10 md:${changeAlignment}`}
+        >
           <ChangingCards />
         </div>
       </div>
