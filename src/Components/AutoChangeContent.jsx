@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Progress } from '@material-tailwind/react';
 
 const AutoChangeContent = ({
   changeAlignment = 'grid-cols-2',
@@ -13,12 +14,26 @@ const AutoChangeContent = ({
   ];
 
   const [images, setImages] = useState(imagesArr.slice(0, 1));
+  const [progress, setProgress] = useState(0);
 
   const [isFirstActive, setIsFirstActive] = useState(true);
   const [isSecondActive, setIsSecondActive] = useState(false);
   const [isThirdActive, setIsThirdActive] = useState(false);
   const [isFourthActive, setIsFourthActive] = useState(false);
   const [isFifthActive, setIsFifthActive] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setProgress((prev) => {
+        if (prev >= 100) {
+          return 0;
+        }
+        return (prev += 1);
+      });
+    }, 90);
+
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     let isMounted = true; // Flag to track if the component is mounted
@@ -89,16 +104,27 @@ const AutoChangeContent = ({
     };
   }, []);
 
+  function ProgressColors({ color = 'blue' }) {
+    return (
+      <>
+        <Progress
+          value={progress}
+          color={color}
+          className="bottom-0 bg-gray-100"
+        />
+      </>
+    );
+  }
+
   const ChangingCards = () => {
     return (
       <>
-        <div className="w-full  top-0">
+        <div className="w-full transition-all top-0">
           <div
-            className={
-              isFirstActive
-                ? 'AutoChangeContent Active'
-                : `AutoChangeContent Hidden`
-            }
+            className={`transition-all border-b py-6 grid gap-5 duration-300 w-11/12 cursor-pointer overflow-hidden  autoChangeContentClass
+
+              ${isFirstActive ? 'autoChangeActive' : 'autoChangeHidden'}
+            `}
             onClick={() => {
               setIsFirstActive(true);
               setIsSecondActive(false);
@@ -109,11 +135,13 @@ const AutoChangeContent = ({
             }}
           >
             <h2
-              className={
-                isFirstActive
-                  ? `flex justify-start items-center gap-4 md:text-2xl font-bold text-gray-800`
-                  : `flex justify-start items-center gap-4 md:text-xl font-bold text-gray-400`
-              }
+              className={`transition-all duration-200 flex justify-start items-center gap-4 md:text-2xl font-bold text-gray-800
+                ${
+                  isFirstActive
+                    ? `md:text-2xl  text-gray-800`
+                    : `md:text-xl  text-gray-400`
+                }
+              `}
             >
               <img
                 src="./images/autochange/cube.png"
@@ -131,13 +159,13 @@ const AutoChangeContent = ({
               DesignPro connects up to six calendars to automate scheduling with
               real-time availability.
             </p>
+            <ProgressColors />
           </div>
           <div
-            className={
-              isSecondActive
-                ? 'AutoChangeContent Active'
-                : `AutoChangeContent Hidden`
-            }
+            className={`transition-all border-b py-6 grid gap-5 duration-300 w-11/12 cursor-pointer overflow-hidden  autoChangeContentClass
+
+              ${isSecondActive ? 'autoChangeActive' : 'autoChangeHidden'}
+            `}
             onClick={() => {
               setIsFirstActive(false);
               setIsSecondActive(true);
@@ -148,11 +176,13 @@ const AutoChangeContent = ({
             }}
           >
             <h2
-              className={
-                isSecondActive
-                  ? `flex justify-start items-center gap-4 md:text-2xl font-bold text-gray-800`
-                  : `flex justify-start items-center gap-4 md:text-xl font-bold text-gray-400`
-              }
+              className={`transition-all duration-200 flex justify-start items-center gap-4 md:text-2xl font-bold text-gray-800
+                ${
+                  isSecondActive
+                    ? `md:text-2xl  text-gray-800`
+                    : `md:text-xl  text-gray-400`
+                }
+              `}
             >
               <img
                 src="./images/autochange/trees.png"
@@ -171,13 +201,13 @@ const AutoChangeContent = ({
               calendar with detailed availability settings, scheduling rules,
               buffers, and more.
             </p>
+            <ProgressColors color="green" />
           </div>
           <div
-            className={
-              isThirdActive
-                ? 'AutoChangeContent Active'
-                : `AutoChangeContent Hidden`
-            }
+            className={`transition-all border-b py-6 grid gap-5 duration-300 w-11/12 cursor-pointer overflow-hidden  autoChangeContentClass
+
+              ${isThirdActive ? 'autoChangeActive' : 'autoChangeHidden'}
+            `}
             onClick={() => {
               setIsFirstActive(false);
               setIsSecondActive(false);
@@ -188,11 +218,13 @@ const AutoChangeContent = ({
             }}
           >
             <h2
-              className={
-                isThirdActive
-                  ? `flex justify-start items-center gap-4 md:text-2xl font-bold text-gray-800`
-                  : `flex justify-start items-center gap-4 md:text-xl font-bold text-gray-400`
-              }
+              className={`transition-all duration-200 flex justify-start items-center gap-4 md:text-2xl font-bold text-gray-800
+                ${
+                  isThirdActive
+                    ? `md:text-2xl  text-gray-800`
+                    : `md:text-xl  text-gray-400`
+                }
+              `}
             >
               <img
                 src="./images/autochange/triangle.png"
@@ -210,13 +242,13 @@ const AutoChangeContent = ({
               Sync your video conferencing tools and set preferences for
               in-person meetings or calls.
             </p>
+            <ProgressColors color="pink" />
           </div>
           <div
-            className={
-              isFourthActive
-                ? 'AutoChangeContent Active'
-                : `AutoChangeContent Hidden`
-            }
+            className={`transition-all border-b py-6 grid gap-5 duration-300 w-11/12 cursor-pointer overflow-hidden  autoChangeContentClass
+
+              ${isFourthActive ? 'autoChangeActive' : 'autoChangeHidden'}
+            `}
             onClick={() => {
               setIsFirstActive(false);
               setIsSecondActive(false);
@@ -227,11 +259,13 @@ const AutoChangeContent = ({
             }}
           >
             <h2
-              className={
-                isFourthActive
-                  ? `flex justify-start items-center gap-4 md:text-2xl font-bold text-gray-800`
-                  : `flex justify-start items-center gap-4 md:text-xl font-bold text-gray-400`
-              }
+              className={`transition-all duration-200 flex justify-start items-center gap-4 md:text-2xl font-bold text-gray-800
+                ${
+                  isFourthActive
+                    ? `md:text-2xl  text-gray-800`
+                    : `md:text-xl  text-gray-400`
+                }
+              `}
             >
               <img
                 src="./images/autochange/wave.png"
@@ -249,13 +283,13 @@ const AutoChangeContent = ({
               Choose from pre-built templates or quickly create custom event
               types for any meeting you need to schedule.
             </p>
+            <ProgressColors color="purple" />
           </div>
           <div
-            className={
-              isFifthActive
-                ? 'AutoChangeContent Active'
-                : `AutoChangeContent Hidden`
-            }
+            className={`transition-all border-b py-6 grid gap-5 duration-300 w-11/12 cursor-pointer overflow-hidden  autoChangeContentClass
+
+              ${isFifthActive ? 'autoChangeActive' : 'autoChangeHidden'}
+            `}
             onClick={() => {
               setIsFirstActive(false);
               setIsSecondActive(false);
@@ -266,11 +300,13 @@ const AutoChangeContent = ({
             }}
           >
             <h2
-              className={
-                isFifthActive
-                  ? `flex justify-start items-center gap-4 md:text-2xl font-bold text-gray-800`
-                  : `flex justify-start items-center gap-4 md:text-xl font-bold text-gray-400`
-              }
+              className={`transition-all duration-200 flex justify-start items-center gap-4 md:text-2xl font-bold text-gray-800
+                ${
+                  isFifthActive
+                    ? `md:text-2xl  text-gray-800`
+                    : `md:text-xl  text-gray-400`
+                }
+              `}
             >
               <img
                 src="./images/autochange/send.png"
@@ -288,6 +324,7 @@ const AutoChangeContent = ({
               Easily book meetings by embedding scheduling links on your
               website, landing pages, or emails.
             </p>
+            <ProgressColors color="purple" />
           </div>
         </div>
         <div className="py-8 px-4 mt-10 md:mt-0 md:h-[38rem] bg-gray-100 w-full rounded-2xl">

@@ -244,15 +244,24 @@ a {
 /* swiper ⬆️*/
 
 /* autoChangeContent ⬇️ */
-.AutoChangeContent {
-  transition: 0.3s ease-in-out;
+.autoChangeContentClass {
+  transition: 0.7s ease-in-out;
 }
 
-.AutoChangeContent.Active {
-  @apply transition-all h-auto border-b py-6 grid gap-5 duration-300 w-11/12 cursor-pointer overflow-hidden;
+.autoChangeContentClass.autoChangeActive {
+  @apply h-auto;
+}
+
+.autoChangeContentClass.autoChangeHidden {
+  @apply h-20;
+}
+
+/* 
+.autoChangeContentClass.Active {
+  @apply h-auto;
 }
 
 .AutoChangeContent.Hidden {
-  @apply transition-all h-20 border-b py-6 grid gap-5 duration-300 w-11/12 cursor-pointer overflow-hidden;
-}
+  @apply h-20;
+} */
 /* autoChangeContent ⬆️ */
