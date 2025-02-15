@@ -1,10 +1,21 @@
 import React from 'react';
 import { BiPhone } from 'react-icons/bi';
 import { IoMailOutline } from 'react-icons/io5';
+import { motion } from 'framer-motion';
 
 const Footer = () => {
   return (
-    <div className="bg" style={{ background: 'var(--background-blue)' }}>
+    <motion.div
+      initial={{ y: 100, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{
+        delay: 0.4,
+        type: 'spring',
+      }}
+      className="bg"
+      style={{ background: 'var(--background-blue)' }}
+    >
       <footer
         className="flex justify-center m-auto mt-[4rem] w-full max-w-7xl items-center relative z-10 pt-10 overflow-hidden lg:pt-[120px]"
         style={{ background: 'var(--background-blue)' }}
@@ -184,7 +195,7 @@ const Footer = () => {
           </span>
         </div>
       </footer>
-    </div>
+    </motion.div>
   );
 };
 

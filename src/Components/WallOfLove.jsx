@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 function WallOfLove() {
   const data = [
@@ -41,7 +42,16 @@ function WallOfLove() {
   ];
 
   return (
-    <section className="flex flex-col justify-center items-center mx-auto w-full max-w-7xl md:mt-16 md:pt-10 bg-white  ">
+    <motion.section
+      initial={{ y: 100, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{
+        delay: 0.4,
+        type: 'spring',
+      }}
+      className="flex flex-col justify-center items-center mx-auto w-full max-w-7xl md:mt-16 md:pt-10 bg-white  "
+    >
       <div className="flex m-auto justify-center items-center flex-col w-full gap-4 ">
         <div
           className={`flex flex-col justify-center gap-2 items-center lg:gap-4`}
@@ -67,7 +77,16 @@ function WallOfLove() {
 
         {/* slide container */}
 
-        <div className="mx-4 grid grid-cols-1 gap-6 md:grid-cols-3">
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.4,
+            type: 'spring',
+          }}
+          className="mx-4 grid grid-cols-1 gap-6 md:grid-cols-3"
+        >
           {/* <Slider {...settings}> */}
           {data.map((e, i) => (
             <div
@@ -91,9 +110,9 @@ function WallOfLove() {
             </div>
           ))}
           {/* </Slider> */}
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

@@ -1,9 +1,19 @@
 import { Link } from 'react-router-dom';
 import Button from './Button';
+import { motion } from 'framer-motion';
 
 const SendReqSection = ({ title, button }) => {
   return (
-    <section className="mx-auto my-15 w-full max-w-7xl">
+    <motion.section
+      initial={{ y: 100, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{
+        delay: 0.4,
+        type: 'spring',
+      }}
+      className="mx-auto my-15 w-full max-w-7xl"
+    >
       <div className="mx-5">
         <div className="w-full relative text-center py-6 rounded-md flex-col gap-10 leading-10 bg-yellow-400 h-auto justify-center items-center md:flex md:rounded-xl xl:rounded-2xl">
           {title ? (
@@ -39,7 +49,7 @@ const SendReqSection = ({ title, button }) => {
           <div className="bg-[#0a32c3] rounded-tl-lg rounded-tr-lg w-15 h-10 absolute bottom-0 left-5 z-12 md:w-20 md:h-16 md:left-10"></div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

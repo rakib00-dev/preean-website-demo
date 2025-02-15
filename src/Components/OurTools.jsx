@@ -1,8 +1,17 @@
-import Button from './Button';
+import { motion } from 'framer-motion';
 
 const OurTools = () => {
   return (
-    <section className="mx-auto my-15 w-full max-w-7xl">
+    <motion.section
+      initial={{ y: 100, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{
+        delay: 0.4,
+        type: 'spring',
+      }}
+      className="mx-auto my-15 w-full max-w-7xl"
+    >
       <div className="mx-5">
         <div className="w-full relative text-center py-6 px-10 rounded-md flex-col gap-2 leading-5 bg-gray-100 h-auto justify-between items-center md:flex md:flex-row md:rounded-xl xl:rounded-2xl">
           <div
@@ -64,7 +73,7 @@ const OurTools = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

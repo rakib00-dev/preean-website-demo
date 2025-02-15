@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Progress } from '@material-tailwind/react';
+import { motion } from 'framer-motion';
 
 const AutoChangeContent = ({
   changeAlignment = 'grid-cols-2',
@@ -337,7 +338,16 @@ const AutoChangeContent = ({
   };
 
   return (
-    <section className="mx-auto w-full max-w-7xl my-20">
+    <motion.section
+      initial={{ y: 100, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{
+        delay: 0.4,
+        type: 'spring',
+      }}
+      className="mx-auto w-full max-w-7xl my-20"
+    >
       <div className="mx-3 md:mx-16">
         <div
           className={`flex flex-col justify-center gap-2 items-center md:gap-4 md:items-start md:my-8 md:mx-12`}
@@ -367,7 +377,7 @@ const AutoChangeContent = ({
           <ChangingCards />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

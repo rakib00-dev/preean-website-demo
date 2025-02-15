@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import Button from './Button';
+import { motion } from 'framer-motion';
 
 const SecondTypeSection = ({
   smallTitle = 'how it work',
@@ -17,7 +18,16 @@ const SecondTypeSection = ({
   workImgs[2] = './images/SecondTypeImg/mail-open.svg';
 
   return (
-    <section className="flex flex-col justify-center items-center mx-auto w-full max-w-7xl md:mt-16 md:pt-10 bg-white overflow-hidden ">
+    <motion.section
+      initial={{ y: 100, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{
+        delay: 0.4,
+        type: 'spring',
+      }}
+      className="flex flex-col justify-center items-center mx-auto w-full max-w-7xl md:mt-16 md:pt-10 bg-white overflow-hidden "
+    >
       <div className="flex m-auto justify-center items-center flex-col w-[95%] gap-4 ">
         {/* content */}
 
@@ -101,7 +111,7 @@ const SecondTypeSection = ({
           </Link>
         )}
       </div>
-    </section>
+    </motion.section>
   );
 };
 

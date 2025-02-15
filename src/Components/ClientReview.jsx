@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { clientArr } from '../importItems/client';
+import { motion } from 'framer-motion';
 
 const ClientReview = () => {
   const [client, setClient] = useState(clientArr.slice(0, 1));
@@ -23,7 +24,16 @@ const ClientReview = () => {
   };
 
   return (
-    <section className="mx-auto my-12 w-full max-w-7xl md:my-16">
+    <motion.section
+      initial={{ y: 100, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{
+        delay: 0.4,
+        type: 'spring',
+      }}
+      className="mx-auto my-12 w-full max-w-7xl md:my-16"
+    >
       <div className="mx-2 md:mx-10">
         {/* selection */}
         <div className=" mx-auto grid place-items-center my-6 w-full md:hidden">
@@ -105,7 +115,7 @@ const ClientReview = () => {
           </div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 
