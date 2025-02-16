@@ -17,7 +17,7 @@ const SolutionHomeSection = () => {
       }}
       className="mx-auto w-full max-w-7xl my-20 overflow-hidden"
     >
-      <div className="mx-3 md:mx-16">
+      <div className="mx-3 md:ms">
         <motion.div
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}

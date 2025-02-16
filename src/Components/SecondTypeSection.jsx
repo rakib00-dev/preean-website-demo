@@ -26,9 +26,9 @@ const SecondTypeSection = ({
         delay: 0.4,
         type: 'spring',
       }}
-      className="flex flex-col justify-center items-center mx-auto w-full max-w-7xl md:mt-16 md:pt-10 bg-white overflow-hidden "
+      className="flex flex-col justify-center items-center mx-auto w-full max-w-7xl md:mt-16 md:pt-10 bg-white overflow-hidden"
     >
-      <div className="flex m-auto justify-center items-center flex-col w-[95%] gap-4 ">
+      <div className="flex m-auto justify-center items-center flex-col w-full gap-4 ">
         {/* content */}
 
         {/* text conent */}

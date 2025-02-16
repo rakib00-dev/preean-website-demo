@@ -18,7 +18,7 @@ const PickPerfectPlan = () => {
       }}
       className="mx-auto w-full max-w-7xl my-20"
     >
-      <div className="mx-3 md:mx-16">
+      <div className="">
         <motion.div
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -27,7 +27,7 @@ const PickPerfectPlan = () => {
             delay: 0.3,
             type: 'spring',
           }}
-          className={`flex flex-col justify-center gap-2 items-center md:gap-4 md:items-start md:my-8 md:mx-12`}
+          className={`flex flex-col justify-center gap-2 items-center mx-3 md:gap-4 md:items-start md:my-8 md:mx-12`}
         >
           <h1
             className="uppercase font-extrabold text-[.85rem] md:text-[.9rem]"
@@ -130,7 +130,7 @@ const PickPerfectPlan = () => {
               delay: 0.4,
               type: 'spring',
             }}
-            className="grid place-items-center gap-5 md:gap-0 md:grid-cols-4"
+            className="grid place-items-center gap-5 md:gap-4  md:grid-cols-4 md:w-full "
           >
             {isFirstBtnActive ? (
               <WeeklyCards />
@@ -151,7 +151,10 @@ export default PickPerfectPlan;
 const WeeklyCards = () => {
   return (
     <>
-      <HomePagePricing btnColor="bg-transparent border sm:text-black hover:text-gray-400" />
+      <HomePagePricing
+        btnColor="bg-transparent border sm:text-black hover:text-gray-400"
+        textColor="text-black"
+      />
       <HomePagePricing
         price="250"
         title="Business"
@@ -188,6 +191,7 @@ const MonthlyCards = () => {
       <HomePagePricing
         price="124"
         btnColor="bg-transparent border sm:text-black hover:text-gray-400"
+        textColor="text-black"
       />
       <HomePagePricing
         price="225"
@@ -225,6 +229,7 @@ const QuarterlyCards = () => {
       <HomePagePricing
         price="110"
         btnColor="bg-transparent border sm:text-black hover:text-gray-400"
+        textColor="text-black"
       />
       <HomePagePricing
         price="200"
@@ -262,6 +267,7 @@ const HomePagePricing = ({
   titleSize = 'text-xl',
   price = '138',
   bgColor = 'bg-white',
+  textColor = 'text-white',
   priceColor = 'gray-900',
   btnText = 'View More',
   borderColor = 'gray-300',
@@ -271,7 +277,7 @@ const HomePagePricing = ({
   children,
 }) => {
   return (
-    <div className={`w-[230px] mx-2  rounded-2xl left-0 relative`}>
+    <div className={`w-[230px] mx-2 rounded-2xl relative md:w-[270px]`}>
       {/* initial wraper */}
       <div
         className={`border border-t-8 rounded-2xl h-[337px] px-4 py-5 gap-4 grid ${bgColor} border-${borderColor}`}
@@ -287,7 +293,7 @@ const HomePagePricing = ({
         <div className="grid w-full place-items-center mb-5">
           <Link
             to={'/pricing'}
-            className={`transition-all text-white text-center py-2 px-4 rounded-xl md:text-md sm:w-full ${btnColor}`}
+            className={`transition-all ${textColor} text-center py-2 px-4 rounded-xl md:text-md sm:w-full ${btnColor}`}
           >
             {btnText}
           </Link>

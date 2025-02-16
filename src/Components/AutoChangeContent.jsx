@@ -348,9 +348,9 @@ const AutoChangeContent = ({
       }}
       className="mx-auto w-full max-w-7xl my-20"
     >
-      <div className="mx-3 md:mx-16">
+      <div className="mx-3 md:mx-0">
         <div
-          className={`flex flex-col justify-center gap-2 items-center md:gap-4 md:items-start md:my-8 md:mx-12`}
+          className={`flex flex-col justify-center gap-2 items-center md:gap-4 md:items-start md:my-8 md:mx-10`}
         >
           <h1
             className="uppercase font-extrabold text-[.85rem] md:text-[.9rem]"
