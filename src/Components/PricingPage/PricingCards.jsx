@@ -12,7 +12,7 @@ const PricingCards = () => {
       <section className="bg-white mx-auto w-full max-w-7xl ">
         <div className="py-8 px-4 mx-auto lg:py-16">
           <div className="mx-auto w-fit max-w-screen-md text-center mb-8 lg:mb-12">
-            <div className="uppercase gap-2 flex justify-center items-center bg-gray-100 py-2 px-1 rounded-xl">
+            <div className="uppercase gap-2 flex justify-center items-center bg-gray-200 py-2 px-1 rounded-xl">
               <button
                 className={
                   isFirstBtnActive
@@ -179,6 +179,9 @@ const FilterCardPackage = ({
         btnColor="bg-gray-800 hover:bg-gray-600"
         description="Create all of your everyday designs."
         buttonText="Choose Personal"
+        doneImgStyle={{
+          filter: 'hue-rotate(180deg) saturate(0%) brightness(0%)',
+        }}
       ></PricingCard>
       <PricingCard
         title="Business"
@@ -187,6 +190,9 @@ const FilterCardPackage = ({
         feature1stList="2 Daily Output"
         feature2ndList="Next-Day Delivery"
         DesignLockColor="black"
+        doneImgStyle={{
+          filter: 'hue-rotate(180deg) saturate(0%) brightness(0%)',
+        }}
       ></PricingCard>
       <PricingCard
         title="Designated Designer"
@@ -198,9 +204,6 @@ const FilterCardPackage = ({
         priceColor="black text-extrabold"
         featureLockColor="black"
         DesignLockColor="black"
-        doneImgStyle={{
-          filter: 'hue-rotate(180deg) saturate(0%) brightness(189%)',
-        }}
         thirdChild
       >
         <img
@@ -221,7 +224,7 @@ const FilterCardPackage = ({
         featureLockColor="black"
         DesignLockColor="black"
         doneImgStyle={{
-          filter: 'hue-rotate(180deg) saturate(0%) brightness(189%)',
+          filter: 'hue-rotate(180deg) saturate(0%) brightness(0%)',
         }}
       ></PricingCard>
     </div>
@@ -267,7 +270,7 @@ const PricingCard = ({
             <div className="grid place-items-center my-5 gap-4 w-full overflow-hidden">
               <Link
                 to={'/book-a-call'}
-                className={`transition-all duration-200 text-white md:text-xl font-medium ${btnColor} py-3 px-16 rounded-xl`}
+                className={`transition-all duration-200 text-white md:text-lg font-semibold ${btnColor} py-3 px-18 rounded-xl`}
               >
                 {btnText}
               </Link>
@@ -281,77 +284,101 @@ const PricingCard = ({
           >
             <h5 className="text-lg font-extrabold">Features</h5>
             <ul className="grid gap-4 *:font-medium *:text-gray-600">
-              <li className="flex text-sm gap-2">
+              <li className="flex text-sm gap-2 ">
                 <img
                   loading="lazy"
                   src={done}
+                  style={doneImgStyle}
                   alt="done meaning it will given to client"
                   className="w-4"
                 />
-                {feature1stList}
+                <span className="border-b-2 border-dotted border-gray-400">
+                  {feature1stList}
+                </span>
               </li>
               <li className="flex text-sm gap-2">
                 <img
                   loading="lazy"
                   src={done}
+                  style={doneImgStyle}
                   alt="done meaning it will given to client"
                   className="w-4"
                 />
-                {feature2ndList}
+                <span className="border-b-2 border-dotted border-gray-400">
+                  {feature2ndList}
+                </span>
               </li>
               <li className={`flex text-sm gap-2 text-${featureLockColor}`}>
                 <img
                   loading="lazy"
                   src={done}
+                  style={doneImgStyle}
                   alt="lock meaning it will not given to client"
                   className="w-4"
-                />{' '}
-                Real Time Slack Communication
+                />
+                <span className="border-b-2 border-dotted border-gray-400">
+                  Real Time Slack Communication
+                </span>
               </li>
               <li className="flex text-sm gap-2">
                 <img
                   loading="lazy"
                   src={done}
+                  style={doneImgStyle}
                   alt="done meaning it will given to client"
                   className="w-4"
                 />
-                Design Services
+                <span className="border-b-2 border-dotted border-gray-400">
+                  Design Services
+                </span>
               </li>
               <li className="flex text-sm gap-2">
                 <img
                   loading="lazy"
                   src={done}
+                  style={doneImgStyle}
                   alt="done meaning it will given to client"
                   className="w-4"
                 />
-                Web Design
+                <span className="border-b-2 border-dotted border-gray-400">
+                  Web Design
+                </span>
               </li>
               <li className="flex text-sm gap-2">
                 <img
                   loading="lazy"
                   src={done}
+                  style={doneImgStyle}
                   alt="done meaning it will given to client"
                   className="w-4"
                 />
-                Illustrations
+                <span className="border-b-2 border-dotted border-gray-400">
+                  Illustrations
+                </span>
               </li>
               <li className={`flex text-sm gap-2 text-${DesignLockColor}`}>
                 <img
                   loading="lazy"
                   src={done}
+                  style={doneImgStyle}
                   alt="lock meaning it will not given to client"
                   className="w-4"
                 />
-                Motion Graphics
+                <span className="border-b-2 border-dotted border-gray-400">
+                  Motion Graphics
+                </span>
               </li>
               <li className={`flex text-sm gap-2 text-${DesignLockColor}`}>
                 <img
                   loading="lazy"
                   src={done}
+                  style={doneImgStyle}
                   alt="lock meaning it will not given to client"
                   className="w-4"
                 />
-                Video Editing
+                <span className="border-b-2 border-dotted border-gray-400">
+                  Video Editing
+                </span>
               </li>
             </ul>
           </div>
