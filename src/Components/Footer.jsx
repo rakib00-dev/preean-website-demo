@@ -13,22 +13,22 @@ const Footer = () => {
         delay: 0.4,
         type: 'spring',
       }}
-      className="bg"
-      style={{ background: 'var(--background-blue)' }}
+      className=""
+      style={{ background: 'var(--text-primary)' }}
     >
       <footer
-        className="flex justify-center m-auto mt-[4rem] w-full max-w-7xl items-center relative z-10 pt-10 overflow-hidden lg:pt-[120px]"
-        style={{ background: 'var(--background-blue)' }}
+        className="flex justify-center m-auto mt-[4rem] w-full max-w-7xl items-center relative z-10 pt-10 overflow-hidden lg:pt-[120px] *:text-white"
+        style={{ background: 'var(--text-primary)' }}
       >
-        <div className="flex flex-col w-[95%] p-0 md:w-4/5 md:p-4 md:flex-row">
-          <div className="-mx-4 flex flex-wrap">
-            <div className="w-full px-4 sm:w-2/3 lg:w-3/12">
+        <div className="flex flex-col w-[95%] p-0 md:p-4 md:flex-row">
+          <div className="gird md:flex w-full">
+            <div className="w-full px-4 md:w-3/12">
               <div className="mb-10 w-full">
                 <a href="/#" className="mb-6 inline-block max-w-[160px]">
                   <img
                     src="https://designpro.qa/img/Designpro-logo-large.png"
                     alt="logo"
-                    className="w-60"
+                    className="w-60 invert"
                     loading="lazy"
                   />
                 </a>

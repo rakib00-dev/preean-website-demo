@@ -24,7 +24,7 @@ const Hero = () => {
                 className="hidden absolute justify-center items-center left-0 top-0 w-full hue-rotate-383 lg:flex"
                 loading="lazy"
               /> */}
-              <div className="relative m-auto shadow-[10px_10px_45px_5px_rgba(0,0,0,0.25)] rounded-2xl flex flex-col justify-center items-center w-full scale-90 lg:scale-80">
+              <div className="relative m-auto shadow-[10px_10px_45px_5px_rgba(0,0,0,0.25)] rounded-2xl flex flex-col justify-center items-center w-full scale-90 md:scale-90">
                 <div className="px-6 pb-6 pt-2 grid gap-5 bg-white rounded-xl border-gray-200 border-2 shadow-2xl absolute cardOne">
                   <h1 className="md:text-2xl text-xs font-bold bg-gray-100 p-4 rounded-2xl ">
                     Reduce no-shows and stay on track
