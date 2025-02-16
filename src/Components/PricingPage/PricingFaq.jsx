@@ -21,19 +21,24 @@ const PricingFaq = ({
 
   return (
     <section className="mx-auto w-full my-16 max-w-7xl">
-      <div className="grid mx-2  grid-cols-1 md:grid-cols-2 gap-10 md:gap-2 place-items-center md:mx-auto">
+      <div className="grid mx-2  grid-cols-1 gap-10 md:gap-2 place-items-center md:mx-auto">
         {/* content */}
-        <div className="grid top-0  gap-4">
-          <h1 className="md:text-3xl text-2xl text-center md:text-start font-extrabold ">
-            F.A.Q
+        <div className="grid place-items-center top-0  gap-4">
+          <h1 className="md:text-6xl text-3xl text-center md:text-start font-extrabold ">
+            Frequently Asked Questions
           </h1>
-          <p className=" text-lg text-start w-70 md:text-2xl md:w-[25.5rem]">
-            Can’t find the info your are looking for? send us an email at
-            Govenderpreean23@gmail.com
+          <p className=" text-lg text-center w-70 md:text-2xl md:w-[35.5rem]">
+            Can’t find the info your are looking for? send us an email at{' '}
+            <a
+              href="mailto:Govenderpreean23@gmail.com"
+              className="text-blue-500 cursor-pointer hover:underline"
+            >
+              Govenderpreean23@gmail.com
+            </a>
           </p>
         </div>
         {/* FAQS */}
-        <div className="transition-all duration-300 grid w-full md:mt-20 md:mr-3 gap-6">
+        <div className="transition-all duration-300 grid w-full md:w-11/12 md:mt-20 md:mr-3 gap-6">
           <div className="bg-gray-100 h-auto w- text-md md:text-xl py-4 pr-10 pl-4 font-bold rounded-2xl cursor-pointer">
             <h1
               className="flex gap-5 "
