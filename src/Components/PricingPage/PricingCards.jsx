@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Button from '../Button';
 import { Link } from 'react-router-dom';
+import { FaLongArrowAltDown } from 'react-icons/fa';
 
 const PricingCards = () => {
   const [isFirstBtnActive, setIsFirstBtnActive] = useState(true);
@@ -184,7 +185,7 @@ const FilterCardPackage = ({
         }}
       ></PricingCard>
       <PricingCard
-        title="Business"
+        title="Standard"
         description="Get double the output everyday."
         price={secondPrice}
         feature1stList="2 Daily Output"
@@ -195,7 +196,7 @@ const FilterCardPackage = ({
         }}
       ></PricingCard>
       <PricingCard
-        title="Designated Designer"
+        title="Premium"
         description="For growing businesses"
         price={thirdPrice}
         feature1stList="1 Designated Designer"
@@ -214,7 +215,7 @@ const FilterCardPackage = ({
         />
       </PricingCard>
       <PricingCard
-        title="Design Team"
+        title="Enterprise"
         description="For large companies."
         price={fourthPrice}
         btnText="Book A Call"
@@ -232,7 +233,7 @@ const FilterCardPackage = ({
 };
 
 const PricingCard = ({
-  title = 'Advanced',
+  title = 'Basic',
   description = 'Create all of your everyday designs.',
   price = '124',
   done = './images/ourpricingpage/card-images/done.svg',
@@ -257,12 +258,16 @@ const PricingCard = ({
       <div className={`md:w-[280px] mx-2 left-0 relative`}>
         {/* initial wraper */}
         <div
-          className={`border-2 rounded-2xl border-gray-300/30 shadow-xl p-4 gap-4 grid ${bgColor} `}
+          className={`border-2 relative rounded-2xl border-gray-300/30 shadow-xl p-4 gap-4 grid ${bgColor} `}
         >
-          {children}
-          <div className="grid gap-1 pb-0">
-            {thirdChild && <span></span>}
-            <h5 className=" font-extrabold text-2xl">{title}</h5>
+          {/* {children} */}
+          {thirdChild && (
+            <span className="absolute top-0 right-0 text-sm bg-blue-500 font-bold text-white capitalize py-1 px-2 rounded-bl-2xl rounded-tr-2xl ">
+              recommended plan
+            </span>
+          )}
+          <div className="relative grid gap-1 pb-0">
+            <h5 className=" font-extrabold text-2xl pt-1">{title}</h5>
             <p className="text-sm font-medium text-gray-500">{description}</p>
             <h5 className={`text-3xl mt-7 font-extrabold text-${priceColor}`}>
               ${price}/wk
@@ -276,8 +281,8 @@ const PricingCard = ({
               </Link>
             </div>
           </div>
-          <span className="text-[#0b3558] text-xs font-bold">
-            This is our {title}
+          <span className="text-[#0b3558] text-xs font-bold flex justify-start gap-2 items-center">
+            This is our {title} <FaLongArrowAltDown />
           </span>
           <div
             className={`transition-all duration-300 grid gap-4 pt-3 overflow-hidden ${
