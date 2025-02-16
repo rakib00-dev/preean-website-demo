@@ -7,6 +7,7 @@ import PricingCards from '../Components/PricingPage/PricingCards';
 import PricingFaq from '../Components/PricingPage/PricingFaq';
 import SendReqSection from '../Components/SendReqSection';
 import WallOfLove from '../Components/WallOfLove';
+import CompareFeatures from '../Components/PricingPage/CompareFeatures';
 
 const PricingPage = () => {
   return (
@@ -20,6 +21,7 @@ const PricingPage = () => {
         </PageHeader>
       </section>
       <PricingCards />
+      <CompareFeatures />
       <AllPlans />
       <OurWork />
       <WallOfLove />
