@@ -103,15 +103,21 @@ const PricingCards = () => {
         </div>
       </section>
       {/* <WebflowDevelopment /> */}
-      <section className="mx-auto w-full max-w-7xl">
+      <section className="mx-auto w-full grid place-items-center max-w-7xl">
         <div className="bg-purple-600 grid place-items-center mx-2 md:mx-20 w-fit  rounded-xl">
           <div className="grid justify-center items-center w-auto gap-2 p-6 py-10 h-auto place-items-center md:grid-cols-3">
             {/* cards */}
             <div className="flex flex-col gap-2 md:gap-5 w-full ">
-              <h5 className="py-2 px-4 w-fit rounded-full text-sm font-extrabold uppercase  bg-red-400 text-white">
+              <h5
+                className="py-2 px-4 w-fit rounded-full text-sm font-extrabold uppercase  bg-red-400 text-white"
+                style={{ color: 'white' }}
+              >
                 Add-on
               </h5>
-              <h3 className="w-fit font-extrabold text-2xl text-white md:text-3xl">
+              <h3
+                className="w-fit font-extrabold text-2xl text-white md:text-3xl"
+                style={{ color: 'white' }}
+              >
                 Webflow Development
               </h3>
             </div>
@@ -126,7 +132,10 @@ const PricingCards = () => {
             </div>
             <div className="grid gap-2 md:gap-5 w-full md:w-fit ">
               <div>
-                <h5 className="text-lg font-extrabold text-white">
+                <h5
+                  className="text-lg font-extrabold text-white"
+                  style={{ color: 'white' }}
+                >
                   started at
                 </h5>
                 <span className="text-yellow-400 font-[900] text-2xl">
