@@ -36,7 +36,7 @@ const PickPerfectPlan = () => {
             enjoy best plans
           </h1>
           <h2
-            className={`font-extrabold text-[1.55rem] text-center w-full mb-4 leading-8 lg:text-start md:text-[2.1rem] md:w-4/5 lg:text-[2.5rem] lg:leading-13`}
+            className={`font-extrabold text-[1.55rem] text-center w-full mb-4 leading-8 lg:text-start md:text-6xl md:w-4/5 lg:leading-13`}
           >
             Choose the ideal plan that suits your team's needs.
           </h2>

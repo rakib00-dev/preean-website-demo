@@ -26,7 +26,7 @@ const WhatWeOffer = ({
             {smallTitle}
           </h1>
           <h2
-            className={`font-extrabold text-[1.55rem] text-center w-[95%] mb-4 leading-8 lg:text-${textContentAlign} min-[450px]:w-full md:text-[2.1rem] lg:w-full lg:text-[2.5rem] lg:leading-13`}
+            className={`font-extrabold text-[1.55rem] text-center w-[95%] mb-4 leading-8 md:text-6xl md:text-${textContentAlign} min-[450px]:w-full lg:w-full lg:leading-13`}
             style={style}
           >
             {bigTitle}
