@@ -227,7 +227,7 @@ const NavLink = ({ link, label, className }) => {
     <li>
       <a
         href={link}
-        className={`inline-block text-base leading-loose text-body-color hover:underline  ${className}`}
+        className={`inline-block text-base leading-loose text-white hover:underline  ${className}`}
       >
         {label}
       </a>
