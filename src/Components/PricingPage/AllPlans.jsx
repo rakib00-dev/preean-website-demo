@@ -1,7 +1,7 @@
 const AllPlans = () => {
   return (
     <section className="mx-auto my-10 w-full max-w-7xl">
-      <div className="bg-gray-100 grid place-items-center rounded-2xl p-5 py-7 gap-10 mx-2 md:mx-20 ">
+      <div className="bg-gray-200 grid place-items-center rounded-2xl p-5 py-7 gap-10 mx-2 md:mx-20 ">
         <h1 className="text-3xl font-[900] md:text-4xl">All plans include</h1>
         <ul className="grid md:grid-cols-3 gap-5">
           <li className="flex gap-2 md:text-xl md:mx-15">

@@ -260,7 +260,7 @@ const PricingCard = ({
           className={`border-2 rounded-2xl border-gray-300/30 shadow-xl p-4 gap-4 grid ${bgColor} `}
         >
           {children}
-          <div className="grid gap-1 border-b-1 border-gray-300 pb-0">
+          <div className="grid gap-1 pb-0">
             {thirdChild && <span></span>}
             <h5 className=" font-extrabold text-2xl">{title}</h5>
             <p className="text-sm font-medium text-gray-500">{description}</p>
@@ -276,7 +276,9 @@ const PricingCard = ({
               </Link>
             </div>
           </div>
-
+          <span className="text-[#0b3558] text-xs font-bold">
+            This is our {title}
+          </span>
           <div
             className={`transition-all duration-300 grid gap-4 pt-3 overflow-hidden ${
               isViewMore ? 'h-96' : 'h-56'
