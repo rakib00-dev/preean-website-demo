@@ -2,12 +2,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import 'tailwindcss';
 
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy-Heavy.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy-Large.ttf') format('truetype'); /* Not a common weight */
+  font-weight: 900;
+  font-style: normal;
+}
+
 :root {
   --text-primary: #07122b;
   /* --color-primary: #ff5757; */
   --black-primary: #0b3558;
   --black-secondary: rgb(71, 103, 136);
   --blue-primary: #0099f6;
+  --primary-font: 'Gilroy';
   --colors-pink: #ef457e;
   --background-gray: #f8f8f8;
   --colors-yellow: #ffd44d;
@@ -19,12 +55,12 @@
 }
 
 * {
-  font-family: 'Mulish', sans-serif !important;
+  font-family: 'Gilroy', sans-serif !important;
 }
 
 p,
 a {
-  font-family: 'Roboto', sans-serif !important;
+  font-family: 'Gilroy', sans-serif !important;
 }
 
 h1,
@@ -33,6 +69,7 @@ h3,
 h4,
 h5 {
   color: var(--black-primary);
+  font-weight: 700;
 }
 
 /* navbar dropdown ⬇️*/

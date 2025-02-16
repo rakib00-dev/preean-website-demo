@@ -37,7 +37,7 @@ const SolutionHomeSection = () => {
           <h2
             className={`font-extrabold text-[1.55rem] text-center w-full mb-4 leading-8 md:text-6xl md:text-start md:w-4/5 lg:leading-13`}
           >
-            Check out our solutions and resources we provide
+            Calendly makes scheduling simple
           </h2>
         </motion.div>
 
