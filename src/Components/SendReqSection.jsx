@@ -19,7 +19,10 @@ const SendReqSection = ({ title, button }) => {
           {title ? (
             title
           ) : (
-            <h1 className="text-xl px-8 mt-15 mb-4 font-extrabold md:text-4xl xl:text-6xl">
+            <h1
+              className="text-xl px-8 mt-15 mb-4 font-extrabold md:text-4xl xl:text-6xl"
+              style={{ color: 'black' }}
+            >
               Send your request today. <br />
               Get your design tomorrow.
             </h1>

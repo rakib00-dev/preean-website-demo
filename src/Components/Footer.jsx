@@ -73,7 +73,10 @@ const Footer = () => {
 
             <div className="w-full px-4 sm:w-1/2 lg:w-3/12">
               <div className="mb-10 w-full">
-                <h4 className="mb-9 text-lg font-semibold text-dark ">
+                <h4
+                  className="mb-9 text-lg font-semibold text-dark "
+                  style={{ color: '#8181ff' }}
+                >
                   Follow Us On
                 </h4>
                 <div className="mb-6 flex items-center">
@@ -206,7 +209,12 @@ const LinkGroup = ({ children, header }) => {
     <>
       <div className="w-full px-4 sm:w-1/2 lg:w-2/12">
         <div className="mb-10 w-full">
-          <h4 className="mb-9 text-lg font-semibold text-dark ">{header}</h4>
+          <h4
+            className="mb-9 text-lg font-semibold text-dark"
+            style={{ color: '#8181ff' }}
+          >
+            {header}
+          </h4>
           <ul className="space-y-3">{children}</ul>
         </div>
       </div>

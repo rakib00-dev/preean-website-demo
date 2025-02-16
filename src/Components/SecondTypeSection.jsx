@@ -42,7 +42,7 @@ const SecondTypeSection = ({
             {smallTitle}
           </h1>
           <h2
-            className={`font-extrabold text-[1.55rem] text-center w-[95%] mb-4 leading-8 md:text-6xl md:text-${textContentAlign} min-[450px]:w-full lg:w-full lg:leading-13`}
+            className={`font-extrabold text-[1.55rem] text-center w-[95%] mb-4 leading-8 md:text-6xl md:text-${textContentAlign} md:w-[98%] lg:leading-13`}
             style={style}
           >
             {bigTitle}
