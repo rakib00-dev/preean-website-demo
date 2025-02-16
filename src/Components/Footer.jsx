@@ -82,7 +82,7 @@ const Footer = () => {
                 <div className="mb-6 flex items-center">
                   <a
                     href="#"
-                    className="transition-all mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-stroke text-dark bg-blue-800 text-white hover:border-primary hover:bg-white hover:text-red-500 sm:mr-4 lg:mr-3 xl:mr-4"
+                    className="transition-all mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-gray-50/40 text-dark bg-blue-800 text-white hover:border-primary hover:bg-white hover:text-red-500 sm:mr-4 lg:mr-3 xl:mr-4"
                   >
                     <svg
                       width="8"
@@ -95,7 +95,7 @@ const Footer = () => {
                   </a>
                   <a
                     href="#"
-                    className="transition-all mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-stroke text-dark bg-blue-500 text-white hover:border-primary hover:bg-white hover:text-red-500 sm:mr-4 lg:mr-3 xl:mr-4"
+                    className="transition-all mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-gray-50/40 text-dark bg-blue-500 text-white hover:border-primary hover:bg-white hover:text-red-500 sm:mr-4 lg:mr-3 xl:mr-4"
                   >
                     <svg
                       width="16"
@@ -108,7 +108,7 @@ const Footer = () => {
                   </a>
                   <a
                     href="#"
-                    className="transition-all mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-stroke text-dark bg-red-500 text-white hover:border-primary hover:bg-white hover:text-red-500 sm:mr-4 lg:mr-3 xl:mr-4"
+                    className="transition-all mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-gray-50/40 text-dark bg-red-500 text-white hover:border-primary hover:bg-white hover:text-red-500 sm:mr-4 lg:mr-3 xl:mr-4"
                   >
                     <svg
                       width="16"
@@ -121,7 +121,7 @@ const Footer = () => {
                   </a>
                   <a
                     href="#"
-                    className="transition-all mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-stroke text-dark bg-blue-800 text-white hover:border-primary hover:bg-white hover:text-red-500  sm:mr-4 lg:mr-3 xl:mr-4"
+                    className="transition-all mr-3 flex h-8 w-8 items-center justify-center rounded-full border border-gray-50/40 text-dark bg-blue-800 text-white hover:border-primary hover:bg-white hover:text-red-500  sm:mr-4 lg:mr-3 xl:mr-4"
                   >
                     <svg
                       width="14"
