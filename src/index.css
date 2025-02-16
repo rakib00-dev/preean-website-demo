@@ -43,7 +43,8 @@
   --black-primary: #0b3558;
   --black-secondary: rgb(71, 103, 136);
   --blue-primary: #0099f6;
-  --primary-font: 'Gilroy';
+  --primary-font: 'Gilroy', sans-serif;
+  --primary-bg: #f8f9fb;
   --colors-pink: #ef457e;
   --background-gray: #f8f8f8;
   --colors-yellow: #ffd44d;
@@ -56,6 +57,11 @@
 
 * {
   font-family: 'Gilroy', sans-serif !important;
+}
+
+body,
+section {
+  background: var(--primary-bg);
 }
 
 p,

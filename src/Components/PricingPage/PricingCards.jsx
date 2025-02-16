@@ -163,10 +163,11 @@ const FilterCardPackage = ({
   fourthPrice = '599',
 }) => {
   return (
-    <div className=" relative grid grid-cols-1 md:grid-cols-4 gap-5">
+    <div className="w-full md:mx-4 relative grid grid-cols-1 md:grid-cols-4 gap-5">
       <PricingCard
         price={firstPrice}
         subscription="year"
+        btnColor="bg-gray-800 hover:bg-gray-600"
         description="Create all of your everyday designs."
         buttonText="Choose Personal"
       ></PricingCard>
@@ -176,26 +177,22 @@ const FilterCardPackage = ({
         price={secondPrice}
         feature1stList="2 Daily Output"
         feature2ndList="Next-Day Delivery"
-        DesignLockImg="./images/ourpricingpage/card-images/done.svg"
         DesignLockColor="black"
       ></PricingCard>
       <PricingCard
         title="Designated Designer"
-        description="Collaborate in real time with your designer."
+        description="For growing businesses"
         price={thirdPrice}
         feature1stList="1 Designated Designer"
         feature2stList="Same-Day Delivery"
-        bgColor="bg-[#ffa500]"
         btnText="Book A Call"
-        btnColor="black"
         priceColor="black text-extrabold"
-        featurLockImg="./images/ourpricingpage/card-images/done.svg"
-        DesignLockImg="./images/ourpricingpage/card-images/done.svg"
         featureLockColor="black"
         DesignLockColor="black"
         doneImgStyle={{
           filter: 'hue-rotate(180deg) saturate(0%) brightness(189%)',
         }}
+        thirdChild
       >
         <img
           src="./images/ourpricingpage/card-images/most-popular.webp"
@@ -206,16 +203,12 @@ const FilterCardPackage = ({
       </PricingCard>
       <PricingCard
         title="Design Team"
-        description="Collaborate in real time with your designer."
+        description="For large companies."
         price={fourthPrice}
-        bgColor="bg-[#ffa500]"
         btnText="Book A Call"
-        btnColor="black"
         priceColor="black text-extrabold"
         feature1stList="2 Designated Designer"
         feature2stList="Same-Day Delivery"
-        featurLockImg="./images/ourpricingpage/card-images/done.svg"
-        DesignLockImg="./images/ourpricingpage/card-images/done.svg"
         featureLockColor="black"
         DesignLockColor="black"
         doneImgStyle={{
@@ -235,40 +228,39 @@ const PricingCard = ({
   feature2ndList = '1-2 Day Delivery',
   featureLockColor = 'gray-400',
   DesignLockColor = 'gray-400',
-  featurLockImg = './images/ourpricingpage/card-images/lock.svg',
-  DesignLockImg = './images/ourpricingpage/card-images/lock.svg',
+  // done = './images/ourpricingpage/card-images/lock.svg',
+  // done = './images/ourpricingpage/card-images/lock.svg',
+  doneImgStyle,
   bgColor = 'bg-white',
   priceColor = 'blue-500',
-  doneImgStyle,
+  thirdChild,
   btnText = 'Get Started',
-  btnColor,
+  btnColor = 'bg-blue-500 hover:bg-blue-400',
   children,
 }) => {
   const [isViewMore, setIsViewMore] = useState(false);
 
   return (
     <>
-      <div className={`md:w-[230px]  mx-2 left-0 relative`}>
+      <div className={`md:w-[280px] mx-2 left-0 relative`}>
         {/* initial wraper */}
         <div
-          className={`border-2 rounded-2xl border-gray-300 p-4 gap-4 grid ${bgColor} `}
+          className={`border-2 rounded-2xl border-gray-300/30 shadow-xl p-4 gap-4 grid ${bgColor} `}
         >
           {children}
-          <div className="grid gap-4 border-b-1 border-gray-300 pb-5">
-            <h5 className=" font-extrabold text-lg">{title}</h5>
-            <p className="text-lg">{description}</p>
-            <h5 className={`text-3xl mt-2 font-extrabold text-${priceColor}`}>
+          <div className="grid gap-1 border-b-1 border-gray-300 pb-0">
+            {thirdChild && <span></span>}
+            <h5 className=" font-extrabold text-2xl">{title}</h5>
+            <p className="text-sm font-medium text-gray-500">{description}</p>
+            <h5 className={`text-3xl mt-7 font-extrabold text-${priceColor}`}>
               ${price}/wk
             </h5>
-            <div className="grid place-items-center my-5 gap-4">
-              <Link to={'/book-a-call'}>
-                <Button
-                  className={'text-white md:text-xl bg-black sm:px-56'}
-                  px="40"
-                  bg={btnColor}
-                >
-                  {btnText}
-                </Button>
+            <div className="grid place-items-center my-5 gap-4 w-full overflow-hidden">
+              <Link
+                to={'/book-a-call'}
+                className={`transition-all duration-200 text-white md:text-xl font-medium ${btnColor} py-3 px-16 rounded-xl`}
+              >
+                {btnText}
               </Link>
             </div>
           </div>
@@ -278,77 +270,77 @@ const PricingCard = ({
               isViewMore ? 'h-96' : 'h-56'
             }`}
           >
-            <h5 className="text-xl font-extrabold">Features</h5>
-            <ul className="grid gap-4">
-              <li className="flex text-md gap-2">
+            <h5 className="text-lg font-extrabold">Features</h5>
+            <ul className="grid gap-4 *:font-medium *:text-gray-600">
+              <li className="flex text-sm gap-2">
                 <img
                   loading="lazy"
                   src={done}
                   alt="done meaning it will given to client"
-                  style={doneImgStyle}
+                  className="w-4"
                 />
                 {feature1stList}
               </li>
-              <li className="flex text-md gap-2">
+              <li className="flex text-sm gap-2">
                 <img
                   loading="lazy"
                   src={done}
                   alt="done meaning it will given to client"
-                  style={doneImgStyle}
+                  className="w-4"
                 />
                 {feature2ndList}
               </li>
-              <li className={`flex text-md gap-2 text-${featureLockColor}`}>
+              <li className={`flex text-sm gap-2 text-${featureLockColor}`}>
                 <img
                   loading="lazy"
-                  src={featurLockImg}
+                  src={done}
                   alt="lock meaning it will not given to client"
-                  style={doneImgStyle}
+                  className="w-4"
                 />{' '}
                 Real Time Slack Communication
               </li>
-              <li className="flex text-md gap-2">
+              <li className="flex text-sm gap-2">
                 <img
                   loading="lazy"
                   src={done}
                   alt="done meaning it will given to client"
-                  style={doneImgStyle}
+                  className="w-4"
                 />
                 Design Services
               </li>
-              <li className="flex text-md gap-2">
+              <li className="flex text-sm gap-2">
                 <img
                   loading="lazy"
                   src={done}
                   alt="done meaning it will given to client"
-                  style={doneImgStyle}
+                  className="w-4"
                 />
                 Web Design
               </li>
-              <li className="flex text-md gap-2">
+              <li className="flex text-sm gap-2">
                 <img
                   loading="lazy"
                   src={done}
                   alt="done meaning it will given to client"
-                  style={doneImgStyle}
+                  className="w-4"
                 />
                 Illustrations
               </li>
-              <li className={`flex text-md gap-2 text-${DesignLockColor}`}>
+              <li className={`flex text-sm gap-2 text-${DesignLockColor}`}>
                 <img
                   loading="lazy"
-                  src={DesignLockImg}
+                  src={done}
                   alt="lock meaning it will not given to client"
-                  style={doneImgStyle}
+                  className="w-4"
                 />
                 Motion Graphics
               </li>
-              <li className={`flex text-md gap-2 text-${DesignLockColor}`}>
+              <li className={`flex text-sm gap-2 text-${DesignLockColor}`}>
                 <img
                   loading="lazy"
-                  src={DesignLockImg}
+                  src={done}
                   alt="lock meaning it will not given to client"
-                  style={doneImgStyle}
+                  className="w-4"
                 />
                 Video Editing
               </li>
@@ -362,7 +354,7 @@ const PricingCard = ({
           >
             {isViewMore ? 'view Less...' : 'view More...'}
           </span>
-          <div className="grid gap-4">
+          {/* <div className="grid gap-4">
             <h5 className="text-xl font-extrabold ">Tools</h5>
             <div className="flex gap-2">
               <img
@@ -384,7 +376,7 @@ const PricingCard = ({
                 className="w-10"
               />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
