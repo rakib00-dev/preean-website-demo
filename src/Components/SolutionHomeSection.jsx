@@ -15,7 +15,7 @@ const SolutionHomeSection = () => {
         delay: 0.4,
         type: 'spring',
       }}
-      className="mx-auto w-full max-w-7xl my-20 overflow-hidden"
+      className="mx-auto w-full max-w-7xl mb-20 overflow-hidden"
     >
       <div className="mx-3 md:ms">
         <motion.div
@@ -26,7 +26,7 @@ const SolutionHomeSection = () => {
             delay: 0.3,
             type: 'spring',
           }}
-          className={`flex flex-col justify-center gap-2 items-center md:gap-4 md:items-start md:my-8 md:mx-12`}
+          className={`flex flex-col justify-center gap-2 items-center md:gap-4 md:items-start md:mb-8 md:mx-12`}
         >
           <h1
             className="uppercase font-extrabold text-[.85rem] md:text-[.9rem]"

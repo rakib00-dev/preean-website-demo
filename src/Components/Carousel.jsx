@@ -21,7 +21,7 @@ const Carousel = () => {
         delay: 0.4,
         type: 'spring',
       }}
-      className={`mx-auto w-full max-w-7xl my-16 items-center bg-white overflow-hidden`}
+      className={`mx-auto w-full max-w-7xl my-10 items-center bg-white overflow-hidden`}
     >
       <div className="flex m-auto justify-center items-center flex-col w-[95%] gap-8">
         {/* counter */}
