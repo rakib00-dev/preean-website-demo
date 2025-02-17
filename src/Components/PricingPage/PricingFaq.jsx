@@ -39,7 +39,7 @@ const PricingFaq = ({
         </div>
         {/* FAQS */}
         <div className="transition-all duration-300 grid w-full md:w-11/12 md:mt-20 md:mr-3 gap-6">
-          <div className="bg-gray-100 h-auto w- text-md md:text-xl py-4 pr-10 pl-4 font-bold rounded-2xl cursor-pointer">
+          <div className="bg-gray-200 h-auto text-md md:text-xl py-4 pr-10 pl-4 font-bold rounded-2xl cursor-pointer">
             <h1
               className="flex gap-5 "
               onClick={() => {
@@ -65,7 +65,7 @@ const PricingFaq = ({
               {p1}
             </p>
           </div>
-          <div className="bg-gray-100 text-md md:text-xl py-4 pr-10 pl-4 font-bold rounded-2xl cursor-pointer">
+          <div className="bg-gray-200 text-md md:text-xl py-4 pr-10 pl-4 font-bold rounded-2xl cursor-pointer">
             <h1
               className="flex gap-5 "
               onClick={() => {
@@ -91,7 +91,7 @@ const PricingFaq = ({
               {p2}
             </p>
           </div>
-          <div className="bg-gray-100 text-md md:text-xl py-4 pr-10 pl-4 font-bold rounded-2xl cursor-pointer">
+          <div className="bg-gray-200 text-md md:text-xl py-4 pr-10 pl-4 font-bold rounded-2xl cursor-pointer">
             <h1
               className="flex gap-5 "
               onClick={() => {
@@ -117,7 +117,7 @@ const PricingFaq = ({
               {p3}
             </p>
           </div>
-          <div className="bg-gray-100 text-md md:text-xl py-4 pr-10 pl-4 font-bold rounded-2xl cursor-pointer">
+          <div className="bg-gray-200 text-md md:text-xl py-4 pr-10 pl-4 font-bold rounded-2xl cursor-pointer">
             <h1
               className="flex gap-5 "
               onClick={() => {
@@ -143,7 +143,7 @@ const PricingFaq = ({
               {p4}
             </p>
           </div>
-          <div className="bg-gray-100 text-md md:text-xl py-4 pr-10 pl-4 font-bold rounded-2xl cursor-pointer">
+          <div className="bg-gray-200 text-md md:text-xl py-4 pr-10 pl-4 font-bold rounded-2xl cursor-pointer">
             <h1
               className="flex gap-5 "
               onClick={() => {
