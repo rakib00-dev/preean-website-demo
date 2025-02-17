@@ -1,22 +1,25 @@
+// import { useEffect, useState } from 'react';
 import { FaCheckCircle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const CompareFeatures = () => {
-  // const [isSticky, setIsSticky] = useState(false);
-  // const triggerPoint = 300; // Adjust scroll position where it becomes fixed
+  // const [isOver, setIsOver] = useState('top-20');
+  // const triggerPoint = 602;
 
   // useEffect(() => {
   //   const handleScroll = () => {
-  //     if (window.scrollY >= triggerPoint) {
-  //       setIsSticky(true);
+  //     if (triggerPoint <= window.scrollY) {
+  //       setIsOver('-top-96');
   //     } else {
-  //       setIsSticky(false);
+  //       setIsOver('top-20');
   //     }
   //   };
 
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => window.removeEventListener('scroll', handleScroll);
   // }, []);
+
+  // console.log(isOver);
 
   const SecondRow = ({ title = 'Scheduling' }) => {
     return (
@@ -55,7 +58,7 @@ const CompareFeatures = () => {
   return (
     <>
       <section
-        className="w-full hidden max-w-7xl mt-20 mx-auto sticky top-20 md:grid"
+        className={`w-full transition-all duration-300 hidden max-w-7xl mt-20 mx-auto sticky top-20 md:grid`}
         style={{ zIndex: 1 }}
       >
         {/* large screen */}

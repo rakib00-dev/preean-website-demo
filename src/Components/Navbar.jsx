@@ -16,12 +16,12 @@ const Navbar = () => {
         <ListItem
           navLink={'#'}
           className={
-            'uppercase  flex justify-start items-center gap-2  text-sm sm:font-bold'
+            'uppercase  flex justify-start items-center gap-2 text-sm sm:font-bold'
           }
           onmouseover={() => setIsHovered(true)}
           onmouseout={() => setIsHovered(false)}
           onclick={() => setIsHovered((prev) => !prev)}
-          style={{ color: 'black' }}
+          style={{ color: '#0b3558' }}
         >
           solutions{' '}
           <FaChevronDown
@@ -50,7 +50,7 @@ const Navbar = () => {
           onmouseover={() => setIsResourceHovered(true)}
           onmouseout={() => setIsResourceHovered(false)}
           onclick={() => setIsResourceHovered((prev) => !prev)}
-          style={{ color: 'black' }}
+          style={{ color: '#0b3558' }}
         >
           resources{' '}
           <FaChevronDown
@@ -353,7 +353,7 @@ const Navbar = () => {
           className="relative flex justify-center items-center px-6 py-4 max-w-7xl border-b-1 border-gray-200 bg-white/60 p-4 w-full h-20 m-auto lg:py-0.5"
         >
           <div className={''} style={cssStyle.blur}></div>{' '}
-          <div className="flex justify-center items-center w-fit gap-35 min-[375px]:gap-50 min-[440px]:gap-60 min-[550px]:gap-85 min-[695px]:gap-110 md:gap-86 md:mx-10 ">
+          <div className="flex justify-center items-center w-fit gap-35 min-[375px]:gap-50 min-[440px]:gap-60  ">
             <div
               id="logo"
               className="text-md font-medium w-32 md:w-64 md:text-lg"
@@ -371,7 +371,7 @@ const Navbar = () => {
             {/* large screen */}
             <div
               id="menu"
-              className="hidden justify-between  gap-10 items-center w-full xl:flex"
+              className="hidden justify-between  gap-10 items-center w-full md:flex"
             >
               <ul className="flex justify-center  items-center gap-5">
                 <NavLists />
@@ -394,7 +394,7 @@ const Navbar = () => {
               </div>
             </div>
             <div
-              className={!isNavOpen ? `block xl:hidden` : 'hidden xl:hidden'}
+              className={!isNavOpen ? `block md:hidden` : 'hidden md:hidden'}
               onClick={() => {
                 setIsNavOpen((prev) => !prev);
               }}
@@ -403,7 +403,7 @@ const Navbar = () => {
             </div>
 
             <div
-              className={isNavOpen ? `block xl:hidden` : 'hidden xl:hidden'}
+              className={isNavOpen ? `block md:hidden` : 'hidden md:hidden'}
               onClick={() => {
                 setIsNavOpen((prev) => prev);
               }}
@@ -524,7 +524,7 @@ const Navbar = () => {
           id="menu"
           className={
             isNavOpen
-              ? 'transition-all fixed top-20 flex justify-start items-start flex-col w-full h-full pl-5 pt-5 gap-10 border rounded-md bg-white m-auto overflow-y-auto xl:hidden'
+              ? 'transition-all fixed top-20 flex justify-start items-start flex-col w-full h-full pl-5 pt-5 gap-10 border rounded-md bg-white m-auto overflow-y-auto md:hidden'
               : 'hidden'
           }
           style={{ zIndex: 122 }}
