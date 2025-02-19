@@ -217,10 +217,10 @@ const CompareFeatures = () => {
 
       {/* small screen */}
       <section
-        className={`w-full transition-all duration-300 grid max-w-7xl mt-20 mx-auto sticky top-20 md:hidden`}
+        className={`w-full transition-all duration-300 grid max-w-7xl mt-20 mx-auto sticky top-20 grid-cols-2 md:hidden`}
         style={{ zIndex: 1 }}
       >
-        {/* large screen */}
+        {/* samll screen */}
         <div className="place-items-center mx-auto pb-4 w-full">
           {/* compare feature row */}
           <div className="flex justify-center w-full items-center gap-6">
@@ -239,7 +239,7 @@ const CompareFeatures = () => {
       </section>
 
       {/* second elements */}
-      <section className="w-full grid max-w-7xl mb-20 mx-auto md:hidden">
+      <section className="w-full grid max-w-7xl mb-20 mx-auto grid-cols-2 md:hidden">
         {/* Scheduling */}
         <div className="place-items-center mx-auto pb-4 w-full">
           {/* scheduling title main row */}
