@@ -57,8 +57,9 @@ const CompareFeatures = () => {
 
   return (
     <>
+      {/* large screen */}
       <section
-        className={`w-full transition-all duration-300 grid max-w-7xl mt-20 mx-auto sticky top-20`}
+        className={`w-full transition-all duration-300 hidden max-w-7xl mt-20 mx-auto sticky top-20 md:grid`}
         style={{ zIndex: 1 }}
       >
         {/* large screen */}
@@ -81,6 +82,164 @@ const CompareFeatures = () => {
 
       {/* second elements */}
       <section className="w-full hidden max-w-7xl mb-20 mx-auto md:grid">
+        {/* Scheduling */}
+        <div className="place-items-center mx-auto pb-4 w-full">
+          {/* scheduling title main row */}
+          <SecondRow />
+          <ThirdRow
+            col1="1"
+            col2="Unlimited"
+            col3="Unlimited"
+            col4="Unlimited"
+          />
+          <ThirdRow
+            title="Connect calendars"
+            col1="1"
+            col2="6"
+            col3="6"
+            col4="6"
+          />
+          <ThirdRow
+            title="Unlimited meetings"
+            col1={<FaCheckCircle className="text-blue-700" />}
+            col2={<FaCheckCircle className="text-blue-700" />}
+            col3={<FaCheckCircle className="text-blue-700" />}
+            col4={<FaCheckCircle className="text-blue-700" />}
+          />
+          <ThirdRow
+            title="Customize your booking link"
+            col1={<FaCheckCircle className="text-blue-700" />}
+            col2={<FaCheckCircle className="text-blue-700" />}
+            col3={<FaCheckCircle className="text-blue-700" />}
+            col4={<FaCheckCircle className="text-blue-700" />}
+          />
+          <ThirdRow
+            title="Mobile app & browser extension"
+            col1={<FaCheckCircle className="text-blue-700" />}
+            col2={<FaCheckCircle className="text-blue-700" />}
+            col3={<FaCheckCircle className="text-blue-700" />}
+            col4={<FaCheckCircle className="text-blue-700" />}
+          />
+          <ThirdRow
+            title="Meeting polls and one-off meetings"
+            col1={<FaCheckCircle className="text-blue-700" />}
+            col2={<FaCheckCircle className="text-blue-700" />}
+            col3={<FaCheckCircle className="text-blue-700" />}
+            col4={<FaCheckCircle className="text-blue-700" />}
+          />
+          <ThirdRow
+            title="View contact profiles and scheduling activity"
+            // col1={<span> </span>}
+
+            col2={'Unlimited'}
+            col3={<FaCheckCircle className="text-blue-700" />}
+            col4={<FaCheckCircle className="text-blue-700" />}
+          />
+        </div>
+        {/* integrations */}
+        <div className="place-items-center my-10 mx-auto pb-4 w-full">
+          {/* Integrations title main row */}
+          <SecondRow title="Integrations" />
+          <ThirdRow
+            title="Google, Microsoft Teams, Outlook, and Office 365 calendar integrations"
+            col1={'1'}
+            col2={<FaCheckCircle className="text-blue-700" />}
+            col3={<FaCheckCircle className="text-blue-700" />}
+            col4={<FaCheckCircle className="text-blue-700" />}
+          />
+          <ThirdRow
+            title="Zoom, Google Meet, Microsoft Teams and other video conferencing tools"
+            col1={<FaCheckCircle className="text-blue-700" />}
+            col2={<FaCheckCircle className="text-blue-700" />}
+            col3={<FaCheckCircle className="text-blue-700" />}
+            col4={<FaCheckCircle className="text-blue-700" />}
+          />
+          <ThirdRow
+            title="Custom webhooks to access Calendly meeting information in real-time"
+            col2={<FaCheckCircle className="text-blue-700" />}
+            col3={<FaCheckCircle className="text-blue-700" />}
+            col4={<FaCheckCircle className="text-blue-700" />}
+          />
+          <ThirdRow
+            title="Stripe and PayPal for payment collection"
+            col2={<FaCheckCircle className="text-blue-700" />}
+            col3={<FaCheckCircle className="text-blue-700" />}
+            col4={<FaCheckCircle className="text-blue-700" />}
+          />
+          <ThirdRow
+            title="HubSpot, Mailchimp, and Zapier for automations"
+            col2={<FaCheckCircle className="text-blue-700" />}
+            col3={<FaCheckCircle className="text-blue-700" />}
+            col4={<FaCheckCircle className="text-blue-700" />}
+          />
+          <ThirdRow
+            title="Automate reminder workflows with Gmail and Outlook"
+            // col1={<span> </span>}
+            col1={'Unlimited'}
+            col2={'Unlimited'}
+            col3={<FaCheckCircle className="text-blue-700" />}
+          />
+        </div>
+        {/* business Support */}
+        <div className="place-items-center my-10 mx-auto pb-4 w-full">
+          {/* Business Support title main row */}
+          <SecondRow title="Business Support" />
+          <ThirdRow
+            title="Help center and Design Pro community access"
+            col1={<FaCheckCircle className="text-blue-700" />}
+            col2={<FaCheckCircle className="text-blue-700" />}
+            col3={<FaCheckCircle className="text-blue-700" />}
+            col4={<FaCheckCircle className="text-blue-700" />}
+          />
+          <ThirdRow
+            title="24/7 Email support"
+            col1={<FaCheckCircle className="text-blue-700" />}
+            col2={<FaCheckCircle className="text-blue-700" />}
+            col3={<FaCheckCircle className="text-blue-700" />}
+            col4={<FaCheckCircle className="text-blue-700" />}
+          />
+          <ThirdRow
+            title="24/7 Chat support"
+            col2={<FaCheckCircle className="text-blue-700" />}
+            col3={<FaCheckCircle className="text-blue-700" />}
+            col4={<FaCheckCircle className="text-blue-700" />}
+          />
+          <ThirdRow
+            title="Phone support"
+            col4={<FaCheckCircle className="text-blue-700" />}
+          />
+          <ThirdRow
+            title="Dedicated account support"
+            col4={<FaCheckCircle className="text-blue-700" />}
+          />
+        </div>
+      </section>
+
+      {/* small screen */}
+      <section
+        className={`w-full transition-all duration-300 grid max-w-7xl mt-20 mx-auto sticky top-20 md:hidden`}
+        style={{ zIndex: 1 }}
+      >
+        {/* large screen */}
+        <div className="place-items-center mx-auto pb-4 w-full">
+          {/* compare feature row */}
+          <div className="flex justify-center w-full items-center gap-6">
+            <h2 className="font-bold text-2xl w-fit">Compare features</h2>
+            <MainRow
+              smallTitle="Basic"
+              bigTitleChild
+              price="138"
+              btnBg="bg-gray-600 hover:bg-gray-500"
+            />
+            <MainRow smallTitle="Standard" bigTitleChild price="250" />
+            <MainRow smallTitle="Premium" bigTitleChild price="325" />
+            <MainRow />
+          </div>
+        </div>
+      </section>
+
+      {/* second elements */}
+      <section className="w-full grid max-w-7xl mb-20 mx-auto md:hidden">
         {/* Scheduling */}
         <div className="place-items-center mx-auto pb-4 w-full">
           {/* scheduling title main row */}
