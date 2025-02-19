@@ -71,6 +71,7 @@ a {
 
 li {
   color: var(--black-primary);
+  font-family: 'Gilroy', sans-serif !important;
 }
 
 h1,

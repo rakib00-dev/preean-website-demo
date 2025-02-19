@@ -58,7 +58,7 @@ const CompareFeatures = () => {
   return (
     <>
       <section
-        className={`w-full transition-all duration-300 hidden max-w-7xl mt-20 mx-auto sticky top-20 md:grid`}
+        className={`w-full transition-all duration-300 grid max-w-7xl mt-20 mx-auto sticky top-20`}
         style={{ zIndex: 1 }}
       >
         {/* large screen */}
