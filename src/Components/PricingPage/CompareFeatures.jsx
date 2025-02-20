@@ -1,8 +1,10 @@
 // import { useEffect, useState } from 'react';
-import { FaCheckCircle } from 'react-icons/fa';
+import { useState } from 'react';
+import { FaCheckCircle, FaChevronDown } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const CompareFeatures = () => {
+  const [isFirstClicked, setIsFirstClicked] = useState(false);
   // const [isOver, setIsOver] = useState('top-20');
   // const triggerPoint = 602;
 
@@ -21,14 +23,28 @@ const CompareFeatures = () => {
 
   // console.log(isOver);
 
-  const SecondRow = ({ title = 'Scheduling' }) => {
+  const SecondRow = ({ title = 'Scheduling', smallChildren }) => {
     return (
       <div className="flex justify-center w-full items-center border-b border-gray-300 gap-6">
         <h2 className="font-bold text-2xl text-start mr-20 py-4">{title}</h2>
-        <MainRow borderBgMainRow=""> </MainRow>
-        <MainRow borderBgMainRow=""> </MainRow>
-        <MainRow borderBgMainRow=""> </MainRow>
-        <MainRow borderBgMainRow=""> </MainRow>
+        {smallChildren ? (
+          smallChildren
+        ) : (
+          <>
+            <MainRow borderBgMainRow=""> </MainRow>
+            <MainRow borderBgMainRow=""> </MainRow>
+            <MainRow borderBgMainRow=""> </MainRow>
+            <MainRow borderBgMainRow=""> </MainRow>
+          </>
+        )}
+      </div>
+    );
+  };
+
+  const SmallSecondRow = ({ title = 'Scheduling', smallChildren }) => {
+    return (
+      <div className="flex justify-start w-full items-center border-b border-gray-300 gap-6">
+        <h2 className="font-bold text-2xl text-start py-4">{title}</h2>
       </div>
     );
   };
@@ -62,16 +78,20 @@ const CompareFeatures = () => {
     col2 = '‎',
   }) => {
     return (
-      <div className="grid w-full items-center border-b border-gray-300/60">
+      <div className="grid w-full place-items-center py-6 items-center bg-gray-100 border-b border-gray-300/60">
         <p
-          className="font-medium text-[14px] w-full text-start "
+          className="font-medium text-[14px] w-full text-center py-2"
           style={{ color: '#0b3558' }}
         >
           {title}
         </p>
-        <div className="flex w-full">
-          <SmallMainRow borderBgMainRow="bg-gray-100 py-6">{col1}</SmallMainRow>
-          <SmallMainRow borderBgMainRow="bg-gray-100 py-6">{col2}</SmallMainRow>
+        <div className="flex w-full justify-center items-center">
+          <SmallMainRow bgColor="bg-gray-100 text-center place-items-center">
+            {col1}
+          </SmallMainRow>
+          <SmallMainRow bgColor="bg-gray-100 text-center place-items-center">
+            {col2}
+          </SmallMainRow>
         </div>
       </div>
     );
@@ -265,7 +285,7 @@ const CompareFeatures = () => {
               smallTitle="Basic"
               price="138"
               style={'black'}
-              bgColor="text-black bg-gray-200"
+              bgColor="text-black bg-gray-200/60"
             />
             <SmallMainRow
               smallTitle="Standard"
@@ -280,9 +300,23 @@ const CompareFeatures = () => {
       {/* second small elements */}
       <section className="w-full grid max-w-7xl mb-20 mx-auto md:hidden">
         {/* Scheduling */}
-        <div className="grid place-items-center mx-auto pb-4 w-full">
+        <div className="grid place-items-center mx-auto pb-4 w-full ">
           {/* scheduling title main row */}
-          <SecondRow />
+          <span
+            className="flex justify-center items-center w-full px-6"
+            onClick={() => {
+              setIsFirstClicked((prev) => !prev);
+            }}
+          >
+            <SmallSecondRow smallChildren />
+            <FaChevronDown
+              className={
+                isFirstClicked
+                  ? `rotate-180 transition-all duration-300 mt-1`
+                  : 'transition-all duration-300 mt-1'
+              }
+            />
+          </span>
           <SmallThirdRow col1="1" col2="Unlimited" />
           <SmallThirdRow title="Connect calendars" col1="1" col2="6" />
           <SmallThirdRow
