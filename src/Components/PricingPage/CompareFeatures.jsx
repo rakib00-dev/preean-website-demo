@@ -32,6 +32,7 @@ const CompareFeatures = () => {
       </div>
     );
   };
+
   const ThirdRow = ({
     title = 'One-on-one meeting types',
     col1 = '‎',
@@ -55,6 +56,27 @@ const CompareFeatures = () => {
     );
   };
 
+  const SmallThirdRow = ({
+    title = 'One-on-one meeting types',
+    col1 = '‎',
+    col2 = '‎',
+  }) => {
+    return (
+      <div className="grid w-full items-center border-b border-gray-300/60">
+        <p
+          className="font-medium text-[14px] w-full text-start "
+          style={{ color: '#0b3558' }}
+        >
+          {title}
+        </p>
+        <div className="flex w-full">
+          <SmallMainRow borderBgMainRow="bg-gray-100 py-6">{col1}</SmallMainRow>
+          <SmallMainRow borderBgMainRow="bg-gray-100 py-6">{col2}</SmallMainRow>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <>
       {/* large screen */}
@@ -73,14 +95,24 @@ const CompareFeatures = () => {
               price="138"
               btnBg="bg-gray-600 hover:bg-gray-500"
             />
-            <MainRow smallTitle="Standard" bigTitleChild price="250" />
-            <MainRow smallTitle="Premium" bigTitleChild price="325" />
-            <MainRow />
+            <MainRow
+              smallTitle="Standard"
+              bigTitleChild
+              price="250"
+              btnBg={'bg-blue-600 hover:bg-blue-500'}
+            />
+            <MainRow
+              smallTitle="Premium"
+              bigTitleChild
+              price="325"
+              btnBg={'bg-blue-600 hover:bg-blue-500'}
+            />
+            <MainRow btnBg={'bg-blue-600 hover:bg-blue-500'} />
           </div>
         </div>
       </section>
 
-      {/* second elements */}
+      {/* second large elements */}
       <section className="w-full hidden max-w-7xl mb-20 mx-auto md:grid">
         {/* Scheduling */}
         <div className="place-items-center mx-auto pb-4 w-full">
@@ -217,160 +249,71 @@ const CompareFeatures = () => {
 
       {/* small screen */}
       <section
-        className={`w-full transition-all duration-300 grid max-w-7xl mt-20 mx-auto sticky top-20 grid-cols-2 md:hidden`}
+        className={`w-full transition-all duration-300 grid max-w-7xl mt-20 mx-auto sticky top-20 md:hidden`}
         style={{ zIndex: 1 }}
       >
         {/* samll screen */}
-        <div className="place-items-center mx-auto pb-4 w-full">
+        <div className="mx-auto pb-4 w-full">
           {/* compare feature row */}
-          <div className="flex justify-center w-full items-center gap-6">
-            <h2 className="font-bold text-2xl w-fit">Compare features</h2>
-            <MainRow
+          <div className="flex flex-col justify-center w-full items-center gap-6">
+            <h2 className="font-bold text-2xl text-center w-fit">
+              Compare features
+            </h2>
+          </div>
+          <div className="flex justify-around mt-6">
+            <SmallMainRow
               smallTitle="Basic"
-              bigTitleChild
               price="138"
-              btnBg="bg-gray-600 hover:bg-gray-500"
+              style={'black'}
+              bgColor="text-black bg-gray-200"
             />
-            <MainRow smallTitle="Standard" bigTitleChild price="250" />
-            <MainRow smallTitle="Premium" bigTitleChild price="325" />
-            <MainRow />
+            <SmallMainRow
+              smallTitle="Standard"
+              bigTitleChild
+              price="250"
+              bgColor={'text-white bg-blue-500'}
+            />
           </div>
         </div>
       </section>
 
-      {/* second elements */}
-      <section className="w-full grid max-w-7xl mb-20 mx-auto grid-cols-2 md:hidden">
+      {/* second small elements */}
+      <section className="w-full grid max-w-7xl mb-20 mx-auto md:hidden">
         {/* Scheduling */}
-        <div className="place-items-center mx-auto pb-4 w-full">
+        <div className="grid place-items-center mx-auto pb-4 w-full">
           {/* scheduling title main row */}
           <SecondRow />
-          <ThirdRow
-            col1="1"
-            col2="Unlimited"
-            col3="Unlimited"
-            col4="Unlimited"
-          />
-          <ThirdRow
-            title="Connect calendars"
-            col1="1"
-            col2="6"
-            col3="6"
-            col4="6"
-          />
-          <ThirdRow
+          <SmallThirdRow col1="1" col2="Unlimited" />
+          <SmallThirdRow title="Connect calendars" col1="1" col2="6" />
+          <SmallThirdRow
             title="Unlimited meetings"
             col1={<FaCheckCircle className="text-blue-700" />}
             col2={<FaCheckCircle className="text-blue-700" />}
-            col3={<FaCheckCircle className="text-blue-700" />}
-            col4={<FaCheckCircle className="text-blue-700" />}
           />
-          <ThirdRow
+          <SmallThirdRow
             title="Customize your booking link"
             col1={<FaCheckCircle className="text-blue-700" />}
             col2={<FaCheckCircle className="text-blue-700" />}
-            col3={<FaCheckCircle className="text-blue-700" />}
-            col4={<FaCheckCircle className="text-blue-700" />}
           />
-          <ThirdRow
+          <SmallThirdRow
             title="Mobile app & browser extension"
             col1={<FaCheckCircle className="text-blue-700" />}
             col2={<FaCheckCircle className="text-blue-700" />}
-            col3={<FaCheckCircle className="text-blue-700" />}
-            col4={<FaCheckCircle className="text-blue-700" />}
           />
-          <ThirdRow
+          <SmallThirdRow
             title="Meeting polls and one-off meetings"
             col1={<FaCheckCircle className="text-blue-700" />}
             col2={<FaCheckCircle className="text-blue-700" />}
-            col3={<FaCheckCircle className="text-blue-700" />}
-            col4={<FaCheckCircle className="text-blue-700" />}
           />
-          <ThirdRow
+          <SmallThirdRow
             title="View contact profiles and scheduling activity"
             // col1={<span> </span>}
 
-            col2={'Unlimited'}
-            col3={<FaCheckCircle className="text-blue-700" />}
-            col4={<FaCheckCircle className="text-blue-700" />}
+            col1={'Unlimited'}
+            col2={<FaCheckCircle className="text-blue-700" />}
           />
         </div>
         {/* integrations */}
-        <div className="place-items-center my-10 mx-auto pb-4 w-full">
-          {/* Integrations title main row */}
-          <SecondRow title="Integrations" />
-          <ThirdRow
-            title="Google, Microsoft Teams, Outlook, and Office 365 calendar integrations"
-            col1={'1'}
-            col2={<FaCheckCircle className="text-blue-700" />}
-            col3={<FaCheckCircle className="text-blue-700" />}
-            col4={<FaCheckCircle className="text-blue-700" />}
-          />
-          <ThirdRow
-            title="Zoom, Google Meet, Microsoft Teams and other video conferencing tools"
-            col1={<FaCheckCircle className="text-blue-700" />}
-            col2={<FaCheckCircle className="text-blue-700" />}
-            col3={<FaCheckCircle className="text-blue-700" />}
-            col4={<FaCheckCircle className="text-blue-700" />}
-          />
-          <ThirdRow
-            title="Custom webhooks to access Calendly meeting information in real-time"
-            col2={<FaCheckCircle className="text-blue-700" />}
-            col3={<FaCheckCircle className="text-blue-700" />}
-            col4={<FaCheckCircle className="text-blue-700" />}
-          />
-          <ThirdRow
-            title="Stripe and PayPal for payment collection"
-            col2={<FaCheckCircle className="text-blue-700" />}
-            col3={<FaCheckCircle className="text-blue-700" />}
-            col4={<FaCheckCircle className="text-blue-700" />}
-          />
-          <ThirdRow
-            title="HubSpot, Mailchimp, and Zapier for automations"
-            col2={<FaCheckCircle className="text-blue-700" />}
-            col3={<FaCheckCircle className="text-blue-700" />}
-            col4={<FaCheckCircle className="text-blue-700" />}
-          />
-          <ThirdRow
-            title="Automate reminder workflows with Gmail and Outlook"
-            // col1={<span> </span>}
-            col1={'Unlimited'}
-            col2={'Unlimited'}
-            col3={<FaCheckCircle className="text-blue-700" />}
-          />
-        </div>
-        {/* business Support */}
-        <div className="place-items-center my-10 mx-auto pb-4 w-full">
-          {/* Business Support title main row */}
-          <SecondRow title="Business Support" />
-          <ThirdRow
-            title="Help center and Design Pro community access"
-            col1={<FaCheckCircle className="text-blue-700" />}
-            col2={<FaCheckCircle className="text-blue-700" />}
-            col3={<FaCheckCircle className="text-blue-700" />}
-            col4={<FaCheckCircle className="text-blue-700" />}
-          />
-          <ThirdRow
-            title="24/7 Email support"
-            col1={<FaCheckCircle className="text-blue-700" />}
-            col2={<FaCheckCircle className="text-blue-700" />}
-            col3={<FaCheckCircle className="text-blue-700" />}
-            col4={<FaCheckCircle className="text-blue-700" />}
-          />
-          <ThirdRow
-            title="24/7 Chat support"
-            col2={<FaCheckCircle className="text-blue-700" />}
-            col3={<FaCheckCircle className="text-blue-700" />}
-            col4={<FaCheckCircle className="text-blue-700" />}
-          />
-          <ThirdRow
-            title="Phone support"
-            col4={<FaCheckCircle className="text-blue-700" />}
-          />
-          <ThirdRow
-            title="Dedicated account support"
-            col4={<FaCheckCircle className="text-blue-700" />}
-          />
-        </div>
       </section>
     </>
   );
@@ -381,7 +324,7 @@ export default CompareFeatures;
 const MainRow = ({
   smallTitle = 'Enterprise',
   bigTitleChild,
-  btnBg = 'bg-blue-600 hover:bg-blue-500',
+  btnBg,
   price = '138',
   borderBgMainRow = 'border-b border-gray-300 bg-gradient-to-t from-gray-200/30 to-[#f8f9fb]',
   children,
@@ -405,14 +348,42 @@ const MainRow = ({
               'Contact us'
             )}
           </h5>
-          <div className="grid place-items-center my-5 gap-4 w-full overflow-hidden">
-            <Link
-              to={'/book-a-call'}
-              className={`transition-all duration-200 text-white text-md font-semibold ${btnBg} py-2 px-7 rounded-md`}
-            >
-              Get Started
-            </Link>
-          </div>
+          {btnBg ? (
+            <div className="grid place-items-center my-5 gap-4 w-full overflow-hidden">
+              <Link
+                to={'/book-a-call'}
+                className={`transition-all duration-200 text-white text-md font-semibold ${btnBg} py-2 px-7 rounded-md`}
+              >
+                Get Started
+              </Link>
+            </div>
+          ) : (
+            <></>
+          )}
+        </>
+      )}
+    </div>
+  );
+};
+
+const SmallMainRow = ({
+  smallTitle = 'Enterprise',
+  price = '138',
+  style = 'white',
+  bgColor,
+  children,
+}) => {
+  return (
+    <div className={`grid grid-cols-1 w-full gap-1 p-2 ${bgColor}`}>
+      {children ? (
+        children
+      ) : (
+        <>
+          <h6 className="font-bold text-center text-md">{smallTitle}</h6>
+          <h5 className="text-2xl text-center" style={{ color: `${style}` }}>
+            ${price}
+            <span className="text-sm">/wk</span>
+          </h5>
         </>
       )}
     </div>
