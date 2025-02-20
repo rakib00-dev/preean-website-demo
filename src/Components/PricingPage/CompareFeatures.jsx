@@ -400,7 +400,7 @@ const CompareFeatures = () => {
           />
           <SmallThirdRow
             title="Customize your booking link"
-            col1={<FaCheckCircle className="text-blue-700" />}
+            col1={'-'}
             col2={<FaCheckCircle className="text-blue-700" />}
           />
           <SmallThirdRow
@@ -411,7 +411,7 @@ const CompareFeatures = () => {
           <SmallThirdRow
             title="Meeting polls and one-off meetings"
             col1={<FaCheckCircle className="text-blue-700" />}
-            col2={<FaCheckCircle className="text-blue-700" />}
+            col2={'-'}
           />
           <SmallThirdRow
             title="View contact profiles and scheduling activity"
