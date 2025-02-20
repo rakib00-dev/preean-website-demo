@@ -374,7 +374,7 @@ const CompareFeatures = () => {
         {/* integrations */}
         <div
           className={`transition-all duration-300 grid place-items-center mx-auto pb-4 w-full overflow-hidden ${
-            isSecondClicked ? 'h-16' : 'h-[950px]'
+            isSecondClicked ? 'h-16' : 'h-[1000px]'
           }`}
         >
           {/* integrations title main row */}
@@ -420,11 +420,25 @@ const CompareFeatures = () => {
             col1={'Unlimited'}
             col2={<FaCheckCircle className="text-blue-700" />}
           />
+          <div className="relative flex gap-2 my-4">
+            <Link
+              to={''}
+              className="bg-blue-950 text-white py-4 px-7 text-sm font-bold rounded"
+            >
+              Get Started
+            </Link>
+            <Link
+              to={''}
+              className="bg-blue-950 text-white py-4 px-7 text-sm font-bold rounded"
+            >
+              Get Started
+            </Link>
+          </div>
         </div>
         {/* Bussiness Support */}
         <div
           className={`transition-all duration-300 grid place-items-center mx-auto pb-4 w-full overflow-hidden ${
-            isThirdClicked ? 'h-16' : 'h-[950px]'
+            isThirdClicked ? 'h-16' : 'h-[1000px]'
           }`}
         >
           {/* Bussiness Support title main row */}
@@ -470,6 +484,20 @@ const CompareFeatures = () => {
             col1={'Unlimited'}
             col2={<FaCheckCircle className="text-blue-700" />}
           />
+          <div className="relative flex gap-2 my-4">
+            <Link
+              to={''}
+              className="bg-blue-950 text-white py-4 px-7 text-sm font-bold rounded"
+            >
+              Get Started
+            </Link>
+            <Link
+              to={''}
+              className="bg-blue-950 text-white py-4 px-7 text-sm font-bold rounded"
+            >
+              Get Started
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -579,7 +607,7 @@ const CompareFeatures = () => {
         {/* integrations */}
         <div
           className={`transition-all duration-300 grid place-items-center mx-auto pb-4 w-full overflow-hidden ${
-            isMoreSecondClicked ? 'h-16' : 'h-[950px]'
+            isMoreSecondClicked ? 'h-16' : 'h-[1000px]'
           }`}
         >
           {/* integrations title main row */}
@@ -625,11 +653,25 @@ const CompareFeatures = () => {
             col1={'Unlimited'}
             col2={<FaCheckCircle className="text-blue-700" />}
           />
+          <div className="relative flex gap-2 my-4">
+            <Link
+              to={''}
+              className="bg-blue-950 text-white py-4 px-7 text-sm font-bold rounded"
+            >
+              Get Started
+            </Link>
+            <Link
+              to={''}
+              className="bg-blue-950 text-white py-4 px-7 text-sm font-bold rounded"
+            >
+              Get Started
+            </Link>
+          </div>
         </div>
         {/* Bussiness Support */}
         <div
           className={`transition-all duration-300 grid place-items-center mx-auto pb-4 w-full overflow-hidden ${
-            isMoreThirdClicked ? 'h-16' : 'h-[950px]'
+            isMoreThirdClicked ? 'h-16' : 'h-[1000px]'
           }`}
         >
           {/* Bussiness Support title main row */}
@@ -675,6 +717,20 @@ const CompareFeatures = () => {
             col1={'Unlimited'}
             col2={<FaCheckCircle className="text-blue-700" />}
           />
+          <div className="relative flex gap-2 my-4">
+            <Link
+              to={''}
+              className="bg-blue-950 text-white py-4 px-7 text-sm font-bold rounded"
+            >
+              Get Started
+            </Link>
+            <Link
+              to={''}
+              className="bg-blue-950 text-white py-4 px-7 text-sm font-bold rounded"
+            >
+              Get Started
+            </Link>
+          </div>
         </div>
       </section>
     </>
