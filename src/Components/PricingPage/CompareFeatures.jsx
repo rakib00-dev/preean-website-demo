@@ -4,7 +4,13 @@ import { FaCheckCircle, FaChevronDown } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const CompareFeatures = () => {
-  const [isFirstClicked, setIsFirstClicked] = useState(false);
+  const [isFirstClicked, setIsFirstClicked] = useState(true);
+  const [isSecondClicked, setIsSecondClicked] = useState(true);
+  const [isThirdClicked, setIsThirdClicked] = useState(true);
+
+  const [isMoreFirstClicked, setIsMoreFirstClicked] = useState(true);
+  const [isMoreSecondClicked, setIsMoreSecondClicked] = useState(true);
+  const [isMoreThirdClicked, setIsMoreThirdClicked] = useState(true);
   // const [isOver, setIsOver] = useState('top-20');
   // const triggerPoint = 602;
 
@@ -267,10 +273,9 @@ const CompareFeatures = () => {
         </div>
       </section>
 
-      {/* small screen */}
+      {/* small screen compare */}
       <section
-        className={`w-full transition-all duration-300 grid max-w-7xl mt-20 mx-auto sticky top-20 md:hidden`}
-        style={{ zIndex: 1 }}
+        className={`w-full transition-all duration-300 grid max-w-7xl mt-20 mx-auto md:hidden`}
       >
         {/* samll screen */}
         <div className="mx-auto pb-4 w-full">
@@ -280,41 +285,110 @@ const CompareFeatures = () => {
               Compare features
             </h2>
           </div>
-          <div className="flex justify-around mt-6">
-            <SmallMainRow
-              smallTitle="Basic"
-              price="138"
-              style={'black'}
-              bgColor="text-black bg-gray-200/60"
-            />
-            <SmallMainRow
-              smallTitle="Standard"
-              bigTitleChild
-              price="250"
-              bgColor={'text-white bg-blue-500'}
-            />
-          </div>
         </div>
       </section>
+      <div
+        className="flex justify-around mt-4 mb-2 sticky top-20 md:hidden"
+        style={{ zIndex: 1 }}
+      >
+        <SmallMainRow
+          smallTitle="Basic"
+          price="138"
+          style={'black'}
+          bgColor="text-black bg-gray-200"
+        />
+        <SmallMainRow
+          smallTitle="Standard"
+          bigTitleChild
+          price="250"
+          bgColor={'text-white bg-blue-500'}
+        />
+      </div>
 
-      {/* second small elements */}
+      {/* second small elements compare */}
       <section className="w-full grid max-w-7xl mb-20 mx-auto md:hidden">
         {/* Scheduling */}
-        <div className="grid place-items-center mx-auto pb-4 w-full ">
+        <div
+          className={`transition-all duration-300 grid place-items-center mx-auto pb-4 w-full overflow-hidden ${
+            isFirstClicked ? 'h-16' : 'h-[1000px]'
+          }`}
+        >
           {/* scheduling title main row */}
           <span
-            className="flex justify-center items-center w-full px-6"
+            className="flex transition-all duration-300 justify-center items-center w-full px-6"
             onClick={() => {
               setIsFirstClicked((prev) => !prev);
             }}
           >
             <SmallSecondRow smallChildren />
             <FaChevronDown
-              className={
-                isFirstClicked
-                  ? `rotate-180 transition-all duration-300 mt-1`
-                  : 'transition-all duration-300 mt-1'
-              }
+              className={`transition-all duration-300 ${
+                isFirstClicked ? `rotate-270 mt-1` : 'mt-1'
+              }`}
+            />
+          </span>
+          <SmallThirdRow col1="1" col2="Unlimited" />
+          <SmallThirdRow title="Connect calendars" col1="1" col2="6" />
+          <SmallThirdRow
+            title="Unlimited meetings"
+            col1={<FaCheckCircle className="text-blue-700" />}
+            col2={<FaCheckCircle className="text-blue-700" />}
+          />
+          <SmallThirdRow
+            title="Customize your booking link"
+            col1={<FaCheckCircle className="text-blue-700" />}
+            col2={<FaCheckCircle className="text-blue-700" />}
+          />
+          <SmallThirdRow
+            title="Mobile app & browser extension"
+            col1={<FaCheckCircle className="text-blue-700" />}
+            col2={<FaCheckCircle className="text-blue-700" />}
+          />
+          <SmallThirdRow
+            title="Meeting polls and one-off meetings"
+            col1={<FaCheckCircle className="text-blue-700" />}
+            col2={<FaCheckCircle className="text-blue-700" />}
+          />
+          <SmallThirdRow
+            title="View contact profiles and scheduling activity"
+            // col1={<span> </span>}
+
+            col1={'Unlimited'}
+            col2={<FaCheckCircle className="text-blue-700" />}
+          />
+          <div className="relative flex gap-2 my-4">
+            <Link
+              to={''}
+              className="bg-blue-950 text-white py-4 px-7 text-sm font-bold rounded"
+            >
+              Get Started
+            </Link>
+            <Link
+              to={''}
+              className="bg-blue-950 text-white py-4 px-7 text-sm font-bold rounded"
+            >
+              Get Started
+            </Link>
+          </div>
+        </div>
+        {/* integrations */}
+        <div
+          className={`transition-all duration-300 grid place-items-center mx-auto pb-4 w-full overflow-hidden ${
+            isSecondClicked ? 'h-16' : 'h-[950px]'
+          }`}
+        >
+          {/* integrations title main row */}
+          <span
+            className="flex transition-all duration-300 justify-center items-center w-full px-6"
+            onClick={() => {
+              setIsSecondClicked((prev) => !prev);
+            }}
+          >
+            <SmallSecondRow smallChildren title="integrations" />
+            <FaChevronDown
+              className={`transition-all duration-300 ${
+                isSecondClicked ? `rotate-270 mt-1` : 'mt-1'
+              }`}
             />
           </span>
           <SmallThirdRow col1="1" col2="Unlimited" />
@@ -347,7 +421,261 @@ const CompareFeatures = () => {
             col2={<FaCheckCircle className="text-blue-700" />}
           />
         </div>
+        {/* Bussiness Support */}
+        <div
+          className={`transition-all duration-300 grid place-items-center mx-auto pb-4 w-full overflow-hidden ${
+            isThirdClicked ? 'h-16' : 'h-[950px]'
+          }`}
+        >
+          {/* Bussiness Support title main row */}
+          <span
+            className="flex transition-all duration-300 justify-center items-center w-full px-6"
+            onClick={() => {
+              setIsThirdClicked((prev) => !prev);
+            }}
+          >
+            <SmallSecondRow smallChildren title="Bussiness Support" />
+            <FaChevronDown
+              className={`transition-all duration-300 ${
+                isThirdClicked ? `rotate-270 mt-1` : 'mt-1'
+              }`}
+            />
+          </span>
+          <SmallThirdRow col1="1" col2="Unlimited" />
+          <SmallThirdRow title="Connect calendars" col1="1" col2="6" />
+          <SmallThirdRow
+            title="Unlimited meetings"
+            col1={<FaCheckCircle className="text-blue-700" />}
+            col2={<FaCheckCircle className="text-blue-700" />}
+          />
+          <SmallThirdRow
+            title="Customize your booking link"
+            col1={<FaCheckCircle className="text-blue-700" />}
+            col2={<FaCheckCircle className="text-blue-700" />}
+          />
+          <SmallThirdRow
+            title="Mobile app & browser extension"
+            col1={<FaCheckCircle className="text-blue-700" />}
+            col2={<FaCheckCircle className="text-blue-700" />}
+          />
+          <SmallThirdRow
+            title="Meeting polls and one-off meetings"
+            col1={<FaCheckCircle className="text-blue-700" />}
+            col2={<FaCheckCircle className="text-blue-700" />}
+          />
+          <SmallThirdRow
+            title="View contact profiles and scheduling activity"
+            // col1={<span> </span>}
+
+            col1={'Unlimited'}
+            col2={<FaCheckCircle className="text-blue-700" />}
+          />
+        </div>
+      </section>
+
+      {/* small screen teams and enterprice */}
+      <section
+        className={`w-full transition-all duration-300 grid max-w-7xl mt-20 mx-auto md:hidden`}
+      >
+        {/* samll screen */}
+        <div className="mx-auto pb-4 w-full">
+          {/* compare feature row */}
+          <div className="flex flex-col justify-center w-full items-center gap-6">
+            <h2 className="font-bold text-2xl text-center w-fit">
+              Even more for teams and Enterprise Plans
+            </h2>
+            <p className="text-md text-center w-fit">
+              Find the subscription that makes the most sense for you or your
+              team
+            </p>
+          </div>
+        </div>
+      </section>
+      <div
+        className="flex justify-around mt-6 sticky top-20 md:hidden"
+        style={{ zIndex: 2 }}
+      >
+        <SmallMainRow
+          smallTitle="Premium"
+          price="325"
+          style={'black'}
+          bgColor="text-black bg-gray-200"
+        />
+        <SmallMainRow
+          smallTitle="Contact us"
+          bigTitleChild
+          // price="Contact us"
+          contactChild
+          bgColor={'text-white bg-gray-700'}
+        />
+      </div>
+
+      {/* second small elements teams and enterprice */}
+      <section className="w-full grid max-w-7xl mb-20 mx-auto md:hidden">
+        {/* Scheduling */}
+        <div
+          className={`transition-all duration-300 grid place-items-center mx-auto pb-4 w-full overflow-hidden ${
+            isMoreFirstClicked ? 'h-16' : 'h-[1000px]'
+          }`}
+        >
+          {/* scheduling title main row */}
+          <span
+            className="flex transition-all duration-300 justify-center items-center w-full px-6"
+            onClick={() => {
+              setIsMoreFirstClicked((prev) => !prev);
+            }}
+          >
+            <SmallSecondRow smallChildren />
+            <FaChevronDown
+              className={`transition-all duration-300 ${
+                isMoreFirstClicked ? `rotate-270 mt-1` : 'mt-1'
+              }`}
+            />
+          </span>
+          <SmallThirdRow col1="1" col2="Unlimited" />
+          <SmallThirdRow title="Connect calendars" col1="1" col2="6" />
+          <SmallThirdRow
+            title="Unlimited meetings"
+            col1={<FaCheckCircle className="text-blue-700" />}
+            col2={<FaCheckCircle className="text-blue-700" />}
+          />
+          <SmallThirdRow
+            title="Customize your booking link"
+            col1={<FaCheckCircle className="text-blue-700" />}
+            col2={<FaCheckCircle className="text-blue-700" />}
+          />
+          <SmallThirdRow
+            title="Mobile app & browser extension"
+            col1={<FaCheckCircle className="text-blue-700" />}
+            col2={<FaCheckCircle className="text-blue-700" />}
+          />
+          <SmallThirdRow
+            title="Meeting polls and one-off meetings"
+            col1={<FaCheckCircle className="text-blue-700" />}
+            col2={<FaCheckCircle className="text-blue-700" />}
+          />
+          <SmallThirdRow
+            title="View contact profiles and scheduling activity"
+            // col1={<span> </span>}
+
+            col1={'Unlimited'}
+            col2={<FaCheckCircle className="text-blue-700" />}
+          />
+          <div className="relative flex gap-2 my-4">
+            <Link
+              to={''}
+              className="bg-blue-950 text-white py-4 px-7 text-sm font-bold rounded"
+            >
+              Get Started
+            </Link>
+            <Link
+              to={''}
+              className="bg-blue-950 text-white py-4 px-7 text-sm font-bold rounded"
+            >
+              Get Started
+            </Link>
+          </div>
+        </div>
         {/* integrations */}
+        <div
+          className={`transition-all duration-300 grid place-items-center mx-auto pb-4 w-full overflow-hidden ${
+            isMoreSecondClicked ? 'h-16' : 'h-[950px]'
+          }`}
+        >
+          {/* integrations title main row */}
+          <span
+            className="flex transition-all duration-300 justify-center items-center w-full px-6"
+            onClick={() => {
+              setIsMoreSecondClicked((prev) => !prev);
+            }}
+          >
+            <SmallSecondRow smallChildren title="integrations" />
+            <FaChevronDown
+              className={`transition-all duration-300 ${
+                isMoreSecondClicked ? `rotate-270 mt-1` : 'mt-1'
+              }`}
+            />
+          </span>
+          <SmallThirdRow col1="1" col2="Unlimited" />
+          <SmallThirdRow title="Connect calendars" col1="1" col2="6" />
+          <SmallThirdRow
+            title="Unlimited meetings"
+            col1={<FaCheckCircle className="text-blue-700" />}
+            col2={<FaCheckCircle className="text-blue-700" />}
+          />
+          <SmallThirdRow
+            title="Customize your booking link"
+            col1={<FaCheckCircle className="text-blue-700" />}
+            col2={<FaCheckCircle className="text-blue-700" />}
+          />
+          <SmallThirdRow
+            title="Mobile app & browser extension"
+            col1={<FaCheckCircle className="text-blue-700" />}
+            col2={<FaCheckCircle className="text-blue-700" />}
+          />
+          <SmallThirdRow
+            title="Meeting polls and one-off meetings"
+            col1={<FaCheckCircle className="text-blue-700" />}
+            col2={<FaCheckCircle className="text-blue-700" />}
+          />
+          <SmallThirdRow
+            title="View contact profiles and scheduling activity"
+            // col1={<span> </span>}
+
+            col1={'Unlimited'}
+            col2={<FaCheckCircle className="text-blue-700" />}
+          />
+        </div>
+        {/* Bussiness Support */}
+        <div
+          className={`transition-all duration-300 grid place-items-center mx-auto pb-4 w-full overflow-hidden ${
+            isMoreThirdClicked ? 'h-16' : 'h-[950px]'
+          }`}
+        >
+          {/* Bussiness Support title main row */}
+          <span
+            className="flex transition-all duration-300 justify-center items-center w-full px-6"
+            onClick={() => {
+              setIsMoreThirdClicked((prev) => !prev);
+            }}
+          >
+            <SmallSecondRow smallChildren title="Bussiness Support" />
+            <FaChevronDown
+              className={`transition-all duration-300 ${
+                isMoreThirdClicked ? `rotate-270 mt-1` : 'mt-1'
+              }`}
+            />
+          </span>
+          <SmallThirdRow col1="1" col2="Unlimited" />
+          <SmallThirdRow title="Connect calendars" col1="1" col2="6" />
+          <SmallThirdRow
+            title="Unlimited meetings"
+            col1={<FaCheckCircle className="text-blue-700" />}
+            col2={<FaCheckCircle className="text-blue-700" />}
+          />
+          <SmallThirdRow
+            title="Customize your booking link"
+            col1={<FaCheckCircle className="text-blue-700" />}
+            col2={<FaCheckCircle className="text-blue-700" />}
+          />
+          <SmallThirdRow
+            title="Mobile app & browser extension"
+            col1={<FaCheckCircle className="text-blue-700" />}
+            col2={<FaCheckCircle className="text-blue-700" />}
+          />
+          <SmallThirdRow
+            title="Meeting polls and one-off meetings"
+            col1={<FaCheckCircle className="text-blue-700" />}
+            col2={<FaCheckCircle className="text-blue-700" />}
+          />
+          <SmallThirdRow
+            title="View contact profiles and scheduling activity"
+            // col1={<span> </span>}
+
+            col1={'Unlimited'}
+            col2={<FaCheckCircle className="text-blue-700" />}
+          />
+        </div>
       </section>
     </>
   );
@@ -406,6 +734,7 @@ const SmallMainRow = ({
   style = 'white',
   bgColor,
   children,
+  contactChild,
 }) => {
   return (
     <div className={`grid grid-cols-1 w-full gap-1 p-2 ${bgColor}`}>
@@ -415,8 +744,14 @@ const SmallMainRow = ({
         <>
           <h6 className="font-bold text-center text-md">{smallTitle}</h6>
           <h5 className="text-2xl text-center" style={{ color: `${style}` }}>
-            ${price}
-            <span className="text-sm">/wk</span>
+            {contactChild ? (
+              'Contact Us'
+            ) : (
+              <>
+                ${price}
+                <span className="text-sm">/wk</span>
+              </>
+            )}
           </h5>
         </>
       )}
