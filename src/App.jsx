@@ -33,8 +33,8 @@ function App() {
           path: '/graphic-design',
           element: (
             <Suspense fallback={<p>Loading...</p>}>
-              {/* <SocialMediaPage /> */}
               <GraphicDesign />
+              {/* <SocialMediaPage /> */}
             </Suspense>
           ),
         },

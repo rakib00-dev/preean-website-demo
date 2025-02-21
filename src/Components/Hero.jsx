@@ -5,6 +5,7 @@ import Button from './Button';
 const Hero = ({
   title = 'On-Demand Graphic & Web Design',
   para = 'Get access to our creative team in a few clicks. Simple, fast, and affordable.',
+  largeScreenImg = 'md:w-4/5',
   children,
 }) => {
   return (
@@ -19,19 +20,15 @@ const Hero = ({
         className={`md:mx-auto w-full my-6 mx-0 md:my-20 pb-20 max-w-7xl items-center  `}
       >
         <div className=" relative flex mx-2 flex-col-reverse top-0 justify-center items-center md:flex-row-reverse md:mx-10 ">
-          {/* imges */}
-          <div className="mx-auto grid place-items-center top-0 mt-44 mb-50 w-full cursor-pointer md:mt-20 md:mb-20 md:w-4/5">
-            <div className="relative m-auto mt-4 h-auto w-full">
-              {/* <img
-                src="./images/hero/header-video-bg.svg"
-                alt="header bg"
-                className="hidden absolute justify-center items-center left-0 top-0 w-full hue-rotate-383 lg:flex"
-                loading="lazy"
-              /> */}
-              <div className="relative m-auto shadow-[10px_10px_45px_5px_rgba(0,0,0,0.25)] rounded-2xl flex flex-col justify-center items-center w-full scale-90 md:scale-90">
-                {children ? (
-                  children
-                ) : (
+          <div
+            className={`mx-auto grid place-items-center top-0 mt-44 mb-50 w-full cursor-pointer md:mt-20 md:mb-20 ${largeScreenImg}`}
+          >
+            {/* imges */}
+            {children ? (
+              children
+            ) : (
+              <div className="relative m-auto mt-4 h-auto w-full">
+                <div className="relative m-auto shadow-[10px_10px_45px_5px_rgba(0,0,0,0.25)] rounded-2xl flex flex-col justify-center items-center w-full scale-90 md:scale-90">
                   <>
                     <div className="px-6 pb-6 pt-2 grid gap-5 bg-white rounded-xl border-gray-200 border-2 shadow-2xl absolute cardOne">
                       <h1 className="md:text-2xl text-xs font-bold bg-gray-100 p-4 rounded-2xl ">
@@ -57,11 +54,11 @@ const Hero = ({
                       />
                     </div>
                   </>
-                )}
 
-                {/* <div className=" flex justify-center items-center place-items-center rounded-xl absolute shadow-xl w-15 h-15 playWave" />  */}
+                  {/* <div className=" flex justify-center items-center place-items-center rounded-xl absolute shadow-xl w-15 h-15 playWave" />  */}
+                </div>
               </div>
-            </div>
+            )}
           </div>
 
           {/* content */}

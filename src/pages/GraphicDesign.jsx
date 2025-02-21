@@ -22,7 +22,14 @@ const GraphicDesign = () => {
   return (
     <section className="mx-auto w-full max-w-7xl">
       <SolutionHeader />
-      <Hero />
+      <Hero largeScreenImg="md:w-1/2">
+        <img
+          src="./images/hero/send-reminder.webp"
+          alt="header bg cover"
+          className="flex justify-center items-center rounded-xl relative shadow-xl top-0 "
+          loading="lazy"
+        />
+      </Hero>
       {/* our work */}
       <Suspense fallback={<p>Loading...</p>}>
         <OurSoluWork />
