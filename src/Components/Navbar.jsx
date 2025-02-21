@@ -118,30 +118,13 @@ const Navbar = () => {
               title="print design"
               src="./images/navbar/print-design.png"
             />
-            <DropDown
-              title="video editing"
-              src="./images/navbar/video-editing.png"
-            />
-            <DropDown title="branding" src="./images/navbar/branding.png" />
-            <DropDown
-              title="presentation"
-              src="./images/navbar/presentation.png"
-            />
-            <DropDown title="ad design" src="./images/navbar/ad-design.png" />
-            <DropDown
-              title="illustrations"
-              src="./images/navbar/illustrations.png"
-            />
-            <DropDown
-              title="motion graphic"
-              src="./images/navbar/motion-graphic.png"
-            />
-            <Link
+
+            {/* <Link
               to="/#"
               className="transition-all px-3 py-3 ml-4 mt-4 bg-blue-100/50 border-1/80 text-blue-500 font-bold rounded-md text-sm hover:border-1 hover:bg-white"
             >
               ENTIRE SCOPE OF SERVICE
-            </Link>
+            </Link> */}
           </div>
         </div>
         <ListItem
@@ -275,7 +258,7 @@ const Navbar = () => {
       <>
         <Link
           to={to}
-          className={`flex gap-2 p-4 justify-start items-center w-[210px] rounded-md DropItemHover ${className}`}
+          className={`flex gap-2 p-4 justify-start items-center w-full rounded-md DropItemHover ${className}`}
           onClick={() => {
             setIsNavOpen(false);
           }}
@@ -371,7 +354,7 @@ const Navbar = () => {
             {/* large screen */}
             <div
               id="menu"
-              className="hidden justify-between  gap-10 items-center w-full md:flex"
+              className="hidden justify-between  gap-10 items-center w-full lg:flex"
             >
               <ul className="flex justify-center  items-center gap-5">
                 <NavLists />
@@ -394,7 +377,7 @@ const Navbar = () => {
               </div>
             </div>
             <div
-              className={!isNavOpen ? `block md:hidden` : 'hidden md:hidden'}
+              className={!isNavOpen ? `block lg:hidden` : 'hidden lg:hidden'}
               onClick={() => {
                 setIsNavOpen((prev) => !prev);
               }}
@@ -403,7 +386,7 @@ const Navbar = () => {
             </div>
 
             <div
-              className={isNavOpen ? `block md:hidden` : 'hidden md:hidden'}
+              className={isNavOpen ? `block lg:hidden` : 'hidden lg:hidden'}
               onClick={() => {
                 setIsNavOpen((prev) => prev);
               }}
@@ -426,7 +409,7 @@ const Navbar = () => {
         onClick={() => setIsHovered((prev) => !prev)}
       >
         <div
-          className="hidden fixed rounded-xl bg-white top-[48px] m-auto justify-start items-start flex-wrap shadow-xl w-[40rem] lg:flex"
+          className="hidden fixed rounded-xl bg-white top-[48px] m-auto flex-col justify-start items-start flex-wrap shadow-xl w-[40rem] lg:flex"
           style={{ zIndex: 1122 }}
         >
           <DropDown
@@ -448,30 +431,12 @@ const Navbar = () => {
             title="print design"
             src="./images/navbar/print-design.png"
           />
-          <DropDown
-            title="video editing"
-            src="./images/navbar/video-editing.png"
-          />
-          <DropDown title="branding" src="./images/navbar/branding.png" />
-          <DropDown
-            title="presentation"
-            src="./images/navbar/presentation.png"
-          />
-          <DropDown title="ad design" src="./images/navbar/ad-design.png" />
-          <DropDown
-            title="illustrations"
-            src="./images/navbar/illustrations.png"
-          />
-          <DropDown
-            title="motion graphic"
-            src="./images/navbar/motion-graphic.png"
-          />
-          <Link
+          {/* <Link
             to="/#"
             className="transition-all px-3 py-3 mt-4 bg-blue-100/50 border-1/80 text-blue-500 font-bold rounded-md text-sm hover:border-1 hover:bg-white"
           >
             ENTIRE SCOPE OF SERVICE
-          </Link>
+          </Link> */}
         </div>
       </div>
 
@@ -524,7 +489,7 @@ const Navbar = () => {
           id="menu"
           className={
             isNavOpen
-              ? 'transition-all fixed top-20 flex justify-start items-start flex-col w-full h-full pl-5 pt-5 gap-10 border rounded-md bg-white m-auto overflow-y-auto md:hidden'
+              ? 'transition-all fixed top-20 flex justify-start items-start flex-col w-full h-full pl-5 pt-5 gap-10 border rounded-md bg-white m-auto overflow-y-auto lg:hidden'
               : 'hidden'
           }
           style={{ zIndex: 122 }}
