@@ -16,7 +16,7 @@ const Navbar = () => {
         <ListItem
           navLink={'#'}
           className={
-            'uppercase  flex justify-start items-center gap-2 text-sm sm:font-bold'
+            'capitalize  flex justify-start items-center gap-2 text-sm sm:font-bold'
           }
           onmouseover={() => setIsHovered(true)}
           onmouseout={() => setIsHovered(false)}
@@ -32,20 +32,20 @@ const Navbar = () => {
         </ListItem>
         <ListItem
           navLink="/our-work"
-          className={'uppercase  text-sm sm:font-bold'}
+          className={'capitalize  text-sm sm:font-bold'}
         >
           our work
         </ListItem>
         <ListItem
           navLink="/pricing"
-          className={'uppercase  text-sm sm:font-bold'}
+          className={'capitalize  text-sm sm:font-bold'}
         >
           pricing
         </ListItem>
         <ListItem
           navLink="#"
           className={
-            'uppercase  flex justify-start items-center gap-2  text-sm sm:font-bold'
+            'capitalize  flex justify-start items-center gap-2  text-sm sm:font-bold'
           }
           onmouseover={() => setIsResourceHovered(true)}
           onmouseout={() => setIsResourceHovered(false)}
@@ -70,12 +70,12 @@ const Navbar = () => {
         <ListItem
           navLink="#"
           // className={
-          //   'uppercase flex justify-start items-center gap-2 sm:font-bold'
+          //   'capitalize flex justify-start items-center gap-2 sm:font-bold'
           // }
           smallClassName={({ isActive }) =>
             isActive
-              ? `uppercase flex justify-start items-center gap-2 sm:font-bold`
-              : `relative text-xl font-bold cursor-pointer text-black transition-all duration-300 uppercase lg:text-sm hover:text-gray-500`
+              ? `capitalize flex justify-start items-center gap-2 sm:font-bold`
+              : `relative text-xl font-bold cursor-pointer text-black transition-all duration-300 capitalize lg:text-sm hover:text-gray-500`
           }
           style={{ padding: ' 0' }}
           onclick={() => setIsHovered((prev) => !prev)}
@@ -148,8 +148,8 @@ const Navbar = () => {
           navLink="/our-work"
           smallClassName={({ isActive }) =>
             isActive
-              ? `uppercase text-blue-500 sm:font-bold `
-              : `uppercase  sm:font-bold `
+              ? `capitalize text-blue-500 sm:font-bold `
+              : `capitalize  sm:font-bold `
           }
           onclick={() => {
             setIsNavOpen(false);
@@ -161,8 +161,8 @@ const Navbar = () => {
           navLink="/pricing"
           smallClassName={({ isActive }) =>
             isActive
-              ? `uppercase text-blue-500 sm:font-bold `
-              : `uppercase  sm:font-bold `
+              ? `capitalize text-blue-500 sm:font-bold `
+              : `capitalize  sm:font-bold `
           }
           onclick={() => {
             setIsNavOpen((prev) => !prev);
@@ -174,8 +174,8 @@ const Navbar = () => {
           navLink="#"
           smallClassName={({ isActive }) =>
             isActive
-              ? 'uppercase flex justify-start items-center gap-2 sm:font-bold'
-              : `'uppercase flex justify-start items-center gap-2 sm:font-bold'`
+              ? 'capitalize flex justify-start items-center gap-2 sm:font-bold'
+              : `'capitalize flex justify-start items-center gap-2 sm:font-bold'`
           }
           style={{ padding: ' 0' }}
           onclick={() => {
@@ -243,7 +243,7 @@ const Navbar = () => {
         <li className="pb-5 left-0 lg:pb-0">
           <NavLink
             to={navLink}
-            // className={`relative text-xl font-bold cursor-pointer transition-all duration-300 uppercase  lg:text-sm hover:text-gray-500 ${className}`}
+            // className={`relative text-xl font-bold cursor-pointer transition-all duration-300 capitalize  lg:text-sm hover:text-gray-500 ${className}`}
             style={style}
             onMouseOver={onmouseover}
             onMouseOut={onmouseout}
@@ -253,8 +253,8 @@ const Navbar = () => {
                 ? smallClassName
                 : ({ isActive }) =>
                     isActive
-                      ? `relative text-xl font-bold cursor-pointer transition-all duration-300 uppercase text-blue-500 lg:text-sm hover:text-gray-500 ${className}`
-                      : `relative text-xl font-bold cursor-pointer transition-all duration-300 uppercase  lg:text-sm hover:text-gray-500 ${className}`
+                      ? `relative text-xl font-bold cursor-pointer transition-all duration-300 capitalize text-blue-500 lg:text-sm hover:text-gray-500 ${className}`
+                      : `relative text-xl font-bold cursor-pointer transition-all duration-300 capitalize  lg:text-sm hover:text-gray-500 ${className}`
             }
           >
             {children}
@@ -286,7 +286,7 @@ const Navbar = () => {
             className={`p-3 rounded bg-gray-100/80 h-[43.98px] ${imgClassName}`}
             loading="lazy"
           />
-          <h5 className="uppercase text-sm w-fit font-bold">{title}</h5>
+          <h5 className="capitalize text-sm w-fit font-bold">{title}</h5>
         </Link>
       </>
     );
