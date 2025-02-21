@@ -333,66 +333,62 @@ const Navbar = () => {
       >
         <nav
           id="nav"
-          className="relative flex justify-center items-center px-6 py-4 max-w-7xl border-b-1 border-gray-200 bg-white/60 p-4 w-full h-20 m-auto lg:py-0.5"
+          className="relative flex justify-between items-center px-6 py-4 max-w-7xl border-b-1 border-gray-200 bg-white/60 p-4 w-full h-20 m-auto lg:py-0.5"
         >
           <div className={''} style={cssStyle.blur}></div>{' '}
-          <div className="flex justify-center items-center w-fit gap-35 min-[375px]:gap-50 min-[440px]:gap-60  ">
-            <div
-              id="logo"
-              className="text-md font-medium w-32 md:w-64 md:text-lg"
-            >
-              <Link to="/" className="flex items-center">
-                <img
-                  src="https://designpro.qa/img/Designpro-logo-large.png"
-                  alt="logo"
-                  className="w-60"
-                  loading="lazy"
-                />
-              </Link>
-            </div>
-
-            {/* large screen */}
-            <div
-              id="menu"
-              className="hidden justify-between  gap-10 items-center w-full lg:flex"
-            >
-              <ul className="flex justify-center  items-center gap-5">
-                <NavLists />
-              </ul>
-              <div id="contact">
-                <div className="flex flex-row gap-4 justify-end pr-16 sm:flex lg:pr-0">
-                  <Link
-                    to="/#"
-                    className="transition-all px-7 py-3 text-blue-500 border border-blue-500 rounded-md font-medium text-dark hover:text-white hover:bg-blue-300"
-                  >
-                    Sign in
-                  </Link>
-                  <Link
-                    to="/book-a-call"
-                    className="transition-all rounded-md bg-blue-500 px-7 py-3 text-base font-medium text-white hover:bg-blue-500/90"
-                  >
-                    Book A Call
-                  </Link>
-                </div>
+          <div
+            id="logo"
+            className="text-md font-medium w-32 md:w-64 md:text-lg"
+          >
+            <Link to="/" className="flex items-center">
+              <img
+                src="https://designpro.qa/img/Designpro-logo-large.png"
+                alt="logo"
+                className="w-60"
+                loading="lazy"
+              />
+            </Link>
+          </div>
+          {/* large screen */}
+          <div
+            id="menu"
+            className="hidden justify-end items-center w-full lg:flex"
+          >
+            <ul className="flex justify-center mx-auto items-center gap-5">
+              <NavLists />
+            </ul>
+            <div id="contact">
+              <div className="flex flex-row gap-4 justify-end pr-16 sm:flex lg:pr-0">
+                <Link
+                  to="/#"
+                  className="transition-all px-7 py-3 text-blue-500 border border-blue-500 rounded-md font-medium text-dark hover:text-white hover:bg-blue-300"
+                >
+                  Sign in
+                </Link>
+                <Link
+                  to="/book-a-call"
+                  className="transition-all rounded-md bg-blue-500 px-7 py-3 text-base font-medium text-white hover:bg-blue-500/90"
+                >
+                  Book A Call
+                </Link>
               </div>
             </div>
-            <div
-              className={!isNavOpen ? `block lg:hidden` : 'hidden lg:hidden'}
-              onClick={() => {
-                setIsNavOpen((prev) => !prev);
-              }}
-            >
-              <RiMenu3Fill className="text-3xl" />
-            </div>
-
-            <div
-              className={isNavOpen ? `block lg:hidden` : 'hidden lg:hidden'}
-              onClick={() => {
-                setIsNavOpen((prev) => prev);
-              }}
-            >
-              <RiCloseFill className="text-3xl" />
-            </div>
+          </div>
+          <div
+            className={!isNavOpen ? `block lg:hidden` : 'hidden lg:hidden'}
+            onClick={() => {
+              setIsNavOpen((prev) => !prev);
+            }}
+          >
+            <RiMenu3Fill className="text-3xl" />
+          </div>
+          <div
+            className={isNavOpen ? `block lg:hidden` : 'hidden lg:hidden'}
+            onClick={() => {
+              setIsNavOpen((prev) => prev);
+            }}
+          >
+            <RiCloseFill className="text-3xl" />
           </div>
         </nav>
       </motion.div>
