@@ -99,24 +99,25 @@ const Navbar = () => {
             className="flex rounded-xl bg-white top-[48px] pb-4 mb-4 right-[30%] m-auto flex-col justify-start items-start flex-wrap shadow-xl w-[18rem] lg:hidden"
             style={{ zIndex: 1122 }}
           >
-            <DropDown
+            {/* <DropDown
               to="/social-media"
               title="social media"
               src="./images/navbar/social-media.svg"
+            /> */}
+            <DropDown
+              to="graphic-design"
+              title="graphic design"
+              src="/images/navbar/graphic-design.svg"
             />
             <DropDown
               to="/canva-design"
               title="canva design"
-              src="./images/navbar/canva.png"
-            />
-            <DropDown
-              title="graphic design"
-              src="./images/navbar/graphic-design.svg"
+              src="/images/navbar/canva.png"
             />
             <DropDown title="web design" src="./images/navbar/web-design.svg" />
             <DropDown
               title="print design"
-              src="./images/navbar/print-design.png"
+              src="/images/navbar/print-design.png"
             />
 
             {/* <Link
@@ -408,24 +409,26 @@ const Navbar = () => {
           className="hidden fixed rounded-xl bg-white top-[48px] m-auto flex-col justify-start items-start flex-wrap shadow-xl w-[40rem] lg:flex"
           style={{ zIndex: 1122 }}
         >
-          <DropDown
+          {/* <DropDown
             to="/social-media"
             title="social media"
             src="./images/navbar/social-media.svg"
+          /> */}
+          <DropDown
+            to="/graphic-design"
+            title="graphic design"
+            src="/images/navbar/graphic-design.svg"
           />
           <DropDown
             to="/canva-design"
             title="canva design"
-            src="./images/navbar/canva.png"
+            src="/images/navbar/canva.png"
           />
-          <DropDown
-            title="graphic design"
-            src="./images/navbar/graphic-design.svg"
-          />
+
           <DropDown title="web design" src="./images/navbar/web-design.svg" />
           <DropDown
             title="print design"
-            src="./images/navbar/print-design.png"
+            src="/images/navbar/print-design.png"
           />
           {/* <Link
             to="/#"
