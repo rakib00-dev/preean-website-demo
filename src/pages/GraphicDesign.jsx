@@ -6,6 +6,10 @@ import SocialMediaWallOfLove from '../Components/Solutions-Components/SocialMedi
 
 import SolutionHeader from '../Components/Solutions-Components/SolutionHeader';
 import SolutionVideo from '../Components/Solutions-Components/SolutionVideo';
+
+const SolutionWhyChoose = React.lazy(() =>
+  import('../Components/Solutions-Components/SolutionWhyChoose')
+);
 const SolutionCards = React.lazy(() =>
   import('../Components/Solutions-Components/SolutionCards')
 );
@@ -31,7 +35,12 @@ const GraphicDesign = () => {
         {/* <OurSoluWork /> */}
         <SolutionCards />
       </Suspense>
-      <SolutionVideo />
+      <Suspense fallback={<p>Loading...</p>}>
+        <SolutionVideo />
+      </Suspense>
+      <Suspense fallback={<p>Loading...</p>}>
+        <SolutionWhyChoose />
+      </Suspense>
       {/* <TargetAudience /> */}
       <AgenciesWordwide />
       <WhyChoose />
