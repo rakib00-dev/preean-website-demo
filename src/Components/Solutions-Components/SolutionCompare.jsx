@@ -12,7 +12,7 @@ const SolutionCompare = () => {
             Convert high-value leads and fill pipeline faster
           </h2>
         </div>
-        <div className="grid md:grid-cols-3 px-12 py-10 w-full">
+        <div className="grid md:grid-cols-3 px-4 md:px-12 py-10 w-full">
           <Cards />
           <div className="w-[1px] h-auto bg-black/10 mx-auto md:block" />
           <div className="w-auto h-[1px] bg-black/10 my-12 md:hidden" />
