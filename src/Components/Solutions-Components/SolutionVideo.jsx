@@ -26,7 +26,7 @@ const SolutionVideo = () => {
               alt="solution video thumbnail"
               loading="lazy"
             />
-            <div className="transition-all duration-300 absolute top-[40%] left-[50%] cursor-pointer bg-blue-600/70 md:px-10 md:py-4 hover:bg-blue-500/60">
+            <div className="transition-all duration-300 absolute top-[40%] left-[45%] cursor-pointer bg-blue-600/70 md:px-10 md:py-4 hover:bg-blue-500/60">
               <img
                 src="/images/solutionPage/solution-video/blue-play.png"
                 alt="solution video thumbnail"
