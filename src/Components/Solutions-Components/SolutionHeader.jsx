@@ -30,7 +30,7 @@ const SolutionHeader = ({
               <img
                 src="./images/solutionPage/solution-hero.png"
                 alt="solution header bg"
-                className="flex justify-center items-center rounded-xl relative shadow-xl top-0 w-full"
+                className="flex justify-center items-center rounded-xl relative top-0 w-full"
                 loading="lazy"
               />
             )}
