@@ -7,14 +7,14 @@ const SoluCommonCard = ({
   return (
     <section className="w-full max-w-7xl mx-auto">
       <div className="grid mx-3 md:mx-6 py-8 place-items-center md:grid-cols-2 ">
-        <div className="p-2 md:w-4/5">
+        <div className="p-2 grid gap-7 md:w-[90%]">
           <p className="text-sm text-blue-800 bg-blue-100 px-2 py-1 w-fit rounded-full">
             Why DesignPro
           </p>
-          <h1 className="text-2xl">
+          <h1 className="text-2xl md:text-4xl">
             Book prospects when they’re ready to talk to sales
           </h1>
-          <p className="text-lg">
+          <p className="text-lg text-gray-600">
             Remove the steps that cause friction for prospects. Add Calendly to
             your website, landing pages, or display ads, and embed sales reps’
             Calendly links into emails and campaigns to set your team up to win

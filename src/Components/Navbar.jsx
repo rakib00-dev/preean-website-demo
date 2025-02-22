@@ -334,7 +334,7 @@ const Navbar = () => {
       >
         <nav
           id="nav"
-          className="relative flex justify-between items-center px-6 py-4 max-w-7xl border-b-1 border-gray-200 bg-white/60 p-4 w-full h-20 m-auto lg:py-0.5"
+          className="relative flex justify-between items-center px-6 md:px-12 py-4 max-w-7xl border-b-1 border-gray-200 bg-white/60 p-4 w-full h-20 m-auto lg:py-0.5"
         >
           <div className={''} style={cssStyle.blur}></div>{' '}
           <div

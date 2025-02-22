@@ -12,7 +12,7 @@ const SolutionVideo = () => {
           </h2>
         </div>
         {/* content */}
-        <div className="grid my-12 mx-4 md:mx-6 shadow-lg rounded-2xl border border-gray-300 overflow-hidden bg-white md:flex ">
+        <div className="grid my-12 mx-4 md:mx-12 shadow-lg rounded-2xl border border-gray-300 overflow-hidden bg-white md:flex ">
           <div className="p-8 md:border-r md:border-gray-300 md:w-1/2">
             <h3 className="text-2xl">Connect and convert</h3>
             <p className="text-lg text-[#0b3558] mt-3">

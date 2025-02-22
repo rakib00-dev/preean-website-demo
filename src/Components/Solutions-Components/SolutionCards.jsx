@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const SolutionCards = () => {
   return (
     <section className="w-full max-w-7xl my-17 ">
-      <div className="grid place-items-center gap-10 mx-6 md:grid-cols-3">
+      <div className="grid place-items-center mx-3 md:mx-10 md:grid-cols-3">
         <Cards />
       </div>
     </section>
@@ -17,7 +17,7 @@ export default SolutionCards;
 const Cards = () => {
   return (
     <>
-      <div className="grid py-6 px-7 rounded-4xl w-full h-[404px] gap-19 relative border border-[#8247f5] overflow-hidden cursor-pointer group">
+      <div className="grid py-6 px-7 rounded-4xl w-full md:w-[378px] h-[404px] gap-19 relative border border-[#8247f5] overflow-hidden cursor-pointer group">
         <img
           src="/images/solutionPage/solution-cards/clickup-image.svg"
           alt="this is a clickup img"
@@ -48,7 +48,7 @@ const Cards = () => {
           />
         </div>
       </div>
-      <div className="grid py-6 px-7 rounded-4xl w-full h-[404px] gap-19 relative border border-[#14aa51] overflow-hidden cursor-pointer group">
+      <div className="grid py-6 px-7 rounded-4xl w-full md:w-[378px] h-[404px] gap-19 relative border border-[#14aa51] overflow-hidden cursor-pointer group">
         <img
           src="/images/solutionPage/solution-cards/katalon-image.svg"
           alt="this is a clickup img"
@@ -79,7 +79,7 @@ const Cards = () => {
           />
         </div>
       </div>
-      <div className="grid py-6 px-7 rounded-4xl w-full h-[404px] gap-19 relative border border-[#ff0066] overflow-hidden cursor-pointer group">
+      <div className="grid py-6 px-7 rounded-4xl w-full md:w-[378px] h-[404px] gap-19 relative border border-[#ff0066] overflow-hidden cursor-pointer group">
         <img
           src="/images/solutionPage/solution-cards/smith-image.svg"
           alt="this is a clickup img"
