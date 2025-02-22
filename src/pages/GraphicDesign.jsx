@@ -12,6 +12,7 @@ import SolutionReady from '../Components/SolutionReady';
 import SolutionPricingPlan from '../Components/Solutions-Components/SolutionPricingPlan';
 import SolutionExploreMore from '../Components/Solutions-Components/SolutionExploreMore';
 import SolutonAhead from '../Components/Solutions-Components/SolutonAhead';
+import SolutionFilter from '../Components/Solutions-Components/SolutionFilter';
 
 const SolutionHomeSection = React.lazy(() =>
   import('../Components/SolutionHomeSection')
@@ -51,6 +52,7 @@ const GraphicDesign = () => {
         <SolutionWhyChoose />
       </Suspense>
       {/* filter section -><- */}
+      <SolutionFilter />
       <Suspense fallback={<p>Loading...</p>}>
         <SolutionHomeSection />
       </Suspense>

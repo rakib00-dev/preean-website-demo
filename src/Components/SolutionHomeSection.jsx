@@ -35,9 +35,9 @@ const SolutionHomeSection = () => {
             our solutions & resources
           </h1>
           <h2
-            className={`font-extrabold text-[1.55rem] text-center w-full mb-4 leading-8 md:text-6xl md:text-start md:w-4/5 lg:leading-13`}
+            className={`font-extrabold text-[1.55rem] text-center w-full mb-4 leading-8 md:text-6xl md:text-start md:w-4/5 md:leading-16`}
           >
-            Calendly makes scheduling simple
+            Design Pro makes scheduling simple
           </h2>
         </motion.div>
 
