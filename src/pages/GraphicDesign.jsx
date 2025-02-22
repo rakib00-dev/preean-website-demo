@@ -7,6 +7,8 @@ import SocialMediaWallOfLove from '../Components/Solutions-Components/SocialMedi
 import SolutionHeader from '../Components/Solutions-Components/SolutionHeader';
 import SolutionVideo from '../Components/Solutions-Components/SolutionVideo';
 import SolutionClientRequest from '../Components/Solutions-Components/SolutionClientRequest';
+import SolutionCompare from '../Components/Solutions-Components/SolutionCompare';
+import SolutionReady from '../Components/SolutionReady';
 
 const SolutionHomeSection = React.lazy(() =>
   import('../Components/SolutionHomeSection')
@@ -52,7 +54,8 @@ const GraphicDesign = () => {
       <Suspense fallback={<p>Loading...</p>}>
         <SolutionClientRequest />
       </Suspense>
-      <WhyChoose />
+      <SolutionCompare />
+      <SolutionReady />
       <Suspense fallback={<p>Loading...</p>}>
         <PostOnSocialMedia />
       </Suspense>
