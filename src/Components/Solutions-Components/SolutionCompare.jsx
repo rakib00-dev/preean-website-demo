@@ -56,7 +56,7 @@ const Cards = ({
         {paraChild ? (
           paraChild
         ) : (
-          <p className="text-sm font-medium text-[#0b3558c0] bg-gray-200/80 w-fit px-2 py-1 rounded-full">
+          <p className="text-sm font-medium text-[#0b3558c0] bg-gray-200/80 h-fit w-fit px-3 py-1 grid place-items-center rounded-full">
             The Old Way
           </p>
         )}
