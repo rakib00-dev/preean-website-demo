@@ -8,8 +8,8 @@ const FirstTypeSection = ({
   children,
 }) => {
   return (
-    <section className="flex flex-col justify-center items-center mx-auto w-full max-w-7xl my-[4rem] bg-white overflow-hidden ">
-      <div className="flex m-auto justify-center items-center flex-col w-[95%] gap-4 md:flex-row">
+    <section className="mx-auto w-full max-w-7xl my-[4rem] bg-white overflow-hidden">
+      <div className="flex m-auto justify-center items-center flex-col w-[95%] gap-4 md:flex-row md:w-full">
         <h1
           className="uppercase font-bold text-[.85rem] md:hidden"
           style={{ color: 'var(--colors-pink)' }}
