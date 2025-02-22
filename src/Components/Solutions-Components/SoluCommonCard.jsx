@@ -7,9 +7,9 @@ const SoluCommonCard = ({
   return (
     <section className="w-full max-w-7xl mx-auto">
       <div className="grid mx-3 md:mx-6 py-8 place-items-center md:grid-cols-2 ">
-        <div className="p-2 grid gap-7 md:w-[90%]">
-          <p className="text-sm text-blue-800 bg-blue-100 px-2 py-1 w-fit rounded-full">
-            Why DesignPro
+        <div className="p-2 grid gap-7 md:w-[93%]">
+          <p className="capitalize text-sm text-blue-800 bg-blue-100 px-2 py-1 w-fit rounded-full">
+            improve communication rates
           </p>
           <h1 className="text-2xl md:text-4xl">
             Book prospects when they’re ready to talk to sales
