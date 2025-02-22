@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const SolutionCards = () => {
   return (
     <section className="w-full max-w-7xl my-17 ">
-      <div className="grid place-items-center mx-3 md:mx-10 md:grid-cols-3">
+      <div className="grid place-items-center gap-3 md:gap-0 mx-3 md:mx-10 md:grid-cols-3">
         <Cards />
       </div>
     </section>
