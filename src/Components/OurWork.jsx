@@ -3,7 +3,7 @@ import Button from './Button';
 
 const OurWork = () => {
   return (
-    <section className="mx-auto w-full max-w-7xl my-20">
+    <section className="mx-auto w-full max-w-7xl my-16">
       <div className="mx-3 md:mx-16">
         <div
           className={`flex flex-col justify-center gap-2 items-center md:gap-4 md:items-start md:my-8`}
