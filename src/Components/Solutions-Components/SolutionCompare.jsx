@@ -61,7 +61,7 @@ const Cards = ({
           </p>
         )}
         <div className="grid gap-5">
-          <h2 className="text-4xl">{title}</h2>
+          <h2 className="text-2xl md:text-4xl">{title}</h2>
           <ul className="grid gap-4 *:font-medium">
             <li
               className="flex items-center gap-2"
