@@ -6,7 +6,11 @@ import SocialMediaWallOfLove from '../Components/Solutions-Components/SocialMedi
 
 import SolutionHeader from '../Components/Solutions-Components/SolutionHeader';
 import SolutionVideo from '../Components/Solutions-Components/SolutionVideo';
+import SolutionClientRequest from '../Components/Solutions-Components/SolutionClientRequest';
 
+const SolutionHomeSection = React.lazy(() =>
+  import('../Components/SolutionHomeSection')
+);
 const SolutionWhyChoose = React.lazy(() =>
   import('../Components/Solutions-Components/SolutionWhyChoose')
 );
@@ -41,10 +45,13 @@ const GraphicDesign = () => {
       <Suspense fallback={<p>Loading...</p>}>
         <SolutionWhyChoose />
       </Suspense>
+      {/* filter section -><- */}
       <Suspense fallback={<p>Loading...</p>}>
         <SolutionHomeSection />
       </Suspense>
-      <AgenciesWordwide />
+      <Suspense fallback={<p>Loading...</p>}>
+        <SolutionClientRequest />
+      </Suspense>
       <WhyChoose />
       <Suspense fallback={<p>Loading...</p>}>
         <PostOnSocialMedia />
