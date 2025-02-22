@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 const SolutionPricingPlan = () => {
   return (
     <section className="w-full max-w-7xl mx-auto">
-      <div className="grid place-items-center w-full py-17 px-12 bg-gray-200/40 md:grid-cols-3">
-        <div className="grid gap-8 ">
-          <h2 className="text-5xl">Pricing Plans</h2>
+      <div className="grid place-items-center w-full py-12 md:py-17 px-2 md:px-12 bg-gray-200/40 md:grid-cols-3">
+        <div className="grid gap-8 mb-12 px-2">
+          <h2 className="text-4xl md:text-5xl">Pricing Plans</h2>
           <p>
             Get what you need to hit your goals: make scheduling easier and
             deliver a better meeting experience for all, while connecting your
@@ -50,10 +50,10 @@ const Card = ({
   children,
 }) => {
   return (
-    <div className={`w-[230px] mx-2 rounded-2xl relative md:w-[370px]`}>
+    <div className={`w-[270px] mb-5 mx-2 rounded-2xl relative md:w-[370px]`}>
       {/* initial wraper */}
       <div
-        className={`border border-t-10 rounded-2xl h-[350px] px-8 py-6 gap-4 grid ${bgColor} ${borderColor}`}
+        className={`grid border border-t-10 rounded-2xl h-[350px] px-4 md:px-8 py-6 gap-4 ${bgColor} ${borderColor}`}
       >
         {children}
         <div className={`grid gap-4 ${lastColor}`}>
@@ -74,7 +74,7 @@ const Card = ({
         <div className="grid w-full place-items-center ">
           <Link
             to={'/pricing'}
-            className={`transition-all duration-200 ${linkTextColor} text-center py-3 font-medium px-3 rounded-lg md:text-lg sm:w-full ${btnColor} `}
+            className={`transition-all duration-200 ${linkTextColor} text-center py-3 font-medium px-3 rounded-lg md:text-lg w-full ${btnColor} `}
           >
             {btnText}
           </Link>
