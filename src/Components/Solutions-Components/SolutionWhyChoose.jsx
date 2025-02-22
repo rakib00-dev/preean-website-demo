@@ -1,4 +1,5 @@
 import React from 'react';
+import SoluCommonCard from './SoluCommonCard';
 
 const SolutionWhyChoose = () => {
   return (
@@ -13,6 +14,9 @@ const SolutionWhyChoose = () => {
           >
             Move marketing initiatives forward, faster with easy scheduling
           </h2>
+        </div>
+        <div>
+          <SoluCommonCard />
         </div>
       </div>
     </section>

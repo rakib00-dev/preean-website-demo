@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import TargetAudience from '../Components/Solutions-Components/TargetAudience';
+// import TargetAudience from '../Components/Solutions-Components/TargetAudience';
 import AgenciesWordwide from '../Components/Solutions-Components/AgenciesWordwide';
 import WhyChoose from '../Components/Solutions-Components/WhyChoose';
 import SocialMediaWallOfLove from '../Components/Solutions-Components/SocialMediaWallOfLove';
