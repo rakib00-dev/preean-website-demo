@@ -2,7 +2,7 @@ import React from 'react';
 import { Typography, Button, Tooltip } from '@material-tailwind/react';
 import { useCopyToClipboard } from 'usehooks-ts';
 import { CheckIcon, DocumentDuplicateIcon } from '@heroicons/react/24/outline';
-import SolutionHeader from './Solutions-Components/SolutionHeader';
+import SolutionHeader from './Solutions-Components/OldSolutionHeader';
 
 const BookACall = () => {
   return (

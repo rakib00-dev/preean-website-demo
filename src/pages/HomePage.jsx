@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import SolutionHeader from '../Components/Solutions-Components/SolutionHeader';
+import SolutionHeader from '../Components/Solutions-Components/OldSolutionHeader';
 // const BetterSolution = React.lazy(() => import('../Components/BetterSolution'));
 const AutoChangeContent = React.lazy(() =>
   import('../Components/AutoChangeContent')

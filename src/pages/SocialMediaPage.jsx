@@ -1,6 +1,6 @@
 import PricingFaq from '../Components/PricingPage/PricingFaq';
 import SendReqSection from '../Components/SendReqSection';
-import SolutionHeader from '../Components/Solutions-Components/SolutionHeader';
+import SolutionHeader from '../Components/Solutions-Components/OldSolutionHeader';
 import React, { Suspense } from 'react';
 import TargetAudience from '../Components/Solutions-Components/TargetAudience';
 import AgenciesWordwide from '../Components/Solutions-Components/AgenciesWordwide';
