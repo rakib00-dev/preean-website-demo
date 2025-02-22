@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 const SolutionExploreMore = () => {
   return (
-    <section className="w-full max-w-7xl md:my-20">
-      <div className="relative py-10">
+    <section className="w-full max-w-7xl">
+      <div className="relative py-8 md:py-18">
         <div className="grid place-items-center mx-auto gap-5">
           <p className="text-sm  text-blue-800 bg-blue-100 px-2 py-1 rounded-full">
             Explore more

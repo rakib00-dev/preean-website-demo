@@ -11,6 +11,7 @@ import SolutionCompare from '../Components/Solutions-Components/SolutionCompare'
 import SolutionReady from '../Components/SolutionReady';
 import SolutionPricingPlan from '../Components/Solutions-Components/SolutionPricingPlan';
 import SolutionExploreMore from '../Components/Solutions-Components/SolutionExploreMore';
+import SolutonAhead from '../Components/Solutions-Components/SolutonAhead';
 
 const SolutionHomeSection = React.lazy(() =>
   import('../Components/SolutionHomeSection')
@@ -60,10 +61,7 @@ const GraphicDesign = () => {
       <SolutionPricingPlan />
       <SolutionExploreMore />
       <SolutionReady />
-      <Suspense fallback={<p>Loading...</p>}>
-        <PostOnSocialMedia />
-      </Suspense>
-      <SocialMediaWallOfLove />
+      <SolutonAhead />
     </section>
   );
 };
