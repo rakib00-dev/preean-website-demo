@@ -9,6 +9,7 @@ import SolutionVideo from '../Components/Solutions-Components/SolutionVideo';
 import SolutionClientRequest from '../Components/Solutions-Components/SolutionClientRequest';
 import SolutionCompare from '../Components/Solutions-Components/SolutionCompare';
 import SolutionReady from '../Components/SolutionReady';
+import SolutionPricingPlan from '../Components/Solutions-Components/SolutionPricingPlan';
 
 const SolutionHomeSection = React.lazy(() =>
   import('../Components/SolutionHomeSection')
@@ -55,6 +56,7 @@ const GraphicDesign = () => {
         <SolutionClientRequest />
       </Suspense>
       <SolutionCompare />
+      <SolutionPricingPlan />
       <SolutionReady />
       <Suspense fallback={<p>Loading...</p>}>
         <PostOnSocialMedia />
