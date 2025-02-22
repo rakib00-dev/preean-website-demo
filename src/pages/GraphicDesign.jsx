@@ -10,6 +10,7 @@ import SolutionClientRequest from '../Components/Solutions-Components/SolutionCl
 import SolutionCompare from '../Components/Solutions-Components/SolutionCompare';
 import SolutionReady from '../Components/SolutionReady';
 import SolutionPricingPlan from '../Components/Solutions-Components/SolutionPricingPlan';
+import SolutionExploreMore from '../Components/Solutions-Components/SolutionExploreMore';
 
 const SolutionHomeSection = React.lazy(() =>
   import('../Components/SolutionHomeSection')
@@ -57,6 +58,7 @@ const GraphicDesign = () => {
       </Suspense>
       <SolutionCompare />
       <SolutionPricingPlan />
+      <SolutionExploreMore />
       <SolutionReady />
       <Suspense fallback={<p>Loading...</p>}>
         <PostOnSocialMedia />
