@@ -32,7 +32,7 @@ const SolutionWhyChoose = () => {
             bigTitle="Make your valuable time free and more impact to project"
             para="Prove the value of your programs. Get a clearer picture of which messages, campaigns, and routing forms resulted in booked meetings when you integrate Calendly with your CRM and marketing tech stack."
             linkText="see our plans or book a call"
-            imgSrc="/images/solutionPage/graphic-design/customers.png"
+            imgSrc="/images/solutionPage/graphic-design/crm.png"
             bgColor={'bg-gray-100'}
           />
           <SoluCommonCard
@@ -40,7 +40,7 @@ const SolutionWhyChoose = () => {
             bigTitle="Remove the hassle of marketing meetings too"
             para="Easily connect with your vendors, meet with customers, send Meeting Polls for larger groups, organize webinars, and co-host meetings with teammates to plan a project with partners outside of your company."
             linkText="Contact for more info"
-            imgSrc="/images/solutionPage/graphic-design/customers.png"
+            imgSrc="/images/solutionPage/graphic-design/event-types-marketing.png"
             bgColor={'bg-gray-100'}
             imgOrder="order-1"
             contentOrder="order-2"

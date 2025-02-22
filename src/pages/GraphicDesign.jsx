@@ -41,7 +41,9 @@ const GraphicDesign = () => {
       <Suspense fallback={<p>Loading...</p>}>
         <SolutionWhyChoose />
       </Suspense>
-      {/* <TargetAudience /> */}
+      <Suspense fallback={<p>Loading...</p>}>
+        <SolutionHomeSection />
+      </Suspense>
       <AgenciesWordwide />
       <WhyChoose />
       <Suspense fallback={<p>Loading...</p>}>
