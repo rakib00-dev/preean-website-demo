@@ -1,75 +1,70 @@
-import { FaPlayCircle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import Button from '../Button';
 
 const SolutionHeader = ({
-  solutionLink = '/book-a-call',
-  page1stTitle = 'Social Media',
-  page2ndTitle = 'Design Services',
-  pagePara = 'Create original and eye-catching designs tailored to each social media platforms, be it Instagram, YouTube, Pinterest or beyond. Wether it’s static images or animated posts, boost your marketing efforts with the help our of design team.',
+  title = 'On-Demand Graphic & Web Design',
+  para = 'Get access to our creative team in a few clicks. Simple, fast, and affordable.',
+  largeScreenImg = 'md:w-1/2',
   children,
-  done,
 }) => {
   return (
-    <section className="mx-auto w-full my-20 max-w-7xl ">
-      <div className="relative">
-        <div
-          className={`flex flex-col justify-center gap-2 items-center lg:gap-4`}
-        >
-          <h1
-            className={`font-extrabold grid text-[1.85rem] text-center w-full mb-4 leading-8 lg:text-center min-[450px]:w-full md:text-[3rem] lg:w-full lg:leading-13`}
+    <>
+      <motion.header
+        initial={{ y: -50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{
+          delay: 0.2,
+          type: 'spring',
+        }}
+        className={`md:mx-auto w-full mx-0 pb-20 max-w-7xl items-center  `}
+      >
+        <div className=" relative flex mx-2 flex-col-reverse top-0 justify-center items-center md:flex-row-reverse md:mx-10 ">
+          <div
+            className={`mx-auto grid place-items-center top-0 my-12 w-full cursor-pointer md:mt-20 ${largeScreenImg}`}
           >
-            <span className="text-[#ef457e]">{page1stTitle}</span>
-            {page2ndTitle}
-          </h1>
-          <p
-            className={`text-center text-xl px-2 w-full md:px-0 md:w-2/3 md:text-2xl `}
-          >
-            {pagePara}
-          </p>
-          {done ? (
-            done
-          ) : (
-            <Link to={solutionLink}>
-              <button
-                className={
-                  'py-2 px-6 rounded-md font-extrabold text-black flex justify-center items-center gap-2 text-lg bg-blue-300 hover:bg-blue-100 cursor-pointer'
-                }
-              >
-                <FaPlayCircle />
-                Book A Call
-              </button>
-            </Link>
-          )}
-          {children ? (
-            children
-          ) : (
-            <div className="flex absolute px-5 top-0 items-center justify-between -z-10 w-full">
+            {/* imges */}
+            {children ? (
+              children
+            ) : (
               <img
-                src="./images/ourpricingpage/deep-blue-squre.svg"
-                alt="this is a blue squre element which is use to inchnge the design quality"
+                src="./images/solutionPage/solution-hero.png"
+                alt="solution header bg"
+                className="flex justify-center items-center rounded-xl relative shadow-xl top-0 w-full"
                 loading="lazy"
-                className="w-10 left-[10%] absolute -top-8 md:w-24"
               />
-              <div className="absolue left-[25%] grid w-full">
-                <img
-                  src="./images/ourworkpage/tringle.svg"
-                  alt="this is a tringle element which is use to inchnge the design quality"
-                  loading="lazy"
-                  className="hidden -top-13 absolute  left-[20%] md:block md:left-[25%]"
-                />
-              </div>
+            )}
+          </div>
 
-              <img
-                src="./images/solutionPage/social-media/pink-box.svg"
-                alt="this is a pink box element which is use to inchnge the design quality"
-                loading="lazy"
-                className="w-10 absolute -bottom-30 -top-10 md:top-0 right-[10%] md:w-26"
+          {/* content */}
+          <div className="leading-14 w-full mt-4 md:w-[40%]">
+            <h1 className="text-3xl text-center text-gray-600 font-[900] w-full md:text-[3rem] md:text-start">
+              {title}
+            </h1>
+            <p className="text-xl text-center py-4 md:text-start lg:text-2xl md:w-4/5">
+              {para}
+            </p>
+            <Link
+              to="/pricing"
+              className="flex justify-center md:justify-start"
+            >
+              <Button
+                text={'pick your plan'}
+                px="30"
+                py="0"
+                className={'text-white uppercase'}
               />
-            </div>
-          )}
+            </Link>
+          </div>
+          {/* <img
+            src="./images/ourpricingpage/deep-blue-squre.svg"
+            alt="play"
+            className=" flex justify-center items-center place-items-center rounded-xl absolute shadow-xl w-[1000px] -top-40 -right-64 -z-30 rotateAnimation"
+            loading="lazy"
+          /> */}
         </div>
-      </div>
-    </section>
+      </motion.header>
+    </>
   );
 };
 
