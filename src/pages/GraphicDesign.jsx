@@ -5,6 +5,7 @@ import WhyChoose from '../Components/Solutions-Components/WhyChoose';
 import SocialMediaWallOfLove from '../Components/Solutions-Components/SocialMediaWallOfLove';
 
 import SolutionHeader from '../Components/Solutions-Components/SolutionHeader';
+import SolutionVideo from '../Components/Solutions-Components/SolutionVideo';
 const SolutionCards = React.lazy(() =>
   import('../Components/Solutions-Components/SolutionCards')
 );
@@ -30,7 +31,8 @@ const GraphicDesign = () => {
         {/* <OurSoluWork /> */}
         <SolutionCards />
       </Suspense>
-      <TargetAudience />
+      <SolutionVideo />
+      {/* <TargetAudience /> */}
       <AgenciesWordwide />
       <WhyChoose />
       <Suspense fallback={<p>Loading...</p>}>
