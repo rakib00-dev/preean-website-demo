@@ -106,7 +106,7 @@ const Cards = () => {
             src="/images/solutionPage/solution-cards/card-shape-3.svg"
             alt="card svg shape"
             loading="lazy"
-            className="transition-all duration-400 absolute -top-40 md:-top-28 -left-30 w-80 h-80 rotate-10 group-hover:scale-[10]"
+            className="transition-all duration-400 absolute -top-30 -left-18 md:-top-28 md:-left-30 w-80 h-80 rotate-10 scale-125 md:scale-100 group-hover:scale-[10]"
           />
         </div>
       </div>
