@@ -114,8 +114,13 @@ const Navbar = () => {
               title="canva design"
               src="/images/navbar/canva.png"
             />
-            <DropDown title="web design" src="./images/navbar/web-design.svg" />
             <DropDown
+              to="web-design"
+              title="web design"
+              src="./images/navbar/web-design.svg"
+            />
+            <DropDown
+              to="print-design"
               title="print design"
               src="/images/navbar/print-design.png"
             />
@@ -425,8 +430,13 @@ const Navbar = () => {
             src="/images/navbar/canva.png"
           />
 
-          <DropDown title="web design" src="./images/navbar/web-design.svg" />
           <DropDown
+            to="web-design"
+            title="web design"
+            src="./images/navbar/web-design.svg"
+          />
+          <DropDown
+            to="print-design"
             title="print design"
             src="/images/navbar/print-design.png"
           />
