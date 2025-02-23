@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 import Button from '../Button';
 
 const OurWorkSamples = ({
-  smallTitle = 'our work',
-  bigTitle = 'Our latest social media designs',
+  bigTitle = 'social media designs',
+  para = 'Engaging designs are a must for every platform in order to grab the attention of your target audience. Get custom branded, innovative, and platform-ready designs and templates, from static to motion and video, in every dimension you need! From Instagram to TikTok, from posts to stories, stand out and scale your social media output.',
   children,
 }) => {
   const socialMediaImg = [
@@ -55,22 +55,18 @@ const OurWorkSamples = ({
   ];
 
   return (
-    <section className="flex flex-col justify-center items-center mx-auto w-full max-w-7xl pt-20 md:mt-16 md:pt-40 bg-white overflow-hidden ">
+    <section className="flex flex-col justify-center items-center mx-auto w-full max-w-7xl pt-20 md:mt-16 bg-white overflow-hidden ">
       <div className="grid w-[95%] gap-4 ">
         {/* content */}
 
         {/* text conent */}
-        <h1
-          className="uppercase font-bold text-[.85rem]"
-          style={{ color: 'var(--colors-pink)' }}
-        >
-          {smallTitle}
-        </h1>
+
         <h2
-          className={`font-extrabold text-[1.55rem] w-[95%] mb-4 leading-8 md:text-start min-[450px]:w-full md:text-[2.1rem] lg:w-full lg:text-[2.5rem] lg:leading-13`}
+          className={`font-extrabold capitalize text-[1.65rem] w-[95%] leading-8 md:text-start min-[450px]:w-full md:text-[2.1rem] lg:w-full lg:text-[2.5rem] lg:leading-13`}
         >
           {bigTitle}
         </h2>
+        <p className="text-4">{para}</p>
       </div>
       <div className="grid place-items-center grid-cols-1 md:grid-cols-5 gap-5 w-[95%] mt-8 md:mt-12">
         {children
@@ -86,7 +82,7 @@ const OurWorkSamples = ({
               </div>
             ))}
       </div>
-      <div className="flex justify-center items-center mx-auto mt-16 mb-6 w-full">
+      <div className="flex justify-center items-center mx-auto mt-10 mb-6 w-full">
         <Link to={'/book-a-call'}>
           <Button
             text={'Get Started'}
