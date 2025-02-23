@@ -109,7 +109,17 @@ const SolutionFilter = () => {
           </li>
         </ul>
         <div className="w-full">
-          <SoluCommonCard />
+          {isFirstActive ? (
+            <FirstCard />
+          ) : isSecondActive ? (
+            <SecondCard />
+          ) : isThirdActive ? (
+            <ThirdCard />
+          ) : isFourthActive ? (
+            <FourthCard />
+          ) : (
+            <FifthCard />
+          )}
         </div>
       </div>
     </section>
@@ -117,3 +127,19 @@ const SolutionFilter = () => {
 };
 
 export default SolutionFilter;
+
+const FirstCard = () => {
+  return <SoluCommonCard />;
+};
+const SecondCard = () => {
+  return <SoluCommonCard />;
+};
+const ThirdCard = () => {
+  return <SoluCommonCard />;
+};
+const FourthCard = () => {
+  return <SoluCommonCard />;
+};
+const FifthCard = () => {
+  return <SoluCommonCard />;
+};
