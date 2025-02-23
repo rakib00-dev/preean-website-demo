@@ -129,17 +129,52 @@ const SolutionFilter = () => {
 export default SolutionFilter;
 
 const FirstCard = () => {
-  return <SoluCommonCard />;
+  return (
+    <SoluCommonCard
+      bigTitle="Drive prospect action"
+      para="Add a booking page on your website and landing pages so prospects can reach you as soon as you have their attention."
+      imgSrc="/images/solutionPage/graphic-design/filter/filter1.png"
+      linkText="Learn more"
+    />
+  );
 };
 const SecondCard = () => {
-  return <SoluCommonCard />;
+  return (
+    <SoluCommonCard
+      bigTitle="Connect with high-value leads"
+      para="Book qualified buyers at live events or from your website — directly from HubSpot, Marketo, Pardot and Calendly forms. Use existing qualification criteria and match known accounts to account owners."
+      imgSrc="/images/solutionPage/graphic-design/filter/filter2.png"
+      linkText="Learn more"
+    />
+  );
 };
 const ThirdCard = () => {
-  return <SoluCommonCard />;
+  return (
+    <SoluCommonCard
+      bigTitle="Integrate with Salesforce and other CRMs"
+      para="Eliminate manual data entry by automatically syncing Calendly with your CRM to update leads, contacts, and opportunities in real-time. Book meetings directly from CRM records."
+      imgSrc="/images/solutionPage/graphic-design/filter/filter3.png"
+      linkText="Learn more"
+    />
+  );
 };
 const FourthCard = () => {
-  return <SoluCommonCard />;
+  return (
+    <SoluCommonCard
+      bigTitle="Integrate with your marketing tech stack"
+      para="Integrate with your marketing automation platform for immediate campaign reporting and a seamless prospect experience."
+      imgSrc="/images/solutionPage/graphic-design/filter/filter4.png"
+      linkText="Learn more"
+    />
+  );
 };
 const FifthCard = () => {
-  return <SoluCommonCard />;
+  return (
+    <SoluCommonCard
+      bigTitle="Build your best experience"
+      para="Create a scalable meeting template to use for campaigns and lead routing to make your job easier."
+      imgSrc="/images/solutionPage/graphic-design/filter/filter5.png"
+      linkText="Learn more"
+    />
+  );
 };

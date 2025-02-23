@@ -16,7 +16,7 @@ const SolutionWhyChoose = () => {
           </h2>
         </div>
         <div className="bg-gray-100 w-full">
-          <SoluCommonCard bgColor={'bg-gray-100'} />
+          <SoluCommonCard bgColor={'bg-gray-100'} smallChild />
           <SoluCommonCard
             smallTitle="Increase you visibility"
             bigTitle="Book less meetings from your marketing project"
@@ -26,6 +26,7 @@ const SolutionWhyChoose = () => {
             bgColor={'bg-gray-100'}
             imgOrder="order-1"
             contentOrder="order-2"
+            smallChild
           />
           <SoluCommonCard
             smallTitle="Measure ampaign performance"
@@ -34,6 +35,7 @@ const SolutionWhyChoose = () => {
             linkText="see our plans or book a call"
             imgSrc="/images/solutionPage/graphic-design/crm.png"
             bgColor={'bg-gray-100'}
+            smallChild
           />
           <SoluCommonCard
             smallTitle="Schedule any meetings"
@@ -44,6 +46,7 @@ const SolutionWhyChoose = () => {
             bgColor={'bg-gray-100'}
             imgOrder="order-1"
             contentOrder="order-2"
+            smallChild
           />
         </div>
       </div>
