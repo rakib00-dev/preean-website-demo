@@ -1,4 +1,8 @@
 import React, { Suspense } from 'react';
+// import TargetAudience from '../Components/Solutions-Components/TargetAudience';
+import AgenciesWordwide from '../Components/Solutions-Components/AgenciesWordwide';
+import WhyChoose from '../Components/Solutions-Components/WhyChoose';
+import SocialMediaWallOfLove from '../Components/Solutions-Components/SocialMediaWallOfLove';
 
 import SolutionHeader from '../Components/Solutions-Components/SolutionHeader';
 import SolutionVideo from '../Components/Solutions-Components/SolutionVideo';
@@ -19,12 +23,15 @@ const SolutionWhyChoose = React.lazy(() =>
 const SolutionCards = React.lazy(() =>
   import('../Components/Solutions-Components/SolutionCards')
 );
+const PostOnSocialMedia = React.lazy(() =>
+  import('../Components/Solutions-Components/PostOnSocialMedia')
+);
 
-const CanvaDesignPage = () => {
+const WebDesignPage = () => {
   return (
     <section className="mx-auto w-full max-w-7xl">
       <SolutionHeader
-        title="On-Demand Canva Design Graphic"
+        title="On-Demand web Design Graphic"
         largeScreenImg="md:w-1/2"
       ></SolutionHeader>
       {/* our work */}
@@ -55,4 +62,4 @@ const CanvaDesignPage = () => {
   );
 };
 
-export default CanvaDesignPage;
+export default WebDesignPage;

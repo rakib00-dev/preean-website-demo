@@ -3,8 +3,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router';
 import MainLayout from './layouts/MainLayout';
 import HomePage from './pages/HomePage';
 import CanvaDesignPage from './pages/CanvaDesignPage';
+import WebDesignPage from './pages/WebDesignPage';
 
-const GraphicDesign = React.lazy(() => import('./pages/GraphicDesign'));
+const GraphicDesign = React.lazy(() => import('./pages/GraphicDesignPage'));
 const BookACall = React.lazy(() => import('./Components/BookACall'));
 // const CanvaDesignPage = React.lazy(() => import('./pages/OldCanvaDesignPage'));
 const SocialMediaPage = React.lazy(() => import('./pages/SocialMediaPage'));
@@ -44,6 +45,14 @@ function App() {
           element: (
             <Suspense fallback={<p>Loading...</p>}>
               <CanvaDesignPage />
+            </Suspense>
+          ),
+        },
+        {
+          path: '/web-design',
+          element: (
+            <Suspense fallback={<p>Loading...</p>}>
+              <WebDesignPage />
             </Suspense>
           ),
         },

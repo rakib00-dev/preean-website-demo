@@ -19,14 +19,14 @@ const SolutionWhyChoose = React.lazy(() =>
 const SolutionCards = React.lazy(() =>
   import('../Components/Solutions-Components/SolutionCards')
 );
+const PostOnSocialMedia = React.lazy(() =>
+  import('../Components/Solutions-Components/PostOnSocialMedia')
+);
 
-const CanvaDesignPage = () => {
+const GraphicDesignPage = () => {
   return (
     <section className="mx-auto w-full max-w-7xl">
-      <SolutionHeader
-        title="On-Demand Canva Design Graphic"
-        largeScreenImg="md:w-1/2"
-      ></SolutionHeader>
+      <SolutionHeader largeScreenImg="md:w-1/2"></SolutionHeader>
       {/* our work */}
       <Suspense fallback={<p>Loading...</p>}>
         {/* <OurSoluWork /> */}
@@ -55,4 +55,4 @@ const CanvaDesignPage = () => {
   );
 };
 
-export default CanvaDesignPage;
+export default GraphicDesignPage;
