@@ -549,7 +549,7 @@ const PrintDesign = () => {
   return (
     <OurWorkSamples
       bigTitle="Print Designs"
-      para="Custom branded white papers, guides, eBooks, and other digital reports deserve stellar design. Let’s rid the world of boring, plain white papers and thrill audiences with meaningful charts, infographics, interesting typography, illustrations, and more. Leave a lasting, valuable impression with professional layouts and editable final design files."
+      para="We promise print is not dead. From traditional book design to magazines, posters, as well as corporate print designs for fliers, menus, and business cards. Get custom branded renders and print-ready designs in any format, on-demand."
     >
       {printImg.map((e, i) => (
         <div key={i} className="grid">
