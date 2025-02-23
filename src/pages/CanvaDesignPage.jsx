@@ -1,67 +1,56 @@
-import PricingFaq from '../Components/PricingPage/PricingFaq';
-import SendReqSection from '../Components/SendReqSection';
-import SolutionHeader from '../Components/Solutions-Components/OldSolutionHeader';
 import React, { Suspense } from 'react';
-import SocialMediaWallOfLove from '../Components/Solutions-Components/SocialMediaWallOfLove';
-import HowItWorks from '../Components/HowItWorks';
-import PowerByTechnology from '../Components/PowerByTechnology';
-import WhatWeOffer from '../Components/WhatWeOffer';
 
-const PostOnSocialMedia = React.lazy(() =>
-  import('../Components/Solutions-Components/PostOnSocialMedia')
+import SolutionHeader from '../Components/Solutions-Components/SolutionHeader';
+import SolutionVideo from '../Components/Solutions-Components/SolutionVideo';
+import SolutionClientRequest from '../Components/Solutions-Components/SolutionClientRequest';
+import SolutionCompare from '../Components/Solutions-Components/SolutionCompare';
+import SolutionReady from '../Components/SolutionReady';
+import SolutionPricingPlan from '../Components/Solutions-Components/SolutionPricingPlan';
+import SolutionExploreMore from '../Components/Solutions-Components/SolutionExploreMore';
+import SolutonAhead from '../Components/Solutions-Components/SolutonAhead';
+import SolutionFilter from '../Components/Solutions-Components/SolutionFilter';
+
+const SolutionHomeSection = React.lazy(() =>
+  import('../Components/SolutionHomeSection')
 );
-const OurSoluWork = React.lazy(() =>
-  import('../Components/Solutions-Components/OurSoluWork')
+const SolutionWhyChoose = React.lazy(() =>
+  import('../Components/Solutions-Components/SolutionWhyChoose')
+);
+const SolutionCards = React.lazy(() =>
+  import('../Components/Solutions-Components/SolutionCards')
 );
 
 const CanvaDesignPage = () => {
   return (
     <section className="mx-auto w-full max-w-7xl">
       <SolutionHeader
-        page1stTitle="Canva"
-        page2ndTitle="Design Service"
-        pagePara="Get help from professional Canva designers and create beautiful templates and other designs that make your brand shines."
-      />
+        title="On-Demand Canva Design Graphic"
+        largeScreenImg="md:w-1/2"
+      ></SolutionHeader>
       {/* our work */}
       <Suspense fallback={<p>Loading...</p>}>
-        <OurSoluWork bigTitle="Our latest Canva designs" />
+        {/* <OurSoluWork /> */}
+        <SolutionCards />
       </Suspense>
-      <HowItWorks />
-      <PowerByTechnology
-        smallTitle="MAke the most of your canva account"
-        bigTitle="Get help from a pro Canva designer"
-        contentClass="sm:flex-col lg:flex-row w-11/12 mx-20"
-        imgSrc="./images/solutionPage/canva-design/canva_pro_photo.avif"
-        listChild={<OrderedList3 />}
-      />
-      <PowerByTechnology
-        smallTitle="DESIGN FOR EVERY PLATFORM"
-        bigTitle="Elevate your brand with spot-on designs"
-        contentClass="sm:flex-col lg:flex-row-reverse w-11/12 mx-20"
-        imgSrc="./images/solutionPage/canva-design/every-platform.avif"
-        para={
-          'Create dozens of new Canva designs that will make your business stand out across all different platforms.'
-        }
-        listChild={<></>}
-      />
       <Suspense fallback={<p>Loading...</p>}>
-        <PostOnSocialMedia />
+        <SolutionVideo />
       </Suspense>
-      <WhatWeOffer />
-      <SocialMediaWallOfLove />
-      <PricingFaq
-        firstTile="What's the turnaround time?"
-        p1="Turnaround time depends on various factors, including the type and complexity of the task, the quality of the design brief and the number of revisions needed. On average, you can expect to receive your design the next business day with our Advanced and Business plans and on the same day with our Dedicated Designer plan."
-        secondTitle="How much does it cost? What’s included?"
-        p2="Our plans start at $549/mo, all included and no hidden fees. You can see the full pricing here. We don’t charge per project or revision. For a flat monthly fee, you get access to our design team, Monday to Friday, all year long. Everyday you can expect to receive significant design work on one or multiple projects depending on your plan. You can learn more about how we work here."
-        thirdTitle="Do I always work with the same designer?"
-        p3="We assign your request to the best designer for the job. If you submit multiple requests of the same “type” (for instance social media graphics), they will all go to the same designer. You can also choose to work with different designers and ask for a designer change at anytime."
-        fourthTitle="What design tools do you use? Will I get the source files?"
-        p4="Our designers use the Adobe Creative Suite, Figma and Canva. Source files (PSD, AI, INDD, FIG) are always included along with PNG, JPEG, SVG & PDF."
-        fifthTitle="Do you also do social media videos and motion graphics?"
-        p5="Yes we do. As part of our Business and Dedicated Designer plans, you can submit motion graphics and video editing requests. You can view our full scope of services here."
-      />
-      <SendReqSection />
+      <Suspense fallback={<p>Loading...</p>}>
+        <SolutionWhyChoose />
+      </Suspense>
+      {/* filter section -><- */}
+      <SolutionFilter />
+      <Suspense fallback={<p>Loading...</p>}>
+        <SolutionHomeSection />
+      </Suspense>
+      <Suspense fallback={<p>Loading...</p>}>
+        <SolutionClientRequest />
+      </Suspense>
+      <SolutionCompare />
+      <SolutionPricingPlan />
+      <SolutionExploreMore />
+      <SolutionReady />
+      <SolutonAhead />
     </section>
   );
 };

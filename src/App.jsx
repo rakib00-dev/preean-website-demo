@@ -2,10 +2,11 @@ import React, { Suspense } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router';
 import MainLayout from './layouts/MainLayout';
 import HomePage from './pages/HomePage';
+import CanvaDesignPage from './pages/CanvaDesignPage';
 
 const GraphicDesign = React.lazy(() => import('./pages/GraphicDesign'));
 const BookACall = React.lazy(() => import('./Components/BookACall'));
-const CanvaDesignPage = React.lazy(() => import('./pages/CanvaDesignPage'));
+// const CanvaDesignPage = React.lazy(() => import('./pages/OldCanvaDesignPage'));
 const SocialMediaPage = React.lazy(() => import('./pages/SocialMediaPage'));
 const AllOurImgWorks = React.lazy(() =>
   import('./Components/WorkPage/AllOurImgWorks')
