@@ -8,59 +8,57 @@ const OurWorkSamples = ({
 }) => {
   const socialMediaImg = [
     {
-      src: './images/solutionPage/social-media-work/Flex.png',
+      src: '/images/solutionPage/social-media-work/Flex.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/social-media-work/Health.png',
+      src: '/images/solutionPage/social-media-work/Health.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/social-media-work/Glow.png',
+      src: '/images/solutionPage/social-media-work/Glow.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/social-media-work/Realesatate.png',
+      src: '/images/solutionPage/social-media-work/Realesatate.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/social-media-work/Health2.png',
-      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
-    },
-
-    {
-      src: './images/solutionPage/social-media-work/Master.png',
+      src: '/images/solutionPage/social-media-work/Health2.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
 
     {
-      src: './images/solutionPage/social-media-work/Nutrition.png',
+      src: '/images/solutionPage/social-media-work/Master.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
 
     {
-      src: './images/solutionPage/social-media-work/Open.png',
+      src: '/images/solutionPage/social-media-work/Nutrition.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
 
     {
-      src: './images/solutionPage/social-media-work/Perfect.png',
+      src: '/images/solutionPage/social-media-work/Open.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
 
     {
-      src: './images/solutionPage/social-media-work/Pit.png',
+      src: '/images/solutionPage/social-media-work/Perfect.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+
+    {
+      src: '/images/solutionPage/social-media-work/Pit.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
   ];
 
   return (
-    <section className="flex flex-col justify-center items-center mx-auto w-full max-w-7xl pt-20 md:mt-16 bg-white overflow-hidden ">
+    <section className="flex flex-col justify-center items-center mx-auto w-full max-w-7xl pt-20 px-3 md:px-6 md:mt-16 bg-white overflow-hidden ">
       <div className="grid w-[95%] gap-4 ">
         {/* content */}
-
         {/* text conent */}
-
         <h2
           className={`font-extrabold capitalize text-[1.65rem] w-[95%] leading-8 md:text-start min-[450px]:w-full md:text-[2.1rem] lg:w-full lg:text-[2.5rem] lg:leading-13`}
         >

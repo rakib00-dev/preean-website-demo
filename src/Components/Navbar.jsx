@@ -479,7 +479,7 @@ const Navbar = () => {
           <DropDown
             to="web-design"
             title="web design"
-            src="./images/navbar/web-design.svg"
+            src="/images/navbar/web-design.svg"
           />
           <DropDown
             to="print-design"
@@ -501,24 +501,27 @@ const Navbar = () => {
         onClick={() => setIsOurWorkHovered((prev) => !prev)}
       >
         <div
-          className="hidden fixed rounded-xl bg-white top-[48px] right-[10%] m-auto flex-col justify-start items-start flex-wrap shadow-xl w-[40rem] lg:flex"
+          className="hidden fixed rounded-xl bg-white top-[48px] right-[27%] m-auto border border-gray-100 shadow-xl w-[27rem] lg:flex"
           style={{ zIndex: 1122 }}
         >
-          <DropDown to="/our-work/#social-media" title="social media" />
-          <DropDown to="/our-work/#ad-creative" title="ad creative" />
-
-          <DropDown to="/our-work/#branding-logo" title="branding logo" />
-          <DropDown to="/our-work/#email-design" title="email design" />
-          <DropDown
-            to="/our-work/#infographics-design"
-            title="infographics design"
-          />
-          <DropDown
-            to="/our-work/#intergrated-campain"
-            title="intergrated campain"
-          />
-          <DropDown to="/our-work/#print-design" title="print design" />
-          <DropDown to="/our-work/#Web-design" title="Web design" />
+          <div>
+            <DropDown to="/our-work/#social-media" title="social media" />
+            <DropDown to="/our-work/#ad-creative" title="ad creative" />
+            <DropDown to="/our-work/#branding-logo" title="branding logo" />
+            <DropDown to="/our-work/#email-design" title="email design" />
+          </div>
+          <div>
+            <DropDown
+              to="/our-work/#infographics-design"
+              title="infographics design"
+            />
+            <DropDown
+              to="/our-work/#intergrated-campain"
+              title="intergrated campain"
+            />
+            <DropDown to="/our-work/#print-design" title="print design" />
+            <DropDown to="/our-work/#Web-design" title="Web design" />
+          </div>
         </div>
       </div>
 

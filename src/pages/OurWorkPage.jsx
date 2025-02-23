@@ -42,53 +42,53 @@ export default OurWorkPage;
 const AddCreative = () => {
   const addCreativeImg = [
     {
-      src: './images/solutionPage/ad-creative-work/Crypto.png',
+      src: '/images/solutionPage/ad-creative-work/Crypto.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/ad-creative-work/Food.png',
+      src: '/images/solutionPage/ad-creative-work/Food.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/ad-creative-work/interview.png',
+      src: '/images/solutionPage/ad-creative-work/interview.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     // {
-    //   src: './images/solutionPage/ad-creative-work/Jess.png',
+    //   src: '/images/solutionPage/ad-creative-work/Jess.png',
     //   alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     // },
     {
-      src: './images/solutionPage/ad-creative-work/Realestate.png',
+      src: '/images/solutionPage/ad-creative-work/Realestate.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
 
     {
-      src: './images/solutionPage/ad-creative-work/Sage.png',
+      src: '/images/solutionPage/ad-creative-work/Sage.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
 
     {
-      src: './images/solutionPage/ad-creative-work/Silk.png',
+      src: '/images/solutionPage/ad-creative-work/Silk.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
 
     {
-      src: './images/solutionPage/ad-creative-work/sumbit.png',
+      src: '/images/solutionPage/ad-creative-work/sumbit.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
 
     {
-      src: './images/solutionPage/ad-creative-work/Tasks.png',
+      src: '/images/solutionPage/ad-creative-work/Tasks.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
 
     {
-      src: './images/solutionPage/ad-creative-work/Victim.png',
+      src: '/images/solutionPage/ad-creative-work/Victim.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
 
     {
-      src: './images/solutionPage/ad-creative-work/Win.png',
+      src: '/images/solutionPage/ad-creative-work/Win.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
   ];
@@ -110,117 +110,117 @@ const AddCreative = () => {
 const BrandingLogo = () => {
   const brandingLogo = [
     {
-      src: './images/solutionPage/branding-logo-work/6.png',
+      src: '/images/solutionPage/branding-logo-work/6.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/branding-logo-work/Bali.png',
+      src: '/images/solutionPage/branding-logo-work/Bali.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/branding-logo-work/Basis.png',
+      src: '/images/solutionPage/branding-logo-work/Basis.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/branding-logo-work/Bestias.png',
+      src: '/images/solutionPage/branding-logo-work/Bestias.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/branding-logo-work/Brine.png',
-      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
-    },
-
-    {
-      src: './images/solutionPage/branding-logo-work/business.png',
+      src: '/images/solutionPage/branding-logo-work/Brine.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
 
     {
-      src: './images/solutionPage/branding-logo-work/Cappadocia.png',
+      src: '/images/solutionPage/branding-logo-work/business.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
 
     {
-      src: './images/solutionPage/branding-logo-work/Car.png',
+      src: '/images/solutionPage/branding-logo-work/Cappadocia.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
 
     {
-      src: './images/solutionPage/branding-logo-work/Church.png',
+      src: '/images/solutionPage/branding-logo-work/Car.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
 
     {
-      src: './images/solutionPage/branding-logo-work/Coffee.png',
+      src: '/images/solutionPage/branding-logo-work/Church.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
 
     {
-      src: './images/solutionPage/branding-logo-work/East.png',
+      src: '/images/solutionPage/branding-logo-work/Coffee.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+
+    {
+      src: '/images/solutionPage/branding-logo-work/East.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/branding-logo-work/Easter.png',
+      src: '/images/solutionPage/branding-logo-work/Easter.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/branding-logo-work/Fresh.png',
+      src: '/images/solutionPage/branding-logo-work/Fresh.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/branding-logo-work/Frist Health.png',
+      src: '/images/solutionPage/branding-logo-work/Frist Health.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/branding-logo-work/Greener.png',
+      src: '/images/solutionPage/branding-logo-work/Greener.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/branding-logo-work/Grow.png',
+      src: '/images/solutionPage/branding-logo-work/Grow.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/branding-logo-work/Health.png',
+      src: '/images/solutionPage/branding-logo-work/Health.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/branding-logo-work/Life.png',
+      src: '/images/solutionPage/branding-logo-work/Life.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/branding-logo-work/Mediheart.png',
+      src: '/images/solutionPage/branding-logo-work/Mediheart.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/branding-logo-work/Movement.png',
+      src: '/images/solutionPage/branding-logo-work/Movement.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/branding-logo-work/Nymph.png',
+      src: '/images/solutionPage/branding-logo-work/Nymph.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/branding-logo-work/Pilates.png',
+      src: '/images/solutionPage/branding-logo-work/Pilates.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/branding-logo-work/property.png',
+      src: '/images/solutionPage/branding-logo-work/property.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/branding-logo-work/Salsa.png',
+      src: '/images/solutionPage/branding-logo-work/Salsa.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/branding-logo-work/Tagline.png',
+      src: '/images/solutionPage/branding-logo-work/Tagline.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/branding-logo-work/Welcome.png',
+      src: '/images/solutionPage/branding-logo-work/Welcome.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/branding-logo-work/Zumba.png',
+      src: '/images/solutionPage/branding-logo-work/Zumba.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
   ];
@@ -242,43 +242,43 @@ const BrandingLogo = () => {
 const Email = () => {
   const emailImg = [
     {
-      src: './images/solutionPage/email-work/Collagen.png',
+      src: '/images/solutionPage/email-work/Collagen.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/email-work/Fathers.png',
+      src: '/images/solutionPage/email-work/Fathers.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/email-work/Ferret.png',
+      src: '/images/solutionPage/email-work/Ferret.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/email-work/Furniture.png',
+      src: '/images/solutionPage/email-work/Furniture.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/email-work/Limited.png',
-      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
-    },
-
-    {
-      src: './images/solutionPage/email-work/Offers.png',
+      src: '/images/solutionPage/email-work/Limited.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
 
     {
-      src: './images/solutionPage/email-work/Ruggable.png',
+      src: '/images/solutionPage/email-work/Offers.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
 
     {
-      src: './images/solutionPage/email-work/Stout.png',
+      src: '/images/solutionPage/email-work/Ruggable.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
 
     {
-      src: './images/solutionPage/email-work/Yaysay.png',
+      src: '/images/solutionPage/email-work/Stout.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+
+    {
+      src: '/images/solutionPage/email-work/Yaysay.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
   ];
@@ -300,55 +300,55 @@ const Email = () => {
 const Infographics = () => {
   const infoImg = [
     {
-      src: './images/solutionPage/infographics-work/Binge.png',
+      src: '/images/solutionPage/infographics-work/Binge.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/infographics-work/Design.png',
+      src: '/images/solutionPage/infographics-work/Design.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/infographics-work/Entrepreneur.png',
+      src: '/images/solutionPage/infographics-work/Entrepreneur.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/infographics-work/High.png',
+      src: '/images/solutionPage/infographics-work/High.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/infographics-work/Kombuchia.png',
-      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
-    },
-
-    {
-      src: './images/solutionPage/infographics-work/Lubhasadh.png',
+      src: '/images/solutionPage/infographics-work/Kombuchia.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
 
     {
-      src: './images/solutionPage/infographics-work/Mexico.png',
+      src: '/images/solutionPage/infographics-work/Lubhasadh.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
 
     {
-      src: './images/solutionPage/infographics-work/Morning.png',
+      src: '/images/solutionPage/infographics-work/Mexico.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
 
     {
-      src: './images/solutionPage/infographics-work/Proper.png',
+      src: '/images/solutionPage/infographics-work/Morning.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+
+    {
+      src: '/images/solutionPage/infographics-work/Proper.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/infographics-work/Sanitize.png',
+      src: '/images/solutionPage/infographics-work/Sanitize.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/infographics-work/Syptoms.png',
+      src: '/images/solutionPage/infographics-work/Syptoms.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/infographics-work/Tax.png',
+      src: '/images/solutionPage/infographics-work/Tax.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
   ];
@@ -370,55 +370,55 @@ const Infographics = () => {
 const Intergrated = () => {
   const inteImg = [
     {
-      src: './images/solutionPage/intergrated-campains-work/Connect.png',
+      src: '/images/solutionPage/intergrated-campains-work/Connect.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/intergrated-campains-work/Furniture.png',
+      src: '/images/solutionPage/intergrated-campains-work/Furniture.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/intergrated-campains-work/Live.png',
+      src: '/images/solutionPage/intergrated-campains-work/Live.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/intergrated-campains-work/Oil.png',
+      src: '/images/solutionPage/intergrated-campains-work/Oil.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/intergrated-campains-work/Physical.png',
-      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
-    },
-
-    {
-      src: './images/solutionPage/intergrated-campains-work/Prime.png',
+      src: '/images/solutionPage/intergrated-campains-work/Physical.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
 
     {
-      src: './images/solutionPage/intergrated-campains-work/Renovations.png',
+      src: '/images/solutionPage/intergrated-campains-work/Prime.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
 
     {
-      src: './images/solutionPage/intergrated-campains-work/School.png',
+      src: '/images/solutionPage/intergrated-campains-work/Renovations.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
 
     {
-      src: './images/solutionPage/intergrated-campains-work/Stock.png',
+      src: '/images/solutionPage/intergrated-campains-work/School.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+
+    {
+      src: '/images/solutionPage/intergrated-campains-work/Stock.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/intergrated-campains-work/Underline.png',
+      src: '/images/solutionPage/intergrated-campains-work/Underline.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/intergrated-campains-work/Wear.png',
+      src: '/images/solutionPage/intergrated-campains-work/Wear.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/intergrated-campains-work/Yogurt.png',
+      src: '/images/solutionPage/intergrated-campains-work/Yogurt.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
   ];
@@ -440,111 +440,111 @@ const Intergrated = () => {
 const PrintDesign = () => {
   const printImg = [
     {
-      src: './images/solutionPage/print-design-work/Amazon.png',
+      src: '/images/solutionPage/print-design-work/Amazon.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/print-design-work/Arrived.png',
+      src: '/images/solutionPage/print-design-work/Arrived.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/print-design-work/avorvedic.png',
+      src: '/images/solutionPage/print-design-work/avorvedic.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/print-design-work/Better.png',
+      src: '/images/solutionPage/print-design-work/Better.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/print-design-work/build.png',
-      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
-    },
-
-    {
-      src: './images/solutionPage/print-design-work/Business.png',
+      src: '/images/solutionPage/print-design-work/build.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
 
     {
-      src: './images/solutionPage/print-design-work/Christmas.png',
+      src: '/images/solutionPage/print-design-work/Business.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
 
     {
-      src: './images/solutionPage/print-design-work/Commerical.png',
+      src: '/images/solutionPage/print-design-work/Christmas.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
 
     {
-      src: './images/solutionPage/print-design-work/Dry.png',
+      src: '/images/solutionPage/print-design-work/Commerical.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+
+    {
+      src: '/images/solutionPage/print-design-work/Dry.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/print-design-work/Electronics.png',
+      src: '/images/solutionPage/print-design-work/Electronics.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/print-design-work/fishing.png',
+      src: '/images/solutionPage/print-design-work/fishing.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/print-design-work/Free.png',
+      src: '/images/solutionPage/print-design-work/Free.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/print-design-work/Grow.png',
+      src: '/images/solutionPage/print-design-work/Grow.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/print-design-work/Handy.png',
+      src: '/images/solutionPage/print-design-work/Handy.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/print-design-work/Heart.png',
+      src: '/images/solutionPage/print-design-work/Heart.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/print-design-work/Kibsi.png',
+      src: '/images/solutionPage/print-design-work/Kibsi.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/print-design-work/Math.png',
+      src: '/images/solutionPage/print-design-work/Math.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/print-design-work/Menu.png',
+      src: '/images/solutionPage/print-design-work/Menu.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/print-design-work/Money.png',
+      src: '/images/solutionPage/print-design-work/Money.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/print-design-work/Moved.png',
+      src: '/images/solutionPage/print-design-work/Moved.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/print-design-work/Never.png',
+      src: '/images/solutionPage/print-design-work/Never.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/print-design-work/Note.png',
+      src: '/images/solutionPage/print-design-work/Note.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/print-design-work/Rare.png',
+      src: '/images/solutionPage/print-design-work/Rare.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/print-design-work/Steel.png',
+      src: '/images/solutionPage/print-design-work/Steel.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/print-design-work/Student.png',
+      src: '/images/solutionPage/print-design-work/Student.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/print-design-work/yoga.png',
+      src: '/images/solutionPage/print-design-work/yoga.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
   ];
@@ -566,42 +566,42 @@ const PrintDesign = () => {
 const WebDesign = () => {
   const webImg = [
     {
-      src: './images/solutionPage/web-design-work/2.png',
+      src: '/images/solutionPage/web-design-work/2.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/web-design-work/6.png',
+      src: '/images/solutionPage/web-design-work/6.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/web-design-work/amazon.png',
+      src: '/images/solutionPage/web-design-work/amazon.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/web-design-work/Coffee3.png',
+      src: '/images/solutionPage/web-design-work/Coffee3.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/web-design-work/Fitness.png',
-      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
-    },
-
-    {
-      src: './images/solutionPage/web-design-work/organic.png',
+      src: '/images/solutionPage/web-design-work/Fitness.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
 
     {
-      src: './images/solutionPage/web-design-work/shoees.png',
+      src: '/images/solutionPage/web-design-work/organic.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
 
     {
-      src: './images/solutionPage/web-design-work/sure.png',
+      src: '/images/solutionPage/web-design-work/shoees.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+
+    {
+      src: '/images/solutionPage/web-design-work/sure.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
     {
-      src: './images/solutionPage/web-design-work/website.png',
+      src: '/images/solutionPage/web-design-work/website.png',
       alt: 'this is a social media work of design pro agency and this photo is done by design pro',
     },
   ];
