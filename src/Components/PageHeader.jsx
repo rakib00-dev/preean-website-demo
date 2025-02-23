@@ -4,7 +4,7 @@ const PageHeader = ({
   children,
 }) => {
   return (
-    <section className="mx-auto w-full max-w-7xl ">
+    <section className="mx-auto w-full max-w-7xl">
       <div className="relative">
         <div
           className={`flex flex-col justify-center gap-2 items-center lg:gap-4`}
@@ -20,7 +20,7 @@ const PageHeader = ({
           {children ? (
             children
           ) : (
-            <div className="flex absolute px-5 top-0 items-center justify-between -z-10 w-full">
+            <div className="flex absolute px-5 top-0 items-center justify-between z-10 w-full">
               <img
                 src="./images/ourworkpage/yellow-squre.svg"
                 alt="this is a yello element which is use to inchnge the design quality"
