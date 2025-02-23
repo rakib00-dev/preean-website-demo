@@ -146,11 +146,11 @@ const Navbar = () => {
           </div>
         </div>
         <ListItem
-          navLink="/our-work"
+          navLink="#"
           smallClassName={({ isActive }) =>
             isActive
-              ? `capitalize flex justify-start items-center gap-2 sm:font-bold`
-              : `relative text-xl font-bold cursor-pointer text-black transition-all duration-300 capitalize lg:text-sm hover:text-gray-500`
+              ? `capitalize flex items-center gap-2 text-blue-500 sm:font-bold`
+              : `capitalize flex items-center gap-2 sm:font-bold`
           }
           style={{ padding: ' 0' }}
           onclick={() => setIsOurWorkHovered((prev) => !prev)}
