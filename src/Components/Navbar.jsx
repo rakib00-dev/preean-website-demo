@@ -7,6 +7,7 @@ import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   const [isHovered, setIsHovered] = useState(false);
+  const [isOurWorkHovered, setIsOurWorkHovered] = useState(false);
   const [isResourceHovered, setIsResourceHovered] = useState(false);
 
   // large screen nav list
@@ -16,7 +17,7 @@ const Navbar = () => {
         <ListItem
           navLink={'#'}
           className={
-            'capitalize  flex justify-start items-center gap-2 text-sm sm:font-bold'
+            'capitalize flex justify-start items-center gap-2 text-sm sm:font-bold'
           }
           onmouseover={() => setIsHovered(true)}
           onmouseout={() => setIsHovered(false)}
@@ -32,9 +33,20 @@ const Navbar = () => {
         </ListItem>
         <ListItem
           navLink="/our-work"
-          className={'capitalize  text-sm sm:font-bold'}
+          className={
+            'capitalize flex justify-start items-center gap-2 text-sm sm:font-bold'
+          }
+          onmouseover={() => setIsOurWorkHovered(true)}
+          onmouseout={() => setIsOurWorkHovered(false)}
+          onclick={() => setIsOurWorkHovered((prev) => !prev)}
+          style={{ color: '#0b3558' }}
         >
           our work
+          <FaChevronDown
+            className={
+              isOurWorkHovered ? `rotate-180 transition-all` : 'transition-all'
+            }
+          />
         </ListItem>
         <ListItem
           navLink="/pricing"
@@ -137,15 +149,48 @@ const Navbar = () => {
           navLink="/our-work"
           smallClassName={({ isActive }) =>
             isActive
-              ? `capitalize text-blue-500 sm:font-bold `
-              : `capitalize  sm:font-bold `
+              ? `capitalize flex justify-start items-center gap-2 sm:font-bold`
+              : `relative text-xl font-bold cursor-pointer text-black transition-all duration-300 capitalize lg:text-sm hover:text-gray-500`
           }
-          onclick={() => {
-            setIsNavOpen(false);
-          }}
+          style={{ padding: ' 0' }}
+          onclick={() => setIsOurWorkHovered((prev) => !prev)}
         >
           our work
+          <FaChevronDown
+            className={
+              isOurWorkHovered ? `rotate-180 transition-all` : 'transition-all'
+            }
+          />
         </ListItem>
+        <div
+          className={
+            isOurWorkHovered
+              ? `transition-all relative justify-center items-center place-items-center m-auto scale-y-100`
+              : 'transition-all scale-y-0 hidden'
+          }
+          onClick={() => setIsOurWorkHovered((prev) => !prev)}
+        >
+          <div
+            className="flex rounded-xl bg-white top-[48px] pb-4 mb-4 right-[30%] m-auto flex-col justify-start items-start flex-wrap shadow-xl w-[18rem] lg:hidden"
+            style={{ zIndex: 1122 }}
+          >
+            <DropDown to="/our-work/#social-media" title="social media" />
+            <DropDown to="/our-work/#ad-creative" title="ad creative" />
+
+            <DropDown to="/our-work/#branding-logo" title="branding logo" />
+            <DropDown to="/our-work/#email-design" title="email design" />
+            <DropDown
+              to="/our-work/#infographics-design"
+              title="infographics design"
+            />
+            <DropDown
+              to="/our-work/#intergrated-campain"
+              title="intergrated campain"
+            />
+            <DropDown to="/our-work/#print-design" title="print design" />
+            <DropDown to="/our-work/#Web-design" title="Web design" />
+          </div>
+        </div>
         <ListItem
           navLink="/pricing"
           smallClassName={({ isActive }) =>
@@ -255,7 +300,7 @@ const Navbar = () => {
 
   const DropDown = ({
     title = 'web design',
-    src = 'https://cdn.prod.website-files.com/63a9cb71c629474d4ae334b9/64ad4265f27f2a2ecddd973e_social-media%20(1)%201.svg',
+    src,
     to = '#',
     className,
     imgClassName,
@@ -264,17 +309,23 @@ const Navbar = () => {
       <>
         <Link
           to={to}
-          className={`flex gap-2 p-4 justify-start items-center w-full rounded-md DropItemHover ${className}`}
+          className={`flex gap-2 p-4 justify-start items-center w-full rounded-md DropItemHover ${className} ${
+            src ? '' : 'pl-10 py-6 underline'
+          }`}
           onClick={() => {
             setIsNavOpen(false);
           }}
         >
-          <img
-            src={src}
-            alt={title}
-            className={`p-3 rounded bg-gray-100/80 h-[43.98px] ${imgClassName}`}
-            loading="lazy"
-          />
+          {src ? (
+            <img
+              src={src}
+              alt={title}
+              className={`p-3 rounded bg-gray-100/80 h-[43.98px] ${imgClassName}`}
+              loading="lazy"
+            />
+          ) : (
+            <></>
+          )}
           <h5 className="capitalize text-sm w-fit font-bold">{title}</h5>
         </Link>
       </>
@@ -414,11 +465,6 @@ const Navbar = () => {
           className="hidden fixed rounded-xl bg-white top-[48px] m-auto flex-col justify-start items-start flex-wrap shadow-xl w-[40rem] lg:flex"
           style={{ zIndex: 1122 }}
         >
-          {/* <DropDown
-            to="/social-media"
-            title="social media"
-            src="./images/navbar/social-media.svg"
-          /> */}
           <DropDown
             to="/graphic-design"
             title="graphic design"
@@ -440,12 +486,39 @@ const Navbar = () => {
             title="print design"
             src="/images/navbar/print-design.png"
           />
-          {/* <Link
-            to="/#"
-            className="transition-all px-3 py-3 mt-4 bg-blue-100/50 border-1/80 text-blue-500 font-bold rounded-md text-sm hover:border-1 hover:bg-white"
-          >
-            ENTIRE SCOPE OF SERVICE
-          </Link> */}
+        </div>
+      </div>
+
+      {/* our work drop down */}
+      <div
+        className={
+          isOurWorkHovered
+            ? ` transition-all flex justify-center items-center place-items-center m-auto`
+            : 'transition-all hidden top-50 opacity-0'
+        }
+        onMouseOver={() => setIsOurWorkHovered(true)}
+        onMouseOut={() => setIsOurWorkHovered(false)}
+        onClick={() => setIsOurWorkHovered((prev) => !prev)}
+      >
+        <div
+          className="hidden fixed rounded-xl bg-white top-[48px] right-[10%] m-auto flex-col justify-start items-start flex-wrap shadow-xl w-[40rem] lg:flex"
+          style={{ zIndex: 1122 }}
+        >
+          <DropDown to="/our-work/#social-media" title="social media" />
+          <DropDown to="/our-work/#ad-creative" title="ad creative" />
+
+          <DropDown to="/our-work/#branding-logo" title="branding logo" />
+          <DropDown to="/our-work/#email-design" title="email design" />
+          <DropDown
+            to="/our-work/#infographics-design"
+            title="infographics design"
+          />
+          <DropDown
+            to="/our-work/#intergrated-campain"
+            title="intergrated campain"
+          />
+          <DropDown to="/our-work/#print-design" title="print design" />
+          <DropDown to="/our-work/#Web-design" title="Web design" />
         </div>
       </div>
 
