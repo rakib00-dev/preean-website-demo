@@ -55,26 +55,22 @@ const OurWorkSamples = ({
   ];
 
   return (
-    <section className="flex flex-col justify-center items-center mx-auto w-full max-w-7xl md:mt-16 md:pt-10 bg-white overflow-hidden ">
-      <div className="flex m-auto justify-center items-center flex-col w-[95%] gap-4 ">
+    <section className="flex flex-col justify-center items-center mx-auto w-full max-w-7xl pt-20 md:mt-16 md:pt-40 bg-white overflow-hidden ">
+      <div className="grid w-[95%] gap-4 ">
         {/* content */}
 
         {/* text conent */}
-        <div
-          className={`flex flex-col justify-center gap-2 items-center lg:gap-4`}
+        <h1
+          className="uppercase font-bold text-[.85rem]"
+          style={{ color: 'var(--colors-pink)' }}
         >
-          <h1
-            className="uppercase font-bold text-[.85rem]"
-            style={{ color: 'var(--colors-pink)' }}
-          >
-            {smallTitle}
-          </h1>
-          <h2
-            className={`font-extrabold text-[1.55rem] text-center w-[95%] mb-4 leading-8 lg:text-center min-[450px]:w-full md:text-[2.1rem] lg:w-full lg:text-[2.5rem] lg:leading-13`}
-          >
-            {bigTitle}
-          </h2>
-        </div>
+          {smallTitle}
+        </h1>
+        <h2
+          className={`font-extrabold text-[1.55rem] w-[95%] mb-4 leading-8 md:text-start min-[450px]:w-full md:text-[2.1rem] lg:w-full lg:text-[2.5rem] lg:leading-13`}
+        >
+          {bigTitle}
+        </h2>
       </div>
       <div className="grid place-items-center grid-cols-1 md:grid-cols-5 gap-5 w-[95%] mt-8 md:mt-12">
         {children
@@ -91,9 +87,9 @@ const OurWorkSamples = ({
             ))}
       </div>
       <div className="flex justify-center items-center mx-auto mt-16 mb-6 w-full">
-        <Link to={'/our-work'}>
+        <Link to={'/book-a-call'}>
           <Button
-            text={'All Our Works'}
+            text={'Get Started'}
             className={
               'transition-all border-blue-500 bg-transparent text-blue-500 border-2 hover:bg-blue-500 hover:border-black hover:text-black'
             }
