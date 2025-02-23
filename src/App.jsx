@@ -4,6 +4,7 @@ import MainLayout from './layouts/MainLayout';
 import HomePage from './pages/HomePage';
 import CanvaDesignPage from './pages/CanvaDesignPage';
 import WebDesignPage from './pages/WebDesignPage';
+import PrintDesignPage from './pages/PrintDesignPage';
 
 const GraphicDesign = React.lazy(() => import('./pages/GraphicDesignPage'));
 const BookACall = React.lazy(() => import('./Components/BookACall'));
@@ -53,6 +54,14 @@ function App() {
           element: (
             <Suspense fallback={<p>Loading...</p>}>
               <WebDesignPage />
+            </Suspense>
+          ),
+        },
+        {
+          path: '/print-design',
+          element: (
+            <Suspense fallback={<p>Loading...</p>}>
+              <PrintDesignPage />
             </Suspense>
           ),
         },

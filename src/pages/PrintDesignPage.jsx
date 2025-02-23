@@ -20,7 +20,7 @@ const SolutionCards = React.lazy(() =>
   import('../Components/Solutions-Components/SolutionCards')
 );
 
-const CanvaDesignPage = () => {
+const PrintDesignPage = () => {
   return (
     <section className="mx-auto w-full max-w-7xl">
       <SolutionHeader
@@ -55,4 +55,4 @@ const CanvaDesignPage = () => {
   );
 };
 
-export default CanvaDesignPage;
+export default PrintDesignPage;
