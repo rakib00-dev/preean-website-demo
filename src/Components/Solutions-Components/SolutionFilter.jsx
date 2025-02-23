@@ -9,7 +9,7 @@ const SolutionFilter = () => {
   const [isFifthActive, setIsFifthActive] = useState(false);
 
   return (
-    <section className="w-full max-w-7xl md:my-20">
+    <section className="w-full max-w-7xl md:my-20 overflow-hidden">
       <div className="relative py-10 md:py-30">
         <div className="grid place-items-center mx-auto gap-5">
           <p className="text-sm  text-blue-800 bg-blue-100 px-2 py-1 rounded-full">
@@ -21,9 +21,9 @@ const SolutionFilter = () => {
             DesignPro's features for clients
           </h2>
         </div>
-        <ul className="flex mt-12 px-3 md:px-0 justify-center md:text-2xl font-medium w-full overflow-x-scroll md:overflow-auto">
+        <ul className="flex relative mt-12 ml-4 px-3 justify-center text-sm md:text-2xl font-medium w-full overflow-x-scroll md:overflow-auto">
           <li
-            className={`transition-all duration-300 cursor-pointer w-fit py-3 px-6 border-b-3 border-gray-200 hover:bg-blue-50 ${
+            className={`transition-all duration-300 cursor-pointer py-3 px-6 border-b-3 border-gray-200 hover:bg-blue-50 ${
               isFirstActive
                 ? 'border-b-blue-300 '
                 : 'text-[#0b3558] hover:text-[#000]'
@@ -40,7 +40,7 @@ const SolutionFilter = () => {
             Build Website
           </li>
           <li
-            className={`transition-all duration-300 cursor-pointer w-fit py-3 px-6 border-b-3 border-gray-200 hover:bg-blue-50 ${
+            className={`transition-all duration-300 cursor-pointer py-3 px-6 border-b-3 border-gray-200 hover:bg-blue-50 ${
               isSecondActive
                 ? 'border-b-blue-300 '
                 : 'text-[#0b3558] hover:text-[#000]'
@@ -57,7 +57,7 @@ const SolutionFilter = () => {
             Thumbnail Design
           </li>
           <li
-            className={`transition-all duration-300 cursor-pointer w-fit py-3 px-6 border-b-3 border-gray-200 hover:bg-blue-50 ${
+            className={`transition-all duration-300 cursor-pointer py-3 px-6 border-b-3 border-gray-200 hover:bg-blue-50 ${
               isThirdActive
                 ? 'border-b-blue-300 '
                 : 'text-[#0b3558] hover:text-[#000]'
@@ -74,7 +74,7 @@ const SolutionFilter = () => {
             Lead Generation
           </li>
           <li
-            className={`transition-all duration-300 cursor-pointer w-fit py-3 px-6 border-b-3 border-gray-200 hover:bg-blue-50 ${
+            className={`transition-all duration-300 cursor-pointer py-3 px-6 border-b-3 border-gray-200 hover:bg-blue-50 ${
               isFourthActive
                 ? 'border-b-blue-300 '
                 : 'text-[#0b3558] hover:text-[#000]'
@@ -91,7 +91,7 @@ const SolutionFilter = () => {
             Social Media
           </li>
           <li
-            className={`transition-all duration-300 cursor-pointer w-fit py-3 px-6 border-b-3 border-gray-200 hover:bg-blue-50 ${
+            className={`transition-all duration-300 cursor-pointer py-3 px-6 border-b-3 border-gray-200 hover:bg-blue-50 ${
               isFifthActive
                 ? 'border-b-blue-300 '
                 : 'text-[#0b3558] hover:text-[#000]'
