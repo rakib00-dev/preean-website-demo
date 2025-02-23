@@ -27,6 +27,9 @@ const OurWorkPage = () => {
       <Suspense fallback={<p>Loading...</p>}>
         <Intergrated />
       </Suspense>
+      <Suspense fallback={<p>Loading...</p>}>
+        <PrintDesign />
+      </Suspense>
     </div>
   );
 };
@@ -423,6 +426,132 @@ const Intergrated = () => {
       para="Custom branded white papers, guides, eBooks, and other digital reports deserve stellar design. Let’s rid the world of boring, plain white papers and thrill audiences with meaningful charts, infographics, interesting typography, illustrations, and more. Leave a lasting, valuable impression with professional layouts and editable final design files."
     >
       {inteImg.map((e, i) => (
+        <div key={i} className="grid">
+          <img src={e.src} alt={e.alt} loading="lazy" className="rounded-xl" />
+        </div>
+      ))}
+    </OurWorkSamples>
+  );
+};
+
+const PrintDesign = () => {
+  const printImg = [
+    {
+      src: './images/solutionPage/print-design-work/Amazon.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+    {
+      src: './images/solutionPage/print-design-work/Arrived.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+    {
+      src: './images/solutionPage/print-design-work/avorvedic.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+    {
+      src: './images/solutionPage/print-design-work/Better.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+    {
+      src: './images/solutionPage/print-design-work/build.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+
+    {
+      src: './images/solutionPage/print-design-work/Business.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+
+    {
+      src: './images/solutionPage/print-design-work/Christmas.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+
+    {
+      src: './images/solutionPage/print-design-work/Commerical.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+
+    {
+      src: './images/solutionPage/print-design-work/Dry.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+    {
+      src: './images/solutionPage/print-design-work/Electronics.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+    {
+      src: './images/solutionPage/print-design-work/fishing.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+    {
+      src: './images/solutionPage/print-design-work/Free.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+    {
+      src: './images/solutionPage/print-design-work/Grow.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+    {
+      src: './images/solutionPage/print-design-work/Handy.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+    {
+      src: './images/solutionPage/print-design-work/Heart.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+    {
+      src: './images/solutionPage/print-design-work/Kibsi.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+    {
+      src: './images/solutionPage/print-design-work/Math.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+    {
+      src: './images/solutionPage/print-design-work/Menu.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+    {
+      src: './images/solutionPage/print-design-work/Money.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+    {
+      src: './images/solutionPage/print-design-work/Moved.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+    {
+      src: './images/solutionPage/print-design-work/Never.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+    {
+      src: './images/solutionPage/print-design-work/Note.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+    {
+      src: './images/solutionPage/print-design-work/Rare.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+    {
+      src: './images/solutionPage/print-design-work/Steel.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+    {
+      src: './images/solutionPage/print-design-work/Student.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+    {
+      src: './images/solutionPage/print-design-work/yoga.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+  ];
+
+  return (
+    <OurWorkSamples
+      bigTitle="Print Designs"
+      para="Custom branded white papers, guides, eBooks, and other digital reports deserve stellar design. Let’s rid the world of boring, plain white papers and thrill audiences with meaningful charts, infographics, interesting typography, illustrations, and more. Leave a lasting, valuable impression with professional layouts and editable final design files."
+    >
+      {printImg.map((e, i) => (
         <div key={i} className="grid">
           <img src={e.src} alt={e.alt} loading="lazy" className="rounded-xl" />
         </div>
