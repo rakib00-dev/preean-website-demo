@@ -30,6 +30,9 @@ const OurWorkPage = () => {
       <Suspense fallback={<p>Loading...</p>}>
         <PrintDesign />
       </Suspense>
+      <Suspense fallback={<p>Loading...</p>}>
+        <WebDesign />
+      </Suspense>
     </div>
   );
 };
@@ -552,6 +555,63 @@ const PrintDesign = () => {
       para="We promise print is not dead. From traditional book design to magazines, posters, as well as corporate print designs for fliers, menus, and business cards. Get custom branded renders and print-ready designs in any format, on-demand."
     >
       {printImg.map((e, i) => (
+        <div key={i} className="grid">
+          <img src={e.src} alt={e.alt} loading="lazy" className="rounded-xl" />
+        </div>
+      ))}
+    </OurWorkSamples>
+  );
+};
+
+const WebDesign = () => {
+  const webImg = [
+    {
+      src: './images/solutionPage/web-design-work/2.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+    {
+      src: './images/solutionPage/web-design-work/6.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+    {
+      src: './images/solutionPage/web-design-work/amazon.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+    {
+      src: './images/solutionPage/web-design-work/Coffee3.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+    {
+      src: './images/solutionPage/web-design-work/Fitness.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+
+    {
+      src: './images/solutionPage/web-design-work/organic.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+
+    {
+      src: './images/solutionPage/web-design-work/shoees.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+
+    {
+      src: './images/solutionPage/web-design-work/sure.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+    {
+      src: './images/solutionPage/web-design-work/website.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+  ];
+
+  return (
+    <OurWorkSamples
+      bigTitle="Website Designs"
+      para="User interface graphics and designs are one of the most important first impressions your brand makes in our digital world. Getting new custom branded heroes, landing pages, widgets and other UI elements and designs is easier than ever, now delivered in Figma-ready formats!"
+    >
+      {webImg.map((e, i) => (
         <div key={i} className="grid">
           <img src={e.src} alt={e.alt} loading="lazy" className="rounded-xl" />
         </div>
