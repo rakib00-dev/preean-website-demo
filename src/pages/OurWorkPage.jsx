@@ -24,6 +24,9 @@ const OurWorkPage = () => {
       <Suspense fallback={<p>Loading...</p>}>
         <Infographics />
       </Suspense>
+      <Suspense fallback={<p>Loading...</p>}>
+        <Intergrated />
+      </Suspense>
     </div>
   );
 };
@@ -350,6 +353,76 @@ const Infographics = () => {
       para="Custom branded white papers, guides, eBooks, and other digital reports deserve stellar design. Let’s rid the world of boring, plain white papers and thrill audiences with meaningful charts, infographics, interesting typography, illustrations, and more. Leave a lasting, valuable impression with professional layouts and editable final design files."
     >
       {infoImg.map((e, i) => (
+        <div key={i} className="grid">
+          <img src={e.src} alt={e.alt} loading="lazy" className="rounded-xl" />
+        </div>
+      ))}
+    </OurWorkSamples>
+  );
+};
+
+const Intergrated = () => {
+  const inteImg = [
+    {
+      src: './images/solutionPage/intergrated-campains-work/Connect.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+    {
+      src: './images/solutionPage/intergrated-campains-work/Furniture.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+    {
+      src: './images/solutionPage/intergrated-campains-work/Live.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+    {
+      src: './images/solutionPage/intergrated-campains-work/Oil.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+    {
+      src: './images/solutionPage/intergrated-campains-work/Physical.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+
+    {
+      src: './images/solutionPage/intergrated-campains-work/Prime.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+
+    {
+      src: './images/solutionPage/intergrated-campains-work/Renovations.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+
+    {
+      src: './images/solutionPage/intergrated-campains-work/School.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+
+    {
+      src: './images/solutionPage/intergrated-campains-work/Stock.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+    {
+      src: './images/solutionPage/intergrated-campains-work/Underline.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+    {
+      src: './images/solutionPage/intergrated-campains-work/Wear.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+    {
+      src: './images/solutionPage/intergrated-campains-work/Yogurt.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+  ];
+
+  return (
+    <OurWorkSamples
+      bigTitle="Intergrated Campain Designs"
+      para="Custom branded white papers, guides, eBooks, and other digital reports deserve stellar design. Let’s rid the world of boring, plain white papers and thrill audiences with meaningful charts, infographics, interesting typography, illustrations, and more. Leave a lasting, valuable impression with professional layouts and editable final design files."
+    >
+      {inteImg.map((e, i) => (
         <div key={i} className="grid">
           <img src={e.src} alt={e.alt} loading="lazy" className="rounded-xl" />
         </div>
