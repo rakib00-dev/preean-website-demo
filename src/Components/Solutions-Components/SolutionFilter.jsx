@@ -1,6 +1,13 @@
-import { NavLink } from 'react-router-dom';
+import { useState } from 'react';
+import SoluCommonCard from './SoluCommonCard';
 
 const SolutionFilter = () => {
+  const [isFirstActive, setIsFirstActive] = useState(true);
+  const [isSecondActive, setIsSecondActive] = useState(false);
+  const [isThirdActive, setIsThirdActive] = useState(false);
+  const [isFourthActive, setIsFourthActive] = useState(false);
+  const [isFifthActive, setIsFifthActive] = useState(false);
+
   return (
     <section className="w-full max-w-7xl md:my-20">
       <div className="relative py-10 md:py-30">
@@ -14,39 +21,96 @@ const SolutionFilter = () => {
             DesignPro's features for clients
           </h2>
         </div>
-        <div className="flex mt-12 mx-16 w-full text-2xl font-medium">
-          <NavLink
-            className="cursor-pointer py-3 px-6 border-b-3 border-gray-200"
-            style={{ color: '#0b3558' }}
+        <ul className="flex mt-12 px-3 md:px-0 justify-center md:text-2xl font-medium w-full overflow-x-scroll md:overflow-auto">
+          <li
+            className={`transition-all duration-300 cursor-pointer w-fit py-3 px-6 border-b-3 border-gray-200 hover:bg-blue-50 ${
+              isFirstActive
+                ? 'border-b-blue-300 '
+                : 'text-[#0b3558] hover:text-[#000]'
+            }`}
+            style={{ color: isFirstActive ? '#006bff' : '' }}
+            onClick={() => {
+              setIsFirstActive(true);
+              setIsSecondActive(false);
+              setIsThirdActive(false);
+              setIsFourthActive(false);
+              setIsFifthActive(false);
+            }}
           >
             Build Website
-          </NavLink>
-          <NavLink
-            className="cursor-pointer py-3 px-6 border-b-3 border-gray-200"
-            style={{ color: '#0b3558' }}
+          </li>
+          <li
+            className={`transition-all duration-300 cursor-pointer w-fit py-3 px-6 border-b-3 border-gray-200 hover:bg-blue-50 ${
+              isSecondActive
+                ? 'border-b-blue-300 '
+                : 'text-[#0b3558] hover:text-[#000]'
+            }`}
+            style={{ color: isSecondActive ? '#006bff' : '' }}
+            onClick={() => {
+              setIsFirstActive(false);
+              setIsSecondActive(true);
+              setIsThirdActive(false);
+              setIsFourthActive(false);
+              setIsFifthActive(false);
+            }}
           >
             Thumbnail Design
-          </NavLink>
-          <NavLink
-            className="cursor-pointer py-3 px-6 border-b-3 border-gray-200"
-            style={{ color: '#0b3558' }}
+          </li>
+          <li
+            className={`transition-all duration-300 cursor-pointer w-fit py-3 px-6 border-b-3 border-gray-200 hover:bg-blue-50 ${
+              isThirdActive
+                ? 'border-b-blue-300 '
+                : 'text-[#0b3558] hover:text-[#000]'
+            }`}
+            style={{ color: isThirdActive ? '#006bff' : '' }}
+            onClick={() => {
+              setIsFirstActive(false);
+              setIsSecondActive(false);
+              setIsThirdActive(true);
+              setIsFourthActive(false);
+              setIsFifthActive(false);
+            }}
           >
             Lead Generation
-          </NavLink>
-          <NavLink
-            className="cursor-pointer py-3 px-6 border-b-3 border-gray-200"
-            style={{ color: '#0b3558' }}
+          </li>
+          <li
+            className={`transition-all duration-300 cursor-pointer w-fit py-3 px-6 border-b-3 border-gray-200 hover:bg-blue-50 ${
+              isFourthActive
+                ? 'border-b-blue-300 '
+                : 'text-[#0b3558] hover:text-[#000]'
+            }`}
+            style={{ color: isFourthActive ? '#006bff' : '' }}
+            onClick={() => {
+              setIsFirstActive(false);
+              setIsSecondActive(false);
+              setIsThirdActive(false);
+              setIsFourthActive(true);
+              setIsFifthActive(false);
+            }}
           >
             Social Media
-          </NavLink>
-          <NavLink
-            className="cursor-pointer py-3 px-6 border-b-3 border-gray-200"
-            style={{ color: '#0b3558' }}
+          </li>
+          <li
+            className={`transition-all duration-300 cursor-pointer w-fit py-3 px-6 border-b-3 border-gray-200 hover:bg-blue-50 ${
+              isFifthActive
+                ? 'border-b-blue-300 '
+                : 'text-[#0b3558] hover:text-[#000]'
+            }`}
+            style={{ color: isFifthActive ? '#006bff' : '' }}
+            onClick={() => {
+              setIsFirstActive(false);
+              setIsSecondActive(false);
+              setIsThirdActive(false);
+              setIsFourthActive(false);
+              setIsFifthActive(true);
+            }}
           >
             Canva Design
-          </NavLink>
+          </li>
+        </ul>
+        <div className="w-full">
+          <SoluCommonCard />
         </div>
-        <div className=" w-full"></div>
       </div>
     </section>
   );
