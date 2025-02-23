@@ -95,6 +95,7 @@ const AddCreative = () => {
 
   return (
     <OurWorkSamples
+      id="ad-creative"
       bigTitle="Ad Creative Designs"
       para="When you’re competing for clicks in a crowded digital landscape, ad design must be eye-catching, unique, and memorable. Get all formats, dimensions and configurations adapted across channels and platforms in a breeze, in static and motion formats."
     >
@@ -227,6 +228,7 @@ const BrandingLogo = () => {
 
   return (
     <OurWorkSamples
+      id="branding-logo"
       bigTitle="Branding Logo Designs"
       para="You’ve got a vision for your brand, we’ve got the top-notch branding and logo designers hungry for another exciting branding adventure. Whether you’re redesigning or starting from scratch, getting new logo concepts or updating a huge multiverse of branded materials, we don’t sweat the small stuff."
     >
@@ -285,6 +287,7 @@ const Email = () => {
 
   return (
     <OurWorkSamples
+      id="email-design"
       bigTitle="Email Designs"
       para="From beautiful email heroes to fully designed robust visual email campaigns, don’t delay and sacrifice another personalization opportunity! Get the static and motion components for every email and what your click and conversion rates climb. Note: HTML design not included."
     >
@@ -355,6 +358,7 @@ const Infographics = () => {
 
   return (
     <OurWorkSamples
+      id="infographics-design"
       bigTitle="Infographics Designs"
       para="Custom branded white papers, guides, eBooks, and other digital reports deserve stellar design. Let’s rid the world of boring, plain white papers and thrill audiences with meaningful charts, infographics, interesting typography, illustrations, and more. Leave a lasting, valuable impression with professional layouts and editable final design files."
     >
@@ -425,6 +429,7 @@ const Intergrated = () => {
 
   return (
     <OurWorkSamples
+      id="intergrated-campain"
       bigTitle="Intergrated Campain Designs"
       para="Custom branded white papers, guides, eBooks, and other digital reports deserve stellar design. Let’s rid the world of boring, plain white papers and thrill audiences with meaningful charts, infographics, interesting typography, illustrations, and more. Leave a lasting, valuable impression with professional layouts and editable final design files."
     >
@@ -551,6 +556,7 @@ const PrintDesign = () => {
 
   return (
     <OurWorkSamples
+      id="print-design"
       bigTitle="Print Designs"
       para="We promise print is not dead. From traditional book design to magazines, posters, as well as corporate print designs for fliers, menus, and business cards. Get custom branded renders and print-ready designs in any format, on-demand."
     >
@@ -608,6 +614,7 @@ const WebDesign = () => {
 
   return (
     <OurWorkSamples
+      id="Web-design"
       bigTitle="Website Designs"
       para="User interface graphics and designs are one of the most important first impressions your brand makes in our digital world. Getting new custom branded heroes, landing pages, widgets and other UI elements and designs is easier than ever, now delivered in Figma-ready formats!"
     >

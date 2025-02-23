@@ -55,6 +55,10 @@
   --text-white: white;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   font-family: 'Gilroy', sans-serif !important;
 }

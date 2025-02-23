@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import Button from '../Button';
 
 const OurWorkSamples = ({
+  id = 'social-media',
   bigTitle = 'social media designs',
   para = 'Engaging designs are a must for every platform in order to grab the attention of your target audience. Get custom branded, innovative, and platform-ready designs and templates, from static to motion and video, in every dimension you need! From Instagram to TikTok, from posts to stories, stand out and scale your social media output.',
   children,
@@ -55,7 +56,10 @@ const OurWorkSamples = ({
   ];
 
   return (
-    <section className="flex flex-col justify-center items-center mx-auto w-full max-w-7xl pt-20 px-3 md:px-6 md:mt-16 bg-white overflow-hidden ">
+    <section
+      id={id}
+      className="flex flex-col justify-center items-center mx-auto w-full max-w-7xl pt-20 px-3 md:px-6 md:mt-16 bg-white overflow-hidden "
+    >
       <div className="grid w-[95%] gap-4 ">
         {/* content */}
         {/* text conent */}

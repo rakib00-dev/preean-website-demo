@@ -114,7 +114,7 @@ const Navbar = () => {
             {/* <DropDown
               to="/social-media"
               title="social media"
-              src="./images/navbar/social-media.svg"
+              src="/images/navbar/social-media.svg"
             /> */}
             <DropDown
               to="graphic-design"
@@ -129,7 +129,7 @@ const Navbar = () => {
             <DropDown
               to="web-design"
               title="web design"
-              src="./images/navbar/web-design.svg"
+              src="/images/navbar/web-design.svg"
             />
             <DropDown
               to="print-design"
@@ -238,22 +238,22 @@ const Navbar = () => {
           >
             <DropDown
               title="Free illustrations"
-              src="./images/navbar/illustrations.png"
+              src="/images/navbar/illustrations.png"
               className={'w-full'}
             />
             <DropDown
               title="guilds"
-              src="./images/navbar/guides.png"
+              src="/images/navbar/guides.png"
               className={'w-full'}
             />
             <DropDown
               title="design blog"
-              src="./images/navbar/design-blog.png"
+              src="/images/navbar/design-blog.png"
               className={'w-full'}
             />
             <DropDown
               title="case studies"
-              src="./images/navbar/case-study.png"
+              src="/images/navbar/case-study.png"
               className={'w-full'}
             />
           </div>
@@ -505,22 +505,104 @@ const Navbar = () => {
           style={{ zIndex: 1122 }}
         >
           <div>
-            <DropDown to="/our-work/#social-media" title="social media" />
-            <DropDown to="/our-work/#ad-creative" title="ad creative" />
-            <DropDown to="/our-work/#branding-logo" title="branding logo" />
-            <DropDown to="/our-work/#email-design" title="email design" />
+            <a
+              className={`flex gap-2 p-4 justify-start items-center w-full rounded-md DropItemHover pl-10 py-6 underline`}
+              onClick={() => {
+                setIsNavOpen(false);
+              }}
+              href="/our-work/#social-media"
+              title="social media"
+            >
+              <h5 className="capitalize text-sm w-fit font-bold">
+                {'social media'}
+              </h5>
+            </a>
+            <a
+              className={`flex gap-2 p-4 justify-start items-center w-full rounded-md DropItemHover pl-10 py-6 underline`}
+              onClick={() => {
+                setIsNavOpen(false);
+              }}
+              href="/our-work/#ad-creative"
+              title="ad creative"
+            >
+              <h5 className="capitalize text-sm w-fit font-bold">
+                {'ad creative'}
+              </h5>
+            </a>
+            <a
+              className={`flex gap-2 p-4 justify-start items-center w-full rounded-md DropItemHover pl-10 py-6 underline`}
+              onClick={() => {
+                setIsNavOpen(false);
+              }}
+              href="/our-work/#branding-logo"
+              title="branding logo"
+            >
+              <h5 className="capitalize text-sm w-fit font-bold">
+                {'branding logo'}
+              </h5>
+            </a>
+            <a
+              className={`flex gap-2 p-4 justify-start items-center w-full rounded-md DropItemHover pl-10 py-6 underline`}
+              onClick={() => {
+                setIsNavOpen(false);
+              }}
+              href="/our-work/#email-design"
+              title="email design"
+            >
+              <h5 className="capitalize text-sm w-fit font-bold">
+                {'email design'}
+              </h5>
+            </a>
           </div>
           <div>
-            <DropDown
-              to="/our-work/#infographics-design"
+            <a
+              className={`flex gap-2 p-4 justify-start items-center w-full rounded-md DropItemHover pl-10 py-6 underline`}
+              onClick={() => {
+                setIsNavOpen(false);
+              }}
+              href="/our-work/#infographics-design"
               title="infographics design"
-            />
-            <DropDown
-              to="/our-work/#intergrated-campain"
+            >
+              <h5 className="capitalize text-sm w-fit font-bold">
+                {'infographics design'}
+              </h5>
+            </a>
+            <a
+              className={`flex gap-2 p-4 justify-start items-center w-full rounded-md DropItemHover pl-10 py-6 underline`}
+              onClick={() => {
+                setIsNavOpen(false);
+              }}
+              href="/our-work/#intergrated-campain"
               title="intergrated campain"
-            />
-            <DropDown to="/our-work/#print-design" title="print design" />
-            <DropDown to="/our-work/#Web-design" title="Web design" />
+            >
+              <h5 className="capitalize text-sm w-fit font-bold">
+                {'intergrated campain'}
+              </h5>
+            </a>
+            <a
+              className={`flex gap-2 p-4 justify-start items-center w-full rounded-md DropItemHover pl-10 py-6 underline`}
+              onClick={() => {
+                setIsNavOpen(false);
+              }}
+              href="/our-work/#print-design"
+              title="print design"
+            >
+              <h5 className="capitalize text-sm w-fit font-bold">
+                {'print design'}
+              </h5>
+            </a>
+            <a
+              className={`flex gap-2 p-4 justify-start items-center w-full rounded-md DropItemHover pl-10 py-6 underline`}
+              onClick={() => {
+                setIsNavOpen(false);
+              }}
+              href="/our-work/#Web-design"
+              title="Web design"
+            >
+              <h5 className="capitalize text-sm w-fit font-bold">
+                {'Web design'}
+              </h5>
+            </a>
           </div>
         </div>
       </div>
@@ -543,22 +625,22 @@ const Navbar = () => {
         >
           <DropDown
             title="Free illustrations"
-            src="./images/navbar/illustrations.png"
+            src="/images/navbar/illustrations.png"
             className={'w-full'}
           />
           <DropDown
             title="guilds"
-            src="./images/navbar/guides.png"
+            src="/images/navbar/guides.png"
             className={'w-full'}
           />
           <DropDown
             title="design blog"
-            src="./images/navbar/design-blog.png"
+            src="/images/navbar/design-blog.png"
             className={'w-full'}
           />
           <DropDown
             title="case studies"
-            src="./images/navbar/case-study.png"
+            src="/images/navbar/case-study.png"
             className={'w-full'}
           />
         </div>
