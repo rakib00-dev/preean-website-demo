@@ -21,6 +21,9 @@ const OurWorkPage = () => {
       <Suspense fallback={<p>Loading...</p>}>
         <Email />
       </Suspense>
+      <Suspense fallback={<p>Loading...</p>}>
+        <Infographics />
+      </Suspense>
     </div>
   );
 };
@@ -277,6 +280,76 @@ const Email = () => {
       para="From beautiful email heroes to fully designed robust visual email campaigns, don’t delay and sacrifice another personalization opportunity! Get the static and motion components for every email and what your click and conversion rates climb. Note: HTML design not included."
     >
       {emailImg.map((e, i) => (
+        <div key={i} className="grid">
+          <img src={e.src} alt={e.alt} loading="lazy" className="rounded-xl" />
+        </div>
+      ))}
+    </OurWorkSamples>
+  );
+};
+
+const Infographics = () => {
+  const infoImg = [
+    {
+      src: './images/solutionPage/infographics-work/Binge.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+    {
+      src: './images/solutionPage/infographics-work/Design.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+    {
+      src: './images/solutionPage/infographics-work/Entrepreneur.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+    {
+      src: './images/solutionPage/infographics-work/High.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+    {
+      src: './images/solutionPage/infographics-work/Kombuchia.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+
+    {
+      src: './images/solutionPage/infographics-work/Lubhasadh.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+
+    {
+      src: './images/solutionPage/infographics-work/Mexico.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+
+    {
+      src: './images/solutionPage/infographics-work/Morning.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+
+    {
+      src: './images/solutionPage/infographics-work/Proper.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+    {
+      src: './images/solutionPage/infographics-work/Sanitize.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+    {
+      src: './images/solutionPage/infographics-work/Syptoms.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+    {
+      src: './images/solutionPage/infographics-work/Tax.png',
+      alt: 'this is a social media work of design pro agency and this photo is done by design pro',
+    },
+  ];
+
+  return (
+    <OurWorkSamples
+      bigTitle="Infographics Designs"
+      para="Custom branded white papers, guides, eBooks, and other digital reports deserve stellar design. Let’s rid the world of boring, plain white papers and thrill audiences with meaningful charts, infographics, interesting typography, illustrations, and more. Leave a lasting, valuable impression with professional layouts and editable final design files."
+    >
+      {infoImg.map((e, i) => (
         <div key={i} className="grid">
           <img src={e.src} alt={e.alt} loading="lazy" className="rounded-xl" />
         </div>
