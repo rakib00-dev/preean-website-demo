@@ -122,19 +122,24 @@ const Navbar = () => {
               src="/images/navbar/graphic-design.svg"
             />
             <DropDown
-              to="/canva-design"
-              title="canva design"
-              src="/images/navbar/canva.png"
+              to="/custom-illustrations"
+              title="Custom Illustrations"
+              src="/images/navbar/design-blog.png"
             />
             <DropDown
-              to="web-design"
-              title="web design"
+              to="presentation-design"
+              title="Presentation Design"
               src="/images/navbar/web-design.svg"
             />
             <DropDown
-              to="print-design"
-              title="print design"
-              src="/images/navbar/print-design.png"
+              to="motion-graphics"
+              title="motion graphics"
+              src="/images/navbar/motion-graphic.png"
+            />
+            <DropDown
+              to="video-editing"
+              title="video editing"
+              src="/images/navbar/video-editing.png"
             />
 
             {/* <Link
@@ -237,8 +242,8 @@ const Navbar = () => {
             style={{ zIndex: 1122 }}
           >
             <DropDown
-              title="Free illustrations"
-              src="/images/navbar/illustrations.png"
+              title="Watch Demos"
+              src="/images/navbar/video-editing.png"
               className={'w-full'}
             />
             <DropDown
@@ -251,11 +256,11 @@ const Navbar = () => {
               src="/images/navbar/design-blog.png"
               className={'w-full'}
             />
-            <DropDown
+            {/* <DropDown
               title="case studies"
               src="/images/navbar/case-study.png"
               className={'w-full'}
-            />
+            /> */}
           </div>
         </div>
       </>
@@ -471,20 +476,25 @@ const Navbar = () => {
             src="/images/navbar/graphic-design.svg"
           />
           <DropDown
-            to="/canva-design"
-            title="canva design"
-            src="/images/navbar/canva.png"
+            to="/custom-illustrations"
+            title="Custom Illustrations"
+            src="/images/navbar/design-blog.png"
           />
 
           <DropDown
-            to="web-design"
-            title="web design"
+            to="presentation-design"
+            title="presentation design"
             src="/images/navbar/web-design.svg"
           />
           <DropDown
-            to="print-design"
-            title="print design"
-            src="/images/navbar/print-design.png"
+            to="motion-graphics"
+            title="motion graphics"
+            src="/images/navbar/motion-graphic.png"
+          />
+          <DropDown
+            to="video-editing"
+            title="video editing"
+            src="/images/navbar/video-editing.png"
           />
         </div>
       </div>
@@ -597,7 +607,7 @@ const Navbar = () => {
                 setIsNavOpen(false);
               }}
               href="/our-work/#Web-design"
-              title="Web design"
+              titLE="Web design"
             >
               <h5 className="capitalize text-sm w-fit font-bold">
                 {'Web design'}
@@ -624,8 +634,8 @@ const Navbar = () => {
           style={{ zIndex: 1122 }}
         >
           <DropDown
-            title="Free illustrations"
-            src="/images/navbar/illustrations.png"
+            title="Watch Demos"
+            src="/images/navbar/video-editing.png"
             className={'w-full'}
           />
           <DropDown
@@ -638,11 +648,11 @@ const Navbar = () => {
             src="/images/navbar/design-blog.png"
             className={'w-full'}
           />
-          <DropDown
+          {/* <DropDown
             title="case studies"
             src="/images/navbar/case-study.png"
             className={'w-full'}
-          />
+          /> */}
         </div>
       </div>
 

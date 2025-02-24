@@ -1,8 +1,4 @@
 import React, { Suspense } from 'react';
-// import TargetAudience from '../Components/Solutions-Components/TargetAudience';
-import AgenciesWordwide from '../Components/Solutions-Components/AgenciesWordwide';
-import WhyChoose from '../Components/Solutions-Components/WhyChoose';
-import SocialMediaWallOfLove from '../Components/Solutions-Components/SocialMediaWallOfLove';
 
 import SolutionHeader from '../Components/Solutions-Components/SolutionHeader';
 import SolutionVideo from '../Components/Solutions-Components/SolutionVideo';
@@ -27,13 +23,12 @@ const PostOnSocialMedia = React.lazy(() =>
   import('../Components/Solutions-Components/PostOnSocialMedia')
 );
 
-const WebDesignPage = () => {
+const CustomIllustrationsPage = () => {
   return (
     <section className="mx-auto w-full max-w-7xl">
-      <SolutionHeader
-        title="On-Demand web Design Graphic"
-        largeScreenImg="md:w-1/2"
-      ></SolutionHeader>
+      <SolutionHeader largeScreenImg="md:w-1/2"></SolutionHeader>
+      {/* filter section -><- */}
+      <SolutionFilter />
       {/* our work */}
       <Suspense fallback={<p>Loading...</p>}>
         {/* <OurSoluWork /> */}
@@ -45,8 +40,6 @@ const WebDesignPage = () => {
       <Suspense fallback={<p>Loading...</p>}>
         <SolutionWhyChoose />
       </Suspense>
-      {/* filter section -><- */}
-      <SolutionFilter />
       <Suspense fallback={<p>Loading...</p>}>
         <SolutionHomeSection />
       </Suspense>
@@ -62,4 +55,4 @@ const WebDesignPage = () => {
   );
 };
 
-export default WebDesignPage;
+export default CustomIllustrationsPage;

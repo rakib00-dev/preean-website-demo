@@ -2,13 +2,14 @@ import React, { Suspense } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router';
 import MainLayout from './layouts/MainLayout';
 import HomePage from './pages/HomePage';
-import CanvaDesignPage from './pages/CanvaDesignPage';
-import WebDesignPage from './pages/WebDesignPage';
-import PrintDesignPage from './pages/PrintDesignPage';
+import CustomIllustrationsPage from './pages/CustomIllustrationsPage';
+import VideoEditingPage from './pages/VideoEditingPage';
+import MotioinGraphicsPage from './pages/MotioinGraphicsPage';
+import PresentationDesignPage from './pages/PresentationDesignPage';
 
-const GraphicDesign = React.lazy(() => import('./pages/GraphicDesignPage'));
+const GraphicDesign = React.lazy(() => import('./pages/GraphicsDesignPage'));
 const BookACall = React.lazy(() => import('./Components/BookACall'));
-// const CanvaDesignPage = React.lazy(() => import('./pages/OldCanvaDesignPage'));
+// const CustomIllustrationsPage = React.lazy(() => import('./pages/OldCustomIllustrations'));
 const SocialMediaPage = React.lazy(() => import('./pages/SocialMediaPage'));
 const AllOurImgWorks = React.lazy(() =>
   import('./Components/WorkPage/AllOurImgWorks')
@@ -42,26 +43,34 @@ function App() {
           ),
         },
         {
-          path: '/canva-design',
+          path: '/custom-illustrations',
           element: (
             <Suspense fallback={<p>Loading...</p>}>
-              <CanvaDesignPage />
+              <CustomIllustrationsPage />
             </Suspense>
           ),
         },
         {
-          path: '/web-design',
+          path: '/presentation-design',
           element: (
             <Suspense fallback={<p>Loading...</p>}>
-              <WebDesignPage />
+              <PresentationDesignPage />
             </Suspense>
           ),
         },
         {
-          path: '/print-design',
+          path: '/motion-graphics',
           element: (
             <Suspense fallback={<p>Loading...</p>}>
-              <PrintDesignPage />
+              <MotioinGraphicsPage />
+            </Suspense>
+          ),
+        },
+        {
+          path: '/video-editing',
+          element: (
+            <Suspense fallback={<p>Loading...</p>}>
+              <VideoEditingPage />
             </Suspense>
           ),
         },

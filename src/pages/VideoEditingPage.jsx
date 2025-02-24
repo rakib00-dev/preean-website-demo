@@ -1,4 +1,8 @@
 import React, { Suspense } from 'react';
+// import TargetAudience from '../Components/Solutions-Components/TargetAudience';
+import AgenciesWordwide from '../Components/Solutions-Components/AgenciesWordwide';
+import WhyChoose from '../Components/Solutions-Components/WhyChoose';
+import SocialMediaWallOfLove from '../Components/Solutions-Components/SocialMediaWallOfLove';
 
 import SolutionHeader from '../Components/Solutions-Components/SolutionHeader';
 import SolutionVideo from '../Components/Solutions-Components/SolutionVideo';
@@ -20,13 +24,15 @@ const SolutionCards = React.lazy(() =>
   import('../Components/Solutions-Components/SolutionCards')
 );
 
-const PrintDesignPage = () => {
+const VideoEditingPage = () => {
   return (
     <section className="mx-auto w-full max-w-7xl">
       <SolutionHeader
-        title="On-Demand Print Design "
+        title="On-Demand video editing work"
         largeScreenImg="md:w-1/2"
       ></SolutionHeader>
+      {/* filter section -><- */}
+      <SolutionFilter />
       {/* our work */}
       <Suspense fallback={<p>Loading...</p>}>
         {/* <OurSoluWork /> */}
@@ -38,8 +44,6 @@ const PrintDesignPage = () => {
       <Suspense fallback={<p>Loading...</p>}>
         <SolutionWhyChoose />
       </Suspense>
-      {/* filter section -><- */}
-      <SolutionFilter />
       <Suspense fallback={<p>Loading...</p>}>
         <SolutionHomeSection />
       </Suspense>
@@ -55,4 +59,4 @@ const PrintDesignPage = () => {
   );
 };
 
-export default PrintDesignPage;
+export default VideoEditingPage;

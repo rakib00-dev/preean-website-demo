@@ -9,8 +9,8 @@ const SolutionFilter = () => {
   const [isFifthActive, setIsFifthActive] = useState(false);
 
   return (
-    <section className="w-full max-w-7xl md:my-20 overflow-hidden">
-      <div className="relative py-10 md:py-30">
+    <section className="w-full max-w-7xl md:my-4 overflow-hidden">
+      <div className="relative py-10">
         <div className="grid place-items-center mx-auto gap-5">
           <p className="text-sm  text-blue-800 bg-blue-100 px-2 py-1 rounded-full">
             Easy work process

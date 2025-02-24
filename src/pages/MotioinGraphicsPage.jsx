@@ -20,13 +20,15 @@ const SolutionCards = React.lazy(() =>
   import('../Components/Solutions-Components/SolutionCards')
 );
 
-const CanvaDesignPage = () => {
+const MotioinGraphicsPage = () => {
   return (
     <section className="mx-auto w-full max-w-7xl">
       <SolutionHeader
-        title="On-Demand Canva Design Graphic"
+        title="On-Demand Print Design "
         largeScreenImg="md:w-1/2"
       ></SolutionHeader>
+      {/* filter section -><- */}
+      <SolutionFilter />
       {/* our work */}
       <Suspense fallback={<p>Loading...</p>}>
         {/* <OurSoluWork /> */}
@@ -38,8 +40,6 @@ const CanvaDesignPage = () => {
       <Suspense fallback={<p>Loading...</p>}>
         <SolutionWhyChoose />
       </Suspense>
-      {/* filter section -><- */}
-      <SolutionFilter />
       <Suspense fallback={<p>Loading...</p>}>
         <SolutionHomeSection />
       </Suspense>
@@ -55,4 +55,4 @@ const CanvaDesignPage = () => {
   );
 };
 
-export default CanvaDesignPage;
+export default MotioinGraphicsPage;
