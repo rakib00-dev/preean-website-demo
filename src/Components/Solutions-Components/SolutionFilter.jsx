@@ -37,7 +37,7 @@ const SolutionFilter = () => {
               setIsFifthActive(false);
             }}
           >
-            Build Website
+            Graphic Design
           </li>
           <li
             className={`transition-all duration-300 cursor-pointer py-3 px-6 border-b-3 border-gray-200 hover:bg-blue-50 ${
@@ -54,7 +54,7 @@ const SolutionFilter = () => {
               setIsFifthActive(false);
             }}
           >
-            Thumbnail Design
+            Custom Illustration
           </li>
           <li
             className={`transition-all duration-300 cursor-pointer py-3 px-6 border-b-3 border-gray-200 hover:bg-blue-50 ${
@@ -71,7 +71,7 @@ const SolutionFilter = () => {
               setIsFifthActive(false);
             }}
           >
-            Lead Generation
+            Presentation Design
           </li>
           <li
             className={`transition-all duration-300 cursor-pointer py-3 px-6 border-b-3 border-gray-200 hover:bg-blue-50 ${
@@ -88,7 +88,7 @@ const SolutionFilter = () => {
               setIsFifthActive(false);
             }}
           >
-            Social Media
+            Motion Graphic
           </li>
           <li
             className={`transition-all duration-300 cursor-pointer py-3 px-6 border-b-3 border-gray-200 hover:bg-blue-50 ${
@@ -105,7 +105,7 @@ const SolutionFilter = () => {
               setIsFifthActive(true);
             }}
           >
-            Canva Design
+            Video Editing
           </li>
         </ul>
         <div className="w-full">
