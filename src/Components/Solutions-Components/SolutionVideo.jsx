@@ -2,7 +2,7 @@ import React from 'react';
 
 const SolutionVideo = () => {
   return (
-    <section className="w-full max-w-7xl my md:my-40">
+    <section className="w-full max-w-7xl my md:my-20">
       <div className="relative">
         <div className="grid place-items-center mx-auto gap-5">
           <h2

@@ -242,17 +242,20 @@ const Navbar = () => {
             style={{ zIndex: 1122 }}
           >
             <DropDown
+              to="/watch-demos"
               title="Watch Demos"
               src="/images/navbar/video-editing.png"
               className={'w-full'}
             />
             <DropDown
-              title="guilds"
+              to="/guides"
+              title="guides"
               src="/images/navbar/guides.png"
               className={'w-full'}
             />
             <DropDown
-              title="design blog"
+              to="/design-blogs"
+              title="design blogs"
               src="/images/navbar/design-blog.png"
               className={'w-full'}
             />
@@ -607,7 +610,7 @@ const Navbar = () => {
                 setIsNavOpen(false);
               }}
               href="/our-work/#Web-design"
-              titLE="Web design"
+              title="Web design"
             >
               <h5 className="capitalize text-sm w-fit font-bold">
                 {'Web design'}
@@ -634,17 +637,20 @@ const Navbar = () => {
           style={{ zIndex: 1122 }}
         >
           <DropDown
+            to="/watch-demos"
             title="Watch Demos"
             src="/images/navbar/video-editing.png"
             className={'w-full'}
           />
           <DropDown
-            title="guilds"
+            to="/guides"
+            title="guides"
             src="/images/navbar/guides.png"
             className={'w-full'}
           />
           <DropDown
-            title="design blog"
+            to="/design-blogs"
+            title="design blogs"
             src="/images/navbar/design-blog.png"
             className={'w-full'}
           />

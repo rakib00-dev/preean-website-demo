@@ -7,6 +7,9 @@ import VideoEditingPage from './pages/VideoEditingPage';
 import MotioinGraphicsPage from './pages/MotioinGraphicsPage';
 import PresentationDesignPage from './pages/PresentationDesignPage';
 
+const DesignBlogsPage = React.lazy(() => import('./pages/DesignBlogsPage'));
+const GuidesPage = React.lazy(() => import('./pages/GuidesPage'));
+const WatchDemosPage = React.lazy(() => import('./pages/WatchDemosPage'));
 const GraphicDesign = React.lazy(() => import('./pages/GraphicsDesignPage'));
 const BookACall = React.lazy(() => import('./Components/BookACall'));
 // const CustomIllustrationsPage = React.lazy(() => import('./pages/OldCustomIllustrations'));
@@ -105,6 +108,30 @@ function App() {
           element: (
             <Suspense fallback={<p>Loading...</p>}>
               <PricingPage />
+            </Suspense>
+          ),
+        },
+        {
+          path: '/watch-demos',
+          element: (
+            <Suspense fallback={<p>Loading...</p>}>
+              <WatchDemosPage />
+            </Suspense>
+          ),
+        },
+        {
+          path: '/guides',
+          element: (
+            <Suspense fallback={<p>Loading...</p>}>
+              <GuidesPage />
+            </Suspense>
+          ),
+        },
+        {
+          path: '/design-blogs',
+          element: (
+            <Suspense fallback={<p>Loading...</p>}>
+              <DesignBlogsPage />
             </Suspense>
           ),
         },
