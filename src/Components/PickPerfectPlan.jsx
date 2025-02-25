@@ -278,7 +278,7 @@ const HomePagePricing = ({
   fourthColor,
 }) => {
   return (
-    <div className={`w-[230px] mx-2 rounded-2xl relative md:w-[270px]`}>
+    <div className={`w-[260px] mx-2 rounded-2xl relative md:w-[270px]`}>
       {/* initial wraper */}
       <div
         className={`border border-t-8 rounded-2xl h-[337px] px-4 py-5 gap-4 grid ${bgColor} border-${borderColor}`}
