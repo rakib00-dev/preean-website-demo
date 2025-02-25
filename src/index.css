@@ -94,14 +94,17 @@ h5 {
   transition: 0.3s ease-in-out;
 }
 
-.DropItemHover:hover {
+.DropItemHover:hover,
+.DropItemActive {
   background-color: var(--background-blue);
 }
-.DropItemHover:hover img {
+.DropItemHover:hover img,
+.DropItemActive img {
   background-color: white;
 }
 
-.DropItemHover:hover h5 {
+.DropItemHover:hover h5,
+.DropItemActive h5 {
   color: var(--color-primary);
 }
 

@@ -36,17 +36,8 @@ const Navbar = () => {
           className={
             'capitalize flex justify-start items-center gap-2 text-sm sm:font-bold'
           }
-          onmouseover={() => setIsOurWorkHovered(true)}
-          onmouseout={() => setIsOurWorkHovered(false)}
-          onclick={() => setIsOurWorkHovered((prev) => !prev)}
-          style={{ color: '#0b3558' }}
         >
           our work
-          <FaChevronDown
-            className={
-              isOurWorkHovered ? `rotate-180 transition-all` : 'transition-all'
-            }
-          />
         </ListItem>
         <ListItem
           navLink="/pricing"
@@ -161,11 +152,6 @@ const Navbar = () => {
           onclick={() => setIsOurWorkHovered((prev) => !prev)}
         >
           our work
-          <FaChevronDown
-            className={
-              isOurWorkHovered ? `rotate-180 transition-all` : 'transition-all'
-            }
-          />
         </ListItem>
         <div
           className={
@@ -315,11 +301,20 @@ const Navbar = () => {
   }) => {
     return (
       <>
-        <Link
+        <NavLink
           to={to}
-          className={`flex gap-2 p-4 justify-start items-center w-full rounded-md DropItemHover ${className} ${
-            src ? '' : 'pl-10 py-6 underline'
-          }`}
+          className={({ isActive }) =>
+            isActive
+              ? `flex gap-2 p-4 justify-start items-center w-full rounded-md DropItemActive ${className} ${
+                  src ? '' : 'pl-10 py-6 underline'
+                }`
+              : `flex gap-2 p-4 justify-start items-center w-full rounded-md DropItemHover ${className} ${
+                  src ? '' : 'pl-10 py-6 underline'
+                }`
+          }
+          // className={`flex gap-2 p-4 justify-start items-center w-full rounded-md DropItemHover ${className} ${
+          //   src ? '' : 'pl-10 py-6 underline'
+          // }`}
           onClick={() => {
             setIsNavOpen(false);
           }}
@@ -335,7 +330,7 @@ const Navbar = () => {
             <></>
           )}
           <h5 className="capitalize text-sm w-fit font-bold">{title}</h5>
-        </Link>
+        </NavLink>
       </>
     );
   };
