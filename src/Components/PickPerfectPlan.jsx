@@ -130,11 +130,11 @@ const PickPerfectPlan = () => {
             className="grid place-items-center gap-5 md:gap-4  md:grid-cols-4 md:w-full "
           >
             {isFirstBtnActive ? (
-              <WeeklyCards />
-            ) : isSecondBtnActive ? (
               <MonthlyCards />
-            ) : (
+            ) : isSecondBtnActive ? (
               <QuarterlyCards />
+            ) : (
+              <AnnuallyCards />
             )}
           </motion.div>
         </div>
@@ -145,7 +145,7 @@ const PickPerfectPlan = () => {
 
 export default PickPerfectPlan;
 
-const WeeklyCards = () => {
+const MonthlyCards = () => {
   return (
     <>
       <HomePagePricing
@@ -170,6 +170,7 @@ const WeeklyCards = () => {
       <HomePagePricing
         price="599"
         title="Design Team"
+        fourthColor="white"
         priceColor="white"
         bgColor="bg-[#0b3558]"
         lastColor={'text-white'}
@@ -182,7 +183,7 @@ const WeeklyCards = () => {
   );
 };
 
-const MonthlyCards = () => {
+const QuarterlyCards = () => {
   return (
     <>
       <HomePagePricing
@@ -208,6 +209,7 @@ const MonthlyCards = () => {
       <HomePagePricing
         price="540"
         title="Design Team"
+        fourthColor="white"
         priceColor="white"
         bgColor="bg-[#0b3558]"
         lastColor={'text-white'}
@@ -220,7 +222,7 @@ const MonthlyCards = () => {
   );
 };
 
-const QuarterlyCards = () => {
+const AnnuallyCards = () => {
   return (
     <>
       <HomePagePricing
@@ -246,6 +248,7 @@ const QuarterlyCards = () => {
       <HomePagePricing
         price="480"
         title="Design Team"
+        fourthColor="white"
         priceColor="white"
         bgColor="bg-[#0b3558]"
         lastColor={'text-white'}
@@ -272,6 +275,7 @@ const HomePagePricing = ({
   lastColor,
   btnColor = 'bg-black',
   children,
+  fourthColor,
 }) => {
   return (
     <div className={`w-[230px] mx-2 rounded-2xl relative md:w-[270px]`}>
@@ -281,9 +285,17 @@ const HomePagePricing = ({
       >
         {children}
         <div className={`grid gap-4 pb-5 ${lastColor}`}>
-          <h5 className={`font-extrabold ${titleSize}`}>{title}</h5>
+          <h5
+            className={`font-extrabold ${titleSize}`}
+            style={{ color: `${fourthColor}` }}
+          >
+            {title}
+          </h5>
           <p className={`text-lg text-${descColor}`}>{description}</p>
-          <h5 className={`text-3xl mt-8 font-extrabold text-${priceColor}`}>
+          <h5
+            className={`text-3xl mt-8 font-extrabold text-${priceColor}`}
+            style={{ color: `${fourthColor}` }}
+          >
             ${price}
             <span className="text-lg">/mo</span>
           </h5>
