@@ -17,12 +17,9 @@ const OurTools = () => {
           <div
             className={`flex flex-col justify-start gap-2 items-start md:gap-4 md:items-start md:my-8`}
           >
-            <h1
-              className="uppercase font-extrabold text-[.85rem] md:text-[.9rem]"
-              style={{ color: 'var(--colors-pink)' }}
-            >
+            <p className="text-sm  text-blue-800 bg-blue-100 px-2 py-1 rounded-full">
               our tools
-            </h1>
+            </p>
             <h2
               className={`font-extrabold text-[1.55rem] text-start w-full mb-4 leading-8 md:text-start md:text-[2.1rem] lg:text-[2.5rem] lg:leading-13`}
             >

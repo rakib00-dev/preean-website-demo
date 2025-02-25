@@ -29,12 +29,9 @@ const PickPerfectPlan = () => {
           }}
           className={`flex flex-col justify-center gap-2 items-center mx-3 md:gap-4 md:items-start md:my-8 md:mx-12`}
         >
-          <h1
-            className="uppercase font-extrabold text-[.85rem] md:text-[.9rem]"
-            style={{ color: 'var(--colors-pink)' }}
-          >
+          <p className="text-sm  text-blue-800 bg-blue-100 px-2 py-1 rounded-full">
             enjoy best plans
-          </h1>
+          </p>
           <h2
             className={`font-extrabold text-[1.55rem] text-center w-full mb-4 leading-8 lg:text-start md:text-6xl md:w-4/5 lg:leading-13`}
           >

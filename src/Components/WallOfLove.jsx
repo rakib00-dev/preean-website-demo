@@ -56,12 +56,9 @@ function WallOfLove() {
         <div
           className={`flex flex-col justify-center gap-2 items-center lg:gap-4`}
         >
-          <h1
-            className="uppercase font-bold text-[.85rem]"
-            style={{ color: 'var(--colors-pink)' }}
-          >
-            wall of love{' '}
-          </h1>
+          <p className="text-sm  text-blue-800 bg-blue-100 px-2 py-1 rounded-full">
+            wall of love
+          </p>
           <h2
             className={`font-extrabold text-[1.85rem] text-center w-full mb-4 leading-8 lg:text-center min-[450px]:w-full md:text-[2.1rem] lg:w-full lg:text-[2.5rem] lg:leading-13`}
           >

@@ -35,12 +35,9 @@ const SecondTypeSection = ({
         <div
           className={`flex flex-col justify-center gap-2 items-center lg:gap-4`}
         >
-          <h1
-            className="uppercase font-bold text-[.85rem]"
-            style={{ color: 'var(--colors-pink)' }}
-          >
+          <p className="text-sm  text-blue-800 bg-blue-100 px-2 py-1 rounded-full">
             {smallTitle}
-          </h1>
+          </p>
           <h2
             className={`font-extrabold text-[1.55rem] text-center w-[95%] mb-4 leading-8 md:text-6xl md:text-${textContentAlign} md:w-[98%] lg:leading-13`}
             style={style}
