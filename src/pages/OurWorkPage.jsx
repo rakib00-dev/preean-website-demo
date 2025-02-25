@@ -1,5 +1,6 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useState } from 'react';
 import PageHeader from '../Components/PageHeader';
+import { IoIosArrowDown } from 'react-icons/io';
 
 const OurWorkSamples = React.lazy(() =>
   import('../Components/WorkPage/OurWorkSamples')
@@ -7,7 +8,8 @@ const OurWorkSamples = React.lazy(() =>
 
 const OurWorkPage = () => {
   return (
-    <div className="mx-auto my-16 w-full max-w-7xl">
+    <div className="mx-auto md:my-16 w-full max-w-7xl">
+      <WorkNavigation />
       <PageHeader />
       <Suspense fallback={<p>Loading...</p>}>
         <OurWorkSamples />
@@ -38,6 +40,298 @@ const OurWorkPage = () => {
 };
 
 export default OurWorkPage;
+
+const WorkNavigation = () => {
+  const [isOurWorkHovered, setIsOurWorkHovered] = useState(false);
+
+  return (
+    <>
+      {/* our work drop down large screen*/}
+      <div
+        className={` transition-all duration-100 sticky top-25 w-full m-auto hidden place-items-center pt-3 gap-3 md:grid`}
+        style={{ zIndex: 11 }}
+        onMouseOver={() => setIsOurWorkHovered(true)}
+        onMouseOut={() => setIsOurWorkHovered(false)}
+      >
+        <div
+          className="flex cursor-pointer justify-center items-center gap-2 rounded bg-blue-200/80 p-2"
+          onMouseOver={() => setIsOurWorkHovered(true)}
+          onMouseOut={() => setIsOurWorkHovered(false)}
+          onClick={() => setIsOurWorkHovered((prev) => !prev)}
+        >
+          <h5>Navigate Works</h5>{' '}
+          <IoIosArrowDown
+            className={
+              isOurWorkHovered ? `rotate-180 transition-all` : 'transition-all'
+            }
+          />
+        </div>
+
+        <div
+          className={`transition-all duration-200 flex flex-wrap rounded-xl bg-white border-gray-100 shadow-xl mx-4 md:mx-0 md:flex-nowrap overflow-hidden ${
+            isOurWorkHovered ? 'h-20 border' : 'h-0 border-0'
+          }`}
+          onMouseOver={() => setIsOurWorkHovered(true)}
+          onClick={() => setIsOurWorkHovered((prev) => !prev)}
+        >
+          <a
+            className={`flex gap-2 justify-start items-center w-fit rounded-md DropItemHover px-2 py-6 `}
+            href="#social-media"
+          >
+            <img
+              src="/images/navbar/social-media-logo.png"
+              alt=""
+              className={`p-1 rounded bg-gray-100/80 h-8`}
+              loading="lazy"
+            />
+            <h5 className="capitalize text-sm w-full font-bold">
+              {'social media'}
+            </h5>
+          </a>
+          <a
+            className={`flex gap-2 justify-start items-center w-fit rounded-md DropItemHover px-2 py-6 `}
+            href="#ad-creative"
+          >
+            <img
+              src="/images/navbar/ad-design.png"
+              alt=""
+              className={`p-1 rounded bg-gray-100/80 h-8`}
+              loading="lazy"
+            />
+            <h5 className="capitalize text-sm w-full font-bold">
+              {'ad creative'}
+            </h5>
+          </a>
+          <a
+            className={`flex gap-2 justify-start items-center w-fit rounded-md DropItemHover px-2 py-6 `}
+            href="#branding-logo"
+          >
+            <img
+              src="/images/navbar/logo-design.png"
+              alt=""
+              className={`p-1 rounded bg-gray-100/80 h-8`}
+              loading="lazy"
+            />
+            <h5 className="capitalize text-sm w-full font-bold">
+              {'branding logo'}
+            </h5>
+          </a>
+          <a
+            className={`flex gap-2 justify-start items-center w-fit rounded-md DropItemHover px-2 py-6 `}
+            href="#email-design"
+          >
+            <img
+              src="/images/navbar/mail.png"
+              alt=""
+              className={`p-1 rounded bg-gray-100/80 h-8`}
+              loading="lazy"
+            />
+            <h5 className="capitalize text-sm w-full font-bold">
+              {'email design'}
+            </h5>
+          </a>
+
+          <a
+            className={`flex gap-2 justify-start items-center w-fit rounded-md DropItemHover px-2 py-6 `}
+            href="#infographics-design"
+          >
+            <img
+              src="/images/navbar/infographic-chart.png"
+              alt=""
+              className={`p-1 rounded bg-gray-100/80 h-8`}
+              loading="lazy"
+            />
+            <h5 className="capitalize text-sm w-full font-bold">
+              {'infographics design'}
+            </h5>
+          </a>
+          <a
+            className={`flex gap-2 justify-start items-center w-fit rounded-md DropItemHover px-2 py-6 `}
+            href="#intergrated-campain"
+          >
+            <img
+              src="/images/navbar/connected.png"
+              alt=""
+              className={`p-1 rounded bg-gray-100/80 h-8`}
+              loading="lazy"
+            />
+            <h5 className="capitalize text-sm w-full font-bold">
+              {'intergrated campain'}
+            </h5>
+          </a>
+          <a
+            className={`flex gap-2 justify-start items-center w-fit rounded-md DropItemHover px-2 py-6 `}
+            href="#print-design"
+          >
+            <img
+              src="/images/navbar/print-work.png"
+              alt=""
+              className={`p-1 rounded bg-gray-100/80 h-8`}
+              loading="lazy"
+            />
+            <h5 className="capitalize text-sm w-full font-bold">
+              {'print design'}
+            </h5>
+          </a>
+          <a
+            className={`flex gap-2 justify-start items-center w-fit rounded-md DropItemHover px-2 py-6 `}
+            href="#Web-design"
+          >
+            <img
+              src="/images/navbar/responsive-design.png"
+              alt=""
+              className={`p-1 rounded bg-gray-100/80 h-8`}
+              loading="lazy"
+            />
+            <h5 className="capitalize text-sm w-full font-bold">
+              {'Web design'}
+            </h5>
+          </a>
+        </div>
+      </div>
+
+      {/* our work dropdown small screen */}
+      <div
+        className={` transition-all duration-300 grid sticky top-15 w-full m-auto place-items-center py-6 gap-3 md:hidden`}
+        style={{ zIndex: 11 }}
+      >
+        <div
+          className="flex cursor-pointer justify-center items-center gap-2 rounded bg-blue-200/80 p-2"
+          onClick={() => setIsOurWorkHovered((prev) => !prev)}
+        >
+          <h5>Navigate Works</h5>{' '}
+          <IoIosArrowDown
+            className={
+              isOurWorkHovered ? `rotate-180 transition-all` : 'transition-all'
+            }
+          />
+        </div>
+
+        <div
+          className={`transition-all duration-300 grid rounded-xl bg-white border-gray-100 shadow-xl mx-4 overflow-hidden md:mx-0 grid-cols-2 ${
+            isOurWorkHovered ? 'h-80 border' : 'h-0 border-0'
+          }`}
+          onMouseOver={() => setIsOurWorkHovered(true)}
+          onClick={() => setIsOurWorkHovered((prev) => !prev)}
+        >
+          <a
+            className={`flex gap-2 justify-start items-center w-fit rounded-md DropItemHover px-2 py-6 `}
+            href="#social-media"
+          >
+            <img
+              src="/images/navbar/social-media-logo.png"
+              alt=""
+              className={`p-1 rounded bg-gray-100/80 h-8`}
+              loading="lazy"
+            />
+            <h5 className="capitalize text-xs w-full font-bold">
+              {'social media'}
+            </h5>
+          </a>
+          <a
+            className={`flex gap-2 justify-start items-center w-fit rounded-md DropItemHover px-2 py-6 `}
+            href="#ad-creative"
+          >
+            <img
+              src="/images/navbar/ad-design.png"
+              alt=""
+              className={`p-1 rounded bg-gray-100/80 h-8`}
+              loading="lazy"
+            />
+            <h5 className="capitalize text-xs w-full font-bold">
+              {'ad creative'}
+            </h5>
+          </a>
+          <a
+            className={`flex gap-2 justify-start items-center w-fit rounded-md DropItemHover px-2 py-6 `}
+            href="#branding-logo"
+          >
+            <img
+              src="/images/navbar/logo-design.png"
+              alt=""
+              className={`p-1 rounded bg-gray-100/80 h-8`}
+              loading="lazy"
+            />
+            <h5 className="capitalize text-xs w-full font-bold">
+              {'branding logo'}
+            </h5>
+          </a>
+          <a
+            className={`flex gap-2 justify-start items-center w-fit rounded-md DropItemHover px-2 py-6 `}
+            href="#email-design"
+          >
+            <img
+              src="/images/navbar/mail.png"
+              alt=""
+              className={`p-1 rounded bg-gray-100/80 h-8`}
+              loading="lazy"
+            />
+            <h5 className="capitalize text-xs w-full font-bold">
+              {'email design'}
+            </h5>
+          </a>
+
+          <a
+            className={`flex gap-2 justify-start items-center w-fit rounded-md DropItemHover px-2 py-6 `}
+            href="#infographics-design"
+          >
+            <img
+              src="/images/navbar/infographic-chart.png"
+              alt=""
+              className={`p-1 rounded bg-gray-100/80 h-8`}
+              loading="lazy"
+            />
+            <h5 className="capitalize text-xs w-full font-bold">
+              {'infographics design'}
+            </h5>
+          </a>
+          <a
+            className={`flex gap-2 justify-start items-center w-fit rounded-md DropItemHover px-2 py-6 `}
+            href="#intergrated-campain"
+          >
+            <img
+              src="/images/navbar/connected.png"
+              alt=""
+              className={`p-1 rounded bg-gray-100/80 h-8`}
+              loading="lazy"
+            />
+            <h5 className="capitalize text-xs w-full font-bold">
+              {'intergrated campain'}
+            </h5>
+          </a>
+          <a
+            className={`flex gap-2 justify-start items-center w-fit rounded-md DropItemHover px-2 py-6 `}
+            href="#print-design"
+          >
+            <img
+              src="/images/navbar/print-work.png"
+              alt=""
+              className={`p-1 rounded bg-gray-100/80 h-8`}
+              loading="lazy"
+            />
+            <h5 className="capitalize text-xs w-full font-bold">
+              {'print design'}
+            </h5>
+          </a>
+          <a
+            className={`flex gap-2 justify-start items-center w-fit rounded-md DropItemHover px-2 py-6 `}
+            href="#Web-design"
+          >
+            <img
+              src="/images/navbar/responsive-design.png"
+              alt=""
+              className={`p-1 rounded bg-gray-100/80 h-8`}
+              loading="lazy"
+            />
+            <h5 className="capitalize text-xs w-full font-bold">
+              {'Web design'}
+            </h5>
+          </a>
+        </div>
+      </div>
+    </>
+  );
+};
 
 const AddCreative = () => {
   const addCreativeImg = [

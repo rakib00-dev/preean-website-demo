@@ -7,7 +7,6 @@ import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   const [isHovered, setIsHovered] = useState(false);
-  const [isOurWorkHovered, setIsOurWorkHovered] = useState(false);
   const [isResourceHovered, setIsResourceHovered] = useState(false);
 
   // large screen nav list
