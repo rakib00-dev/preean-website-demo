@@ -142,46 +142,18 @@ const Navbar = () => {
           </div>
         </div>
         <ListItem
-          navLink="#"
+          navLink="/our-work"
           smallClassName={({ isActive }) =>
             isActive
-              ? `capitalize flex items-center gap-2 text-blue-500 sm:font-bold`
-              : `capitalize flex items-center gap-2 sm:font-bold`
+              ? `capitalize text-blue-500 sm:font-bold `
+              : `capitalize  sm:font-bold `
           }
-          style={{ padding: ' 0' }}
-          onclick={() => setIsOurWorkHovered((prev) => !prev)}
+          onclick={() => {
+            setIsNavOpen((prev) => !prev);
+          }}
         >
           our work
         </ListItem>
-        <div
-          className={
-            isOurWorkHovered
-              ? `transition-all relative justify-center items-center place-items-center m-auto scale-y-100`
-              : 'transition-all scale-y-0 hidden'
-          }
-          onClick={() => setIsOurWorkHovered((prev) => !prev)}
-        >
-          <div
-            className="flex rounded-xl bg-white top-[48px] pb-4 mb-4 right-[30%] m-auto flex-col justify-start items-start flex-wrap shadow-xl w-[18rem] lg:hidden"
-            style={{ zIndex: 1122 }}
-          >
-            <DropDown to="/our-work/#social-media" title="social media" />
-            <DropDown to="/our-work/#ad-creative" title="ad creative" />
-
-            <DropDown to="/our-work/#branding-logo" title="branding logo" />
-            <DropDown to="/our-work/#email-design" title="email design" />
-            <DropDown
-              to="/our-work/#infographics-design"
-              title="infographics design"
-            />
-            <DropDown
-              to="/our-work/#intergrated-campain"
-              title="intergrated campain"
-            />
-            <DropDown to="/our-work/#print-design" title="print design" />
-            <DropDown to="/our-work/#Web-design" title="Web design" />
-          </div>
-        </div>
         <ListItem
           navLink="/pricing"
           smallClassName={({ isActive }) =>
@@ -494,124 +466,6 @@ const Navbar = () => {
             title="video editing"
             src="/images/navbar/video-editing.png"
           />
-        </div>
-      </div>
-
-      {/* our work drop down */}
-      <div
-        className={
-          isOurWorkHovered
-            ? ` transition-all flex justify-center items-center place-items-center m-auto`
-            : 'transition-all hidden top-50 opacity-0'
-        }
-        onMouseOver={() => setIsOurWorkHovered(true)}
-        onMouseOut={() => setIsOurWorkHovered(false)}
-        onClick={() => setIsOurWorkHovered((prev) => !prev)}
-      >
-        <div
-          className="hidden fixed rounded-xl bg-white top-[48px] right-[27%] m-auto border border-gray-100 shadow-xl w-[27rem] lg:flex"
-          style={{ zIndex: 1122 }}
-        >
-          <div>
-            <a
-              className={`flex gap-2 p-4 justify-start items-center w-full rounded-md DropItemHover pl-10 py-6 underline`}
-              onClick={() => {
-                setIsNavOpen(false);
-              }}
-              href="/our-work/#social-media"
-              title="social media"
-            >
-              <h5 className="capitalize text-sm w-fit font-bold">
-                {'social media'}
-              </h5>
-            </a>
-            <a
-              className={`flex gap-2 p-4 justify-start items-center w-full rounded-md DropItemHover pl-10 py-6 underline`}
-              onClick={() => {
-                setIsNavOpen(false);
-              }}
-              href="/our-work/#ad-creative"
-              title="ad creative"
-            >
-              <h5 className="capitalize text-sm w-fit font-bold">
-                {'ad creative'}
-              </h5>
-            </a>
-            <a
-              className={`flex gap-2 p-4 justify-start items-center w-full rounded-md DropItemHover pl-10 py-6 underline`}
-              onClick={() => {
-                setIsNavOpen(false);
-              }}
-              href="/our-work/#branding-logo"
-              title="branding logo"
-            >
-              <h5 className="capitalize text-sm w-fit font-bold">
-                {'branding logo'}
-              </h5>
-            </a>
-            <a
-              className={`flex gap-2 p-4 justify-start items-center w-full rounded-md DropItemHover pl-10 py-6 underline`}
-              onClick={() => {
-                setIsNavOpen(false);
-              }}
-              href="/our-work/#email-design"
-              title="email design"
-            >
-              <h5 className="capitalize text-sm w-fit font-bold">
-                {'email design'}
-              </h5>
-            </a>
-          </div>
-          <div>
-            <a
-              className={`flex gap-2 p-4 justify-start items-center w-full rounded-md DropItemHover pl-10 py-6 underline`}
-              onClick={() => {
-                setIsNavOpen(false);
-              }}
-              href="/our-work/#infographics-design"
-              title="infographics design"
-            >
-              <h5 className="capitalize text-sm w-fit font-bold">
-                {'infographics design'}
-              </h5>
-            </a>
-            <a
-              className={`flex gap-2 p-4 justify-start items-center w-full rounded-md DropItemHover pl-10 py-6 underline`}
-              onClick={() => {
-                setIsNavOpen(false);
-              }}
-              href="/our-work/#intergrated-campain"
-              title="intergrated campain"
-            >
-              <h5 className="capitalize text-sm w-fit font-bold">
-                {'intergrated campain'}
-              </h5>
-            </a>
-            <a
-              className={`flex gap-2 p-4 justify-start items-center w-full rounded-md DropItemHover pl-10 py-6 underline`}
-              onClick={() => {
-                setIsNavOpen(false);
-              }}
-              href="/our-work/#print-design"
-              title="print design"
-            >
-              <h5 className="capitalize text-sm w-fit font-bold">
-                {'print design'}
-              </h5>
-            </a>
-            <a
-              className={`flex gap-2 p-4 justify-start items-center w-full rounded-md DropItemHover pl-10 py-6 underline`}
-              onClick={() => {
-                setIsNavOpen(false);
-              }}
-              href="/our-work/#Web-design"
-              title="Web design"
-            >
-              <h5 className="capitalize text-sm w-fit font-bold">
-                {'Web design'}
-              </h5>
-            </a>
-          </div>
         </div>
       </div>
 
