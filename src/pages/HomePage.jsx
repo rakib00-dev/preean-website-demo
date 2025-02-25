@@ -38,14 +38,14 @@ const HomePage = () => {
       <Suspense fallback={<p>Loading...</p>}>
         <PickPerfectPlan />
       </Suspense>
-      <Suspense fallback={<p>Loading...</p>}>
+      {/* <Suspense fallback={<p>Loading...</p>}>
         <AutoChangeContent />
-      </Suspense>
+      </Suspense> */}
       <Suspense fallback={<p>Loading...</p>}>
         {/* <NeedDesignerSoon /> */}
         {/* <BetterSolution /> */}
         <HowItWorks />
-        <AutoChangeContent changeAlignment="flex md:flex-row-reverse md:gap-10" />
+        {/* <AutoChangeContent changeAlignment="flex md:flex-row-reverse md:gap-10" /> */}
         {/* <PowerByTechnology /> */}
         {/* <WhatWeOffer /> */}
         {/* <OurWork /> */}
