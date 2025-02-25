@@ -143,6 +143,10 @@ const AutoChangeContent = ({
                     : `md:text-xl  text-gray-400`
                 }
               `}
+              style={{
+                color: `${isFirstActive ? `#0b3558` : `#a6bbd1`}`,
+                opacity: `${isFirstActive ? `#1` : `0.4`}`,
+              }}
             >
               <img
                 src="./images/autochange/cube.png"
@@ -184,6 +188,10 @@ const AutoChangeContent = ({
                     : `md:text-xl  text-gray-400`
                 }
               `}
+              style={{
+                color: `${isSecondActive ? `#0b3558` : `#a6bbd1`}`,
+                opacity: `${isSecondActive ? `#1` : `0.4`}`,
+              }}
             >
               <img
                 src="./images/autochange/trees.png"
@@ -226,6 +234,10 @@ const AutoChangeContent = ({
                     : `md:text-xl  text-gray-400`
                 }
               `}
+              style={{
+                color: `${isThirdActive ? `#0b3558` : `#a6bbd1`}`,
+                opacity: `${isThirdActive ? `#1` : `0.4`}`,
+              }}
             >
               <img
                 src="./images/autochange/triangle.png"
@@ -267,6 +279,10 @@ const AutoChangeContent = ({
                     : `md:text-xl  text-gray-400`
                 }
               `}
+              style={{
+                color: `${isFourthActive ? `#0b3558` : `#a6bbd1`}`,
+                opacity: `${isFourthActive ? `#1` : `0.4`}`,
+              }}
             >
               <img
                 src="./images/autochange/wave.png"
@@ -308,6 +324,10 @@ const AutoChangeContent = ({
                     : `md:text-xl  text-gray-400`
                 }
               `}
+              style={{
+                color: `${isFourthActive ? `#0b3558` : `#a6bbd1`}`,
+                opacity: `${isFourthActive ? `#1` : `0.4`}`,
+              }}
             >
               <img
                 src="./images/autochange/send.png"
