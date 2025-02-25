@@ -38,14 +38,18 @@ const HomePage = () => {
       <Suspense fallback={<p>Loading...</p>}>
         <PickPerfectPlan />
       </Suspense>
-      {/* <Suspense fallback={<p>Loading...</p>}>
-        <AutoChangeContent />
-      </Suspense> */}
+      <Suspense fallback={<p>Loading...</p>}>
+        <div className="hidden md:block">
+          <AutoChangeContent />
+        </div>
+      </Suspense>
       <Suspense fallback={<p>Loading...</p>}>
         {/* <NeedDesignerSoon /> */}
         {/* <BetterSolution /> */}
         <HowItWorks />
-        {/* <AutoChangeContent changeAlignment="flex md:flex-row-reverse md:gap-10" /> */}
+        <div className="hidden md:block">
+          <AutoChangeContent changeAlignment="flex md:flex-row-reverse md:gap-10" />
+        </div>
         {/* <PowerByTechnology /> */}
         {/* <WhatWeOffer /> */}
         {/* <OurWork /> */}
