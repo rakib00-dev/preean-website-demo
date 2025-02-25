@@ -23,96 +23,96 @@ const AutoChangeContent = ({
   const [isFourthActive, setIsFourthActive] = useState(false);
   const [isFifthActive, setIsFifthActive] = useState(false);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) {
-          return 0;
-        }
-        return (prev += 1);
-      });
-    }, 90);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setProgress((prev) => {
+  //       if (prev >= 100) {
+  //         return 0;
+  //       }
+  //       return (prev += 1);
+  //     });
+  //   }, 90);
 
-    return () => clearInterval(interval);
-  }, []);
+  //   return () => clearInterval(interval);
+  // }, []);
 
-  useEffect(() => {
-    let isMounted = true; // Flag to track if the component is mounted
+  // useEffect(() => {
+  //   let isMounted = true; // Flag to track if the component is mounted
 
-    const intervalId = setInterval(() => {
-      if (!isMounted) return; // Skip state updates if component is unmounted
+  //   const intervalId = setInterval(() => {
+  //     if (!isMounted) return; // Skip state updates if component is unmounted
 
-      setTimeout(() => {
-        if (isMounted) {
-          setIsFirstActive(true);
-          setIsSecondActive(false);
-          setIsThirdActive(false);
-          setIsFourthActive(false);
-          setIsFifthActive(false);
-          setImages(imagesArr.slice(0, 1));
-        }
-      }, 3500);
+  //     setTimeout(() => {
+  //       if (isMounted) {
+  //         setIsFirstActive(true);
+  //         setIsSecondActive(false);
+  //         setIsThirdActive(false);
+  //         setIsFourthActive(false);
+  //         setIsFifthActive(false);
+  //         setImages(imagesArr.slice(0, 1));
+  //       }
+  //     }, 3500);
 
-      setTimeout(() => {
-        if (isMounted) {
-          setIsFirstActive(false);
-          setIsSecondActive(true);
-          setIsThirdActive(false);
-          setIsFourthActive(false);
-          setIsFifthActive(false);
-          setImages(imagesArr.slice(1, 2));
-        }
-      }, 7000);
+  //     setTimeout(() => {
+  //       if (isMounted) {
+  //         setIsFirstActive(false);
+  //         setIsSecondActive(true);
+  //         setIsThirdActive(false);
+  //         setIsFourthActive(false);
+  //         setIsFifthActive(false);
+  //         setImages(imagesArr.slice(1, 2));
+  //       }
+  //     }, 7000);
 
-      setTimeout(() => {
-        if (isMounted) {
-          setIsFirstActive(false);
-          setIsSecondActive(false);
-          setIsThirdActive(true);
-          setIsFourthActive(false);
-          setIsFifthActive(false);
-          setImages(imagesArr.slice(2, 3));
-        }
-      }, 10500);
+  //     setTimeout(() => {
+  //       if (isMounted) {
+  //         setIsFirstActive(false);
+  //         setIsSecondActive(false);
+  //         setIsThirdActive(true);
+  //         setIsFourthActive(false);
+  //         setIsFifthActive(false);
+  //         setImages(imagesArr.slice(2, 3));
+  //       }
+  //     }, 10500);
 
-      setTimeout(() => {
-        if (isMounted) {
-          setIsFirstActive(false);
-          setIsSecondActive(false);
-          setIsThirdActive(false);
-          setIsFourthActive(true);
-          setIsFifthActive(false);
-          setImages(imagesArr.slice(3, 4));
-        }
-      }, 14000);
+  //     setTimeout(() => {
+  //       if (isMounted) {
+  //         setIsFirstActive(false);
+  //         setIsSecondActive(false);
+  //         setIsThirdActive(false);
+  //         setIsFourthActive(true);
+  //         setIsFifthActive(false);
+  //         setImages(imagesArr.slice(3, 4));
+  //       }
+  //     }, 14000);
 
-      setTimeout(() => {
-        if (isMounted) {
-          setIsFirstActive(false);
-          setIsSecondActive(false);
-          setIsThirdActive(false);
-          setIsFourthActive(false);
-          setIsFifthActive(true);
-          setImages(imagesArr.slice(4, 5));
-        }
-      }, 17500);
-    }, 17500);
+  //     setTimeout(() => {
+  //       if (isMounted) {
+  //         setIsFirstActive(false);
+  //         setIsSecondActive(false);
+  //         setIsThirdActive(false);
+  //         setIsFourthActive(false);
+  //         setIsFifthActive(true);
+  //         setImages(imagesArr.slice(4, 5));
+  //       }
+  //     }, 17500);
+  //   }, 17500);
 
-    // Cleanup the interval when the component unmounts
-    return () => {
-      isMounted = false;
-      clearInterval(intervalId);
-    };
-  }, []);
+  //   // Cleanup the interval when the component unmounts
+  //   return () => {
+  //     isMounted = false;
+  //     clearInterval(intervalId);
+  //   };
+  // }, []);
 
   function ProgressColors({ color = 'blue' }) {
     return (
       <>
-        <Progress
+        {/* <Progress
           value={progress}
           color={color}
           className="bottom-0 bg-gray-100"
-        />
+        /> */}
       </>
     );
   }
@@ -122,7 +122,7 @@ const AutoChangeContent = ({
       <>
         <div className="w-full transition-all top-0">
           <div
-            className={`transition-all border-b py-6 grid gap-5 duration-300 w-11/12 cursor-pointer overflow-hidden  autoChangeContentClass
+            className={`transition-all border-b border-gray-300/60 py-6 grid gap-5 duration-300 w-11/12 cursor-pointer overflow-hidden  autoChangeContentClass
 
               ${isFirstActive ? 'autoChangeActive' : 'autoChangeHidden'}
             `}
@@ -167,7 +167,7 @@ const AutoChangeContent = ({
             <ProgressColors />
           </div>
           <div
-            className={`transition-all border-b py-6 grid gap-5 duration-300 w-11/12 cursor-pointer overflow-hidden  autoChangeContentClass
+            className={`transition-all border-b border-gray-300/60 py-6 grid gap-5 duration-300 w-11/12 cursor-pointer overflow-hidden  autoChangeContentClass
 
               ${isSecondActive ? 'autoChangeActive' : 'autoChangeHidden'}
             `}
@@ -213,7 +213,7 @@ const AutoChangeContent = ({
             <ProgressColors color="green" />
           </div>
           <div
-            className={`transition-all border-b py-6 grid gap-5 duration-300 w-11/12 cursor-pointer overflow-hidden  autoChangeContentClass
+            className={`transition-all border-b border-gray-300/60 py-6 grid gap-5 duration-300 w-11/12 cursor-pointer overflow-hidden  autoChangeContentClass
 
               ${isThirdActive ? 'autoChangeActive' : 'autoChangeHidden'}
             `}
@@ -258,7 +258,7 @@ const AutoChangeContent = ({
             <ProgressColors color="pink" />
           </div>
           <div
-            className={`transition-all border-b py-6 grid gap-5 duration-300 w-11/12 cursor-pointer overflow-hidden  autoChangeContentClass
+            className={`transition-all border-b border-gray-300/60 py-6 grid gap-5 duration-300 w-11/12 cursor-pointer overflow-hidden  autoChangeContentClass
 
               ${isFourthActive ? 'autoChangeActive' : 'autoChangeHidden'}
             `}
@@ -303,7 +303,7 @@ const AutoChangeContent = ({
             <ProgressColors color="purple" />
           </div>
           <div
-            className={`transition-all border-b py-6 grid gap-5 duration-300 w-11/12 cursor-pointer overflow-hidden  autoChangeContentClass
+            className={`transition-all border-b border-gray-300/60 py-6 grid gap-5 duration-300 w-11/12 cursor-pointer overflow-hidden  autoChangeContentClass
 
               ${isFifthActive ? 'autoChangeActive' : 'autoChangeHidden'}
             `}
