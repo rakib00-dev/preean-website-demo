@@ -44,6 +44,19 @@ export default OurWorkPage;
 const WorkNavigation = () => {
   const [isOurWorkHovered, setIsOurWorkHovered] = useState(false);
 
+  const cssStyle = {
+    blur: {
+      position: 'absolute',
+      height: '100%',
+      left: 0,
+      width: '100%',
+      background: '#ffffff42',
+      filter: 'blur(42px)',
+      zIndex: '-1',
+      backdropFilter: 'blur(2px)',
+    },
+  };
+
   return (
     <>
       {/* our work drop down large screen*/}
@@ -54,7 +67,7 @@ const WorkNavigation = () => {
         onMouseOut={() => setIsOurWorkHovered(false)}
       >
         <div
-          className="flex cursor-pointer justify-center items-center gap-2 rounded bg-blue-200/80 p-2"
+          className="flex relative cursor-pointer justify-center items-center gap-2 rounded bg-blue-200/60 p-2 overflow-hidden"
           onMouseOver={() => setIsOurWorkHovered(true)}
           onMouseOut={() => setIsOurWorkHovered(false)}
           onClick={() => setIsOurWorkHovered((prev) => !prev)}
@@ -65,6 +78,7 @@ const WorkNavigation = () => {
               isOurWorkHovered ? `rotate-180 transition-all` : 'transition-all'
             }
           />
+          <div className={''} style={cssStyle.blur}></div>
         </div>
 
         <div
@@ -196,7 +210,7 @@ const WorkNavigation = () => {
         style={{ zIndex: 11 }}
       >
         <div
-          className="flex cursor-pointer justify-center items-center gap-2 rounded bg-blue-200/80 p-2"
+          className="flex cursor-pointer relative justify-center items-center gap-2 rounded bg-blue-200/60 p-2 overflow-hidden"
           onClick={() => setIsOurWorkHovered((prev) => !prev)}
         >
           <h5>Navigate Works</h5>{' '}
@@ -205,6 +219,7 @@ const WorkNavigation = () => {
               isOurWorkHovered ? `rotate-180 transition-all` : 'transition-all'
             }
           />
+          <div className={''} style={cssStyle.blur}></div>
         </div>
 
         <div
