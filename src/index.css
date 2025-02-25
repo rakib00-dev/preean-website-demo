@@ -308,7 +308,7 @@ h5 {
 
 /* autoChangeContent ⬇️ */
 .autoChangeContentClass {
-  transition: 0.7s ease-in-out;
+  transition: 3s ease;
 }
 
 .autoChangeContentClass.autoChangeActive {

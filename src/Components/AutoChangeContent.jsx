@@ -122,7 +122,7 @@ const AutoChangeContent = ({
       <>
         <div className="w-full transition-all top-0">
           <div
-            className={`transition-all border-b border-gray-300/60 py-6 grid gap-5 duration-300 w-11/12 cursor-pointer overflow-hidden  autoChangeContentClass
+            className={`transition-all relative border-b border-gray-300/60 py-6 grid gap-5 duration-300 w-11/12 cursor-pointer overflow-hidden autoChangeContentClass
 
               ${isFirstActive ? 'autoChangeActive' : 'autoChangeHidden'}
             `}
