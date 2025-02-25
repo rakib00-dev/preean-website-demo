@@ -145,7 +145,7 @@ const AutoChangeContent = ({
               `}
               style={{
                 color: `${isFirstActive ? `#0b3558` : `#a6bbd1`}`,
-                opacity: `${isFirstActive ? `#1` : `0.4`}`,
+                opacity: `${isFirstActive ? `` : `0.4`}`,
               }}
             >
               <img
@@ -190,7 +190,7 @@ const AutoChangeContent = ({
               `}
               style={{
                 color: `${isSecondActive ? `#0b3558` : `#a6bbd1`}`,
-                opacity: `${isSecondActive ? `#1` : `0.4`}`,
+                opacity: `${isSecondActive ? `` : `0.4`}`,
               }}
             >
               <img
@@ -236,7 +236,7 @@ const AutoChangeContent = ({
               `}
               style={{
                 color: `${isThirdActive ? `#0b3558` : `#a6bbd1`}`,
-                opacity: `${isThirdActive ? `#1` : `0.4`}`,
+                opacity: `${isThirdActive ? `` : `0.4`}`,
               }}
             >
               <img
@@ -281,7 +281,7 @@ const AutoChangeContent = ({
               `}
               style={{
                 color: `${isFourthActive ? `#0b3558` : `#a6bbd1`}`,
-                opacity: `${isFourthActive ? `#1` : `0.4`}`,
+                opacity: `${isFourthActive ? `` : `0.4`}`,
               }}
             >
               <img
@@ -325,8 +325,8 @@ const AutoChangeContent = ({
                 }
               `}
               style={{
-                color: `${isFourthActive ? `#0b3558` : `#a6bbd1`}`,
-                opacity: `${isFourthActive ? `#1` : `0.4`}`,
+                color: `${isFifthActive ? `#0b3558` : `#a6bbd1`}`,
+                opacity: `${isFifthActive ? `` : `0.4`}`,
               }}
             >
               <img
