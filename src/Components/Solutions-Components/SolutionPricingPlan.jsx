@@ -67,7 +67,7 @@ const Card = ({
           <h5 className={`text-5xl font-extrabold`}>
             <span className={`${priceColor}`}>
               ${price}
-              <span className="text-xl">/wk</span>
+              <span className="text-xl">/mo</span>
             </span>
           </h5>
         </div>

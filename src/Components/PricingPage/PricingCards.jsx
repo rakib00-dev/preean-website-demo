@@ -26,7 +26,7 @@ const PricingCards = () => {
                   setIsThirdBtnActive(false);
                 }}
               >
-                weekly
+                monthly
               </button>
               <button
                 className={
@@ -40,7 +40,7 @@ const PricingCards = () => {
                   setIsThirdBtnActive(false);
                 }}
               >
-                monthly
+                quarterly
                 <img
                   loading="lazy"
                   src="./images/ourpricingpage/card-images/save-10.svg"
@@ -66,7 +66,7 @@ const PricingCards = () => {
                   setIsThirdBtnActive(true);
                 }}
               >
-                quarterly
+                annually
                 <img
                   loading="lazy"
                   src="./images/ourpricingpage/card-images/save-20.svg"
@@ -270,7 +270,8 @@ const PricingCard = ({
             <h5 className=" font-extrabold text-2xl pt-1">{title}</h5>
             <p className="text-sm font-medium text-gray-500">{description}</p>
             <h5 className={`text-3xl mt-7 font-extrabold text-${priceColor}`}>
-              ${price}/wk
+              ${price}
+              <span className="text-lg">/mo</span>
             </h5>
             <div className="grid place-items-center my-5 gap-4 w-full overflow-hidden">
               <Link

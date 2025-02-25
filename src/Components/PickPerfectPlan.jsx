@@ -63,7 +63,7 @@ const PickPerfectPlan = () => {
                   setIsThirdBtnActive(false);
                 }}
               >
-                weekly
+                monthly
               </button>
               <button
                 className={
@@ -77,7 +77,7 @@ const PickPerfectPlan = () => {
                   setIsThirdBtnActive(false);
                 }}
               >
-                monthly
+                quarterly
                 <img
                   loading="lazy"
                   src="./images/ourpricingpage/card-images/save-10.svg"
@@ -103,7 +103,7 @@ const PickPerfectPlan = () => {
                   setIsThirdBtnActive(true);
                 }}
               >
-                quarterly
+                annually
                 <img
                   loading="lazy"
                   src="./images/ourpricingpage/card-images/save-20.svg"
@@ -284,7 +284,8 @@ const HomePagePricing = ({
           <h5 className={`font-extrabold ${titleSize}`}>{title}</h5>
           <p className={`text-lg text-${descColor}`}>{description}</p>
           <h5 className={`text-3xl mt-8 font-extrabold text-${priceColor}`}>
-            ${price}/wk
+            ${price}
+            <span className="text-lg">/mo</span>
           </h5>
         </div>
         <div className="grid w-full place-items-center mb-5">
