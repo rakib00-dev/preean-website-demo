@@ -39,17 +39,13 @@ const HomePage = () => {
         <PickPerfectPlan />
       </Suspense>
       <Suspense fallback={<p>Loading...</p>}>
-        <div className="hidden md:block">
-          <AutoChangeContent />
-        </div>
+        <AutoChangeContent />
       </Suspense>
       <Suspense fallback={<p>Loading...</p>}>
         {/* <NeedDesignerSoon /> */}
         {/* <BetterSolution /> */}
         <HowItWorks />
-        <div className="hidden md:block">
-          <AutoChangeContent changeAlignment="flex md:flex-row-reverse md:gap-10" />
-        </div>
+        <AutoChangeContent changeAlignment="flex md:flex-row-reverse md:gap-10" />
         {/* <PowerByTechnology /> */}
         {/* <WhatWeOffer /> */}
         {/* <OurWork /> */}
