@@ -85,7 +85,7 @@ const OurWorkSamples = ({
             ))}
       </div>
       <div className="flex justify-center items-center mx-auto mt-10 mb-6 w-full">
-        <Link to={'/book-a-call'}>
+        <Link to={'/contact'}>
           <Button
             text={'Get Started'}
             className={

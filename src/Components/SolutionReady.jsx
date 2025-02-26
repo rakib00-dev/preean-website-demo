@@ -8,10 +8,16 @@ const SolutionReady = () => {
           Ready to work with us?
         </h3>
         <div className="grid gap-4 md:grid-cols-2">
-          <Link className="transition-all duration-300 text-white font-bold bg-blue-500 px-4 py-2 rounded-md hover:bg-blue-700">
+          <Link
+            to={'/contact'}
+            className="transition-all duration-300 text-white font-bold bg-blue-500 px-4 py-2 rounded-md hover:bg-blue-700"
+          >
             Get Started
           </Link>
-          <Link className="font-bold px-4 py-2 border rounded-md text-[#0b3558c9]">
+          <Link
+            to={'/book-a-call'}
+            className="font-bold px-4 py-2 border rounded-md text-[#0b3558c9]"
+          >
             Book A Call
           </Link>
         </div>

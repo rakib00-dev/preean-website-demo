@@ -9,23 +9,23 @@ const ClientReview = () => {
   const [isThirdClicked, setIsThirdClicked] = useState(false);
   const [isFourthClicked, setIsFourthClicked] = useState(false);
 
-  const handleSelect = (e) => {
-    if (client) {
-      console.log(e.target[0].value);
-      if (e.target.value === e.target[0].value) {
-        setClient(clientArr.slice(0, 1));
-      }
-      if (e.target.value === e.target[1].value) {
-        setClient(clientArr.slice(1, 2));
-      }
-      if (e.target.value === e.target[2].value) {
-        return setClient(clientArr.slice(2, 3));
-      }
-      if (e.target.value === e.target[3].value) {
-        return setClient(clientArr.slice(3, 4));
-      }
-    }
-  };
+  // const handleSelect = (e) => {
+  //   if (client) {
+  //     console.log(e.target[0].value);
+  //     if (e.target.value === e.target[0].value) {
+  //       setClient(clientArr.slice(0, 1));
+  //     }
+  //     if (e.target.value === e.target[1].value) {
+  //       setClient(clientArr.slice(1, 2));
+  //     }
+  //     if (e.target.value === e.target[2].value) {
+  //       return setClient(clientArr.slice(2, 3));
+  //     }
+  //     if (e.target.value === e.target[3].value) {
+  //       return setClient(clientArr.slice(3, 4));
+  //     }
+  //   }
+  // };
 
   return (
     <motion.section
@@ -40,83 +40,114 @@ const ClientReview = () => {
     >
       <div className="mx-2 md:mx-10">
         {/* selection */}
-        <div className=" mx-auto grid place-items-center my-6 w-full md:hidden">
-          <select
-            name="type"
-            id="type"
-            className="bg-gray-100 text-md py-4 px-8 rounded-md"
-            onChange={handleSelect}
+        <div className="mx-auto flex flex-col justify-center mt-6 w-full md:flex-row">
+          <button
+            className={
+              isFirstClicked
+                ? `capitalize px-4 md:px-20 border-b-2 py-3 md:py-8 cursor-pointer border-b-blue-400 text-blue-400`
+                : 'capitalize px-4 md:px-20 border-b-2 border-b-gray-200 filter brightness-100 -invert-50 saturate-0 py-3 md:py-8 cursor-pointer'
+            }
+            onClick={() => {
+              setClient(clientArr.slice(0, 1));
+              setIsFirstClicked(true);
+              setIsSecondClicked(false);
+              setIsThirdClicked(false);
+              setIsFourthClicked(false);
+            }}
           >
-            <option value="agencies">Agencies</option>
-            <option value="marketing">Marketing teams</option>
-
-            <option value="entrepreneurs">Entrepreneurs</option>
-          </select>
+            <img
+              src="/images/clientreview/company-1.svg"
+              alt=""
+              loading="lazy"
+              className="w-15 h-15 md:h-auto md:w-auto"
+            />
+          </button>
+          <button
+            className={
+              isSecondClicked
+                ? `capitalize px-4 md:px-20 border-b-2 py-3 md:py-8 cursor-pointer border-b-blue-400 text-blue-400`
+                : 'capitalize px-4 md:px-20 border-b-2 border-b-gray-200 filter brightness-100 -invert-50 saturate-0 py-3 md:py-8 cursor-pointer'
+            }
+            onClick={() => {
+              setClient(clientArr.slice(1, 2));
+              setIsFirstClicked(false);
+              setIsSecondClicked(true);
+              setIsThirdClicked(false);
+              setIsFourthClicked(false);
+            }}
+          >
+            <img
+              src="/images/clientreview/company-2.svg"
+              alt=""
+              loading="lazy"
+              className="w-15 h-15 md:h-auto md:w-auto"
+            />
+          </button>
+          <button
+            className={
+              isThirdClicked
+                ? `capitalize px-4 md:px-20 border-b-2 py-3 md:py-8 cursor-pointer border-b-blue-400 text-blue-400`
+                : 'capitalize px-4 md:px-20 border-b-2 border-b-gray-200 filter brightness-100 -invert-50 saturate-0 py-3 md:py-8 cursor-pointer'
+            }
+            onClick={() => {
+              setClient(clientArr.slice(2, 3));
+              setIsFirstClicked(false);
+              setIsSecondClicked(false);
+              setIsThirdClicked(true);
+              setIsFourthClicked(false);
+            }}
+          >
+            <img
+              src="/images/clientreview/company-3.svg"
+              alt=""
+              loading="lazy"
+              className="w-15 h-15 md:h-auto md:w-auto"
+            />
+          </button>
+          <button
+            className={
+              isFourthClicked
+                ? `capitalize px-4 md:px-20 border-b-2 py-3 md:py-8 cursor-pointer border-b-blue-400 text-blue-400`
+                : 'capitalize px-4 md:px-20 border-b-2 border-b-gray-200 filter brightness-100 -invert-50 saturate-0 py-3 md:py-8 cursor-pointer'
+            }
+            onClick={() => {
+              setClient(clientArr.slice(3, 4));
+              setIsFirstClicked(false);
+              setIsSecondClicked(false);
+              setIsThirdClicked(false);
+              setIsFourthClicked(true);
+            }}
+          >
+            <img
+              src="/images/clientreview/company-4.svg"
+              alt=""
+              loading="lazy"
+              className="w-15 h-15 md:h-auto md:w-auto"
+            />
+          </button>
         </div>
 
         {client.map((e, i) => (
-          <div className="grid gap-4 md:grid-cols-2 md:gap-15" key={i}>
-            {/* client img */}
-            <div className=" w-full">
-              <img src={e.img} alt={e.thought} loading="lazy" />
+          <section
+            className="w-full my-12 p-4 md:px-10 max-w-7xl mx-auto"
+            key={i}
+          >
+            <div className="grid gap-10 p-4 md:p-14 bg-white shadow-2xl rounded-2xl">
+              <p className="md:text-2xl">{e.thought}</p>
+              <div className="flex gap-4 items-center">
+                <img
+                  src={e.img}
+                  alt={e.thought}
+                  loading="lazy"
+                  className="w-20 rounded-full"
+                />
+                <div className="grid gap-2">
+                  <h5 className="text-lg">{e.name}</h5>
+                  <p>{e.position}</p>
+                </div>
+              </div>
             </div>
-            {/* about him/her */}
-            <article className="grid gap-3 md:flex md:flex-col md:mt-10">
-              <div className="hidden capitalize text-lg font-bold  justify-center items-center gap-10 my-6 md:flex">
-                <button
-                  className={
-                    isFirstClicked
-                      ? `capitalize border-b-2 py-2 cursor-pointer border-b-blue-400 text-blue-400`
-                      : 'capitalize border-b-2 border-b-gray-200 py-2 cursor-pointer'
-                  }
-                  onClick={() => {
-                    setClient(clientArr.slice(0, 1));
-                    setIsFirstClicked(true);
-                    setIsSecondClicked(false);
-                    setIsThirdClicked(false);
-                  }}
-                >
-                  agencies
-                </button>
-                <button
-                  className={
-                    isSecondClicked
-                      ? `capitalize border-b-2 py-2 cursor-pointer border-b-blue-400 text-blue-400`
-                      : 'capitalize border-b-2 border-b-gray-200 py-2 cursor-pointer'
-                  }
-                  onClick={() => {
-                    setClient(clientArr.slice(1, 2));
-                    setIsFirstClicked(false);
-                    setIsSecondClicked(true);
-                    setIsThirdClicked(false);
-                  }}
-                >
-                  marketing teams
-                </button>
-                <button
-                  className={
-                    isThirdClicked
-                      ? `capitalize border-b-2 py-2 cursor-pointer border-b-blue-400 text-blue-400`
-                      : 'capitalize border-b-2 border-b-gray-200 py-2 cursor-pointer'
-                  }
-                  onClick={() => {
-                    setClient(clientArr.slice(2, 3));
-                    setIsFirstClicked(false);
-                    setIsSecondClicked(false);
-                    setIsThirdClicked(true);
-                  }}
-                >
-                  entrepreneurs
-                </button>
-              </div>
-              <p className="md:text-xl md:mb-5">{e.thought}</p>
-              <div className="leading-10 md:grid md:gap-2">
-                <h5 className="text-xl font-extrabold">{e.name}</h5>
-                <p className="md:text-xl">{e.position}</p>
-                <img src={e.group} alt={e.position} loading="lazy" />
-              </div>
-            </article>
-          </div>
+          </section>
         ))}
       </div>
     </motion.section>

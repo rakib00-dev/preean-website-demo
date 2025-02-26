@@ -31,12 +31,12 @@ const SendReqSection = ({ title, button }) => {
             button
           ) : (
             <div className="flex flex-col mb-15 gap-5 md:mb-0 md:flex-row">
-              <a href="">
+              <Link to="/contact">
                 <Button
                   text={'Get Started'}
                   className={'text-white hover:bg-white hover:text-black'}
                 />
-              </a>
+              </Link>
               <Link to="/book-a-call">
                 <Button
                   text={'Book A Call'}

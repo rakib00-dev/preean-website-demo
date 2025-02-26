@@ -61,6 +61,12 @@ const Navbar = () => {
             }
           />
         </ListItem>
+        <ListItem
+          navLink="/contact"
+          className={'capitalize  text-sm sm:font-bold'}
+        >
+          contact
+        </ListItem>
       </>
     );
   };
@@ -223,6 +229,20 @@ const Navbar = () => {
             /> */}
           </div>
         </div>
+
+        <ListItem
+          navLink="/contact"
+          smallClassName={({ isActive }) =>
+            isActive
+              ? `capitalize text-blue-500 sm:font-bold `
+              : `capitalize  sm:font-bold `
+          }
+          onclick={() => {
+            setIsNavOpen((prev) => !prev);
+          }}
+        >
+          contact
+        </ListItem>
       </>
     );
   };
@@ -391,14 +411,14 @@ const Navbar = () => {
             <div id="contact">
               <div className="flex flex-row gap-4 justify-end pr-16 sm:flex lg:pr-0">
                 <Link
-                  to="/#"
-                  className="transition-all px-7 py-3 text-blue-500 border border-blue-500 rounded-md font-medium text-dark hover:text-white hover:bg-blue-300"
+                  to="/contact"
+                  className="transition-all duration-200 px-7 py-3 text-blue-500 border border-blue-500 rounded-md font-medium text-dark hover:text-white hover:bg-blue-300"
                 >
-                  Sign in
+                  Get Started
                 </Link>
                 <Link
                   to="/book-a-call"
-                  className="transition-all rounded-md bg-blue-500 px-7 py-3 text-base font-medium text-white hover:bg-blue-500/90"
+                  className="transition-all duration-200 rounded-md bg-blue-500 px-7 py-3 text-base font-medium text-white hover:bg-blue-500/90"
                 >
                   Book A Call
                 </Link>
@@ -528,17 +548,17 @@ const Navbar = () => {
           <ul className="flex justify-start items-start flex-col leading-8">
             <NavListsSmallScreen />
             <div className="flex flex-col-reverse gap-4 justify-end pr-16 sm:flex lg:pr-0">
-              <Link
+              {/* <Link
                 to="/#"
                 className="rounded-md px-7 text-center py-3 text-base font-medium text-blue-500 hover:bg-blue-500/90"
               >
                 Sign Up
-              </Link>
+              </Link> */}
               <Link
-                to="/#"
-                className="px-7 py-3 text-center text-blue-500 border border-blue-500 rounded-md font-medium text-dark hover:text-blue-500"
+                to="/contact"
+                className="transition-all duration-200 px-7 py-3 text-center text-blue-500 border border-blue-500 rounded-md font-medium text-dark hover:text-blue-500 hover:bg"
               >
-                Sign in
+                Get Started
               </Link>
               <Link
                 to="/book-a-call"

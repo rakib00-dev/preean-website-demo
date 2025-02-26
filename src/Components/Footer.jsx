@@ -69,6 +69,7 @@ const Footer = () => {
               <NavLink link="/#" label="Our Services" />
               <NavLink link="/#" label="Know Our Team" />
               <NavLink link="/#" label="Sign in" />
+              <NavLink link="/contact" label="Get Started" />
             </LinkGroup>
 
             <div className="w-full px-4 sm:w-1/2 lg:w-3/12">

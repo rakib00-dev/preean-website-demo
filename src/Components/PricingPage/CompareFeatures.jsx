@@ -358,13 +358,13 @@ const CompareFeatures = () => {
           />
           <div className="relative flex gap-2 my-4">
             <Link
-              to={''}
+              to={'/contact'}
               className="bg-blue-950 text-white py-4 px-7 text-sm font-bold rounded"
             >
               Get Started
             </Link>
             <Link
-              to={''}
+              to={'/contact'}
               className="bg-blue-950 text-white py-4 px-7 text-sm font-bold rounded"
             >
               Get Started
@@ -422,13 +422,13 @@ const CompareFeatures = () => {
           />
           <div className="relative flex gap-2 my-4">
             <Link
-              to={''}
+              to={'/contact'}
               className="bg-blue-950 text-white py-4 px-7 text-sm font-bold rounded"
             >
               Get Started
             </Link>
             <Link
-              to={''}
+              to={'/contact'}
               className="bg-blue-950 text-white py-4 px-7 text-sm font-bold rounded"
             >
               Get Started
@@ -486,13 +486,13 @@ const CompareFeatures = () => {
           />
           <div className="relative flex gap-2 my-4">
             <Link
-              to={''}
+              to={'/contact'}
               className="bg-blue-950 text-white py-4 px-7 text-sm font-bold rounded"
             >
               Get Started
             </Link>
             <Link
-              to={''}
+              to={'/contact'}
               className="bg-blue-950 text-white py-4 px-7 text-sm font-bold rounded"
             >
               Get Started
@@ -591,13 +591,13 @@ const CompareFeatures = () => {
           />
           <div className="relative flex gap-2 my-4">
             <Link
-              to={''}
+              to={'/contact'}
               className="bg-blue-950 text-white py-4 px-7 text-sm font-bold rounded"
             >
               Get Started
             </Link>
             <Link
-              to={''}
+              to={'/contact'}
               className="bg-blue-950 text-white py-4 px-7 text-sm font-bold rounded"
             >
               Get Started
@@ -655,13 +655,13 @@ const CompareFeatures = () => {
           />
           <div className="relative flex gap-2 my-4">
             <Link
-              to={''}
+              to={'/contact'}
               className="bg-blue-950 text-white py-4 px-7 text-sm font-bold rounded"
             >
               Get Started
             </Link>
             <Link
-              to={''}
+              to={'/contact'}
               className="bg-blue-950 text-white py-4 px-7 text-sm font-bold rounded"
             >
               Get Started
@@ -719,13 +719,13 @@ const CompareFeatures = () => {
           />
           <div className="relative flex gap-2 my-4">
             <Link
-              to={''}
+              to={'/contact'}
               className="bg-blue-950 text-white py-4 px-7 text-sm font-bold rounded"
             >
               Get Started
             </Link>
             <Link
-              to={''}
+              to={'/contact'}
               className="bg-blue-950 text-white py-4 px-7 text-sm font-bold rounded"
             >
               Get Started
@@ -769,7 +769,7 @@ const MainRow = ({
           {btnBg ? (
             <div className="grid place-items-center my-5 gap-4 w-full overflow-hidden">
               <Link
-                to={'/book-a-call'}
+                to={'/contact'}
                 className={`transition-all duration-200 text-white text-md font-semibold ${btnBg} py-2 px-7 rounded-md`}
               >
                 Get Started

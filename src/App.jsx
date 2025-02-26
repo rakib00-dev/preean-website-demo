@@ -7,6 +7,7 @@ import VideoEditingPage from './pages/VideoEditingPage';
 import MotioinGraphicsPage from './pages/MotioinGraphicsPage';
 import PresentationDesignPage from './pages/PresentationDesignPage';
 
+const ContactPage = React.lazy(() => import('./pages/ContactPage'));
 const DesignBlogsPage = React.lazy(() => import('./pages/DesignBlogsPage'));
 const GuidesPage = React.lazy(() => import('./pages/GuidesPage'));
 const WatchDemosPage = React.lazy(() => import('./pages/WatchDemosPage'));
@@ -74,6 +75,14 @@ function App() {
           element: (
             <Suspense fallback={<p>Loading...</p>}>
               <VideoEditingPage />
+            </Suspense>
+          ),
+        },
+        {
+          path: '/contact',
+          element: (
+            <Suspense fallback={<p>Loading...</p>}>
+              <ContactPage />
             </Suspense>
           ),
         },

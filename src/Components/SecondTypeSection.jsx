@@ -103,7 +103,7 @@ const SecondTypeSection = ({
         {btnChild ? (
           btnChild
         ) : (
-          <Link to="/book-a-call" className="my-5">
+          <Link to="/contact" className="my-5">
             <Button text={'Get Started'} className={'text-white'} />
           </Link>
         )}

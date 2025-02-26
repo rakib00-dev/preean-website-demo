@@ -201,6 +201,7 @@ const FilterCardPackage = ({
         price={thirdPrice}
         feature1stList="1 Designated Designer"
         feature2stList="Same-Day Delivery"
+        to="/book-a-call"
         btnText="Book A Call"
         priceColor="black text-extrabold"
         featureLockColor="black"
@@ -218,6 +219,7 @@ const FilterCardPackage = ({
         title="Enterprise"
         description="For large companies."
         price={fourthPrice}
+        to="/book-a-call"
         btnText="Book A Call"
         priceColor="black text-extrabold"
         feature1stList="2 Designated Designer"
@@ -247,6 +249,7 @@ const PricingCard = ({
   bgColor = 'bg-white',
   priceColor = 'blue-500',
   thirdChild,
+  to = '/contact',
   btnText = 'Get Started',
   btnColor = 'bg-blue-500 hover:bg-blue-400',
   children,
@@ -275,7 +278,7 @@ const PricingCard = ({
             </h5>
             <div className="grid place-items-center my-5 gap-4 w-full overflow-hidden">
               <Link
-                to={'/book-a-call'}
+                to={to}
                 className={`transition-all duration-200 text-white md:text-lg font-semibold ${btnColor} py-3 px-18 rounded-xl`}
               >
                 {btnText}
