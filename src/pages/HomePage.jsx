@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react';
 import SolutionHeader from '../Components/Solutions-Components/OldSolutionHeader';
+import PricingFaq from '../Components/PricingPage/PricingFaq';
 // const BetterSolution = React.lazy(() => import('../Components/BetterSolution'));
 const AutoChangeContent = React.lazy(() =>
   import('../Components/AutoChangeContent')
@@ -24,7 +25,7 @@ const SolutionHomeSection = React.lazy(() =>
   import('../Components/SolutionHomeSection')
 );
 const SendReqSection = React.lazy(() => import('../Components/SendReqSection'));
-const WallOfLove = React.lazy(() => import('../Components/WallOfLove'));
+// const WallOfLove = React.lazy(() => import('../Components/WallOfLove'));
 const WhatWeOffer = React.lazy(() => import('../Components/WhatWeOffer'));
 
 const HomePage = () => {
@@ -50,7 +51,8 @@ const HomePage = () => {
         {/* <WhatWeOffer /> */}
         {/* <OurWork /> */}
         <OurTools />
-        <WallOfLove />
+        {/* <WallOfLove /> */}
+        <PricingFaq />
         <ClientReview />
         <SendReqSection />
       </Suspense>

@@ -20,4 +20,11 @@ export const clientArr = [
     position: 'Founder & CEO, Marani Consulting',
     group: './images/clientreview/client3group.svg',
   },
+  {
+    img: './images/clientreview/client3.avif',
+    thought: `“The potential upside is so big. Your stuff could look good, it could land you bigger clients, and you could just have your entire brand be better. It’s a very low risk - high reward, so go ahead and just do it.”`,
+    name: 'Itamar Marani',
+    position: 'Founder & CEO, Marani Consulting',
+    group: './images/clientreview/client3group.svg',
+  },
 ];

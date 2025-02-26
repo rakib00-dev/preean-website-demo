@@ -7,6 +7,7 @@ const ClientReview = () => {
   const [isFirstClicked, setIsFirstClicked] = useState(true);
   const [isSecondClicked, setIsSecondClicked] = useState(false);
   const [isThirdClicked, setIsThirdClicked] = useState(false);
+  const [isFourthClicked, setIsFourthClicked] = useState(false);
 
   const handleSelect = (e) => {
     if (client) {
@@ -19,6 +20,9 @@ const ClientReview = () => {
       }
       if (e.target.value === e.target[2].value) {
         return setClient(clientArr.slice(2, 3));
+      }
+      if (e.target.value === e.target[3].value) {
+        return setClient(clientArr.slice(3, 4));
       }
     }
   };
