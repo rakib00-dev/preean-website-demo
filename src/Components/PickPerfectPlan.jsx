@@ -163,7 +163,7 @@ const MonthlyCards = () => {
         price="325"
         title="Designated Designer"
         titleSize="text-[19px]"
-        borderColor="[#0099f6]"
+        borderColor="blue-500"
         description="Collaborate in real time with your designer."
         btnColor="bg-blue-500 hover:bg-blue-400"
       />
@@ -202,7 +202,7 @@ const QuarterlyCards = () => {
         price="293"
         title="Designated Designer"
         titleSize="text-[19px]"
-        borderColor="[#0099f6]"
+        borderColor="blue-500"
         description="Collaborate in real time with your designer."
         btnColor="bg-blue-500 hover:bg-blue-400"
       />
@@ -241,7 +241,7 @@ const AnnuallyCards = () => {
         price="250"
         title="Designated Designer"
         titleSize="text-[19px]"
-        borderColor="[#0099f6]"
+        borderColor="blue-500"
         description="Collaborate in real time with your designer."
         btnColor="bg-blue-500 hover:bg-blue-400"
       />
