@@ -29,12 +29,12 @@ const SendReqSection = ({ title, button }) => {
             }
           />
         </div>
-        <div className="w-full relative text-center py-6 rounded-md flex-col gap-10 leading-10 bg-[#f0f3f8] h-auto justify-center items-center md:flex ">
+        <div className="w-full relative text-center py-4 md:py-6 rounded-md flex-col gap-10 leading-10 bg-[#f0f3f8] h-auto justify-center items-center md:flex ">
           {title ? (
             title
           ) : (
             <h1
-              className="text-xl px-8 mt-15 mb-4 font-extrabold md:text-4xl xl:text-6xl"
+              className="text-2xl px-2 md:px-8 mt-15 mb-4 font-extrabold md:text-4xl xl:text-6xl"
               style={{ color: 'black' }}
             >
               {' '}
