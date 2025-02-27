@@ -117,7 +117,7 @@ const ImagesAndLinks = ({
       <img
         src={src}
         alt={alt}
-        className={`p-6 shadow-md border border-gray-200 w-20 rounded-xl md:w-22 ${imgClassName}`}
+        className={`transition-all duration-200 p-6 shadow-md border border-gray-200 w-20 rounded-xl md:w-22 hover:scale-110 hover:shadow-xl ${imgClassName}`}
         loading="lazy"
         title={alt}
       />
