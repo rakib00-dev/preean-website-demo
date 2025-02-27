@@ -21,7 +21,7 @@ const Hero = ({
         }}
         className={`md:mx-auto w-full my-6 md:my-0 mx-0 md:mb-10 pb-20 md:pb-40 max-w-7xl items-center overflow-hidden  `}
       >
-        <div className="relative flex mx-2 py-20 flex-col-reverse top-0 justify-center items-center md:flex-row-reverse md:mx-10 ">
+        <div className="relative flex mx-2 md:py-20 flex-col-reverse top-0 justify-center items-center md:flex-row-reverse md:mx-10 ">
           <div
             className={`mx-auto grid place-items-center top-0 mt-44 mb-50 w-full cursor-pointer md:mt-20 md:mb-20 ${largeScreenImg}`}
           >
