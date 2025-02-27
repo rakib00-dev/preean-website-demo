@@ -202,7 +202,7 @@ h5 {
   }
 }
 
-/* bg shape animation */
+/* hero bg shape animation */
 .dumbbellShapeAnima {
   animation: 20s infinite dumbbell;
 }
@@ -374,3 +374,100 @@ h5 {
   @apply h-20;
 } */
 /* autoChangeContent ⬆️ */
+
+/* send request section ⬇️ */
+.SendRedDumbbellShapeAnima {
+  animation: 10s infinite sendReqDumbbell;
+}
+
+.SendRedTriangleShapeAnima {
+  animation: 10s infinite sendReqTriangle;
+}
+
+@keyframes sendReqDumbbell {
+  0% {
+    transform: rotate(90deg) translateX(-60px);
+  }
+  50% {
+    transform: rotate(165deg) translateX(10px);
+  }
+  100% {
+    transform: rotate(90deg) translateX(-60px);
+  }
+}
+
+@keyframes sendReqTriangle {
+  0% {
+    transform: rotate(180deg) translateX(-90px);
+  }
+  50% {
+    transform: rotate(165deg) translateX(10px);
+  }
+  100% {
+    transform: rotate(180deg) translateX(-90px);
+  }
+}
+.SendRedDumbbellShapeAnima {
+  animation: 10s infinite sendReqDumbbell;
+}
+
+.SendRedTriangleShapeAnima {
+  animation: 10s infinite sendReqTriangle;
+}
+
+@keyframes sendReqDumbbell {
+  0% {
+    transform: rotate(90deg) translateX(-60px);
+  }
+  50% {
+    transform: rotate(165deg) translateX(10px);
+  }
+  100% {
+    transform: rotate(90deg) translateX(-60px);
+  }
+}
+
+@keyframes sendReqTriangle {
+  0% {
+    transform: rotate(180deg) translateX(-90px);
+  }
+  50% {
+    transform: rotate(165deg) translateX(10px);
+  }
+  100% {
+    transform: rotate(180deg) translateX(-90px);
+  }
+}
+
+.SendRedDumbbellShapeAnima2 {
+  animation: 12s infinite sendReqDumbbell2;
+}
+
+.SendRedTriangleShapeAnima3 {
+  animation: 14s infinite sendReqTriangle2;
+}
+
+@keyframes sendReqDumbbell2 {
+  0% {
+    transform: rotate(90deg) translateX(-60px);
+  }
+  50% {
+    transform: rotate(165deg) translateX(10px);
+  }
+  100% {
+    transform: rotate(90deg) translateX(-60px);
+  }
+}
+
+@keyframes sendReqTriangle2 {
+  0% {
+    transform: rotate(180deg) translateX(-90px);
+  }
+  50% {
+    transform: rotate(165deg) translateX(10px);
+  }
+  100% {
+    transform: rotate(180deg) translateX(-90px);
+  }
+}
+/* send request section ⬆️ */
