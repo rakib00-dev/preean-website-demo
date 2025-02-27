@@ -373,14 +373,46 @@ h5 {
 .AutoChangeContent.Hidden {
   @apply h-20;
 } */
+.AutoSectionDumbbellShapeAnima {
+  animation: 10s infinite autoSectionDumbbell;
+}
+
+.AutoSectionTriangleShapeAnima {
+  animation: 10s infinite autoSectionTriangle;
+}
+
+@keyframes autoSectionDumbbell {
+  0% {
+    transform: rotate(180deg) translateX(-190px);
+  }
+  50% {
+    transform: rotate(165deg) translateX(70px);
+  }
+  100% {
+    transform: rotate(180deg) translateX(-190px);
+  }
+}
+
+@keyframes autoSectionTriangle {
+  0% {
+    transform: rotate(180deg) translateX(190px);
+  }
+  50% {
+    transform: rotate(165deg) translateX(-10px);
+  }
+  100% {
+    transform: rotate(180deg) translateX(190px);
+  }
+}
+
 /* autoChangeContent ⬆️ */
 
 /* send request section ⬇️ */
-.SendRedDumbbellShapeAnima {
+.SendReqDumbbellShapeAnima {
   animation: 10s infinite sendReqDumbbell;
 }
 
-.SendRedTriangleShapeAnima {
+.SendReqTriangleShapeAnima {
   animation: 10s infinite sendReqTriangle;
 }
 
@@ -407,6 +439,7 @@ h5 {
     transform: rotate(180deg) translateX(-90px);
   }
 }
+
 .SendRedDumbbellShapeAnima {
   animation: 10s infinite sendReqDumbbell;
 }

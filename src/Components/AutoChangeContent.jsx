@@ -1,17 +1,39 @@
 import React, { useEffect, useState } from 'react';
 import { Progress } from '@material-tailwind/react';
 import { motion } from 'framer-motion';
+import DumbbellShape from './DumbbellShape';
+import TriangleShape from './TriangleShape';
 
 const AutoChangeContent = ({
   changeAlignment = 'grid-cols-2',
   // changeAlignment = 'md:flex md:flex-row-reverse md:gap-10',
 }) => {
   const imagesArr = [
-    { src: './images/autochange/add-your-availability.png' },
-    { src: './images/autochange/connect-conferencing-tools.png' },
-    { src: './images/autochange/connect-your-calendars.png' },
-    { src: './images/autochange/customize-event-types.png' },
-    { src: './images/autochange/share-scheduling-link.png' },
+    {
+      src: './images/autochange/add-your-availability.png',
+      dumbbellfill: '#0099ff',
+      triangleFill: '#e55cff',
+    },
+    {
+      src: './images/autochange/connect-conferencing-tools.png',
+      dumbbellfill: '#8247f5',
+      triangleFill: '#17e886',
+    },
+    {
+      src: './images/autochange/connect-your-calendars.png',
+      dumbbellfill: '#0099ff',
+      triangleFill: '#e55cff',
+    },
+    {
+      src: './images/autochange/customize-event-types.png',
+      dumbbellfill: '#e55cff',
+      triangleFill: '#FFA600',
+    },
+    {
+      src: './images/autochange/share-scheduling-link.png',
+      dumbbellfill: '#17e886',
+      triangleFill: '#e55cff',
+    },
   ];
 
   const [images, setImages] = useState(imagesArr.slice(0, 1));
@@ -23,87 +45,87 @@ const AutoChangeContent = ({
   const [isFourthActive, setIsFourthActive] = useState(false);
   const [isFifthActive, setIsFifthActive] = useState(false);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) {
-          return 0;
-        }
-        return (prev += 1);
-      });
-    }, 90);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setProgress((prev) => {
+  //       if (prev >= 100) {
+  //         return 0;
+  //       }
+  //       return (prev += 1);
+  //     });
+  //   }, 90);
 
-    return () => clearInterval(interval);
-  }, []);
+  //   return () => clearInterval(interval);
+  // }, []);
 
-  useEffect(() => {
-    let isMounted = true; // Flag to track if the component is mounted
+  // useEffect(() => {
+  //   let isMounted = true; // Flag to track if the component is mounted
 
-    const intervalId = setInterval(() => {
-      if (!isMounted) return; // Skip state updates if component is unmounted
+  //   const intervalId = setInterval(() => {
+  //     if (!isMounted) return; // Skip state updates if component is unmounted
 
-      setTimeout(() => {
-        if (isMounted) {
-          setIsFirstActive(true);
-          setIsSecondActive(false);
-          setIsThirdActive(false);
-          setIsFourthActive(false);
-          setIsFifthActive(false);
-          setImages(imagesArr.slice(0, 1));
-        }
-      }, 5000);
+  //     setTimeout(() => {
+  //       if (isMounted) {
+  //         setIsFirstActive(true);
+  //         setIsSecondActive(false);
+  //         setIsThirdActive(false);
+  //         setIsFourthActive(false);
+  //         setIsFifthActive(false);
+  //         setImages(imagesArr.slice(0, 1));
+  //       }
+  //     }, 5000);
 
-      setTimeout(() => {
-        if (isMounted) {
-          setIsFirstActive(false);
-          setIsSecondActive(true);
-          setIsThirdActive(false);
-          setIsFourthActive(false);
-          setIsFifthActive(false);
-          setImages(imagesArr.slice(1, 2));
-        }
-      }, 10000);
+  //     setTimeout(() => {
+  //       if (isMounted) {
+  //         setIsFirstActive(false);
+  //         setIsSecondActive(true);
+  //         setIsThirdActive(false);
+  //         setIsFourthActive(false);
+  //         setIsFifthActive(false);
+  //         setImages(imagesArr.slice(1, 2));
+  //       }
+  //     }, 10000);
 
-      setTimeout(() => {
-        if (isMounted) {
-          setIsFirstActive(false);
-          setIsSecondActive(false);
-          setIsThirdActive(true);
-          setIsFourthActive(false);
-          setIsFifthActive(false);
-          setImages(imagesArr.slice(2, 3));
-        }
-      }, 10000);
+  //     setTimeout(() => {
+  //       if (isMounted) {
+  //         setIsFirstActive(false);
+  //         setIsSecondActive(false);
+  //         setIsThirdActive(true);
+  //         setIsFourthActive(false);
+  //         setIsFifthActive(false);
+  //         setImages(imagesArr.slice(2, 3));
+  //       }
+  //     }, 10000);
 
-      setTimeout(() => {
-        if (isMounted) {
-          setIsFirstActive(false);
-          setIsSecondActive(false);
-          setIsThirdActive(false);
-          setIsFourthActive(true);
-          setIsFifthActive(false);
-          setImages(imagesArr.slice(3, 4));
-        }
-      }, 15000);
+  //     setTimeout(() => {
+  //       if (isMounted) {
+  //         setIsFirstActive(false);
+  //         setIsSecondActive(false);
+  //         setIsThirdActive(false);
+  //         setIsFourthActive(true);
+  //         setIsFifthActive(false);
+  //         setImages(imagesArr.slice(3, 4));
+  //       }
+  //     }, 15000);
 
-      setTimeout(() => {
-        if (isMounted) {
-          setIsFirstActive(false);
-          setIsSecondActive(false);
-          setIsThirdActive(false);
-          setIsFourthActive(false);
-          setIsFifthActive(true);
-          setImages(imagesArr.slice(4, 5));
-        }
-      }, 20000);
-    }, 17500);
+  //     setTimeout(() => {
+  //       if (isMounted) {
+  //         setIsFirstActive(false);
+  //         setIsSecondActive(false);
+  //         setIsThirdActive(false);
+  //         setIsFourthActive(false);
+  //         setIsFifthActive(true);
+  //         setImages(imagesArr.slice(4, 5));
+  //       }
+  //     }, 20000);
+  //   }, 17500);
 
-    // Cleanup the interval when the component unmounts
-    return () => {
-      isMounted = false;
-      clearInterval(intervalId);
-    };
-  }, []);
+  //   // Cleanup the interval when the component unmounts
+  //   return () => {
+  //     isMounted = false;
+  //     clearInterval(intervalId);
+  //   };
+  // }, []);
 
   function ProgressColors({ color = 'blue' }) {
     return (
@@ -348,9 +370,32 @@ const AutoChangeContent = ({
             <ProgressColors color="purple" />
           </div>
         </div>
-        <div className="py-8 px-4 mt-10 md:mt-0 md:h-[38rem] bg-gray-100 w-full rounded-2xl">
+        <div className="relative py-8 px-4 mt-10 md:mt-0 md:h-[38rem] bg-gray-100 w-full rounded-2xl overflow-hidden">
           {images.map((e, i) => (
-            <img src={e.src} alt="" loading="lazy" key={i} />
+            <>
+              <img
+                src={e.src}
+                alt=""
+                loading="lazy"
+                key={i}
+                style={{ zIndex: 1 }}
+                className="relative"
+              />
+              <div className="absolute top-0">
+                <DumbbellShape
+                  className={
+                    'absolute w-[65rem] opacity-100 AutoSectionDumbbellShapeAnima hidden md:block'
+                  }
+                  fill={e.dumbbellfill}
+                />
+                <TriangleShape
+                  className={
+                    'absolute w-[70rem] opacity-80 AutoSectionTriangleShapeAnima hidden md:block'
+                  }
+                  fill={e.triangleFill}
+                />
+              </div>
+            </>
           ))}
         </div>
       </>
