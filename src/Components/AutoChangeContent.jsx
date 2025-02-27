@@ -130,11 +130,11 @@ const AutoChangeContent = ({
   function ProgressColors({ color = 'blue' }) {
     return (
       <>
-        <Progress
+        {/* <Progress
           value={progress}
           color={color}
           className="bottom-0 bg-gray-100"
-        />
+        /> */}
       </>
     );
   }
