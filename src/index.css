@@ -472,35 +472,35 @@ h5 {
   }
 }
 
-.SendRedDumbbellShapeAnima2 {
-  animation: 12s infinite sendReqDumbbell2;
+.SendReqRoundedStarAnima {
+  animation: 10s infinite roundedStar;
 }
 
-.SendRedTriangleShapeAnima3 {
-  animation: 14s infinite sendReqTriangle2;
+.SendReqSemiCircleAnima {
+  animation: 14s infinite semiCircle;
 }
 
-@keyframes sendReqDumbbell2 {
+@keyframes roundedStar {
   0% {
-    transform: rotate(90deg) translateX(-60px);
+    transform: rotate(90deg) translateX(-90px);
   }
   50% {
-    transform: rotate(165deg) translateX(10px);
+    transform: rotate(165deg) translateX(70px);
   }
   100% {
-    transform: rotate(90deg) translateX(-60px);
+    transform: rotate(90deg) translateX(-90px);
   }
 }
 
-@keyframes sendReqTriangle2 {
+@keyframes semiCircle {
   0% {
-    transform: rotate(180deg) translateX(-90px);
+    transform: rotate(180deg) translateX(-140px);
   }
   50% {
-    transform: rotate(165deg) translateX(10px);
+    transform: rotate(165deg) translateX(110px);
   }
   100% {
-    transform: rotate(180deg) translateX(-90px);
+    transform: rotate(180deg) translateX(-140px);
   }
 }
 /* send request section ⬆️ */

@@ -3,6 +3,8 @@ import Button from './Button';
 import { motion } from 'framer-motion';
 import DumbbellShape from './DumbbellShape';
 import TriangleShape from './TriangleShape';
+import RoundedStar from './RoundedStar';
+import SemiCircle from './SemiCircle';
 
 const SendReqSection = ({ title, button }) => {
   return (
@@ -18,14 +20,14 @@ const SendReqSection = ({ title, button }) => {
     >
       <div className="relative mx-5 md:mx-0 overflow-hidden">
         <div className="top-10 -right-30 absolute z-10 hidden md:block">
-          <TriangleShape
+          <RoundedStar
             className={
-              'absolute top-0 right-0 w-[26rem] opacity-100 SendReqTriangleShapeAnima rotate-90 '
+              'absolute top-0 right-0 w-[20rem] opacity-100 SendReqRoundedStarAnima rotate-90 '
             }
           />
-          <DumbbellShape
+          <SemiCircle
             className={
-              'absolute top-0 right-0 w-[20rem] opacity-80 rotate-90 SendReqDumbbellShapeAnima '
+              'absolute top-0 right-0 w-[20rem] opacity-80 rotate-90 SendReqSemiCircleAnima '
             }
           />
         </div>
