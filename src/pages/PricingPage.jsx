@@ -12,14 +12,14 @@ import CompareFeatures from '../Components/PricingPage/CompareFeatures';
 const PricingPage = () => {
   return (
     <>
-      <section className="my-16">
+      <>
         <PageHeader
           pageTitle="Pricing"
           pagePara="All-inclusive plans. No contract. Cancel anytime."
         >
           <PricingBoxes />
         </PageHeader>
-      </section>
+      </>
       <PricingCards />
       <CompareFeatures />
       <AllPlans />

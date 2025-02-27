@@ -10,7 +10,7 @@ const PricingCards = () => {
 
   return (
     <>
-      <section className="bg-white mx-auto w-full max-w-7xl ">
+      <section className="bg-white mx-auto w-full max-w-7xl md:mt-10">
         <div className="py-8 px-4 mx-auto lg:py-16">
           <div className="mx-auto w-fit max-w-screen-md text-center mb-8 lg:mb-12">
             <div className="uppercase gap-2 flex justify-center items-center bg-gray-200 py-2 px-1 rounded-xl">
