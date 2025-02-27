@@ -123,7 +123,7 @@ const Form = ({ className }) => {
       <div id="number-container" className=" mb-4">
         <label
           htmlFor="number"
-          className="text-sm flex font-medium text-gray-600 pb-4"
+          className="text-sm flex font-medium text-gray-600 pb-1"
         >
           Phone Number <span className="text-red-500 text-lg">*</span>
         </label>
@@ -137,8 +137,6 @@ const Form = ({ className }) => {
           />
           <input
             type="text"
-            // id="text"
-            name="Country Code"
             value={value == '' ? '+974' : `${value}`}
             className="md:w-15 w-full py-3 pl-2 border md:rounded-r-none md:border-r-0 border-gray-300 rounded-md outline-none md:rounded-l-md"
             required
@@ -184,7 +182,7 @@ const Form = ({ className }) => {
 const CountryCode = ({ className, onChange }) => {
   return (
     <select
-      name="countryCode"
+      name="Country Code"
       id=""
       className={`border border-gray-300 rounded-md ${className}`}
       defaultValue={'+974'}
