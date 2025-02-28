@@ -6,6 +6,8 @@ import CustomIllustrationsPage from './pages/CustomIllustrationsPage';
 import VideoEditingPage from './pages/VideoEditingPage';
 import MotioinGraphicsPage from './pages/MotioinGraphicsPage';
 import PresentationDesignPage from './pages/PresentationDesignPage';
+import TermsPage from './pages/TermsPage';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 
 const ContactPage = React.lazy(() => import('./pages/ContactPage'));
 const DesignBlogsPage = React.lazy(() => import('./pages/DesignBlogsPage'));
@@ -23,6 +25,10 @@ const ErrorPage = React.lazy(() => import('./pages/ErrorPage'));
 const OurWorkPage = React.lazy(() => import('./pages/OurWorkPage'));
 
 function App() {
+  // const scrollToTop = () => {
+  //   window.scrollTo(0, 0);
+  // };
+
   const router = createBrowserRouter([
     {
       path: '/',
@@ -86,6 +92,15 @@ function App() {
             </Suspense>
           ),
         },
+        {
+          path: '/contact/terms',
+          element: <TermsPage />,
+        },
+        {
+          path: '/contact/privacy-policy',
+          element: <PrivacyPolicy />,
+        },
+
         {
           path: '/book-a-call',
           element: (

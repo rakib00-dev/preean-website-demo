@@ -12,6 +12,10 @@ const ContactPage = ({
   formOrder = 'order-2',
   smallChild = true,
 }) => {
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   // const form = document.getElementById('form');
   // form.addEventListener('submit', (e) => {
   //   e.preventDefault();
@@ -67,12 +71,15 @@ const ContactPage = ({
             </p>
           </div>
 
-          <Link className="transition-all duration-300 text-blue-500 flex items-center gap-2 hover:gap-4 hover:text-black">
+          <Link
+            onClick={scrollToTop}
+            className="transition-all duration-300 text-blue-500 flex items-center gap-2 hover:gap-4 hover:text-black"
+          >
             {linkText} <FaArrowRight />
           </Link>
         </div>
 
-        <Form className={formOrder} />
+        <Form className={formOrder} scrollToTop={scrollToTop} />
       </div>
     </section>
   );
@@ -80,7 +87,7 @@ const ContactPage = ({
 
 export default ContactPage;
 
-const Form = ({ className }) => {
+const Form = ({ className, scrollToTop }) => {
   const [value, setValue] = useState('');
 
   function handleOptionChange(e) {
@@ -213,11 +220,19 @@ const Form = ({ className }) => {
         <p className="text-sm font-[500]">
           By clicking submit you consent to receive email communications about
           Calendly products and services and agree to our{' '}
-          <Link to={'/terms'} className="text-blue-600 underline">
+          <Link
+            onClick={scrollToTop}
+            to={'/contact/terms'}
+            className="text-blue-600 underline"
+          >
             Terms
           </Link>
           . Your data will be processed in accordance with our{' '}
-          <Link to={'/privacy-policy'} className="text-blue-600 underline">
+          <Link
+            onClick={scrollToTop}
+            to={'/contact/privacy-policy'}
+            className="text-blue-600 underline"
+          >
             Privacy Policy
           </Link>
           . You may opt out at any time.
