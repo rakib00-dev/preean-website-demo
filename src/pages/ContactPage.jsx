@@ -92,7 +92,7 @@ const Form = ({ className }) => {
       id="form"
       action="https://api.web3forms.com/submit"
       method="POST"
-      className={`mx-auto w-full mt-8 mb-8 relative bg-white p-6 md:p-8 shadow-2xl border rounded-xl border-gray-300 md:w-[530px] ${className}`}
+      className={`mx-auto w-full mt-8 mb-8 relative bg-white p-6 md:p-8 shadow-xl border rounded-xl border-gray-300 md:w-[530px] ${className}`}
     >
       <input
         type="hidden"
