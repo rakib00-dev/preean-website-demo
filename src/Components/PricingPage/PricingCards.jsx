@@ -12,7 +12,7 @@ const PricingCards = () => {
     <>
       <section className="bg-white mx-auto w-full max-w-7xl md:mt-10">
         <div className="py-8 px-4 mx-auto lg:py-16">
-          <div className="mx-auto w-fit max-w-screen-md text-center mb-8 lg:mb-12">
+          <div className="mx-auto flex flex-col md:flex-row gap-2 items-center w-fit max-w-screen-md text-center mb-8 lg:mb-12">
             <div className="uppercase gap-2 flex justify-center items-center bg-gray-200 py-2 px-1 rounded-xl">
               <button
                 className={
@@ -41,7 +41,7 @@ const PricingCards = () => {
                 }}
               >
                 quarterly
-                <img
+                {/* <img
                   loading="lazy"
                   src="./images/ourpricingpage/card-images/save-10.svg"
                   alt="save 10 percent on monthly purchess"
@@ -52,7 +52,7 @@ const PricingCards = () => {
                   src="./images/ourpricingpage/card-images/small-save-10.svg"
                   alt="save 10 percent on monthly purchess"
                   className=" absolute -top-6 md:hidden"
-                />
+                /> */}
               </button>
               <button
                 className={
@@ -67,7 +67,7 @@ const PricingCards = () => {
                 }}
               >
                 annually
-                <img
+                {/* <img
                   loading="lazy"
                   src="./images/ourpricingpage/card-images/save-20.svg"
                   alt="save 20 percent on monthly purchess"
@@ -78,9 +78,12 @@ const PricingCards = () => {
                   src="./images/ourpricingpage/card-images/small-save-20.svg"
                   alt="save 20 percent on monthly purchess"
                   className=" absolute -top-6 md:hidden"
-                />
+                /> */}
               </button>
-            </div>
+            </div>{' '}
+            <p className="text-sm w-fit h-fit text-blue-800 bg-blue-100 px-2 py-1 rounded-full">
+              Our work process
+            </p>
           </div>
           <div className="flex justify-center items-center mx-auto">
             {isFirstBtnActive ? (
@@ -105,12 +108,12 @@ const PricingCards = () => {
       </section>
       {/* <WebflowDevelopment /> */}
       <section className="mx-auto w-full grid place-items-center max-w-7xl">
-        <div className="bg-purple-600 grid place-items-center mx-2 md:mx-20 w-fit  rounded-xl">
-          <div className="grid justify-center items-center w-auto gap-2 p-6 py-10 h-auto place-items-center md:grid-cols-3">
+        <div className="bg-[#0b3558] grid place-items-center w-full  rounded-xl">
+          <div className="grid justify-center items-center w-auto gap-2 p-6 py-10 h-auto place-items-center md:grid-cols-2">
             {/* cards */}
-            <div className="flex flex-col gap-2 md:gap-5 w-full ">
+            <div className="flex flex-col justify-end  gap-2 md:gap-5 w-full ">
               <h5
-                className="py-2 px-4 w-fit rounded-full text-sm font-extrabold uppercase  bg-red-400 text-white"
+                className="py-2 px-4 w-fit rounded-full flex justify-end text-sm font-extrabold uppercase  bg-red-400 text-white"
                 style={{ color: 'white' }}
               >
                 Add-on
@@ -131,32 +134,32 @@ const PricingCards = () => {
                 Transform your Figma designs into live Webflow websites
               </p>
             </div>
-            <div className="grid gap-2 md:gap-5 w-full md:w-fit ">
-              <div>
-                <h5
-                  className="text-lg font-extrabold text-white"
-                  style={{ color: 'white' }}
-                >
-                  started at
-                </h5>
-                <span className="text-yellow-400 font-[900] text-2xl">
-                  {isFirstBtnActive
-                    ? 'USD $124/wk'
-                    : isSecondBtnActive
-                    ? 'USD $124/wk'
-                    : 'USD $100/wk'}
-                </span>
-              </div>
-              <Link to={'/book-a-call'}>
-                <button
-                  className={
-                    'py-2 px-6 rounded-md font-extrabold text-black text-lg bg-amber-300 hover:bg-amber-100 cursor-pointer'
-                  }
-                >
-                  Book A Call
-                </button>
-              </Link>
+          </div>
+          <div className="flex place-items-center pb-5 gap-2 md:gap-5 w-full md:w-fit ">
+            <div>
+              <h5
+                className="text-lg font-extrabold text-white"
+                style={{ color: 'white' }}
+              >
+                started at
+              </h5>
+              <span className="text-white font-[900] text-2xl">
+                {isFirstBtnActive
+                  ? 'USD $124/wk'
+                  : isSecondBtnActive
+                  ? 'USD $124/wk'
+                  : 'USD $100/wk'}
+              </span>
             </div>
+            <Link to={'/book-a-call'}>
+              <button
+                className={
+                  'py-2 px-6 rounded-md font-bold text-white text-lg bg-blue-500 hover:bg-blue-100 cursor-pointer'
+                }
+              >
+                Book A Call
+              </button>
+            </Link>
           </div>
         </div>
       </section>

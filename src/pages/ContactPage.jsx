@@ -68,7 +68,7 @@ const Form = ({ className }) => {
       <input
         type="hidden"
         name="access_key"
-        value="976bc72c-dbf7-4ac7-8528-24eeb7f396a8"
+        value="d86ee754-00c7-466f-83fd-aa1ebbe84579"
       />
 
       <div id="email-container" className="w-full mb-4">
