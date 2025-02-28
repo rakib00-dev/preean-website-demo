@@ -47,17 +47,26 @@ const TermsPage = () => {
                 You are a “Customer” if:
               </p>
               <ul className="text-lg mx-3 grid gap-3 md:ml-10">
-                <li className="list-disc">
+                <li
+                  className="list-disc"
+                  style={{ color: 'var(--black-primary-terms)' }}
+                >
                   You are an individual with a registered Calendly account; or
                 </li>
-                <li className="list-disc">
+                <li
+                  className="list-disc"
+                  style={{ color: 'var(--black-primary-terms)' }}
+                >
                   You are an Entity that has purchased Calendly licenses for
                   your Authorized Users to access and use Calendly with
                   registered accounts.
                 </li>
-                <li>
+                <li style={{ color: 'var(--black-primary-terms)' }}>
                   <ul className="text-lg ml-4 grid gap-3 md:ml-10">
-                    <li className="list-disc">
+                    <li
+                      className="list-disc"
+                      style={{ color: 'var(--black-primary-terms)' }}
+                    >
                       “Entity” means a company or organization which has
                       purchased licenses to the Services for use with email
                       domains it owns, controls or manages, or has authority to
@@ -65,7 +74,10 @@ const TermsPage = () => {
                       responsible for individuals using such email domain(s)
                       with the Services;
                     </li>
-                    <li className="list-disc">
+                    <li
+                      className="list-disc"
+                      style={{ color: 'var(--black-primary-terms)' }}
+                    >
                       “Authorized Users” means an Entity’s employees,
                       consultants, contractors, and agents i) who are authorized
                       by the Entity to access and use the Services under the
@@ -86,13 +98,19 @@ const TermsPage = () => {
                 If you are a DesignPro Customer:
               </p>
               <ul className="text-lg mx-3 grid gap-3 md:ml-10">
-                <li className="list-disc">
+                <li
+                  className="list-disc"
+                  style={{ color: 'var(--black-primary-terms)' }}
+                >
                   Your access and use of the Services are subject to the
                   Customer Terms and Conditions, unless you have a current and
                   valid MSA with Calendly, in which case the MSA governs and
                   controls.
                 </li>
-                <li className="list-disc">
+                <li
+                  className="list-disc"
+                  style={{ color: 'var(--black-primary-terms)' }}
+                >
                   If you do not have an MSA, then in addition to the Customer
                   Terms & Conditions, you are also subject to the Data
                   Processing Addendum, the Acceptable Use Policy and Privacy
@@ -118,12 +136,18 @@ const TermsPage = () => {
                 You are an “Invitee” if:
               </p>
               <ul className="text-lg mx-3 grid gap-3 md:ml-10">
-                <li className="list-disc">
+                <li
+                  className="list-disc"
+                  style={{ color: 'var(--black-primary-terms)' }}
+                >
                   You have received or are accessing a valid scheduling link
                   made available by a Customer;
                 </li>
                 <b>and</b>
-                <li className="list-disc">
+                <li
+                  className="list-disc"
+                  style={{ color: 'var(--black-primary-terms)' }}
+                >
                   You do not have your own registered Calendly account.
                 </li>
               </ul>
@@ -135,10 +159,16 @@ const TermsPage = () => {
                 If you are an Invitee:
               </p>
               <ul className="text-lg mx-3 grid gap-3 md:ml-10">
-                <li className="list-disc">
+                <li
+                  className="list-disc"
+                  style={{ color: 'var(--black-primary-terms)' }}
+                >
                   You are subject to the Invitee Terms and Conditions
                 </li>
-                <li className="list-disc">
+                <li
+                  className="list-disc"
+                  style={{ color: 'var(--black-primary-terms)' }}
+                >
                   For the avoidance of doubt, if you have a Calendly account,
                   your access and use to the Services, are governed by the or
                   your valid MSA, as described above under the terms applicable
@@ -163,10 +193,16 @@ const TermsPage = () => {
                 You are a Visitor if:
               </p>
               <ul className="text-lg mx-3 grid gap-3 md:ml-10">
-                <li className="list-disc">
+                <li
+                  className="list-disc"
+                  style={{ color: 'var(--black-primary-terms)' }}
+                >
                   You do not have a registered Calendly account;
                 </li>
-                <li className="list-disc">
+                <li
+                  className="list-disc"
+                  style={{ color: 'var(--black-primary-terms)' }}
+                >
                   Nor are you accessing a valid scheduling link made available
                   by a Customer (i.e. you’re just here browsing the Website).
                 </li>
@@ -179,7 +215,10 @@ const TermsPage = () => {
                 If you are a Visitor:
               </p>
               <ul className="text-lg mx-3 grid gap-3 md:ml-10">
-                <li className="list-disc">
+                <li
+                  className="list-disc"
+                  style={{ color: 'var(--black-primary-terms)' }}
+                >
                   You are subject to our also if you’re interested in learning
                   more about DesignPro!
                 </li>
