@@ -3,14 +3,14 @@ import { FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const ContactPage = ({
-  smallTitle = 'Improve communication rates',
+  smallTitle = 'Contact Our Sales Team',
   bigTitle = 'Contact us by filling the form and we will reach out to you',
   para = `Remove the steps that cause friction for prospects. Add Calendly to your website, landing pages, or display ads, and embed sales reps’ Calendly links into emails and campaigns to set your team up to win more deals.`,
   linkText = 'Book a call with DesignPro work from anywhere',
   bgColor,
   contentOrder = 'order-1',
   formOrder = 'order-2',
-  smallChild,
+  smallChild = true,
 }) => {
   // const form = document.getElementById('form');
   // form.addEventListener('submit', (e) => {
@@ -28,7 +28,9 @@ const ContactPage = ({
       <div
         className={`grid px-3 py-8 place-items-center md:grid-cols-2 md:px-6 ${bgColor}`}
       >
-        <div className={`p-2 grid gap-7 md:w-[93%] ${contentOrder}`}>
+        <div
+          className={`p-2 place-items-start grid gap-7 md:w-[93%] ${contentOrder}`}
+        >
           {smallChild ? (
             <p className="text-sm text-blue-800 bg-blue-100 px-2 py-1 w-fit rounded-full">
               {smallTitle}
@@ -37,7 +39,34 @@ const ContactPage = ({
             <></>
           )}
           <h1 className="text-2xl md:text-4xl">{bigTitle}</h1>
-          <p className="text-lg text-gray-600">{para}</p>
+          <div className="flex justify-start items-center gap-3 py-6 border-b-2 border-b-blue-500 w-full">
+            <h1 className="text-6xl">900</h1>
+            <p
+              className="flex justify-center items-center mt-7 text-lg"
+              style={{ color: '#0b3558' }}
+            >
+              Active Clients worldwide
+            </p>
+          </div>
+          <div className="flex justify-start items-center gap-3 py-6 border-b-2 border-b-blue-500 w-full">
+            <h1 className="text-6xl">100+</h1>
+            <p
+              className="flex justify-center items-center mt-7 text-lg"
+              style={{ color: '#0b3558' }}
+            >
+              companies worked with DesignPro
+            </p>
+          </div>
+          <div className="flex justify-start items-center gap-3 py-6 border-b-2 border-b-blue-500 w-full">
+            <h1 className="text-6xl">230+</h1>
+            <p
+              className="flex justify-center items-center mt-7 text-lg"
+              style={{ color: '#0b3558' }}
+            >
+              individuals worked with us
+            </p>
+          </div>
+
           <Link className="transition-all duration-300 text-blue-500 flex items-center gap-2 hover:gap-4 hover:text-black">
             {linkText} <FaArrowRight />
           </Link>
@@ -63,7 +92,7 @@ const Form = ({ className }) => {
       id="form"
       action="https://api.web3forms.com/submit"
       method="POST"
-      className={`mx-auto w-full mt-8 mb-8 relative bg-blue-50/40 p-6 border rounded-xl border-gray-300 md:w-[450px] ${className}`}
+      className={`mx-auto w-full mt-8 mb-8 relative bg-white p-6 md:p-8 shadow-2xl border rounded-xl border-gray-300 md:w-[530px] ${className}`}
     >
       <input
         type="hidden"
@@ -71,18 +100,11 @@ const Form = ({ className }) => {
         value="d86ee754-00c7-466f-83fd-aa1ebbe84579"
       />
 
-      <div id="email-container" className="w-full mb-4">
-        <label htmlFor="email" className="text-sm font-medium text-gray-600">
-          Bussiness Email <span className="text-red-500 text-lg">*</span>
-        </label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Enter Your Email"
-          required
-          className="p-3 border border-gray-300 rounded-md w-full mt-1 outline-none"
-        />
+      <div className="grid gap-4 mb-3">
+        <h2 className="text-4xl font-medium">Let's Chat</h2>
+        <p className="text-lg">
+          A DesignPro expert will reach out to discuss your needs.
+        </p>
       </div>
 
       <div id="name-container" className="flex gap-4 mb-4">
@@ -120,6 +142,20 @@ const Form = ({ className }) => {
         </div>
       </div>
 
+      <div id="email-container" className="w-full mb-4">
+        <label htmlFor="email" className="text-sm font-medium text-gray-600">
+          Bussiness Email <span className="text-red-500 text-lg">*</span>
+        </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter Your Email"
+          required
+          className="p-3 border border-gray-300 rounded-md w-full mt-1 outline-none"
+        />
+      </div>
+
       <div id="number-container" className=" mb-4">
         <label
           htmlFor="number"
@@ -146,7 +182,7 @@ const Form = ({ className }) => {
             type="number"
             id="number"
             name="number"
-            placeholder="Enter Phone Numeber"
+            placeholder="Enter Your Phone Number"
             required
             className="py-3 outline-0 border md:border-l-0 border-gray-300 rounded-l-md md:rounded-l-none rounded-r-md w-full "
           />
@@ -160,20 +196,32 @@ const Form = ({ className }) => {
         <textarea
           id="message"
           name="message"
-          placeholder="Enter Your Message"
+          placeholder="How can we Help?"
           required
           spellCheck="false"
           className="p-3 border outline-none border-gray-300 rounded-md w-full h-32 mt-1 resize-none"
         ></textarea>
       </div>
 
-      <div className="flex justify-end">
+      <div className="flex flex-col gap-5 justify-center w-full">
         <button
           type="submit"
-          className="transition-all duration-300 bg-blue-500 text-white px-10 flex py-2 rounded-md hover:bg-white hover:text-blue-500 border border-gray-300 cursor-pointer "
+          className="w-full text-center transition-all duration-300 bg-blue-500 text-white px-10 py-2 rounded-md hover:bg-white hover:text-blue-500 border border-gray-300 cursor-pointer "
         >
           Submit
         </button>
+        <p className="text-sm font-[500]">
+          By clicking submit you consent to receive email communications about
+          Calendly products and services and agree to our{' '}
+          <Link to={'/terms'} className="text-blue-600 underline">
+            Terms
+          </Link>
+          . Your data will be processed in accordance with our{' '}
+          <Link to={'/privacy-policy'} className="text-blue-600 underline">
+            Privacy Policy
+          </Link>
+          . You may opt out at any time.
+        </p>
       </div>
     </form>
   );

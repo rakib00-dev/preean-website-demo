@@ -372,12 +372,11 @@ const AutoChangeContent = ({
         </div>
         <div className="relative py-8 px-4 mt-10 md:mt-0 md:h-[38rem] bg-gray-100 w-full rounded-2xl overflow-hidden">
           {images.map((e, i) => (
-            <>
+            <div key={i}>
               <img
                 src={e.src}
                 alt=""
                 loading="lazy"
-                key={i}
                 style={{ zIndex: 1 }}
                 className="relative"
               />
@@ -395,7 +394,7 @@ const AutoChangeContent = ({
                   fill={e.triangleFill}
                 />
               </div>
-            </>
+            </div>
           ))}
         </div>
       </>
