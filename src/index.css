@@ -41,7 +41,8 @@
   --text-primary: #07122b;
   /* --color-primary: #ff5757; */
   --black-primary: #0b3558;
-  --black-secondary: rgb(71, 103, 136);
+  --black-primary-terms: #0b3558c3;
+  --black-secondary: #476788;
   --blue-primary: #0099f6;
   --primary-font: 'Gilroy', sans-serif;
   --primary-bg: #f8f9fb;

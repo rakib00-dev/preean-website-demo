@@ -222,6 +222,7 @@ const Form = ({ className, scrollToTop }) => {
           Calendly products and services and agree to our{' '}
           <Link
             onClick={scrollToTop}
+            target="_blank"
             to={'/contact/terms'}
             className="text-blue-600 underline"
           >
@@ -230,6 +231,7 @@ const Form = ({ className, scrollToTop }) => {
           . Your data will be processed in accordance with our{' '}
           <Link
             onClick={scrollToTop}
+            target="_blank"
             to={'/contact/privacy-policy'}
             className="text-blue-600 underline"
           >
