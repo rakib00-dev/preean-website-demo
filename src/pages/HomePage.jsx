@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react';
 import SolutionHeader from '../Components/Solutions-Components/OldSolutionHeader';
 import PricingFaq from '../Components/PricingPage/PricingFaq';
+import CustomersTought from '../Components/CustomersTought';
 // const BetterSolution = React.lazy(() => import('../Components/BetterSolution'));
 const AutoChangeContent = React.lazy(() =>
   import('../Components/AutoChangeContent')
@@ -50,6 +51,7 @@ const HomePage = () => {
         {/* <PowerByTechnology /> */}
         {/* <WhatWeOffer /> */}
         {/* <OurWork /> */}
+        <CustomersTought />
         <OurTools />
         {/* <WallOfLove /> */}
         <PricingFaq />
