@@ -97,7 +97,7 @@ const Cards = () => {
       {data.slice(0, 1).map((e, i) => (
         <div
           key={i}
-          className="gird md:row-span-3 top-0 w-full h-fit border border-gray-300 p-7  pt-0 text-center mb-5 rounded-lg gap-2 leading-10"
+          className="gird md:row-span-3 top-0 w-full h-fit border border-gray-300 p-7  pt-0 text-center md:mb-5 rounded-lg gap-2 leading-10"
         >
           <div className="flex justify-between w-full py-7">
             <img src={e.img} alt="" loading="lazy" className="w-42" />
@@ -123,7 +123,7 @@ const Cards = () => {
       {data.slice(1, 2).map((e, i) => (
         <div
           key={i}
-          className="grid md:row-span-2 top-0 w-full h-fit border border-gray-300 p-7  pt-0 text-center mb-5 rounded-lg gap-2 leading-10"
+          className="grid md:row-span-2 top-0 w-full h-fit border border-gray-300 p-7  pt-0 text-center md:mb-5 rounded-lg gap-2 leading-10"
         >
           <div className="flex justify-between w-full py-7">
             <img src={e.img} alt="" loading="lazy" className="w-42" />
@@ -149,7 +149,7 @@ const Cards = () => {
       {data.slice(2, 3).map((e, i) => (
         <div
           key={i}
-          className="grid md:row-span-2 top-0 w-full h-fit border border-gray-300 p-7  pt-0 text-center mb-5 rounded-lg gap-2 leading-10"
+          className="grid md:row-span-2 top-0 w-full h-fit border border-gray-300 p-7  pt-0 text-center md:mb-5 rounded-lg gap-2 leading-10"
         >
           <div className="flex justify-between w-full py-7">
             <img src={e.img} alt="" loading="lazy" className="w-42" />
@@ -172,7 +172,7 @@ const Cards = () => {
           <p className="text-xl leading-6 text-start md:text-start">{e.p}</p>
         </div>
       ))}
-      <div className="grid place-items-center relative md:-top-63 col-start-1 row-start-4 top-0 w-full h-fit border border-gray-300 p-7  pt-0 text-center mb-5 rounded-lg gap-2 bg-gray-100">
+      <div className="grid place-items-center relative md:-top-63 col-start-1 row-start-4 top-0 w-full h-fit border border-gray-300 p-7  pt-0 text-center md:mb-5 rounded-lg gap-2 bg-gray-100">
         <img
           src="/images/walloflove/G2_Crowd_logo.svg"
           alt=""
@@ -217,7 +217,7 @@ const Cards = () => {
       {data.slice(3, 4).map((e, i) => (
         <div
           key={i}
-          className="grid relative md:-top-24 md:row-span-2 md:col-start-2 md:row-start-3 top-0 w-full h-fit border border-gray-300 p-7  pt-0 text-center mb-5 rounded-lg gap-2 leading-10"
+          className="grid relative md:-top-24 md:row-span-2 md:col-start-2 md:row-start-3 top-0 w-full h-fit border border-gray-300 p-7  pt-0 text-center md:mb-5 rounded-lg gap-2 leading-10"
         >
           <div className="flex justify-between w-full py-7">
             <img src={e.img} alt="" loading="lazy" className="w-42" />
@@ -243,7 +243,7 @@ const Cards = () => {
       {data.slice(4, 5).map((e, i) => (
         <div
           key={i}
-          className="grid relative md:-top-24 md:row-span-2 md:col-start-3 md:row-start-3 top-0 w-full h-fit border border-gray-300 p-7  pt-0 text-center mb-5 rounded-lg gap-2 leading-10"
+          className="grid relative md:-top-24 md:row-span-2 md:col-start-3 md:row-start-3 top-0 w-full h-fit border border-gray-300 p-7  pt-0 text-center md:mb-5 rounded-lg gap-2 leading-10"
         >
           <div className="flex justify-between w-full py-7">
             <img src={e.img} alt="" loading="lazy" className="w-42" />
@@ -270,7 +270,7 @@ const Cards = () => {
       {data.slice(5, 6).map((e, i) => (
         <div
           key={i}
-          className="grid mt-12 relative md:-top-24 md:row-span-2 md:col-start-1 md:row-start-4 top-0 w-full h-fit border border-gray-300 p-7  pt-0 text-center mb-5 rounded-lg gap-2 leading-10"
+          className="grid mt-12 relative md:-top-24 md:row-span-2 md:col-start-1 md:row-start-4 top-0 w-full h-fit border border-gray-300 p-7  pt-0 text-center md:mb-5 rounded-lg gap-2 leading-10"
         >
           <div className="flex justify-between w-full py-7">
             <img src={e.img} alt="" loading="lazy" className="w-42" />
