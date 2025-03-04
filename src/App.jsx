@@ -9,6 +9,7 @@ import PresentationDesignPage from './pages/PresentationDesignPage';
 import TermsPage from './pages/TermsPage';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 
+const LoginPage = React.lazy(() => import('./pages/LoginPage'));
 const ContactPage = React.lazy(() => import('./pages/ContactPage'));
 const DesignBlogsPage = React.lazy(() => import('./pages/DesignBlogsPage'));
 const GuidesPage = React.lazy(() => import('./pages/GuidesPage'));
@@ -106,6 +107,14 @@ function App() {
           element: (
             <Suspense fallback={<p>Loading...</p>}>
               <BookACall />
+            </Suspense>
+          ),
+        },
+        {
+          path: '/log-in',
+          element: (
+            <Suspense fallback={<p>Loading...</p>}>
+              <LoginPage />
             </Suspense>
           ),
         },
