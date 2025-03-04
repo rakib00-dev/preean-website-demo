@@ -3,12 +3,26 @@ import React, { useEffect, useRef, useState } from 'react';
 import { FaChevronDown } from 'react-icons/fa';
 import { RiCloseFill, RiMenu3Fill } from 'react-icons/ri';
 import OutsideClickHandler from 'react-outside-click-handler';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const scrollToTop = () => {
     window.scrollTo(0, 0);
   };
+
+  const [inLoginPage, setInLoginPage] = useState(false);
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname.toString() === '/log-in') {
+      setInLoginPage(true);
+    } else {
+      setInLoginPage(false);
+    }
+  }, []);
+  // console.log();
+  console.log(location.pathname, inLoginPage);
 
   const [isHovered, setIsHovered] = useState(false);
   const [isResourceHovered, setIsResourceHovered] = useState(false);
@@ -425,15 +439,17 @@ const Navbar = () => {
               <NavLists />
             </ul>
             <div id="contact" className="flex gap-1">
-              <Link
-                to="/log-in"
-                className="transition-all duration-200 text-sm px-3 py-2.5 text-gray-800 font-bold rounded-md text-dark hover:text-gray-950 hover:underline"
-                onClick={() => {
-                  scrollToTop();
-                }}
-              >
-                Log In
-              </Link>
+              {location.pathname.toString() !== '/log-in' && (
+                <Link
+                  to="/log-in"
+                  className="transition-all duration-200 text-sm px-3 py-2.5 text-gray-800 font-bold rounded-md text-dark hover:text-gray-950 hover:underline"
+                  onClick={() => {
+                    scrollToTop();
+                  }}
+                >
+                  Log In
+                </Link>
+              )}
               <Link
                 to="/contact"
                 className="transition-all duration-200 text-sm px-3 py-2.5 text-blue-500 border border-blue-500 rounded-md font-bold hover:text-white hover:bg-blue-300 "
