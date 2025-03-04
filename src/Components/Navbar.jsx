@@ -6,6 +6,10 @@ import OutsideClickHandler from 'react-outside-click-handler';
 import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   const [isHovered, setIsHovered] = useState(false);
   const [isResourceHovered, setIsResourceHovered] = useState(false);
 
@@ -35,12 +39,16 @@ const Navbar = () => {
           className={
             'capitalize flex justify-start items-center gap-2 text-sm sm:font-bold'
           }
+          onclick={() => {
+            scrollToTop();
+          }}
         >
           our work
         </ListItem>
         <ListItem
           navLink="/pricing"
           className={'capitalize  text-sm sm:font-bold'}
+          onclick={() => scrollToTop()}
         >
           pricing
         </ListItem>
@@ -155,6 +163,7 @@ const Navbar = () => {
           }
           onclick={() => {
             setIsNavOpen((prev) => !prev);
+            scrollToTop();
           }}
         >
           our work
@@ -168,6 +177,7 @@ const Navbar = () => {
           }
           onclick={() => {
             setIsNavOpen((prev) => !prev);
+            scrollToTop();
           }}
         >
           pricing
@@ -391,7 +401,13 @@ const Navbar = () => {
             id="logo"
             className="text-md font-medium w-32 md:w-64 md:text-lg"
           >
-            <Link to="/" className="flex items-center">
+            <Link
+              to="/"
+              className="flex items-center"
+              onClick={() => {
+                scrollToTop();
+              }}
+            >
               <img
                 src="https://designpro.qa/img/Designpro-logo-large.png"
                 alt="logo"
@@ -408,21 +424,34 @@ const Navbar = () => {
             <ul className="flex justify-center mx-auto items-center gap-5">
               <NavLists />
             </ul>
-            <div id="contact">
-              <div className="flex flex-row gap-4 justify-end pr-16 sm:flex lg:pr-0">
-                <Link
-                  to="/contact"
-                  className="transition-all duration-200 px-7 py-3 text-blue-500 border border-blue-500 rounded-md font-medium text-dark hover:text-white hover:bg-blue-300"
-                >
-                  Get Started
-                </Link>
-                <Link
-                  to="/book-a-call"
-                  className="transition-all duration-200 rounded-md bg-blue-500 px-7 py-3 text-base font-medium text-white hover:bg-blue-500/90"
-                >
-                  Book A Call
-                </Link>
-              </div>
+            <div id="contact" className="flex gap-1">
+              <Link
+                to="/log-in"
+                className="transition-all duration-200 text-sm px-3 py-2.5 text-gray-800 font-bold rounded-md text-dark hover:text-gray-950 hover:underline"
+                onClick={() => {
+                  scrollToTop();
+                }}
+              >
+                Log In
+              </Link>
+              <Link
+                to="/contact"
+                className="transition-all duration-200 text-sm px-3 py-2.5 text-blue-500 border border-blue-500 rounded-md font-bold hover:text-white hover:bg-blue-300 "
+                onClick={() => {
+                  scrollToTop();
+                }}
+              >
+                Get Started
+              </Link>
+              <Link
+                to="/book-a-call"
+                className="transition-all duration-200 text-sm rounded-md bg-blue-600 px-3 py-2.5 font-medium text-white hover:bg-blue-500/90"
+                onClick={() => {
+                  scrollToTop();
+                }}
+              >
+                Book A Call
+              </Link>
             </div>
           </div>
           <div
@@ -540,12 +569,12 @@ const Navbar = () => {
           id="menu"
           className={
             isNavOpen
-              ? 'transition-all fixed top-20 flex justify-start items-start flex-col w-full h-full pl-5 pt-5 gap-10 border rounded-md bg-white m-auto overflow-y-auto lg:hidden'
+              ? 'transition-all fixed top-20 flex justify-start items-start flex-col w-full h-full pl-5 pt-5 gap-10 border rounded-md bg-white m-auto overflow-y-scroll lg:hidden'
               : 'hidden'
           }
           style={{ zIndex: 122 }}
         >
-          <ul className="flex justify-start items-start flex-col leading-8">
+          <ul className="flex justify-start items-start flex-col leading-6">
             <NavListsSmallScreen />
             <div className="flex flex-col-reverse gap-4 justify-end pr-16 sm:flex lg:pr-0">
               {/* <Link
@@ -554,18 +583,36 @@ const Navbar = () => {
               >
                 Sign Up
               </Link> */}
+
               <Link
                 to="/contact"
-                className="transition-all duration-200 px-7 py-3 text-center text-blue-500 border border-blue-500 rounded-md font-medium text-dark hover:text-blue-500 hover:bg"
+                className="transition-all duration-200 text-sm px-3 py-2.5 text-blue-500 border border-blue-500 rounded-md font-bold hover:text-white hover:bg-blue-300 "
+                onClick={() => {
+                  scrollToTop();
+                  setIsNavOpen(false);
+                }}
               >
                 Get Started
               </Link>
               <Link
                 to="/book-a-call"
-                className="rounded-md text-center bg-blue-500 px-7 py-3 text-base font-medium text-white hover:bg-blue-500/90"
-                onClick={() => setIsNavOpen(false)}
+                className="transition-all duration-200 text-sm rounded-md bg-blue-600 px-3 py-2.5 font-medium text-white hover:bg-blue-500/90"
+                onClick={() => {
+                  scrollToTop();
+                  setIsNavOpen(false);
+                }}
               >
                 Book A Call
+              </Link>
+              <Link
+                to="/log-in"
+                className="transition-all underline duration-200 text-sm px-3 shadow text-center py-2.5 text-gray-800 font-bold rounded-md text-dark hover:text-gray-950 hover:underline"
+                onClick={() => {
+                  scrollToTop();
+                  setIsNavOpen(false);
+                }}
+              >
+                Log In
               </Link>
             </div>
           </ul>

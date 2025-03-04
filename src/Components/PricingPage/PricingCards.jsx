@@ -82,7 +82,7 @@ const PricingCards = () => {
               </button>
             </div>{' '}
             <p className="text-sm w-fit h-fit text-blue-800 bg-blue-100 px-2 py-1 rounded-full">
-              Our work process
+              Save up to 20%
             </p>
           </div>
           <div className="flex justify-center items-center mx-auto">
