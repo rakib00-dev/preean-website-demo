@@ -10,19 +10,7 @@ const Navbar = () => {
     window.scrollTo(0, 0);
   };
 
-  const [inLoginPage, setInLoginPage] = useState(false);
-
   const location = useLocation();
-
-  useEffect(() => {
-    if (location.pathname.toString() === '/log-in') {
-      setInLoginPage(true);
-    } else {
-      setInLoginPage(false);
-    }
-  }, []);
-  // console.log();
-  console.log(location.pathname, inLoginPage);
 
   const [isHovered, setIsHovered] = useState(false);
   const [isResourceHovered, setIsResourceHovered] = useState(false);
