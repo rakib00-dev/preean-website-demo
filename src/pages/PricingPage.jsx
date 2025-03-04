@@ -11,7 +11,7 @@ import CompareFeatures from '../Components/PricingPage/CompareFeatures';
 
 const PricingPage = () => {
   return (
-    <>
+    <section className="w-full max-w-7xl mx-auto">
       <>
         <PageHeader
           pageTitle="Pricing"
@@ -46,7 +46,7 @@ const PricingPage = () => {
           </div>
         }
       />
-    </>
+    </section>
   );
 };
 
