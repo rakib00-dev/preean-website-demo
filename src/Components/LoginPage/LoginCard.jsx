@@ -1,31 +1,54 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const LoginCard = () => {
+  const [isWantToLogin, setIsWantToLogin] = useState(true);
+
   return (
     <div className="w-full mx-auto flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-gray-50 border border-gray-200 shadow-xl text-gray-800 my-12">
-      <div className="mb-8 text-center">
-        <h1
-          className="my-3 text-4xl font-bold"
-          style={{ color: 'var(--black-primary)' }}
-        >
-          Sign In
-        </h1>
-        <p className="text-sm text-gray-600">Sign In to access your account</p>
-      </div>
+      {isWantToLogin ? (
+        <div className="mb-8 text-center">
+          <h1
+            className="my-3 text-4xl font-bold"
+            style={{ color: 'var(--black-primary)' }}
+          >
+            Login
+          </h1>
+          <p className="text-sm text-gray-600">Login to access your account</p>
+        </div>
+      ) : (
+        <div className="mb-8 text-center">
+          <h1
+            className="my-3 text-4xl font-bold"
+            style={{ color: 'var(--black-primary)' }}
+          >
+            Sign Up
+          </h1>
+          <p className="text-sm text-gray-600">
+            Sign Up to access your account
+          </p>
+        </div>
+      )}
       <form noValidate="" action="" className="space-y-12">
         <div className="space-y-4">
           <div>
-            <label htmlFor="name" className="block mb-2 text-sm font-medium">
-              Name
-            </label>
-            <input
-              required
-              type="name"
-              name="name"
-              id="name"
-              placeholder="Mr. Example Smith"
-              className="w-full px-3 py-2 border rounded-md border-gray-300  text-gray-800"
-            />
+            {!isWantToLogin && (
+              <>
+                <label
+                  htmlFor="name"
+                  className="block mb-2 text-sm font-medium"
+                >
+                  Name
+                </label>
+                <input
+                  required
+                  type="name"
+                  name="name"
+                  id="name"
+                  placeholder="Mr. Example Smith"
+                  className="w-full px-3 py-2 border rounded-md border-gray-300  text-gray-800"
+                />
+              </>
+            )}
           </div>
           <div>
             <label htmlFor="email" className="block mb-2 text-sm font-medium">
@@ -65,24 +88,51 @@ const LoginCard = () => {
         </div>
         <div className="space-y-2">
           <div>
-            <button
-              type="submit"
-              className="transition-all duration-300 w-full cursor-pointer px-8 py-3 font-semibold rounded-md bg-blue-600 text-gray-50 hover:bg-blue-500"
-            >
-              Sign In
-            </button>
+            {isWantToLogin ? (
+              <button
+                type="submit"
+                className="transition-all duration-300 w-full cursor-pointer px-8 py-3 font-semibold rounded-md bg-blue-600 text-gray-50 hover:bg-blue-500"
+              >
+                Login
+              </button>
+            ) : (
+              <button
+                type="submit"
+                className="transition-all duration-300 w-full cursor-pointer px-8 py-3 font-semibold rounded-md bg-blue-600 text-gray-50 hover:bg-blue-500"
+              >
+                Sign Up
+              </button>
+            )}
           </div>
-          <p className="px-6 text-md pt-2 text-center text-gray-600">
-            Don't have an account yet?
-            <a
-              rel="noopener noreferrer"
-              href="#"
-              className="hover:underline text-blue-600"
-            >
-              Sign up
-            </a>
-            .
-          </p>
+          {isWantToLogin ? (
+            <p className="px-6 text-md pt-2 text-center text-gray-600">
+              Don't have an account yet?{' '}
+              <button
+                type="button"
+                className="hover:underline text-blue-600 cursor-pointer"
+                onClick={() => {
+                  setIsWantToLogin((prev) => !prev);
+                }}
+              >
+                Sign up
+              </button>
+              .
+            </p>
+          ) : (
+            <p className="px-6 text-md pt-2 text-center text-gray-600">
+              I already have an account!{' '}
+              <button
+                type="button"
+                className="hover:underline text-blue-600 cursor-pointer"
+                onClick={() => {
+                  setIsWantToLogin((prev) => !prev);
+                }}
+              >
+                login
+              </button>
+              .
+            </p>
+          )}
         </div>
       </form>
     </div>
