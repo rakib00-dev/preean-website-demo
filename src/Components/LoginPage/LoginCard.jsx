@@ -1,7 +1,15 @@
 import React, { useState } from 'react';
+import { Navigate } from 'react-router-dom';
 
 const LoginCard = () => {
   const [isWantToLogin, setIsWantToLogin] = useState(true);
+  const [isLogedIn, setIsLogedIn] = useState(false);
+
+  const user = { name: 'Rakib', role: 'Admin' };
+
+  if (isLogedIn) {
+    return <Navigate to="/dashboard" state={{ user }} replace />;
+  }
 
   return (
     <div className="w-full mx-auto flex flex-col max-w-md p-6 rounded-md sm:p-10 bg-gray-50 border border-gray-200 shadow-xl text-gray-800 my-12">
@@ -92,6 +100,9 @@ const LoginCard = () => {
               <button
                 type="submit"
                 className="transition-all duration-300 w-full cursor-pointer px-8 py-3 font-semibold rounded-md bg-blue-600 text-gray-50 hover:bg-blue-500"
+                onClick={() => {
+                  setIsLogedIn(true);
+                }}
               >
                 Login
               </button>
