@@ -5,10 +5,10 @@ const LoginCard = () => {
   const [isWantToLogin, setIsWantToLogin] = useState(true);
   const [isLogedIn, setIsLogedIn] = useState(false);
 
-  const user = { name: 'Rakib', role: 'Admin' };
+  const userD = { name: 'Rakib', role: 'Admin' };
 
   if (isLogedIn) {
-    return <Navigate to="/dashboard" state={{ user }} replace />;
+    return <Navigate to="/dashboard" state={{ userD }} replace />;
   }
 
   return (
