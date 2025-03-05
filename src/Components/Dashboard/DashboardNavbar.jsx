@@ -1,4 +1,6 @@
 import React from 'react';
+import { CiBellOn } from 'react-icons/ci';
+import { RiQuestionnaireLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 
 const DashboardNavbar = () => {
@@ -24,10 +26,29 @@ const DashboardNavbar = () => {
           <Link className="font-bold text-white">Brands</Link>
           <Link className="font-bold text-white">Team</Link>
         </div>
-        <div>
-          <button className="transition-all duration-300 text-sm font-bold text-white uppercase py-2 px-3 bg-blue-600 hover:bg-blue-400">
+        <div className="flex gap-2">
+          <button className="transition-all duration-300 text-sm font-bold text-white uppercase py-2 px-3 bg-blue-600 hover:bg-blue-400 cursor-pointer">
             Upgrade
           </button>
+          <button className="flex justify-center items-center  cursor-pointer">
+            <RiQuestionnaireLine className="invert text-3xl font-light" />
+          </button>
+          <button className="flex justify-center items-center  cursor-pointer">
+            <CiBellOn className="invert text-3xl font-light" />
+          </button>
+          <div>
+            <div className="flex justify-center items-center gap-3">
+              <img
+                src="https://img.freepik.com/free-vector/isolated-young-handsome-man-different-poses-white-background-illustration_632498-859.jpg?t=st=1741149670~exp=1741153270~hmac=3a544d2ac44c0503378a035b0b61386fdfee87310462aaa91020e354fb51c294&w=996"
+                alt=""
+                loading="lazy"
+                className="w-10 rounded-full"
+              />
+              <h5 className="" style={{ color: 'white' }}>
+                Name
+              </h5>
+            </div>
+          </div>
         </div>
       </div>
     </section>
