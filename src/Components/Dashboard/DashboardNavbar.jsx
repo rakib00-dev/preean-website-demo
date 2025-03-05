@@ -43,12 +43,12 @@ const DashboardNavbar = () => {
           </Link>
         </div>
         <div className="flex gap-2">
-          <button className="transition-all duration-300 text-sm font-bold text-white uppercase py-2 px-3 bg-blue-600 hover:bg-blue-400 cursor-pointer">
+          <button className="transition-all duration-300 text-sm font-bold text-white uppercase py-2 px-3 bg-blue-600 hover:bg-blue-400 cursor-pointer hover:">
             Upgrade
           </button>
-          <button className="flex justify-center items-center  cursor-pointer">
+          {/* <button className="flex justify-center items-center  cursor-pointer">
             <RiQuestionnaireLine className="transition-all duration-300 invert text-3xl font-light hover:invert-50" />
-          </button>
+          </button> */}
           <button className="flex justify-center items-center cursor-pointer">
             <CiBellOn className="transition-all duration-300 invert text-3xl font-light hover:invert-50" />
           </button>
