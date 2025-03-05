@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import DashboardNavbar from '../Components/Dashboard/DashboardNavbar';
 
 const DashboardPage = () => {
@@ -15,6 +15,7 @@ const DashboardPage = () => {
       <h1 className="text-4xl">
         hello {user?.role} {user?.name} to DashboardPage
       </h1>
+      <Outlet />
     </section>
   );
 };

@@ -505,3 +505,12 @@ h5 {
   }
 }
 /* send request section ⬆️ */
+
+/* dashboard ⬇️ */
+/* .profile h5 {
+  color: white !important;
+} */
+.profile:hover h5 {
+  color: #b7b7b9 !important;
+}
+/* dashboard ⬆️ */

@@ -9,6 +9,9 @@ import PresentationDesignPage from './pages/PresentationDesignPage';
 import TermsPage from './pages/TermsPage';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 
+const DashboardRequests = React.lazy(() =>
+  import('./Components/Dashboard/DashboardRequests')
+);
 const DashboardPage = React.lazy(() => import('./pages/DashboardPage'));
 const LoginPage = React.lazy(() => import('./pages/LoginPage'));
 const ContactPage = React.lazy(() => import('./pages/ContactPage'));
@@ -126,6 +129,16 @@ function App() {
               <DashboardPage />
             </Suspense>
           ),
+          children: [
+            {
+              path: '/dashboard/requests',
+              element: (
+                <Suspense fallback={<p>Loading...</p>}>
+                  <DashboardRequests />
+                </Suspense>
+              ),
+            },
+          ],
         },
         {
           path: '/our-work',
