@@ -6,8 +6,12 @@ const DashboardPage = () => {
   const location = useLocation();
   const user = location.state?.userD;
 
-  console.log(location.state.userD);
+  console.log(location.state?.userD);
   console.log(user);
+
+  // if (!user) {
+  //   return null;
+  // }
 
   return (
     <section className="w-full max-w-7xl mx-auto">

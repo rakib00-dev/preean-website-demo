@@ -23,7 +23,10 @@ const DashboardNavbar = () => {
               loading="lazy"
             />
           </Link>
-          <Link className="transition-all font-bold text-white hover:text-white/60">
+          <Link
+            to={'/dashboard/requests'}
+            className="transition-all font-bold text-white hover:text-white/60"
+          >
             Requests
           </Link>
           <Link className="transition-all font-bold text-white hover:text-white/60">
