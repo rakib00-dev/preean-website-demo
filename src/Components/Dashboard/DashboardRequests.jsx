@@ -9,7 +9,7 @@ const DashboardRequests = () => {
         <div className="flex justify-between items-center">
           <h1 className="text-4xl">Requests</h1>
           <button className="flex text-lg bg-blue-500 font-medium items-center justify-center text-white py-1 px-2 gap-1 transition-all duration-300 hover:bg-blue-400 cursor-pointer">
-            <GoPlus className="text-xl" /> Create Requests
+            <GoPlus className="text-xl" /> Create Request
           </button>
         </div>
         <p
