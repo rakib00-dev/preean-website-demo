@@ -71,7 +71,7 @@ export default DashboardBrands;
 const Cards = ({ src, title, usedInReq }) => {
   return (
     <>
-      <div className="flex justify-between items-center gap-2 py-2 px-4 border border-gray-200 rounded-xl bg-gray-100 cursor-pointer hover:bg-blue-100">
+      <div className="transition-all duration-200 flex justify-between items-center gap-2 py-2 px-4 border border-gray-200 rounded-xl bg-gray-100 cursor-pointer hover:bg-blue-100">
         <div className="flex gap-2 justify-start">
           <img src={src} alt="" loading="lazy" className="w-12 rounded-full" />
           <div>
