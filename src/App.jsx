@@ -9,6 +9,7 @@ import PresentationDesignPage from './pages/PresentationDesignPage';
 import TermsPage from './pages/TermsPage';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 
+const DashboardLayout = React.lazy(() => import('./layouts/DashboardLayout'));
 const PhotoshopDesignPage = React.lazy(() =>
   import('./pages/PhotoshopDesignPage')
 );
@@ -141,40 +142,6 @@ function App() {
           ),
         },
         {
-          path: '/dashboard',
-          element: (
-            <Suspense fallback={<p>Loading...</p>}>
-              <DashboardPage />
-            </Suspense>
-          ),
-          children: [
-            {
-              path: '/dashboard',
-              element: (
-                <Suspense fallback={<p>Loading...</p>}>
-                  <DashboardRequests />
-                </Suspense>
-              ),
-            },
-            {
-              path: '/dashboard/brands',
-              element: (
-                <Suspense fallback={<p>Loading...</p>}>
-                  <DashboardBrands />
-                </Suspense>
-              ),
-            },
-            {
-              path: '/dashboard/team',
-              element: (
-                <Suspense fallback={<p>Loading...</p>}>
-                  <DashboardTeam />
-                </Suspense>
-              ),
-            },
-          ],
-        },
-        {
           path: '/our-work',
           element: (
             <Suspense fallback={<p>Loading...</p>}>
@@ -221,6 +188,46 @@ function App() {
           element: (
             <Suspense fallback={<p>Loading...</p>}>
               <DesignBlogsPage />
+            </Suspense>
+          ),
+        },
+      ],
+    },
+    {
+      path: '/dashboard',
+      element: (
+        <Suspense fallback={<p>Loading...</p>}>
+          <DashboardLayout />
+        </Suspense>
+      ),
+      errorElement: (
+        <Suspense fallback={<p>Loading...</p>}>
+          <ErrorPage />
+        </Suspense>
+      ),
+
+      children: [
+        {
+          path: '/dashboard',
+          element: (
+            <Suspense fallback={<p>Loading...</p>}>
+              <DashboardRequests />
+            </Suspense>
+          ),
+        },
+        {
+          path: '/dashboard/brands',
+          element: (
+            <Suspense fallback={<p>Loading...</p>}>
+              <DashboardBrands />
+            </Suspense>
+          ),
+        },
+        {
+          path: '/dashboard/team',
+          element: (
+            <Suspense fallback={<p>Loading...</p>}>
+              <DashboardTeam />
             </Suspense>
           ),
         },
