@@ -8,6 +8,7 @@ import MotioinGraphicsPage from './pages/MotioinGraphicsPage';
 import PresentationDesignPage from './pages/PresentationDesignPage';
 import TermsPage from './pages/TermsPage';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import DashboardCreateBrand from './Components/Dashboard/DashboardCreateBrand';
 
 const DashboardLayout = React.lazy(() => import('./layouts/DashboardLayout'));
 const PhotoshopDesignPage = React.lazy(() =>
@@ -193,6 +194,7 @@ function App() {
         },
       ],
     },
+
     {
       path: '/dashboard',
       element: (
@@ -220,6 +222,14 @@ function App() {
           element: (
             <Suspense fallback={<p>Loading...</p>}>
               <DashboardBrands />
+            </Suspense>
+          ),
+        },
+        {
+          path: '/dashboard/brands/create-brand',
+          element: (
+            <Suspense fallback={<p>Loading...</p>}>
+              <DashboardCreateBrand />
             </Suspense>
           ),
         },

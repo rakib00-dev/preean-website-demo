@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { BsThreeDots } from 'react-icons/bs';
 import { GoPlus } from 'react-icons/go';
 import { IoMdArrowDropright } from 'react-icons/io';
+import { Link } from 'react-router-dom';
 
 const DashboardBrands = () => {
   const brandArr = [
@@ -34,9 +35,12 @@ const DashboardBrands = () => {
       <div className="grid gap-2">
         <div className="flex justify-between items-center">
           <h1 className="text-4xl">Brands</h1>
-          <button className="flex text-lg bg-blue-500 font-medium items-center justify-center text-white py-1 px-2 gap-1 transition-all duration-300 hover:bg-blue-400 cursor-pointer">
+          <Link
+            to={'/dashboard/brands/create-brand'}
+            className="flex text-lg bg-blue-500 font-medium items-center justify-center text-white py-1 px-2 gap-1 transition-all duration-300 hover:bg-blue-400 cursor-pointer"
+          >
             <GoPlus className="text-xl" /> Create Brand
-          </button>
+          </Link>
         </div>
         <p
           className="w-96 mb-7"
