@@ -1,13 +1,21 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import Footer from '../Components/Footer';
 import Navbar from '../Components/Navbar';
 
 const MainLayout = () => {
+  const location = useLocation();
+
   return (
     <>
-      <Navbar />
-      <Outlet />
-      <Footer />
+      {location.pathname.toString() !== '/dashboard' ? (
+        <>
+          <Navbar />
+          <Outlet />
+          <Footer />
+        </>
+      ) : (
+        <Outlet />
+      )}
     </>
   );
 };
