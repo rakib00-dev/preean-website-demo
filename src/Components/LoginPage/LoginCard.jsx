@@ -8,7 +8,7 @@ const LoginCard = () => {
   // const userD = { name: 'Rakib', role: 'Admin' };
 
   if (isLogedIn) {
-    return <Navigate to="/dashboard" />;
+    return <Navigate to="/dashboad" />;
     // state={{ userD }} replace
   }
 

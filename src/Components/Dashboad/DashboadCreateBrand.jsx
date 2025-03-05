@@ -4,7 +4,7 @@ import { GoPlus } from 'react-icons/go';
 import { IoIosArrowBack, IoMdArrowDropright } from 'react-icons/io';
 import { Link, useNavigate } from 'react-router-dom';
 
-const DashboardCreateBrand = () => {
+const dashboadCreateBrand = () => {
   const navigate = useNavigate();
 
   return (
@@ -54,12 +54,36 @@ const DashboardCreateBrand = () => {
           <h3 className="text-xl flex justify-start items-end">Logos</h3>
           <LogoGallery />
         </div>
+
+        <div className="grid gap-3">
+          <h3 className="text-xl flex justify-start items-end">Brand Guides</h3>
+          <BrandGuids />
+        </div>
+
+        <div className="grid">
+          <h3 className="text-xl flex justify-start items-end">Fonts</h3>
+          <p className="text-gray-500 mb-4">
+            only files with .zip, .ttf, .otf format are allowed
+          </p>
+          <FontUpload />
+        </div>
+
+        {/* <div className="grid">
+          <h3 className="text-xl flex justify-start items-end">
+            Extra assects
+          </h3>
+          <p className="text-gray-500 mb-4">
+            Upload any assets that might be revelant to your brand. This could
+            include other type of graphics, templates, documents, etc.
+          </p>
+          <ExtraAssets />
+        </div> */}
       </div>
     </section>
   );
 };
 
-export default DashboardCreateBrand;
+export default dashboadCreateBrand;
 
 const ColorPalette = () => {
   const colors = [
@@ -133,6 +157,7 @@ const LogoGallery = () => {
             src={logo.src}
             alt={logo.name}
             className="w-16 h-16 object-contain"
+            loading="lazy"
           />
           <span className="text-sm font-medium mt-2">{logo.name}</span>
           <span className="text-xs text-gray-500">{logo.size}</span>
@@ -141,3 +166,102 @@ const LogoGallery = () => {
     </div>
   );
 };
+
+const BrandGuids = () => {
+  const logos = [
+    {
+      src: 'https://cdn-icons-png.flaticon.com/512/337/337946.png',
+      name: 'Favicon.png',
+      size: '6 kB',
+    },
+  ];
+
+  return (
+    <div className="grid grid-cols-4 gap-4">
+      <div className="flex items-center justify-center border-2 border-dashed border-gray-300 w-full h-30 text-gray-500 cursor-pointer ">
+        + Add Brand Guide
+      </div>
+      {logos.map((logo, index) => (
+        <div
+          key={index}
+          className="flex flex-col items-center justify-center border border-gray-300 rounded-lg p-2 shadow-md "
+        >
+          <img
+            src={logo.src}
+            alt={logo.name}
+            className="w-16 h-16 object-contain"
+            loading="lazy"
+          />
+          <span className="text-sm font-medium mt-2">{logo.name}</span>
+          <span className="text-xs text-gray-500">{logo.size}</span>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+const FontUpload = () => {
+  const logos = [
+    {
+      src: '/images/dashboad/dot-file.png',
+      name: 'Font.zip',
+      size: '6 kB',
+    },
+  ];
+
+  return (
+    <div className="grid grid-cols-4 gap-4">
+      <div className="flex items-center justify-center border-2 border-dashed border-gray-300 w-full h-30 text-gray-500 cursor-pointer ">
+        + Add Font
+      </div>
+      {logos.map((logo, index) => (
+        <div
+          key={index}
+          className="flex flex-col items-center justify-center border border-gray-300 rounded-lg p-2 shadow-md "
+        >
+          <img
+            src={logo.src}
+            alt={logo.name}
+            className="w-16 h-16 object-contain"
+            loading="lazy"
+          />
+          <span className="text-sm font-medium mt-2">{logo.name}</span>
+          <span className="text-xs text-gray-500">{logo.size}</span>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+// const ExtraAssets = () => {
+//   const logos = [
+//     {
+//       src: '/images/dashboad/dot-file.png',
+//       name: 'Font.zip',
+//       size: '6 kB',
+//     },
+//   ];
+
+//   return (
+//     <div className="grid grid-cols-4 gap-4">
+//       <div className="flex items-center justify-center border-2 border-dashed border-gray-300 w-full h-30 text-gray-500 cursor-pointer ">
+//         + Add Font
+//       </div>
+//       {logos.map((logo, index) => (
+//         <div
+//           key={index}
+//           className="flex flex-col items-center justify-center border border-gray-300 rounded-lg p-2 shadow-md "
+//         >
+//           <img
+//             src={logo.src}
+//             alt={logo.name}
+//             className="w-16 h-16 object-contain"
+//             loading="lazy"
+//           />
+//           <span className="text-sm font-medium mt-2">{logo.name}</span>
+//           <span className="text-xs text-gray-500">{logo.size}</span>
+//         </div>
+//       ))}
+//     </div>
+//   );
+// };

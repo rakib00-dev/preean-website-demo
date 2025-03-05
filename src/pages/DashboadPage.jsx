@@ -1,8 +1,8 @@
 import React from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
-import DashboardNavbar from '../Components/Dashboard/DashboardNavbar';
+import DashboadNavbar from '../Components/Dashboad/DashboadNavbar';
 
-const DashboardPage = () => {
+const DashboadPage = () => {
   // const location = useLocation();
   // const user = location.state?.userD;
 
@@ -11,13 +11,13 @@ const DashboardPage = () => {
 
   return (
     <section className="w-full max-w-7xl mx-auto">
-      <DashboardNavbar />
+      <dashboadNavbar />
       {/* <h1 className="text-4xl">
-        hello {user?.role} {user?.name} to DashboardPage
+        hello {user?.role} {user?.name} to DashboadPage
       </h1> */}
       <Outlet />
     </section>
   );
 };
 
-export default DashboardPage;
+export default DashboadPage;

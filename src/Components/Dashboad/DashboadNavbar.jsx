@@ -4,7 +4,7 @@ import { IoMdArrowDropright } from 'react-icons/io';
 import { RiQuestionnaireLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 
-const DashboardNavbar = () => {
+const dashboadNavbar = () => {
   return (
     <section className="w-full max-w-7xl mx-auto mb-6">
       <div className="flex justify-between bg-[#0f2333] py-7 px-7">
@@ -24,19 +24,19 @@ const DashboardNavbar = () => {
             />
           </Link>
           <Link
-            to={'/dashboard'}
+            to={'/dashboad'}
             className="transition-all font-bold text-white hover:text-white/60"
           >
             Requests
           </Link>
           <Link
-            to={'/dashboard/brands'}
+            to={'/dashboad/brands'}
             className="transition-all font-bold text-white hover:text-white/60"
           >
             Brands
           </Link>
           <Link
-            to={'/dashboard/team'}
+            to={'/dashboad/team'}
             className="transition-all font-bold text-white hover:text-white/60"
           >
             Team
@@ -75,4 +75,4 @@ const DashboardNavbar = () => {
   );
 };
 
-export default DashboardNavbar;
+export default dashboadNavbar;
