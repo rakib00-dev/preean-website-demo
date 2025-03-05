@@ -9,6 +9,9 @@ import PresentationDesignPage from './pages/PresentationDesignPage';
 import TermsPage from './pages/TermsPage';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 
+const PhotoshopDesignPage = React.lazy(() =>
+  import('./pages/PhotoshopDesignPage')
+);
 const DashboardTeam = React.lazy(() =>
   import('./Components/Dashboard/DashboardTeam')
 );
@@ -53,6 +56,15 @@ function App() {
         {
           path: '/',
           element: <HomePage />,
+        },
+        {
+          path: '/photoshop-design',
+          element: (
+            <Suspense fallback={<p>Loading...</p>}>
+              <PhotoshopDesignPage />
+              {/* <SocialMediaPage /> */}
+            </Suspense>
+          ),
         },
         {
           path: '/graphic-design',

@@ -123,6 +123,11 @@ const Navbar = () => {
               src="/images/navbar/social-media.svg"
             /> */}
             <DropDown
+              to="photoshop-design"
+              title="photoshop design"
+              src="/images/navbar/photoshop-design.png"
+            />
+            <DropDown
               to="graphic-design"
               title="graphic design"
               src="/images/navbar/graphic-design.svg"
@@ -492,6 +497,11 @@ const Navbar = () => {
           className="hidden fixed rounded-xl bg-white top-[48px] m-auto flex-col justify-start items-start flex-wrap shadow-xl w-[40rem] lg:flex"
           style={{ zIndex: 1122 }}
         >
+          <DropDown
+            to="photoshop-design"
+            title="photoshop design"
+            src="/images/navbar/photoshop-design.png"
+          />
           <DropDown
             to="/graphic-design"
             title="graphic design"
