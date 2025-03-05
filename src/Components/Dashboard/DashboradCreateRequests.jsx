@@ -2,6 +2,8 @@ import { BsThreeDots } from 'react-icons/bs';
 import { IoIosArrowBack } from 'react-icons/io';
 import { BrandCards } from './DashboardBrands';
 import { useState } from 'react';
+import { MdFormatBold, MdFormatListBulleted } from 'react-icons/md';
+import { FaItalic, FaLink } from 'react-icons/fa';
 
 const DashboradCreateRequests = () => {
   const categoryData = [
@@ -219,6 +221,87 @@ const DashboradCreateRequests = () => {
             </div>
           </div>
         </div>
+
+        <form>
+          <div class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50  ">
+            <div class="flex items-center justify-between px-3 py-2 border-b border-gray-200 ">
+              <div class="flex flex-wrap items-center divide-gray-200 sm:divide-x sm:rtl:divide-x-reverse ">
+                <div class="flex items-center space-x-1 rtl:space-x-reverse sm:pe-4">
+                  <button
+                    type="button"
+                    class="p-2 text-gray-500 rounded-sm cursor-pointer hover:text-gray-900 hover:bg-gray-100   "
+                  >
+                    <MdFormatBold className="text-2xl" />
+                  </button>
+
+                  <button
+                    type="button"
+                    class="p-2 text-gray-500 rounded-sm cursor-pointer hover:text-gray-900 hover:bg-gray-100   "
+                  >
+                    <FaItalic />
+                  </button>
+                </div>
+                <div class="flex flex-wrap items-center space-x-1 rtl:space-x-reverse sm:ps-4">
+                  <button
+                    type="button"
+                    class="p-2 text-gray-500 rounded-sm cursor-pointer hover:text-gray-900 hover:bg-gray-100   "
+                  >
+                    <FaLink />
+                  </button>
+                  <button
+                    type="button"
+                    class="p-2 text-gray-500 rounded-sm cursor-pointer hover:text-gray-900 hover:bg-gray-100   "
+                  >
+                    <svg
+                      class="w-4 h-4"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 21 18"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9.5 3h9.563M9.5 9h9.563M9.5 15h9.563M1.5 13a2 2 0 1 1 3.321 1.5L1.5 17h5m-5-15 2-1v6m-2 0h4"
+                      />
+                    </svg>
+                    <span class="sr-only">Add list</span>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="p-2 text-gray-500 rounded-sm cursor-pointer hover:text-gray-900 hover:bg-gray-100   "
+                  >
+                    <MdFormatListBulleted className="text-xl" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="px-4 py-2 bg-white rounded-b-lg ">
+              <label for="editor" class="sr-only">
+                Publish post
+              </label>
+              <textarea
+                id="editor"
+                rows="8"
+                class="block w-full px-0 text-sm text-gray-800 bg-white border-0 font-medium focus:ring-0 p-4 outline-none"
+                placeholder={`We are a small B2B/B2C company providing solutions in Digital Marketing and I am looking for a new logo that focuses on:
+      * Social Media
+      * Young Entrepreneurs
+      * Market Leaders`}
+                required
+              ></textarea>
+            </div>
+          </div>
+          <button
+            type="submit"
+            class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800"
+          >
+            Publish post
+          </button>
+        </form>
 
         <div className="mt-80"></div>
       </div>
