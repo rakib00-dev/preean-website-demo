@@ -29,10 +29,16 @@ const DashboardNavbar = () => {
           >
             Requests
           </Link>
-          <Link className="transition-all font-bold text-white hover:text-white/60">
+          <Link
+            to={'/dashboard/brands'}
+            className="transition-all font-bold text-white hover:text-white/60"
+          >
             Brands
           </Link>
-          <Link className="transition-all font-bold text-white hover:text-white/60">
+          <Link
+            to={'/dashboard/team'}
+            className="transition-all font-bold text-white hover:text-white/60"
+          >
             Team
           </Link>
         </div>

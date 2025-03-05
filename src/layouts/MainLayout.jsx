@@ -10,6 +10,7 @@ const MainLayout = () => {
   useEffect(() => {
     if (
       location.pathname.toString() == '/dashboard/requests' ||
+      location.pathname.toString() == '/dashboard/brands' ||
       location.pathname.toString() == '/dashboard'
     ) {
       setIsDashboard(true);
