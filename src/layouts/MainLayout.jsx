@@ -9,25 +9,29 @@ const MainLayout = () => {
 
   useEffect(() => {
     if (
-      location.pathname.toString() == '/dashboard/requests' ||
-      location.pathname.toString() == '/dashboard/brands' ||
-      location.pathname.toString() == '/dashboard/team' ||
-      location.pathname.toString() == '/dashboard'
+      location.pathname.toString() === '/dashboard/requests' ||
+      location.pathname.toString() === '/dashboard/brands' ||
+      location.pathname.toString() === '/dashboard/team' ||
+      location.pathname.toString() === '/dashboard'
     ) {
       setIsDashboard(true);
+    } else {
+      setIsDashboard(false);
     }
-  }, []);
+  }, [location.pathname]);
+
+  console.log(!isDashboard);
 
   return (
     <>
-      {!isDashboard ? (
+      {isDashboard ? (
+        <Outlet />
+      ) : (
         <>
           <Navbar />
           <Outlet />
           <Footer />
         </>
-      ) : (
-        <Outlet />
       )}
     </>
   );
