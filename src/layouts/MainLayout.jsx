@@ -5,22 +5,22 @@ import Navbar from '../Components/Navbar';
 
 const MainLayout = () => {
   // const location = useLocation();
-  // const [isdashboad, setIsdashboad] = useState(false);
+  // const [isdashborad, setIsdashborad] = useState(false);
 
   // useEffect(() => {
   //   if (
-  //     location.pathname.toString() === '/dashboad/requests' ||
-  //     location.pathname.toString() === '/dashboad/brands' ||
-  //     location.pathname.toString() === '/dashboad/team' ||
-  //     location.pathname.toString() === '/dashboad'
+  //     location.pathname.toString() === '/dashboard/requests' ||
+  //     location.pathname.toString() === '/dashboard/brands' ||
+  //     location.pathname.toString() === '/dashboard/team' ||
+  //     location.pathname.toString() === '/dashboard'
   //   ) {
-  //     setIsdashboad(true);
+  //     setIsdashborad(true);
   //   } else {
-  //     setIsdashboad(false);
+  //     setIsdashborad(false);
   //   }
   // }, [location.pathname]);
 
-  // console.log(!isdashboad);
+  // console.log(!isdashborad);
 
   return (
     <>

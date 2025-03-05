@@ -4,7 +4,7 @@ import { GoPlus } from 'react-icons/go';
 import { IoIosArrowBack, IoMdArrowDropright } from 'react-icons/io';
 import { Link, useNavigate } from 'react-router-dom';
 
-const dashboadCreateBrand = () => {
+const DashboardCreateBrand = () => {
   const navigate = useNavigate();
 
   return (
@@ -83,7 +83,7 @@ const dashboadCreateBrand = () => {
   );
 };
 
-export default dashboadCreateBrand;
+export default DashboardCreateBrand;
 
 const ColorPalette = () => {
   const colors = [
@@ -203,7 +203,7 @@ const BrandGuids = () => {
 const FontUpload = () => {
   const logos = [
     {
-      src: '/images/dashboad/dot-file.png',
+      src: '/images/dashboard/dot-file.png',
       name: 'Font.zip',
       size: '6 kB',
     },
@@ -236,7 +236,7 @@ const FontUpload = () => {
 // const ExtraAssets = () => {
 //   const logos = [
 //     {
-//       src: '/images/dashboad/dot-file.png',
+//       src: '/images/dashboard/dot-file.png',
 //       name: 'Font.zip',
 //       size: '6 kB',
 //     },

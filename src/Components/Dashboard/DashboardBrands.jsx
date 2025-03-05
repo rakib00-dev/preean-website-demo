@@ -4,7 +4,7 @@ import { GoPlus } from 'react-icons/go';
 import { IoMdArrowDropright } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 
-const dashboadBrands = () => {
+const DashboradBrands = () => {
   const brandArr = [
     {
       src: 'https://yt3.googleusercontent.com/OqN3DP0rwXrSBvzuAgfeEGwkdhheV93iWz5KsyMeCgk11AJ9B_F2FvIDTN06cNmQ310twIsU5xU=s160-c-k-c0x00ffffff-no-rj',
@@ -36,7 +36,7 @@ const dashboadBrands = () => {
         <div className="flex justify-between items-center">
           <h1 className="text-4xl">Brands</h1>
           <Link
-            to={'/dashboad/brands/create-brand'}
+            to={'/dashboard/brands/create-brand'}
             className="flex text-lg bg-blue-500 font-medium items-center justify-center text-white py-1 px-2 gap-1 transition-all duration-300 hover:bg-blue-400 cursor-pointer"
           >
             <GoPlus className="text-xl" /> Create Brand
@@ -70,7 +70,7 @@ const dashboadBrands = () => {
   );
 };
 
-export default dashboadBrands;
+export default DashboradBrands;
 
 const Cards = ({ src, title, usedInReq }) => {
   return (

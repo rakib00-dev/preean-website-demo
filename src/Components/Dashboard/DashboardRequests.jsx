@@ -4,7 +4,7 @@ import { HiOutlineMagnifyingGlass } from 'react-icons/hi2';
 import { IoMdArrowDropright } from 'react-icons/io';
 import { NavLink } from 'react-router-dom';
 
-const dashboadRequests = () => {
+const dashboradRequests = () => {
   return (
     <section className="mx-50">
       <div className="grid gap-2">
@@ -42,4 +42,4 @@ const dashboadRequests = () => {
   );
 };
 
-export default dashboadRequests;
+export default dashboradRequests;
