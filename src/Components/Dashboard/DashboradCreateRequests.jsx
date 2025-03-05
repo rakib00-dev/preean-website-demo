@@ -3,9 +3,12 @@ import { IoIosArrowBack } from 'react-icons/io';
 import { BrandCards } from './DashboardBrands';
 import { useState } from 'react';
 import { MdFormatBold, MdFormatListBulleted } from 'react-icons/md';
-import { FaItalic, FaLink } from 'react-icons/fa';
+import { FaItalic, FaLink, FaUpload } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 const DashboradCreateRequests = () => {
+  const navigate = useNavigate();
+
   const categoryData = [
     {
       src: '/images/dashboard/requests/brand-identity-design.png',
@@ -59,11 +62,39 @@ const DashboradCreateRequests = () => {
       title: 'e books',
     },
   ];
-
-  console.log(categoryData[0].src);
+  const fileDalivarableData = [
+    {
+      src: '/images/dashboard/requests/artist.png',
+      title: 'Let my designer choose',
+    },
+    {
+      src: '/images/dashboard/requests/jpg.png',
+      title: 'JPG',
+    },
+    {
+      src: '/images/dashboard/requests/png.png',
+      title: 'PNG',
+    },
+    {
+      src: '/images/dashboard/requests/illustrator.png',
+      title: 'AI',
+    },
+    {
+      src: '/images/dashboard/requests/photoshop.png',
+      title: 'PSD',
+    },
+    {
+      src: '/images/dashboard/requests/indesign.png',
+      title: 'INDD',
+    },
+    {
+      src: '/images/dashboard/dot-file.png',
+      title: 'Others',
+    },
+  ];
 
   return (
-    <section className="mx-50">
+    <section className="px-50 max-w-7xl w-full mx-auto">
       <div className="grid gap-8">
         <div className="flex justify-between items-center relative">
           <div
@@ -222,88 +253,202 @@ const DashboradCreateRequests = () => {
           </div>
         </div>
 
-        <form>
-          <div class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50  ">
-            <div class="flex items-center justify-between px-3 py-2 border-b border-gray-200 ">
-              <div class="flex flex-wrap items-center divide-gray-200 sm:divide-x sm:rtl:divide-x-reverse ">
-                <div class="flex items-center space-x-1 rtl:space-x-reverse sm:pe-4">
-                  <button
-                    type="button"
-                    class="p-2 text-gray-500 rounded-sm cursor-pointer hover:text-gray-900 hover:bg-gray-100   "
-                  >
-                    <MdFormatBold className="text-2xl" />
-                  </button>
-
-                  <button
-                    type="button"
-                    class="p-2 text-gray-500 rounded-sm cursor-pointer hover:text-gray-900 hover:bg-gray-100   "
-                  >
-                    <FaItalic />
-                  </button>
-                </div>
-                <div class="flex flex-wrap items-center space-x-1 rtl:space-x-reverse sm:ps-4">
-                  <button
-                    type="button"
-                    class="p-2 text-gray-500 rounded-sm cursor-pointer hover:text-gray-900 hover:bg-gray-100   "
-                  >
-                    <FaLink />
-                  </button>
-                  <button
-                    type="button"
-                    class="p-2 text-gray-500 rounded-sm cursor-pointer hover:text-gray-900 hover:bg-gray-100   "
-                  >
-                    <svg
-                      class="w-4 h-4"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 21 18"
+        <div className="w-full grid gap-3 h-full my-6">
+          <h3 className="text-xl flex gap-2 justify-start items-end">
+            Describe your request
+          </h3>
+          <p className="text-gray-500">
+            Format your paragraphs and create checklists to make your
+            description easy to read and follow. Well-written instructions will
+            result in better designs.
+          </p>
+          <form>
+            <div class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50  ">
+              <div class="flex items-center justify-between px-3 py-2 border-b border-gray-200 ">
+                <div class="flex flex-wrap items-center divide-gray-200 sm:divide-x sm:rtl:divide-x-reverse ">
+                  <div class="flex items-center space-x-1 rtl:space-x-reverse sm:pe-4">
+                    <button
+                      type="button"
+                      class="p-2 text-gray-500 rounded-sm cursor-pointer hover:text-gray-900 hover:bg-gray-100   "
                     >
-                      <path
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M9.5 3h9.563M9.5 9h9.563M9.5 15h9.563M1.5 13a2 2 0 1 1 3.321 1.5L1.5 17h5m-5-15 2-1v6m-2 0h4"
-                      />
-                    </svg>
-                    <span class="sr-only">Add list</span>
-                  </button>
+                      <MdFormatBold className="text-2xl" />
+                    </button>
 
-                  <button
-                    type="button"
-                    class="p-2 text-gray-500 rounded-sm cursor-pointer hover:text-gray-900 hover:bg-gray-100   "
-                  >
-                    <MdFormatListBulleted className="text-xl" />
-                  </button>
+                    <button
+                      type="button"
+                      class="p-2 text-gray-500 rounded-sm cursor-pointer hover:text-gray-900 hover:bg-gray-100   "
+                    >
+                      <FaItalic />
+                    </button>
+                  </div>
+                  <div class="flex flex-wrap items-center space-x-1 rtl:space-x-reverse sm:ps-4">
+                    <button
+                      type="button"
+                      class="p-2 text-gray-500 rounded-sm cursor-pointer hover:text-gray-900 hover:bg-gray-100   "
+                    >
+                      <FaLink />
+                    </button>
+                    <button
+                      type="button"
+                      class="p-2 text-gray-500 rounded-sm cursor-pointer hover:text-gray-900 hover:bg-gray-100   "
+                    >
+                      <svg
+                        class="w-4 h-4"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 21 18"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M9.5 3h9.563M9.5 9h9.563M9.5 15h9.563M1.5 13a2 2 0 1 1 3.321 1.5L1.5 17h5m-5-15 2-1v6m-2 0h4"
+                        />
+                      </svg>
+                      <span class="sr-only">Add list</span>
+                    </button>
+
+                    <button
+                      type="button"
+                      class="p-2 text-gray-500 rounded-sm cursor-pointer hover:text-gray-900 hover:bg-gray-100   "
+                    >
+                      <MdFormatListBulleted className="text-xl" />
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="px-4 py-2 bg-white rounded-b-lg ">
-              <label for="editor" class="sr-only">
-                Publish post
-              </label>
-              <textarea
-                id="editor"
-                rows="8"
-                class="block w-full px-0 text-sm text-gray-800 bg-white border-0 font-medium focus:ring-0 p-4 outline-none"
-                placeholder={`We are a small B2B/B2C company providing solutions in Digital Marketing and I am looking for a new logo that focuses on:
+              <div class="px-4 py-2 bg-white rounded-b-lg ">
+                <label for="editor" class="sr-only">
+                  Publish post
+                </label>
+                <textarea
+                  id="editor"
+                  rows="8"
+                  class="block w-full px-0 text-sm text-gray-800 bg-white border-0 font-medium focus:ring-0 p-4 outline-none"
+                  placeholder={`We are a small B2B/B2C company providing solutions in Digital Marketing and I am looking for a new logo that focuses on:
       * Social Media
       * Young Entrepreneurs
       * Market Leaders`}
-                required
-              ></textarea>
+                  required
+                ></textarea>
+              </div>
+            </div>
+            <button
+              type="submit"
+              class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800"
+            >
+              Publish post
+            </button>
+          </form>
+        </div>
+
+        <div className="w-full grid gap-3 h-full my-8">
+          <h3 className="text-xl flex gap-2 justify-start items-end">
+            Attachments <span className="text-gray-400"> (Optional)</span>
+          </h3>
+          <p className="text-gray-500">
+            Upload any images, files, or examples that may be helpful in
+            explaining your request here.
+          </p>
+          <div className="flex justify-center items-center gap-3 h-40 w-full">
+            <label className="gap-1 h-full w-full border border-gray-200 rounded text-blue-500 bg-gray-100 cursor-pointer flex flex-col justify-center items-center font-semibold">
+              <FaUpload />
+              Upload Files
+              <input type="file" className="hidden" />
+              <input type="" className="hidden" />
+            </label>
+          </div>
+        </div>
+
+        <div>
+          <h3 className="text-xl flex justify-start items-end">
+            File deliverables
+          </h3>
+          <p className="text-gray-400">Select the file types you need</p>
+          <div className="grid gap-3 grid-cols-4 my-5">
+            <div className="grid place-items-center border-2 cursor-pointer border-gray-200 p-4">
+              <img
+                src={fileDalivarableData[0].src}
+                alt=""
+                loading="lazy"
+                className="w-12"
+              />
+              <h5>{fileDalivarableData[0].title}</h5>
+            </div>
+            <div className="grid place-items-center border-2 cursor-pointer border-gray-200 p-4">
+              <img
+                src={fileDalivarableData[1].src}
+                alt=""
+                loading="lazy"
+                className="w-12"
+              />
+              <h5>{fileDalivarableData[1].title}</h5>
+            </div>
+            <div className="grid place-items-center border-2 cursor-pointer border-gray-200 p-4">
+              <img
+                src={fileDalivarableData[2].src}
+                alt=""
+                loading="lazy"
+                className="w-12"
+              />
+              <h5>{fileDalivarableData[2].title}</h5>
+            </div>
+            <div className="grid place-items-center border-2 cursor-pointer border-gray-200 p-4">
+              <img
+                src={fileDalivarableData[3].src}
+                alt=""
+                loading="lazy"
+                className="w-12"
+              />
+              <h5>{fileDalivarableData[3].title}</h5>
+            </div>
+            <div className="grid place-items-center border-2 cursor-pointer border-gray-200 p-4">
+              <img
+                src={fileDalivarableData[4].src}
+                alt=""
+                loading="lazy"
+                className="w-12"
+              />
+              <h5>{fileDalivarableData[4].title}</h5>
+            </div>
+            <div className="grid place-items-center border-2 cursor-pointer border-gray-200 p-4">
+              <img
+                src={fileDalivarableData[5].src}
+                alt=""
+                loading="lazy"
+                className="w-12"
+              />
+              <h5>{fileDalivarableData[5].title}</h5>
+            </div>
+            <div className="grid place-items-center border-2 cursor-pointer border-gray-200 p-4">
+              <img
+                src={fileDalivarableData[6].src}
+                alt=""
+                loading="lazy"
+                className="w-12"
+              />
+              <h5>{fileDalivarableData[6].title}</h5>
             </div>
           </div>
-          <button
-            type="submit"
-            class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800"
-          >
-            Publish post
-          </button>
-        </form>
+        </div>
 
-        <div className="mt-80"></div>
+        <div className="my-12 flex justify-between">
+          <button className="font-bold">Cancel</button>
+          <div className="flex gap-4">
+            <button
+              className="font-bold border border-gray-300 flex justify-center items-center gap-2 cursor-pointer py-2 px-4"
+              onClick={() => navigate(-1)}
+            >
+              <IoIosArrowBack className="transition-all duration-300 text-lg text-gray-500 hover:text-gray-700" />{' '}
+              Previous
+            </button>
+            <button className="transition-all duration-300 font-bold border border-gray-300 px-5 cursor-pointer py-0 bg-blue-500 text-white hover:bg-blue-400">
+              Submit
+            </button>
+          </div>
+        </div>
       </div>
     </section>
   );

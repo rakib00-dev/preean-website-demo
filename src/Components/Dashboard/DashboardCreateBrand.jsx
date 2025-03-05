@@ -8,7 +8,7 @@ const DashboardCreateBrand = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="mx-50">
+    <section className="px-50 max-w-7xl w-full mx-auto">
       <div className="grid gap-8">
         <div className="flex justify-between items-center relative">
           <div
