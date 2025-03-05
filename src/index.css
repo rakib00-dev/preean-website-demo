@@ -510,6 +510,14 @@ h5 {
 /* .profile h5 {
   color: white !important;
 } */
+.profile img {
+  transition: 0.3s ease-in-out;
+}
+
+.profile:hover img {
+  opacity: 0.6;
+}
+
 .profile:hover h5 {
   color: #b7b7b9 !important;
 }

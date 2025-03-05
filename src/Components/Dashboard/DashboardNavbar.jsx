@@ -24,7 +24,7 @@ const DashboardNavbar = () => {
             />
           </Link>
           <Link
-            to={'/dashboard/requests'}
+            to={'/dashboard'}
             className="transition-all font-bold text-white hover:text-white/60"
           >
             Requests

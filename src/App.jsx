@@ -137,7 +137,7 @@ function App() {
           ),
           children: [
             {
-              path: '/dashboard/requests',
+              path: '/dashboard',
               element: (
                 <Suspense fallback={<p>Loading...</p>}>
                   <DashboardRequests />
