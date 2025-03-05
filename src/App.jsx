@@ -9,6 +9,7 @@ import PresentationDesignPage from './pages/PresentationDesignPage';
 import TermsPage from './pages/TermsPage';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import DashboradCreateBrand from './Components/Dashboard/DashboardCreateBrand';
+import DashboradCreateRequests from './Components/Dashboard/DashboradCreateRequests';
 
 const DashboradLayout = React.lazy(() => import('./layouts/DashboardLayout'));
 const PhotoshopDesignPage = React.lazy(() =>
@@ -214,6 +215,14 @@ function App() {
           element: (
             <Suspense fallback={<p>Loading...</p>}>
               <DashboradRequests />
+            </Suspense>
+          ),
+        },
+        {
+          path: '/dashboard/create-request',
+          element: (
+            <Suspense fallback={<p>Loading...</p>}>
+              <DashboradCreateRequests />
             </Suspense>
           ),
         },

@@ -2,7 +2,7 @@ import React from 'react';
 import { GoPlus } from 'react-icons/go';
 import { HiOutlineMagnifyingGlass } from 'react-icons/hi2';
 import { IoMdArrowDropright } from 'react-icons/io';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const dashboradRequests = () => {
   return (
@@ -22,9 +22,12 @@ const dashboradRequests = () => {
                 className="pl-3 pr-4 outline-none placeholder:text-gray-400 w-60"
               />
             </div>
-            <button className="flex text-md bg-blue-500 font-medium items-center justify-center text-white py-1 px-2 gap-1 transition-all duration-300 hover:bg-blue-400 cursor-pointer">
+            <Link
+              to={'/dashboard/create-request'}
+              className="flex text-md bg-blue-500 font-medium items-center justify-center text-white py-1 px-2 gap-1 transition-all duration-300 hover:bg-blue-400 cursor-pointer"
+            >
               <GoPlus className="text-xl" /> Create Request
-            </button>
+            </Link>
           </div>
         </div>
         <div className="flex gap-2 w-full border-b-2 border-gray-200">

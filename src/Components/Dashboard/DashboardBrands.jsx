@@ -5,31 +5,6 @@ import { IoMdArrowDropright } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 
 const DashboradBrands = () => {
-  const brandArr = [
-    {
-      src: 'https://yt3.googleusercontent.com/OqN3DP0rwXrSBvzuAgfeEGwkdhheV93iWz5KsyMeCgk11AJ9B_F2FvIDTN06cNmQ310twIsU5xU=s160-c-k-c0x00ffffff-no-rj',
-      title: 'ManyPixels',
-      usedInReq: 29,
-    },
-    {
-      src: 'https://www.logodesignlove.com/wp-content/uploads/2021/07/coca-cola-logo-arden-square-01.jpg',
-      title: 'Coca Cola',
-      usedInReq: 63,
-    },
-    {
-      src: 'https://upload.wikimedia.org/wikipedia/commons/4/4b/McDonald%27s_logo.svg',
-      title: "Mc Donald's",
-      usedInReq: 23,
-    },
-    {
-      src: 'https://media.designrush.com/tinymce_images/763811/conversions/UPS-logo-content.jpg',
-      title: 'UPS',
-      usedInReq: 11,
-    },
-  ];
-
-  const [brand, setBrand] = useState([...brandArr]);
-
   return (
     <section className="mx-50">
       <div className="grid gap-2">
@@ -56,14 +31,7 @@ const DashboradBrands = () => {
           </h3>
         </div>
         <div className="grid gap-3 grid-cols-3">
-          {brand.map((e, i) => (
-            <Cards
-              key={i}
-              title={e.title}
-              usedInReq={e.usedInReq}
-              src={e.src}
-            />
-          ))}
+          <BrandCards />
         </div>
       </div>
     </section>
@@ -72,7 +40,42 @@ const DashboradBrands = () => {
 
 export default DashboradBrands;
 
-const Cards = ({ src, title, usedInReq }) => {
+export const BrandCards = () => {
+  const brandArr = [
+    {
+      src: 'https://yt3.googleusercontent.com/OqN3DP0rwXrSBvzuAgfeEGwkdhheV93iWz5KsyMeCgk11AJ9B_F2FvIDTN06cNmQ310twIsU5xU=s160-c-k-c0x00ffffff-no-rj',
+      title: 'ManyPixels',
+      usedInReq: 29,
+    },
+    {
+      src: 'https://www.logodesignlove.com/wp-content/uploads/2021/07/coca-cola-logo-arden-square-01.jpg',
+      title: 'Coca Cola',
+      usedInReq: 63,
+    },
+    {
+      src: 'https://upload.wikimedia.org/wikipedia/commons/4/4b/McDonald%27s_logo.svg',
+      title: "Mc Donald's",
+      usedInReq: 23,
+    },
+    {
+      src: 'https://media.designrush.com/tinymce_images/763811/conversions/UPS-logo-content.jpg',
+      title: 'UPS',
+      usedInReq: 11,
+    },
+  ];
+
+  const [brand, setBrand] = useState([...brandArr]);
+
+  return (
+    <>
+      {brand.map((e, i) => (
+        <Card key={i} title={e.title} usedInReq={e.usedInReq} src={e.src} />
+      ))}
+    </>
+  );
+};
+
+const Card = ({ src, title, usedInReq }) => {
   return (
     <>
       <div className="transition-all duration-200 flex justify-between items-center gap-2 py-2 px-4 border border-gray-200 rounded-xl bg-gray-100 cursor-pointer hover:bg-blue-100">
