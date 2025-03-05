@@ -11,18 +11,18 @@ const DashboardBrands = () => {
       usedInReq: 29,
     },
     {
-      src: 'https://yt3.googleusercontent.com/OqN3DP0rwXrSBvzuAgfeEGwkdhheV93iWz5KsyMeCgk11AJ9B_F2FvIDTN06cNmQ310twIsU5xU=s160-c-k-c0x00ffffff-no-rj',
-      title: 'ManyPixels',
+      src: 'https://www.logodesignlove.com/wp-content/uploads/2021/07/coca-cola-logo-arden-square-01.jpg',
+      title: 'Coca Cola',
       usedInReq: 63,
     },
     {
-      src: 'https://yt3.googleusercontent.com/OqN3DP0rwXrSBvzuAgfeEGwkdhheV93iWz5KsyMeCgk11AJ9B_F2FvIDTN06cNmQ310twIsU5xU=s160-c-k-c0x00ffffff-no-rj',
-      title: 'ManyPixels',
-      usedInReq: 11,
+      src: 'https://upload.wikimedia.org/wikipedia/commons/4/4b/McDonald%27s_logo.svg',
+      title: "Mc Donald's",
+      usedInReq: 23,
     },
     {
-      src: 'https://yt3.googleusercontent.com/OqN3DP0rwXrSBvzuAgfeEGwkdhheV93iWz5KsyMeCgk11AJ9B_F2FvIDTN06cNmQ310twIsU5xU=s160-c-k-c0x00ffffff-no-rj',
-      title: 'ManyPixels',
+      src: 'https://media.designrush.com/tinymce_images/763811/conversions/UPS-logo-content.jpg',
+      title: 'UPS',
       usedInReq: 11,
     },
   ];
@@ -71,7 +71,7 @@ export default DashboardBrands;
 const Cards = ({ src, title, usedInReq }) => {
   return (
     <>
-      <div className="flex justify-between items-center gap-2 py-2 px-4 border border-gray-200 rounded-xl bg-gray-100">
+      <div className="flex justify-between items-center gap-2 py-2 px-4 border border-gray-200 rounded-xl bg-gray-100 cursor-pointer hover:bg-blue-100">
         <div className="flex gap-2 justify-start">
           <img src={src} alt="" loading="lazy" className="w-12 rounded-full" />
           <div>
