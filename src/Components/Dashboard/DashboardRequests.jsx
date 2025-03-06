@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { GoPlus } from 'react-icons/go';
 import { HiOutlineMagnifyingGlass } from 'react-icons/hi2';
 import { IoMdArrowDropright } from 'react-icons/io';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 const dashboradRequests = () => {
+  const [isQue, setIsQue] = useState(true);
+  const [isDeli, setIsDeli] = useState(false);
+
   return (
     <section className="mx-50">
       <div className="grid gap-2">
@@ -30,15 +33,38 @@ const dashboradRequests = () => {
             </Link>
           </div>
         </div>
-        <div className="flex gap-2 w-full border-b-2 border-gray-200">
-          <NavLink>Queue</NavLink>
-          <NavLink>Delivered</NavLink>
+        <div className="flex gap-4 w-full border-b-2 border-gray-200 mt-8">
+          <Link
+            to={'/dashboard/req'}
+            className={
+              isQue
+                ? 'transition-all duration-300 font-bold border-b-2 border-blue-500 text-blue-400'
+                : 'transition-all duration-300 font-bold border-b-2 border-transparent text-black'
+            }
+            onClick={() => {
+              setIsQue(true);
+              setIsDeli(false);
+            }}
+          >
+            Queue
+          </Link>
+          <Link
+            to={'/dashboard/req/delivered'}
+            className={
+              isDeli
+                ? 'transition-all duration-300 font-bold border-b-2 border-blue-500 text-blue-400'
+                : 'transition-all duration-300 font-bold border-b-2 border-transparent text-black'
+            }
+            onClick={() => {
+              setIsDeli(true);
+              setIsQue(false);
+            }}
+          >
+            Delivered
+          </Link>
         </div>
-        <div className="my-7">
-          <h3 className="text-lg flex justify-start items-end">
-            Active
-            <IoMdArrowDropright className="transition-all duration-300 text-xl rotate-90 text-blue-500" />
-          </h3>
+        <div>
+          <Outlet />
         </div>
       </div>
     </section>

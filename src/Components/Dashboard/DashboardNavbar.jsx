@@ -27,7 +27,7 @@ const dashboardNavbar = () => {
             className={({ isActive }) =>
               isActive
                 ? 'transition-all duration-300 font-bold text-blue-500 border-b-2 border-blue-400 hover:text-blue-400'
-                : 'transition-all duration-300 font-bold text-white hover:border-b'
+                : 'transition-all duration-300 font-bold text-white border-b-2 border-transparent hover:border-gray-400'
             }
           >
             Requests
@@ -37,7 +37,7 @@ const dashboardNavbar = () => {
             className={({ isActive }) =>
               isActive
                 ? 'transition-all duration-300 font-bold text-blue-500 border-b-2 border-blue-400 hover:text-blue-400'
-                : 'transition-all duration-300 font-bold text-white hover:border-b'
+                : 'transition-all duration-300 font-bold text-white border-b-2 border-transparent hover:border-gray-400'
             }
           >
             Brands
@@ -47,7 +47,7 @@ const dashboardNavbar = () => {
             className={({ isActive }) =>
               isActive
                 ? 'transition-all duration-300 font-bold text-blue-500 border-b-2 border-blue-400 hover:text-blue-400'
-                : 'transition-all duration-300 font-bold text-white hover:border-b'
+                : 'transition-all duration-300 font-bold text-white border-b-2 border-transparent hover:border-gray-400'
             }
           >
             Team

@@ -11,6 +11,10 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import DashboradCreateBrand from './Components/Dashboard/DashboardCreateBrand';
 import DashboardCreateRequests from './Components/Dashboard/DashboradCreateRequests';
 
+const ReqDelivered = React.lazy(() =>
+  import('./Components/Dashboard/ReqDelivered')
+);
+const ReqQueue = React.lazy(() => import('./Components/Dashboard/ReqQueue'));
 const DashboradLayout = React.lazy(() => import('./layouts/DashboardLayout'));
 const PhotoshopDesignPage = React.lazy(() =>
   import('./pages/PhotoshopDesignPage')
@@ -211,7 +215,7 @@ function App() {
 
       children: [
         {
-          path: '/dashboard',
+          index: true,
           element: (
             <Suspense fallback={<p>Loading...</p>}>
               <DashboradRequests />
@@ -225,6 +229,25 @@ function App() {
               <DashboradRequests />
             </Suspense>
           ),
+          children: [
+            {
+              index: true,
+              // path: '/dashboard/req/queue',
+              element: (
+                <Suspense fallback={<p>Loading...</p>}>
+                  <ReqQueue />
+                </Suspense>
+              ),
+            },
+            {
+              path: '/dashboard/req/delivered',
+              element: (
+                <Suspense fallback={<p>Loading...</p>}>
+                  <ReqDelivered />
+                </Suspense>
+              ),
+            },
+          ],
         },
         {
           path: '/dashboard/create-request',
