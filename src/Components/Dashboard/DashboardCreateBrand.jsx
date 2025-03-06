@@ -41,7 +41,11 @@ const DashboardCreateBrand = () => {
         </div>
         <div>
           <h3 className="text-xl flex justify-start items-end">Website</h3>
-          <a href="https://www.manypixels.co" className="text-blue-500">
+          <a
+            target="_blank"
+            href="https://www.manypixels.co"
+            className="text-blue-500 hover:underline"
+          >
             www.manypixels.co
           </a>
         </div>
