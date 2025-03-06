@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { IoMdArrowDropright } from 'react-icons/io';
 
 const ReqQueue = () => {
   const [all, setAll] = useState(true);
@@ -10,7 +11,7 @@ const ReqQueue = () => {
     <section className="">
       <div>
         <div className="flex items-center gap-2 my-4">
-          <h5 className="mr-2">Status</h5>
+          <h5 className="text-md mr-2">Status</h5>
           <button
             className={`transition-all duration-300 px-4 font-medium cursor-pointer py-1 border border-gray-300 rounded-md hover:bg-blue-200 hover:text-gray-800 ${
               all ? 'bg-blue-400 text-white' : ''
@@ -63,6 +64,12 @@ const ReqQueue = () => {
           >
             Paused
           </button>
+        </div>
+        <div className="my-7">
+          <h5 className="text-md flex justify-start items-end">
+            Active
+            <IoMdArrowDropright className="transition-all duration-300 text-xl rotate-90 text-blue-500" />
+          </h5>
         </div>
       </div>
     </section>
