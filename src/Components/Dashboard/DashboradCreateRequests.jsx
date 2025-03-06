@@ -6,7 +6,7 @@ import { MdFormatBold, MdFormatListBulleted } from 'react-icons/md';
 import { FaItalic, FaLink, FaUpload } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 
-const DashboradCreateRequests = () => {
+const DashboardCreateRequests = () => {
   const navigate = useNavigate();
 
   const categoryData = [
@@ -455,4 +455,4 @@ const DashboradCreateRequests = () => {
   );
 };
 
-export default DashboradCreateRequests;
+export default DashboardCreateRequests;
