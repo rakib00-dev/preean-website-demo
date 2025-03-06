@@ -1,8 +1,7 @@
 import React from 'react';
 import { CiBellOn } from 'react-icons/ci';
 import { IoMdArrowDropright } from 'react-icons/io';
-import { RiQuestionnaireLine } from 'react-icons/ri';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const dashboardNavbar = () => {
   return (
@@ -23,24 +22,36 @@ const dashboardNavbar = () => {
               loading="lazy"
             />
           </Link>
-          <Link
-            to={'/dashboard'}
-            className="transition-all font-bold text-white hover:text-white/60"
+          <NavLink
+            to={'/dashboard/req'}
+            className={({ isActive }) =>
+              isActive
+                ? 'transition-all duration-300 font-bold text-blue-500 border-b-2 border-blue-400 hover:text-blue-400'
+                : 'transition-all duration-300 font-bold text-white hover:border-b'
+            }
           >
             Requests
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to={'/dashboard/brands'}
-            className="transition-all font-bold text-white hover:text-white/60"
+            className={({ isActive }) =>
+              isActive
+                ? 'transition-all duration-300 font-bold text-blue-500 border-b-2 border-blue-400 hover:text-blue-400'
+                : 'transition-all duration-300 font-bold text-white hover:border-b'
+            }
           >
             Brands
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to={'/dashboard/team'}
-            className="transition-all font-bold text-white hover:text-white/60"
+            className={({ isActive }) =>
+              isActive
+                ? 'transition-all duration-300 font-bold text-blue-500 border-b-2 border-blue-400 hover:text-blue-400'
+                : 'transition-all duration-300 font-bold text-white hover:border-b'
+            }
           >
             Team
-          </Link>
+          </NavLink>
         </div>
         <div className="flex gap-2">
           <button className="transition-all duration-300 text-sm font-bold text-white uppercase py-2 px-3 bg-blue-600 hover:bg-blue-400 cursor-pointer hover:">

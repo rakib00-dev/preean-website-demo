@@ -219,6 +219,14 @@ function App() {
           ),
         },
         {
+          path: '/dashboard/req',
+          element: (
+            <Suspense fallback={<p>Loading...</p>}>
+              <DashboradRequests />
+            </Suspense>
+          ),
+        },
+        {
           path: '/dashboard/create-request',
           element: (
             <Suspense fallback={<p>Loading...</p>}>
