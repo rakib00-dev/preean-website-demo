@@ -71,17 +71,18 @@ const DashboardCreateBrand = () => {
           </p>
           <FontUpload />
         </div>
+        <div className="my-12 flex justify-between">
+          <button
+            className="transition-all duration-200 font-bold cursor-pointer px-5 py-2 border-b-2 border-transparent hover:text-gray-400 hover:border-gray-400"
+            onClick={() => navigate(-1)}
+          >
+            Cancel
+          </button>
 
-        {/* <div className="grid">
-          <h3 className="text-xl flex justify-start items-end">
-            Extra assects
-          </h3>
-          <p className="text-gray-500 mb-4">
-            Upload any assets that might be revelant to your brand. This could
-            include other type of graphics, templates, documents, etc.
-          </p>
-          <ExtraAssets />
-        </div> */}
+          <button className="transition-all duration-300 font-bold border border-gray-300 px-8 cursor-pointer py-2 bg-blue-500 text-white hover:bg-blue-400 hover:rounded">
+            Save
+          </button>
+        </div>
       </div>
     </section>
   );

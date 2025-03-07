@@ -436,19 +436,16 @@ const DashboardCreateRequests = () => {
         </div>
 
         <div className="my-12 flex justify-between">
-          <button className="font-bold">Cancel</button>
-          <div className="flex gap-4">
-            <button
-              className="font-bold border border-gray-300 flex justify-center items-center gap-2 cursor-pointer py-2 px-4"
-              onClick={() => navigate(-1)}
-            >
-              <IoIosArrowBack className="transition-all duration-300 text-lg text-gray-500 hover:text-gray-700" />{' '}
-              Previous
-            </button>
-            <button className="transition-all duration-300 font-bold border border-gray-300 px-5 cursor-pointer py-0 bg-blue-500 text-white hover:bg-blue-400">
-              Submit
-            </button>
-          </div>
+          <button
+            className="transition-all duration-200 font-bold cursor-pointer px-5 py-2 border-b-2 border-transparent hover:text-gray-400 hover:border-gray-400"
+            onClick={() => navigate(-1)}
+          >
+            Cancel
+          </button>
+
+          <button className="transition-all duration-300 font-bold border border-gray-300 px-8 cursor-pointer py-2 bg-blue-500 text-white hover:bg-blue-400 hover:rounded">
+            Save
+          </button>
         </div>
       </div>
     </section>
