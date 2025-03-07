@@ -96,10 +96,6 @@ const dashboradRequests = () => {
     },
   ]);
 
-  // const filteredUsers = users.filter((user) =>
-  //   user.name.toLowerCase().includes(searchQuery.toLowerCase())
-  // );
-
   const handleReqSearch = (e) => {
     setSearchValue(e.target.value);
   };
