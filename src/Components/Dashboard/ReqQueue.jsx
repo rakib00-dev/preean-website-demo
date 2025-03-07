@@ -106,8 +106,10 @@ const ReqQueue = () => {
         <div className="grid gap-4">
           {activeQueue.map((e, i) => (
             <div key={i} className="flex gap-4 items-center ">
-              <span className=" relative text-white bg-blue-50 p-3 ">
-                <span className="relative font-bold z-10">{i + 1}</span>
+              <span className=" relative text-white bg-blue-50 px-4 py-2 ">
+                <span className="relative stroke-orange-500 font-bold z-10">
+                  {i + 1}
+                </span>
                 <div className="bg-gradient-to-r absolute inset-0 from-[#CF77F3] via-[#009BFF] to-[#2AC9DB] rounded-full blur-[5px] p-3"></div>
                 {/* <div className="bg-gradient-to-r absolute left-0 top-0 from-[#CF77F3] via-[#009BFF] to-[#2AC9DB] rounded-full blur-[5px] w-full h-full"></div> */}
               </span>
