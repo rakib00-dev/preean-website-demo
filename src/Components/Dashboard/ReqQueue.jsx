@@ -35,8 +35,10 @@ const ReqQueue = () => {
         <div className="flex items-center gap-2 my-4">
           <h5 className="text-md mr-2">Status</h5>
           <button
-            className={`transition-all duration-300 px-4 font-medium cursor-pointer py-1 border border-gray-300 rounded-md hover:bg-blue-200 hover:text-gray-800 ${
-              all ? 'bg-blue-400 text-white' : ''
+            className={`transition-all duration-200 px-4 font-medium cursor-pointer py-1 border border-gray-300 rounded-md   ${
+              all
+                ? 'bg-blue-400 text-white'
+                : 'hover:bg-blue-200 hover:text-gray-800 shadow-md'
             }`}
             onClick={() => {
               setAll(true);
@@ -48,8 +50,10 @@ const ReqQueue = () => {
             All
           </button>
           <button
-            className={`transition-all duration-300 px-4 font-medium cursor-pointer py-1 border border-gray-300 rounded-md hover:bg-blue-200 hover:text-gray-800 ${
-              ongoing ? 'bg-blue-400 text-white' : ''
+            className={`transition-all duration-200 px-4 font-medium cursor-pointer py-1 border border-gray-300 rounded-md   ${
+              ongoing
+                ? 'bg-blue-400 text-white'
+                : 'hover:bg-blue-200 hover:text-gray-800 shadow-md'
             }`}
             onClick={() => {
               setAll(false);
@@ -61,8 +65,10 @@ const ReqQueue = () => {
             Ongoing
           </button>
           <button
-            className={`transition-all duration-300 px-4 font-medium cursor-pointer py-1 border border-gray-300 rounded-md hover:bg-blue-200 hover:text-gray-800 ${
-              submitted ? 'bg-blue-400 text-white' : ''
+            className={`transition-all duration-200 px-4 font-medium cursor-pointer py-1 border border-gray-300 rounded-md   ${
+              submitted
+                ? 'bg-blue-400 text-white'
+                : 'hover:bg-blue-200 hover:text-gray-800 shadow-md'
             }`}
             onClick={() => {
               setAll(false);
@@ -74,8 +80,10 @@ const ReqQueue = () => {
             Submitted
           </button>
           <button
-            className={`transition-all duration-300 px-4 font-medium cursor-pointer py-1 border border-gray-300 rounded-md hover:bg-blue-200 hover:text-gray-800 ${
-              paused ? 'bg-blue-400 text-white' : ''
+            className={`transition-all duration-200 px-4 font-medium cursor-pointer py-1 border border-gray-300 rounded-md   ${
+              paused
+                ? 'bg-blue-400 text-white'
+                : 'hover:bg-blue-200 hover:text-gray-800 shadow-md'
             }`}
             onClick={() => {
               setAll(false);
