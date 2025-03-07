@@ -7,6 +7,7 @@ import { Link, Outlet } from 'react-router-dom';
 const dashboradRequests = () => {
   const [isQue, setIsQue] = useState(true);
   const [isDeli, setIsDeli] = useState(false);
+  const [searchValue, setSearchValue] = useState('');
 
   const [activeQueue, setActiveQueue] = useState([
     {
@@ -95,6 +96,21 @@ const dashboradRequests = () => {
     },
   ]);
 
+  // const filteredUsers = users.filter((user) =>
+  //   user.name.toLowerCase().includes(searchQuery.toLowerCase())
+  // );
+
+  const handleReqSearch = (e) => {
+    setSearchValue(e.target.value);
+  };
+
+  // const ReqQueues = activeQueue;
+  const ReqQueues = activeQueue.filter((list) =>
+    list.task.toLowerCase().includes(searchValue.toLowerCase())
+  );
+
+  console.log(searchValue);
+
   return (
     <section className="mx-50">
       <div className="grid gap-2">
@@ -109,6 +125,8 @@ const dashboradRequests = () => {
               <input
                 type="search"
                 placeholder="Search"
+                value={searchValue}
+                onChange={(e) => handleReqSearch(e)}
                 className="pl-3 pr-4 outline-none placeholder:text-gray-400 w-60"
               />
             </div>
@@ -151,7 +169,7 @@ const dashboradRequests = () => {
           </Link>
         </div>
         <div>
-          <Outlet context={activeQueue} />
+          <Outlet context={ReqQueues} />
         </div>
       </div>
     </section>

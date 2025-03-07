@@ -9,9 +9,9 @@ const ReqQueue = () => {
   const [submitted, setSubmitted] = useState(false);
   const [paused, setPaused] = useState(false);
 
-  const activeQueue = useOutletContext();
+  const ReqQueues = useOutletContext();
 
-  const activeQueueLists = activeQueue.filter((list) => {
+  const activeQueueLists = ReqQueues.filter((list) => {
     if (all) {
       return (
         list.status === 'Paused' ||

@@ -4,11 +4,9 @@ import { IoMdArrowDropright } from 'react-icons/io';
 import { useOutletContext } from 'react-router-dom';
 
 const ReqDelivered = () => {
-  const activeQueue = useOutletContext();
+  const ReqQueues = useOutletContext();
 
-  const deliveredList = activeQueue.filter(
-    (list) => list.status === 'Delivered'
-  );
+  const deliveredList = ReqQueues.filter((list) => list.status === 'Delivered');
   console.log(deliveredList);
 
   return (
