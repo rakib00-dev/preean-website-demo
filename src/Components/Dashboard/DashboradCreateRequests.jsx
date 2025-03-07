@@ -124,8 +124,10 @@ const DashboardCreateRequests = () => {
           />
         </div>
         <div>
-          <h3 className="text-xl flex justify-start items-end">Description</h3>
-          <div className="grid gap-3 grid-cols-3">
+          <h3 className="text-xl flex justify-start items-end">
+            Select a brand
+          </h3>
+          <div className="grid gap-3 grid-cols-3 my-4">
             <BrandCards />
           </div>
         </div>
@@ -376,7 +378,7 @@ const DashboardCreateRequests = () => {
                 loading="lazy"
                 className="w-12"
               />
-              <h5>{fileDalivarableData[0].title}</h5>
+              <h5 className="text-center">{fileDalivarableData[0].title}</h5>
             </div>
             <div className="grid place-items-center border-2 cursor-pointer border-gray-200 p-4">
               <img
@@ -385,7 +387,7 @@ const DashboardCreateRequests = () => {
                 loading="lazy"
                 className="w-12"
               />
-              <h5>{fileDalivarableData[1].title}</h5>
+              <h5 className="text-center">{fileDalivarableData[1].title}</h5>
             </div>
             <div className="grid place-items-center border-2 cursor-pointer border-gray-200 p-4">
               <img
@@ -394,7 +396,7 @@ const DashboardCreateRequests = () => {
                 loading="lazy"
                 className="w-12"
               />
-              <h5>{fileDalivarableData[2].title}</h5>
+              <h5 className="text-center">{fileDalivarableData[2].title}</h5>
             </div>
             <div className="grid place-items-center border-2 cursor-pointer border-gray-200 p-4">
               <img
@@ -403,7 +405,7 @@ const DashboardCreateRequests = () => {
                 loading="lazy"
                 className="w-12"
               />
-              <h5>{fileDalivarableData[3].title}</h5>
+              <h5 className="text-center">{fileDalivarableData[3].title}</h5>
             </div>
             <div className="grid place-items-center border-2 cursor-pointer border-gray-200 p-4">
               <img
@@ -412,7 +414,7 @@ const DashboardCreateRequests = () => {
                 loading="lazy"
                 className="w-12"
               />
-              <h5>{fileDalivarableData[4].title}</h5>
+              <h5 className="text-center">{fileDalivarableData[4].title}</h5>
             </div>
             <div className="grid place-items-center border-2 cursor-pointer border-gray-200 p-4">
               <img
@@ -421,7 +423,7 @@ const DashboardCreateRequests = () => {
                 loading="lazy"
                 className="w-12"
               />
-              <h5>{fileDalivarableData[5].title}</h5>
+              <h5 className="text-center">{fileDalivarableData[5].title}</h5>
             </div>
             <div className="grid place-items-center border-2 cursor-pointer border-gray-200 p-4">
               <img
@@ -430,7 +432,7 @@ const DashboardCreateRequests = () => {
                 loading="lazy"
                 className="w-12"
               />
-              <h5>{fileDalivarableData[6].title}</h5>
+              <h5 className="text-center">{fileDalivarableData[6].title}</h5>
             </div>
           </div>
         </div>
