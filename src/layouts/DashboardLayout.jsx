@@ -7,6 +7,7 @@ const DashboradLayout = () => {
     <>
       <DashboardNavbar />
       <Outlet />
+      <div className="mt-15"></div>
     </>
   );
 };
