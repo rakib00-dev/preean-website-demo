@@ -135,7 +135,7 @@ const ReqDelivered = () => {
                     <span>{e.last_updated}</span>
                   </div>
                   <div
-                    className={`transition-all text-center duration-300 px-4 font-medium py-1 border border-gray-300 rounded-full w-30 ${'bg-green-100 text-green-500'}`}
+                    className={`transition-all text-center duration-300 px-4 font-medium py-1 border border-gray-300 rounded-full w-30 ${'bg-gray-500 text-gray-50'}`}
                   >
                     <p>{e.status}</p>
                   </div>
