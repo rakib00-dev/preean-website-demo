@@ -95,6 +95,24 @@ const ReqQueue = () => {
     },
   ]);
 
+  const activeQueueLists = activeQueue.filter((list) => {
+    if (all) {
+      return (
+        list.status === 'Paused' ||
+        list.status === 'Ongoing' ||
+        list.status === 'Submitted'
+      );
+    }
+    if (ongoing) {
+      return list.status === 'Ongoing';
+    }
+    if (submitted) {
+      return list.status === 'Submitted';
+    }
+    if (paused) {
+      return list.status === 'Paused';
+    }
+  });
   return (
     <section className="">
       <div>
@@ -160,7 +178,7 @@ const ReqQueue = () => {
           </h5>
         </div>
         <div className="grid gap-4">
-          {activeQueue.map((e, i) => (
+          {activeQueueLists.map((e, i) => (
             <div key={i} className="flex gap-4 items-center ">
               <span className=" relative text-white bg-blue-50 px-4 py-2 ">
                 <span
