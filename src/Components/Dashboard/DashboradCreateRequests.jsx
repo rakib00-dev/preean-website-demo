@@ -121,6 +121,7 @@ const DashboardCreateRequests = () => {
             type="text"
             placeholder="Enter Your Request"
             className="w-full border border-gray-300 p-2 rounded"
+            required
           />
         </div>
         <div>

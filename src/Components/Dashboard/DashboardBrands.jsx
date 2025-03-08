@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { BsThreeDots } from 'react-icons/bs';
 import { GoPlus } from 'react-icons/go';
 import { IoMdArrowDropright } from 'react-icons/io';
@@ -63,6 +63,8 @@ export const BrandCards = () => {
       usedInReq: 11,
     },
   ];
+
+  // const brand = useContext();
 
   const [brand, setBrand] = useState([...brandArr]);
 
