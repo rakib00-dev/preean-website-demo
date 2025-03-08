@@ -11,32 +11,42 @@ const DashboardCreateRequests = () => {
 
   const categoryData = [
     {
-      src: '/images/dashboard/requests/brand-identity-design.png',
-      title: 'brand identity design',
+      src: '/images/navbar/presentation.png',
+      title: 'presentation design',
     },
-    {
-      src: '/images/dashboard/requests/print-design.png',
-      title: 'print design',
-    },
-    {
-      src: '/images/dashboard/requests/web-design.png',
-      title: 'web design',
-    },
+
     {
       src: '/images/dashboard/requests/digital-design.png',
       title: 'digital design',
     },
     {
       src: '/images/dashboard/requests/illustration.png',
-      title: 'illustration design',
+      title: 'custom illustration',
+    },
+
+    {
+      src: '/images/navbar/photoshop-design.png',
+      title: 'Photoshop design',
+    },
+    {
+      src: '/images/navbar/graphic-design.svg',
+      title: 'graphic design',
+    },
+    {
+      src: '/images/navbar/motion-graphic.png',
+      title: 'motion graphic',
+    },
+  ];
+
+  const productData = [
+    {
+      src: '/images/dashboard/requests/web-design.png',
+      title: 'web design',
     },
     {
       src: '/images/dashboard/requests/corporate-design.png',
       title: 'corporate design',
     },
-  ];
-
-  const productData = [
     {
       src: '/images/dashboard/requests/email-graphics.png',
       title: 'email graphics',
@@ -60,6 +70,10 @@ const DashboardCreateRequests = () => {
     {
       src: '/images/dashboard/requests/e-books.png',
       title: 'e books',
+    },
+    {
+      src: '/images/dashboard/requests/brand-identity-design.png',
+      title: 'brand identity design',
     },
   ];
 
@@ -145,7 +159,7 @@ const DashboardCreateRequests = () => {
                 loading="lazy"
                 className="w-12"
               />
-              <h5>{categoryData[0].title}</h5>
+              <h5 className="capitalize">{categoryData[0].title}</h5>
             </div>
             <div className="grid place-items-center border-2 cursor-pointer border-gray-200 p-4">
               <img
@@ -154,7 +168,7 @@ const DashboardCreateRequests = () => {
                 loading="lazy"
                 className="w-12"
               />
-              <h5>{categoryData[1].title}</h5>
+              <h5 className="capitalize">{categoryData[1].title}</h5>
             </div>
             <div className="grid place-items-center border-2 cursor-pointer border-gray-200 p-4">
               <img
@@ -163,7 +177,7 @@ const DashboardCreateRequests = () => {
                 loading="lazy"
                 className="w-12"
               />
-              <h5>{categoryData[2].title}</h5>
+              <h5 className="capitalize">{categoryData[2].title}</h5>
             </div>
             <div className="grid place-items-center border-2 cursor-pointer border-gray-200 p-4">
               <img
@@ -172,7 +186,7 @@ const DashboardCreateRequests = () => {
                 loading="lazy"
                 className="w-12"
               />
-              <h5>{categoryData[3].title}</h5>
+              <h5 className="capitalize">{categoryData[3].title}</h5>
             </div>
             <div className="grid place-items-center border-2 cursor-pointer border-gray-200 p-4">
               <img
@@ -181,7 +195,7 @@ const DashboardCreateRequests = () => {
                 loading="lazy"
                 className="w-12"
               />
-              <h5>{categoryData[4].title}</h5>
+              <h5 className="capitalize">{categoryData[4].title}</h5>
             </div>
             <div className="grid place-items-center border-2 cursor-pointer border-gray-200 p-4">
               <img
@@ -190,8 +204,35 @@ const DashboardCreateRequests = () => {
                 loading="lazy"
                 className="w-12"
               />
-              <h5>{categoryData[5].title}</h5>
+              <h5 className="capitalize">{categoryData[5].title}</h5>
             </div>
+            {/* <div className="grid place-items-center border-2 cursor-pointer border-gray-200 p-4">
+              <img
+                src={categoryData[6].src}
+                alt=""
+                loading="lazy"
+                className="w-12"
+              />
+              <h5 className="capitalize">{categoryData[6].title}</h5>
+            </div> */}
+            {/* <div className="grid place-items-center border-2 cursor-pointer border-gray-200 p-4">
+              <img
+                src={categoryData[7].src}
+                alt=""
+                loading="lazy"
+                className="w-12"
+              />
+              <h5 className="capitalize">{categoryData[7].title}</h5>
+            </div> */}
+            {/* <div className="grid place-items-center border-2 cursor-pointer border-gray-200 p-4">
+              <img
+                src={categoryData[8].src}
+                alt=""
+                loading="lazy"
+                className="w-12"
+              />
+              <h5 className="capitalize">{categoryData[8].title}</h5>
+            </div> */}
           </div>
         </div>
 
