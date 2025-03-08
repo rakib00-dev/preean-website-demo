@@ -1,9 +1,38 @@
-import React from 'react';
-import { CiBellOn } from 'react-icons/ci';
+import React, { useEffect, useState } from 'react';
+import { BsFillTicketPerforatedFill } from 'react-icons/bs';
+import { CiBellOn, CiDeliveryTruck } from 'react-icons/ci';
+import { FaShop } from 'react-icons/fa6';
+import { GiUpgrade } from 'react-icons/gi';
 import { IoMdArrowDropright } from 'react-icons/io';
-import { Link, NavLink } from 'react-router-dom';
+import { LuTicket } from 'react-icons/lu';
+import { MdAddBusiness } from 'react-icons/md';
+import { TiGroup, TiGroupOutline, TiHome, TiTicket } from 'react-icons/ti';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 
 const dashboardNavbar = () => {
+  const [dashboard, SetDashboard] = useState(false);
+  const [req, SetReq] = useState(false);
+  const [brand, SetBrand] = useState(false);
+  const [team, SetTeam] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === '/dashboard') {
+      SetDashboard(true);
+    } else if (
+      location.pathname === '/dashboard/req' ||
+      location.pathname === '/dashboard/brands/create-request'
+    ) {
+      SetReq(true);
+    } else if (
+      location.pathname === '/dashboard/brands' ||
+      location.pathname === '/dashboard/brands/create-brand'
+    ) {
+      SetBrand(true);
+    } else if (location.pathname === '/dashboard/team') {
+      SetTeam(true);
+    }
+  }, []);
   return (
     <section className="w-full max-w-7xl mx-auto mb-6">
       <div className="flex justify-between bg-[#0f2333] py-7 px-7">
@@ -16,45 +45,84 @@ const dashboardNavbar = () => {
             }}
           >
             <img
-              src="https://designpro.qa/img/Designpro-logo-large.png"
+              src="/images/navbar/Designpro-logo-white-large.png"
               alt="logo"
-              className="w-40 invert"
+              className="w-40"
               loading="lazy"
             />
           </Link>
           <NavLink
-            to={'/dashboard/req'}
-            className={({ isActive }) =>
-              isActive
-                ? 'transition-all duration-300 font-bold text-blue-500 border-b-2 border-blue-400 hover:text-blue-400'
-                : 'transition-all duration-300 font-bold text-white border-b-2 border-transparent hover:border-gray-400'
+            to={'/dashboard'}
+            className={
+              dashboard
+                ? 'flex items-center gap-2 transition-all duration-300 font-bold text-green-500 border-b-2 border-green-400 hover:text-green-400'
+                : 'flex items-center gap-2 transition-all duration-300 font-bold text-white border-b-2 border-transparent hover:border-gray-400'
             }
+            onClick={() => {
+              SetDashboard(true);
+              SetReq(false);
+              SetBrand(false);
+              SetTeam(false);
+            }}
           >
+            <TiHome />
+            Dashboard
+          </NavLink>
+          <NavLink
+            to={'/dashboard/req'}
+            className={
+              req
+                ? 'flex items-center gap-2 transition-all duration-300 font-bold text-green-500 border-b-2 border-green-400 hover:text-green-400'
+                : 'flex items-center gap-2 transition-all duration-300 font-bold text-white border-b-2 border-transparent hover:border-gray-400'
+            }
+            onClick={() => {
+              SetDashboard(false);
+              SetReq(true);
+              SetBrand(false);
+              SetTeam(false);
+            }}
+          >
+            <BsFillTicketPerforatedFill />
             Requests
           </NavLink>
           <NavLink
             to={'/dashboard/brands'}
-            className={({ isActive }) =>
-              isActive
-                ? 'transition-all duration-300 font-bold text-blue-500 border-b-2 border-blue-400 hover:text-blue-400'
-                : 'transition-all duration-300 font-bold text-white border-b-2 border-transparent hover:border-gray-400'
+            className={
+              brand
+                ? 'flex items-center gap-2 transition-all duration-300 font-bold text-green-500 border-b-2 border-green-400 hover:text-green-400'
+                : 'flex items-center gap-2 transition-all duration-300 font-bold text-white border-b-2 border-transparent hover:border-gray-400'
             }
+            onClick={() => {
+              SetDashboard(false);
+              SetReq(false);
+              SetBrand(true);
+              SetTeam(false);
+            }}
           >
+            <FaShop />
             Brands
           </NavLink>
           <NavLink
             to={'/dashboard/team'}
-            className={({ isActive }) =>
-              isActive
-                ? 'transition-all duration-300 font-bold text-blue-500 border-b-2 border-blue-400 hover:text-blue-400'
-                : 'transition-all duration-300 font-bold text-white border-b-2 border-transparent hover:border-gray-400'
+            className={
+              team
+                ? 'flex items-center gap-2 transition-all duration-300 font-bold text-green-500 border-b-2 border-green-400 hover:text-green-400'
+                : 'flex items-center gap-2 transition-all duration-300 font-bold text-white border-b-2 border-transparent hover:border-gray-400'
             }
+            onClick={() => {
+              SetDashboard(false);
+              SetReq(false);
+              SetBrand(false);
+              SetTeam(true);
+            }}
           >
-            Team
+            <TiGroup />
+            team
           </NavLink>
         </div>
         <div className="flex gap-2">
-          <button className="transition-all duration-300 text-sm font-bold text-white uppercase py-2 px-3 bg-blue-600 hover:bg-blue-400 cursor-pointer hover:">
+          <button className="flex gap-2 items-center transition-all  duration-300 text-sm font-bold text-white uppercase py-2 px-3 bg-gradient-to-r rounded from-[#38ffa5d2] via-[#04fd57d9] to-[#2adb3fca] hover:from-[#2adb3fca] hover:to-[#38ffa5d2] cursor-pointer">
+            <GiUpgrade />
             Upgrade
           </button>
           {/* <button className="flex justify-center items-center  cursor-pointer">

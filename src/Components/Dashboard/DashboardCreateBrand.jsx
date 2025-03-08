@@ -23,7 +23,7 @@ const DashboardCreateBrand = () => {
           </div>
         </div>
         <div className="flex items-center text-gray-500 -mt-4">
-          <span className="text-blue-500">brand</span>{' '}
+          <span className="text-green-500">brand</span>{' '}
           <IoIosArrowBack className="text-md text-gray-500 rotate-180" />{' '}
           manypixels
         </div>
@@ -44,7 +44,7 @@ const DashboardCreateBrand = () => {
           <a
             target="_blank"
             href="https://www.manypixels.co"
-            className="text-blue-500 hover:underline"
+            className="text-green-500 hover:underline"
           >
             www.manypixels.co
           </a>
@@ -79,7 +79,7 @@ const DashboardCreateBrand = () => {
             Cancel
           </button>
 
-          <button className="transition-all duration-300 font-bold border border-gray-300 px-8 cursor-pointer py-2 bg-blue-500 text-white hover:bg-blue-400 hover:rounded">
+          <button className="transition-all duration-300 font-bold border border-gray-300 px-8 cursor-pointer py-2 bg-green-500 text-white hover:bg-green-400 hover:rounded">
             Save
           </button>
         </div>
@@ -143,20 +143,36 @@ const LogoGallery = () => {
     },
     {
       src: 'https://upload.wikimedia.org/wikipedia/commons/4/4b/McDonald%27s_logo.svg',
-      name: 'safe area black blue trans...',
+      name: 'safe area black green trans...',
       size: '7 kB',
     },
   ];
 
   return (
-    <div className="grid grid-cols-4 gap-4">
-      <div className="flex items-center justify-center border-2 border-dashed border-gray-300 w-full h-30 text-gray-500 cursor-pointer ">
-        + Add Logo
-      </div>
+    <div className="flex flex-wrap gap-4">
+      <fieldset className="w-fit space-y-1">
+        <label
+          htmlFor="files"
+          className="gap-1 border-2 border-dashed h-full w-full border-gray-200 rounded  bg-gray-100 cursor-pointer flex flex-col justify-center items-center font-semibold"
+        >
+          <span className="text-green-500 w-full text-center border-b-2 border-dashed p-2 border-gray-200">
+            + Add Logos
+          </span>
+          <input
+            type="file"
+            name="files"
+            placeholder="Add Fonts"
+            id="files"
+            className="px-4 py-12 cursor-pointer rounded-md"
+          />
+          {/* <input type="file" className="hidden" />
+            <input type="" className="hidden" /> */}
+        </label>
+      </fieldset>
       {logos.map((logo, index) => (
         <div
           key={index}
-          className="flex flex-col items-center justify-center border border-gray-300 rounded-lg p-2 shadow-md "
+          className="flex flex-col items-center justify-center border border-gray-300 rounded-lg  py-2 px-8 w-40 shadow-md "
         >
           <img
             src={logo.src}
@@ -182,14 +198,30 @@ const BrandGuids = () => {
   ];
 
   return (
-    <div className="grid grid-cols-4 gap-4">
-      <div className="flex items-center justify-center border-2 border-dashed border-gray-300 w-full h-30 text-gray-500 cursor-pointer ">
-        + Add Brand Guide
-      </div>
+    <div className="flex gap-4">
+      <fieldset className="w-fit space-y-1">
+        <label
+          htmlFor="files"
+          className="gap-1 border-2 border-dashed h-full w-full border-gray-200 rounded  bg-gray-100 cursor-pointer flex flex-col justify-center items-center font-semibold"
+        >
+          <span className="text-green-500 w-full text-center border-b-2 border-dashed p-2 border-gray-200">
+            + Add Brand Guides
+          </span>
+          <input
+            type="file"
+            name="files"
+            placeholder="Add Fonts"
+            id="files"
+            className="px-4 py-12 cursor-pointer rounded-md"
+          />
+          {/* <input type="file" className="hidden" />
+            <input type="" className="hidden" /> */}
+        </label>
+      </fieldset>
       {logos.map((logo, index) => (
         <div
           key={index}
-          className="flex flex-col items-center justify-center border border-gray-300 rounded-lg p-2 shadow-md "
+          className="flex flex-col items-center justify-center border border-gray-300 rounded-lg  py-2 px-8 shadow-md "
         >
           <img
             src={logo.src}
@@ -206,7 +238,7 @@ const BrandGuids = () => {
 };
 
 const FontUpload = () => {
-  const logos = [
+  const fonts = [
     {
       src: '/images/dashboard/dot-file.png',
       name: 'Font.zip',
@@ -215,14 +247,30 @@ const FontUpload = () => {
   ];
 
   return (
-    <div className="grid grid-cols-4 gap-4">
-      <div className="flex items-center justify-center border-2 border-dashed border-gray-300 w-full h-30 text-gray-500 cursor-pointer ">
-        + Add Font
-      </div>
-      {logos.map((logo, index) => (
+    <div className="flex flex-wrap gap-4">
+      <fieldset className="w-fit space-y-1">
+        <label
+          htmlFor="files"
+          className="gap-1 border-2 border-dashed h-full w-full border-gray-200 rounded  bg-gray-100 cursor-pointer flex flex-col justify-center items-center font-semibold"
+        >
+          <span className="text-green-500 w-full text-center border-b-2 border-dashed p-2 border-gray-200">
+            Add Fonts
+          </span>
+          <input
+            type="file"
+            name="files"
+            placeholder="Add Fonts"
+            id="files"
+            className="px-4 py-12 cursor-pointer rounded-md"
+          />
+          {/* <input type="file" className="hidden" />
+            <input type="" className="hidden" /> */}
+        </label>
+      </fieldset>
+      {fonts.map((logo, index) => (
         <div
           key={index}
-          className="flex flex-col items-center justify-center border border-gray-300 rounded-lg p-2 shadow-md "
+          className="flex flex-col items-center justify-center border border-gray-300 rounded-lg py-2 px-8 shadow-md "
         >
           <img
             src={logo.src}
@@ -255,7 +303,7 @@ const FontUpload = () => {
 //       {logos.map((logo, index) => (
 //         <div
 //           key={index}
-//           className="flex flex-col items-center justify-center border border-gray-300 rounded-lg p-2 shadow-md "
+//           className="flex flex-col items-center justify-center border border-gray-300 rounded-lg  py-2 px-8 shadow-md "
 //         >
 //           <img
 //             src={logo.src}

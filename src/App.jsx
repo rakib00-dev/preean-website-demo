@@ -8,24 +8,25 @@ import MotioinGraphicsPage from './pages/MotioinGraphicsPage';
 import PresentationDesignPage from './pages/PresentationDesignPage';
 import TermsPage from './pages/TermsPage';
 import PrivacyPolicy from './pages/PrivacyPolicy';
-import DashboradCreateBrand from './Components/Dashboard/DashboardCreateBrand';
-import DashboardCreateRequests from './Components/Dashboard/DashboradCreateRequests';
+import DashboardCreateBrand from './Components/Dashboard/DashboardCreateBrand';
+import DashboardCreateRequests from './Components/Dashboard/DashboardCreateRequests';
+import DashboardHome from './Components/Dashboard/DashboardHome';
 
 const ReqDelivered = React.lazy(() =>
   import('./Components/Dashboard/ReqDelivered')
 );
 const ReqQueue = React.lazy(() => import('./Components/Dashboard/ReqQueue'));
-const DashboradLayout = React.lazy(() => import('./layouts/DashboardLayout'));
+const DashboardLayout = React.lazy(() => import('./layouts/DashboardLayout'));
 const PhotoshopDesignPage = React.lazy(() =>
   import('./pages/PhotoshopDesignPage')
 );
-const DashboradTeam = React.lazy(() =>
+const DashboardTeam = React.lazy(() =>
   import('./Components/Dashboard/DashboardTeam')
 );
-const DashboradBrands = React.lazy(() =>
+const DashboardBrands = React.lazy(() =>
   import('./Components/Dashboard/DashboardBrands')
 );
-const DashboradRequests = React.lazy(() =>
+const DashboardRequests = React.lazy(() =>
   import('./Components/Dashboard/DashboardRequests')
 );
 // const DashboradPage = React.lazy(() => import('./pages/DashboardPage'));
@@ -204,7 +205,7 @@ function App() {
       path: '/dashboard',
       element: (
         <Suspense fallback={<p>Loading...</p>}>
-          <DashboradLayout />
+          <DashboardLayout />
         </Suspense>
       ),
       errorElement: (
@@ -216,9 +217,10 @@ function App() {
       children: [
         {
           index: true,
+          path: '/dashboard',
           element: (
             <Suspense fallback={<p>Loading...</p>}>
-              <DashboradRequests />
+              <DashboardHome />
             </Suspense>
           ),
         },
@@ -226,7 +228,7 @@ function App() {
           path: '/dashboard/req',
           element: (
             <Suspense fallback={<p>Loading...</p>}>
-              <DashboradRequests />
+              <DashboardRequests />
             </Suspense>
           ),
           children: [
@@ -261,7 +263,7 @@ function App() {
           path: '/dashboard/brands',
           element: (
             <Suspense fallback={<p>Loading...</p>}>
-              <DashboradBrands />
+              <DashboardBrands />
             </Suspense>
           ),
         },
@@ -269,7 +271,7 @@ function App() {
           path: '/dashboard/brands/create-brand',
           element: (
             <Suspense fallback={<p>Loading...</p>}>
-              <DashboradCreateBrand />
+              <DashboardCreateBrand />
             </Suspense>
           ),
         },
@@ -277,7 +279,7 @@ function App() {
           path: '/dashboard/team',
           element: (
             <Suspense fallback={<p>Loading...</p>}>
-              <DashboradTeam />
+              <DashboardTeam />
             </Suspense>
           ),
         },

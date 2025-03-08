@@ -1,5 +1,6 @@
 import { useContext, useState } from 'react';
-import { BsThreeDots } from 'react-icons/bs';
+import { BsShop, BsThreeDots } from 'react-icons/bs';
+import { CiDeliveryTruck } from 'react-icons/ci';
 import { GoPlus } from 'react-icons/go';
 import { IoMdArrowDropright } from 'react-icons/io';
 import { Link } from 'react-router-dom';
@@ -9,10 +10,13 @@ const DashboradBrands = () => {
     <section className="mx-50">
       <div className="grid gap-2">
         <div className="flex justify-between items-center">
-          <h1 className="text-4xl">Brands</h1>
+          <h1 className="flex items-center gap-2 text-4xl">
+            <BsShop />
+            Brands
+          </h1>
           <Link
             to={'/dashboard/brands/create-brand'}
-            className="flex text-lg bg-blue-500 font-medium items-center justify-center text-white py-1 px-2 gap-1 transition-all duration-300 hover:bg-blue-400 cursor-pointer"
+            className="flex text-lg bg-green-500 font-medium items-center justify-center text-white py-1 px-2 gap-1 transition-all duration-300 hover:bg-green-400 cursor-pointer"
           >
             <GoPlus className="text-xl" /> Create Brand
           </Link>
@@ -27,7 +31,7 @@ const DashboradBrands = () => {
         <div>
           <h3 className="text-xl flex justify-start items-end">
             brands
-            <IoMdArrowDropright className="transition-all duration-300 text-2xl rotate-90 text-blue-500" />
+            <IoMdArrowDropright className="transition-all duration-300 text-2xl rotate-90 text-green-500" />
           </h3>
         </div>
         <div className="grid gap-3 grid-cols-3">
@@ -80,7 +84,7 @@ export const BrandCards = () => {
 const Card = ({ src, title, usedInReq }) => {
   return (
     <>
-      <div className="transition-all duration-200 flex justify-between items-center gap-2 py-2 px-4 border border-gray-200 rounded-xl bg-gray-100 cursor-pointer hover:bg-blue-100">
+      <div className="transition-all duration-200 flex justify-between items-center gap-2 py-2 px-4 border border-gray-200 rounded-xl bg-gray-100 cursor-pointer hover:bg-green-100">
         <div className="flex gap-2 justify-start">
           <img src={src} alt="" loading="lazy" className="w-12 rounded-full" />
           <div>

@@ -37,8 +37,8 @@ const ReqQueue = () => {
           <button
             className={`transition-all duration-200 px-4 font-medium cursor-pointer py-1 border border-gray-300 rounded-md   ${
               all
-                ? 'bg-blue-400 text-white'
-                : 'hover:bg-blue-200 hover:text-gray-800 shadow-md'
+                ? 'bg-green-400 text-white'
+                : 'hover:bg-green-200 hover:text-gray-800 shadow-md'
             }`}
             onClick={() => {
               setAll(true);
@@ -52,8 +52,8 @@ const ReqQueue = () => {
           <button
             className={`transition-all duration-200 px-4 font-medium cursor-pointer py-1 border border-gray-300 rounded-md   ${
               ongoing
-                ? 'bg-blue-400 text-white'
-                : 'hover:bg-blue-200 hover:text-gray-800 shadow-md'
+                ? 'bg-green-400 text-white'
+                : 'hover:bg-green-200 hover:text-gray-800 shadow-md'
             }`}
             onClick={() => {
               setAll(false);
@@ -67,8 +67,8 @@ const ReqQueue = () => {
           <button
             className={`transition-all duration-200 px-4 font-medium cursor-pointer py-1 border border-gray-300 rounded-md   ${
               submitted
-                ? 'bg-blue-400 text-white'
-                : 'hover:bg-blue-200 hover:text-gray-800 shadow-md'
+                ? 'bg-green-400 text-white'
+                : 'hover:bg-green-200 hover:text-gray-800 shadow-md'
             }`}
             onClick={() => {
               setAll(false);
@@ -82,8 +82,8 @@ const ReqQueue = () => {
           <button
             className={`transition-all duration-200 px-4 font-medium cursor-pointer py-1 border border-gray-300 rounded-md   ${
               paused
-                ? 'bg-blue-400 text-white'
-                : 'hover:bg-blue-200 hover:text-gray-800 shadow-md'
+                ? 'bg-green-400 text-white'
+                : 'hover:bg-green-200 hover:text-gray-800 shadow-md'
             }`}
             onClick={() => {
               setAll(false);
@@ -111,7 +111,7 @@ const ReqQueue = () => {
                 >
                   {i + 1}
                 </span>
-                <div className="bg-gradient-to-r absolute inset-0 from-[#CF77F3] via-[#009BFF] to-[#2AC9DB] rounded-full blur-[5px] p-3"></div>
+                <div className="bg-gradient-to-r absolute inset-0 from-[#c4f377bc] via-[#02d7c5b6] to-[#2adbb2ca] rounded-full blur-[5px] p-3"></div>
                 {/* <div className="bg-gradient-to-r absolute left-0 top-0 from-[#CF77F3] via-[#009BFF] to-[#2AC9DB] rounded-full blur-[5px] w-full h-full"></div> */}
               </span>
 
@@ -122,7 +122,7 @@ const ReqQueue = () => {
                     <span className="pr-2 text-gray-500 font-medium border-r-2 border-gray-200">
                       {e.category}
                     </span>{' '}
-                    <span className="pl-2 text-blue-500">{e.task_id}</span>
+                    <span className="pl-2 text-green-500">{e.task_id}</span>
                   </p>
                 </div>
 

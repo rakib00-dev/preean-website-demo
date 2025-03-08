@@ -416,7 +416,7 @@ const Navbar = () => {
               }}
             >
               <img
-                src="https://designpro.qa/img/Designpro-logo-large.png"
+                src="/images/navbar/Designpro-logo-large.png"
                 alt="logo"
                 className="w-60"
                 loading="lazy"

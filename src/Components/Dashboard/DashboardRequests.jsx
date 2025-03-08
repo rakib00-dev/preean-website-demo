@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { GoPlus } from 'react-icons/go';
 import { HiOutlineMagnifyingGlass } from 'react-icons/hi2';
 import { IoMdArrowDropright } from 'react-icons/io';
+import { LuTicket } from 'react-icons/lu';
 import { Link, Outlet } from 'react-router-dom';
 
 const dashboradRequests = () => {
@@ -111,12 +112,14 @@ const dashboradRequests = () => {
     <section className="mx-50">
       <div className="grid gap-2">
         <div className="flex justify-between items-center">
-          <h1 className="text-4xl">Requests</h1>
+          <h1 className="flex items-center gap-2 text-4xl">
+            <LuTicket /> Requests
+          </h1>
           <div className="flex items-center gap-2">
             <div className="flex justify-center gap-1 items-center bg-gray-50 roudned shadow-md border px-2 border-gray-200 py-1.5">
               <HiOutlineMagnifyingGlass
                 className="text-[#48c8ff] font-extrabold"
-                stroke="blue"
+                stroke="green"
               />
               <input
                 type="search"
@@ -128,7 +131,7 @@ const dashboradRequests = () => {
             </div>
             <Link
               to={'/dashboard/create-request'}
-              className="flex text-md bg-blue-500 font-medium items-center justify-center text-white py-1 px-2 gap-1 transition-all duration-300 hover:bg-blue-400 cursor-pointer"
+              className="flex text-md bg-green-500 font-medium items-center justify-center text-white py-1 px-2 gap-1 transition-all duration-300 hover:bg-green-400 cursor-pointer"
             >
               <GoPlus className="text-xl" /> Create Request
             </Link>
@@ -139,7 +142,7 @@ const dashboradRequests = () => {
             to={'/dashboard/req'}
             className={
               isQue
-                ? 'transition-all duration-300 font-bold border-b-2 border-blue-500 text-blue-400'
+                ? 'transition-all duration-300 font-bold border-b-2 border-green-500 text-green-400'
                 : 'transition-all duration-300 font-bold border-b-2 border-transparent text-black'
             }
             onClick={() => {
@@ -153,7 +156,7 @@ const dashboradRequests = () => {
             to={'/dashboard/req/delivered'}
             className={
               isDeli
-                ? 'transition-all duration-300 font-bold border-b-2 border-blue-500 text-blue-400'
+                ? 'transition-all duration-300 font-bold border-b-2 border-green-500 text-green-400'
                 : 'transition-all duration-300 font-bold border-b-2 border-transparent text-black'
             }
             onClick={() => {
