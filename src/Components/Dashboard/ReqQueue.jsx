@@ -111,7 +111,7 @@ const ReqQueue = () => {
                 >
                   {i + 1}
                 </span>
-                <div className="bg-gradient-to-r absolute inset-0 from-[#c4f377bc] via-[#02d7c5b6] to-[#2adbb2ca] rounded-full blur-[5px] p-3"></div>
+                <div className="bg-gradient-to-r absolute inset-0 from-[#c4f377bc] via-[#02d7c5b6] to-[#2adbb2ca] rounded-full blur-[5px] p-3" />
                 {/* <div className="bg-gradient-to-r absolute left-0 top-0 from-[#CF77F3] via-[#009BFF] to-[#2AC9DB] rounded-full blur-[5px] w-full h-full"></div> */}
               </span>
 

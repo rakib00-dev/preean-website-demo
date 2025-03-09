@@ -137,7 +137,7 @@ const DashboardCreateRequests = () => {
           </div> */}
         </div>
         <div className="flex items-center text-gray-500 -mt-4">
-          <span className="text-blue-500">Requests</span>{' '}
+          <span className="text-green-500">Requests</span>{' '}
           <IoIosArrowBack className="text-md text-gray-500 rotate-180" /> Create
         </div>
         <div className="grid gap-2">
@@ -165,7 +165,7 @@ const DashboardCreateRequests = () => {
             Choose a category
           </h3>
           <div className="grid gap-3 grid-cols-4 my-5">
-            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-blue-100">
+            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-green-100">
               <img
                 src={categoryData[0].src}
                 alt=""
@@ -174,7 +174,7 @@ const DashboardCreateRequests = () => {
               />
               <h5 className="capitalize">{categoryData[0].title}</h5>
             </div>
-            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-blue-100">
+            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-green-100">
               <img
                 src={categoryData[1].src}
                 alt=""
@@ -183,7 +183,7 @@ const DashboardCreateRequests = () => {
               />
               <h5 className="capitalize">{categoryData[1].title}</h5>
             </div>
-            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-blue-100">
+            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-green-100">
               <img
                 src={categoryData[2].src}
                 alt=""
@@ -192,7 +192,7 @@ const DashboardCreateRequests = () => {
               />
               <h5 className="capitalize">{categoryData[2].title}</h5>
             </div>
-            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-blue-100">
+            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-green-100">
               <img
                 src={categoryData[3].src}
                 alt=""
@@ -201,7 +201,7 @@ const DashboardCreateRequests = () => {
               />
               <h5 className="capitalize">{categoryData[3].title}</h5>
             </div>
-            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-blue-100">
+            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-green-100">
               <img
                 src={categoryData[4].src}
                 alt=""
@@ -210,7 +210,7 @@ const DashboardCreateRequests = () => {
               />
               <h5 className="capitalize">{categoryData[4].title}</h5>
             </div>
-            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-blue-100">
+            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-green-100">
               <img
                 src={categoryData[5].src}
                 alt=""
@@ -219,7 +219,7 @@ const DashboardCreateRequests = () => {
               />
               <h5 className="capitalize">{categoryData[5].title}</h5>
             </div>
-            {/* <div classNametransition-all duration-300 ="grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-blue-100">
+            {/* <div classNametransition-all duration-300 ="grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-green-100">
               <img
                 src={categoryData[6].src}
                 alt=""
@@ -228,7 +228,7 @@ const DashboardCreateRequests = () => {
               />
               <h5 className="capitalize">{categoryData[6].title}</h5>
             </div> */}
-            {/* <div classNametransition-all duration-300 ="grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-blue-100">
+            {/* <div classNametransition-all duration-300 ="grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-green-100">
               <img
                 src={categoryData[7].src}
                 alt=""
@@ -237,7 +237,7 @@ const DashboardCreateRequests = () => {
               />
               <h5 className="capitalize">{categoryData[7].title}</h5>
             </div> */}
-            {/* <div classNametransition-all duration-300 ="grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-blue-100">
+            {/* <div classNametransition-all duration-300 ="grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-green-100">
               <img
                 src={categoryData[8].src}
                 alt=""
@@ -254,7 +254,7 @@ const DashboardCreateRequests = () => {
             Choose a product
           </h3>
           <div className="grid gap-3 grid-cols-4 my-5">
-            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-blue-100">
+            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-green-100">
               <img
                 src={productData[0].src}
                 alt=""
@@ -263,7 +263,7 @@ const DashboardCreateRequests = () => {
               />
               <h5>{productData[0].title}</h5>
             </div>
-            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-blue-100">
+            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-green-100">
               <img
                 src={productData[1].src}
                 alt=""
@@ -272,7 +272,7 @@ const DashboardCreateRequests = () => {
               />
               <h5>{productData[1].title}</h5>
             </div>
-            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-blue-100">
+            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-green-100">
               <img
                 src={productData[2].src}
                 alt=""
@@ -281,7 +281,7 @@ const DashboardCreateRequests = () => {
               />
               <h5>{productData[2].title}</h5>
             </div>
-            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-blue-100">
+            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-green-100">
               <img
                 src={productData[3].src}
                 alt=""
@@ -290,7 +290,7 @@ const DashboardCreateRequests = () => {
               />
               <h5>{productData[3].title}</h5>
             </div>
-            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-blue-100">
+            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-green-100">
               <img
                 src={productData[4].src}
                 alt=""
@@ -299,7 +299,7 @@ const DashboardCreateRequests = () => {
               />
               <h5>{productData[4].title}</h5>
             </div>
-            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-blue-100">
+            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-green-100">
               <img
                 src={productData[5].src}
                 alt=""
@@ -308,7 +308,7 @@ const DashboardCreateRequests = () => {
               />
               <h5>{productData[5].title}</h5>
             </div>
-            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-blue-100">
+            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-green-100">
               <img
                 src={productData[6].src}
                 alt=""
@@ -317,7 +317,7 @@ const DashboardCreateRequests = () => {
               />
               <h5>{productData[6].title}</h5>
             </div>
-            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-blue-100">
+            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-green-100">
               <img
                 src={productData[7].src}
                 alt=""
@@ -326,7 +326,7 @@ const DashboardCreateRequests = () => {
               />
               <h5>{productData[7].title}</h5>
             </div>
-            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-blue-100">
+            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-green-100">
               <img
                 src={productData[8].src}
                 alt=""
@@ -335,7 +335,7 @@ const DashboardCreateRequests = () => {
               />
               <h5>{productData[8].title}</h5>
             </div>
-            {/* <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-blue-100">
+            {/* <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-green-100">
               <img
                 src={productData[9].src}
                 alt=""
@@ -431,7 +431,7 @@ const DashboardCreateRequests = () => {
             </div>
             <button
               type="submit"
-              className="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800"
+              className="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-green-700 rounded-lg focus:ring-4 focus:ring-green-200 dark:focus:ring-green-900 hover:bg-green-800"
             >
               Publish post
             </button>
@@ -447,7 +447,7 @@ const DashboardCreateRequests = () => {
             explaining your request here.
           </p>
           <div className="flex justify-center items-center gap-3 h-40 w-full">
-            <label className="gap-1 h-full w-full border border-gray-200 rounded text-blue-500 bg-gray-100 cursor-pointer flex flex-col justify-center items-center font-semibold">
+            <label className="gap-1 h-full w-full border border-gray-200 rounded text-green-500 bg-gray-100 cursor-pointer flex flex-col justify-center items-center font-semibold">
               <FaUpload />
               Upload Files
               <input type="file" className="hidden" />
@@ -462,7 +462,7 @@ const DashboardCreateRequests = () => {
           </h3>
           <p className="text-gray-400">Select the file types you need</p>
           <div className="grid gap-3 grid-cols-4 my-5">
-            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-blue-100">
+            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-green-100">
               <img
                 src={fileDalivarableData[0].src}
                 alt=""
@@ -471,7 +471,7 @@ const DashboardCreateRequests = () => {
               />
               <h5 className="text-center">{fileDalivarableData[0].title}</h5>
             </div>
-            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-blue-100">
+            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-green-100">
               <img
                 src={fileDalivarableData[1].src}
                 alt=""
@@ -480,7 +480,7 @@ const DashboardCreateRequests = () => {
               />
               <h5 className="text-center">{fileDalivarableData[1].title}</h5>
             </div>
-            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-blue-100">
+            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-green-100">
               <img
                 src={fileDalivarableData[2].src}
                 alt=""
@@ -489,7 +489,7 @@ const DashboardCreateRequests = () => {
               />
               <h5 className="text-center">{fileDalivarableData[2].title}</h5>
             </div>
-            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-blue-100">
+            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-green-100">
               <img
                 src={fileDalivarableData[3].src}
                 alt=""
@@ -498,7 +498,7 @@ const DashboardCreateRequests = () => {
               />
               <h5 className="text-center">{fileDalivarableData[3].title}</h5>
             </div>
-            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-blue-100">
+            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-green-100">
               <img
                 src={fileDalivarableData[4].src}
                 alt=""
@@ -507,7 +507,7 @@ const DashboardCreateRequests = () => {
               />
               <h5 className="text-center">{fileDalivarableData[4].title}</h5>
             </div>
-            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-blue-100">
+            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-green-100">
               <img
                 src={fileDalivarableData[5].src}
                 alt=""
@@ -516,7 +516,7 @@ const DashboardCreateRequests = () => {
               />
               <h5 className="text-center">{fileDalivarableData[5].title}</h5>
             </div>
-            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-blue-100">
+            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-green-100">
               <img
                 src={fileDalivarableData[6].src}
                 alt=""
@@ -525,7 +525,7 @@ const DashboardCreateRequests = () => {
               />
               <h5 className="text-center">{fileDalivarableData[6].title}</h5>
             </div>
-            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-blue-100">
+            <div className="transition-all duration-300 grid place-items-center border-2 cursor-pointer border-gray-200 p-4 hover:bg-green-100">
               <img
                 src={fileDalivarableData[7].src}
                 alt=""
@@ -545,7 +545,7 @@ const DashboardCreateRequests = () => {
             Cancel
           </button>
 
-          <button className="transition-all duration-300 font-bold border border-gray-300 px-8 cursor-pointer py-2 bg-blue-500 text-white hover:bg-blue-400 hover:rounded">
+          <button className="transition-all duration-300 font-bold border border-gray-300 px-8 cursor-pointer py-2 bg-green-500 text-white hover:bg-green-400 hover:rounded">
             Save
           </button>
         </div>

@@ -15,20 +15,20 @@ const ReqDelivered = () => {
         <div className="my-7">
           <h5 className="text-md flex justify-start items-end">
             Active
-            <IoMdArrowDropright className="transition-all duration-300 text-xl rotate-90 text-blue-500" />
+            <IoMdArrowDropright className="transition-all duration-300 text-xl rotate-90 text-green-500" />
           </h5>
         </div>
         <div className="grid gap-4">
           {deliveredList.map((e, i) => (
             <div key={i} className="flex gap-4 items-center ">
-              <span className=" relative text-white bg-blue-50 px-4 py-2 ">
+              <span className=" relative text-white bg-green-50 px-4 py-2 ">
                 <span
                   className="relative font-bold z-10 shadow-xl"
                   style={{ WebkitTextStroke: '.2px #0b3558c3' }}
                 >
                   {i + 1}
                 </span>
-                <div className="bg-gradient-to-r absolute inset-0 from-[#CF77F3] via-[#009BFF] to-[#2AC9DB] rounded-full blur-[5px] p-3"></div>
+                <div className="bg-gradient-to-r absolute inset-0 from-[#c4f377bc] via-[#02d7c5b6] to-[#2adbb2ca] rounded-full blur-[5px] p-3" />
                 {/* <div className="bg-gradient-to-r absolute left-0 top-0 from-[#CF77F3] via-[#009BFF] to-[#2AC9DB] rounded-full blur-[5px] w-full h-full"></div> */}
               </span>
 
@@ -39,7 +39,7 @@ const ReqDelivered = () => {
                     <span className="pr-2 text-gray-500 font-medium border-r-2 border-gray-200">
                       {e.category}
                     </span>{' '}
-                    <span className="pl-2 text-blue-500">{e.task_id}</span>
+                    <span className="pl-2 text-green-500">{e.task_id}</span>
                   </p>
                 </div>
 

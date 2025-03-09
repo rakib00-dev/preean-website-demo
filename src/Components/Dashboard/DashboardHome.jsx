@@ -9,7 +9,10 @@ import { GiUpgrade } from 'react-icons/gi';
 const DashboardHome = () => {
   let myDate = new Date();
   let hrs = myDate.getHours();
-  const reciveReqQueues = useOutletContext();
+  let reciveReqQueues = useOutletContext();
+  reciveReqQueues = reciveReqQueues.filter(
+    (list) => list.status !== 'Delivered'
+  );
 
   const [greet, setGreet] = useState(null);
   const [src, setSrc] = useState(null);
