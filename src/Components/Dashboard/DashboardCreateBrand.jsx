@@ -164,6 +164,7 @@ const LogoGallery = () => {
             placeholder="Add Fonts"
             id="files"
             className="px-4 py-12 cursor-pointer rounded-md"
+            multiple
           />
           {/* <input type="file" className="hidden" />
             <input type="" className="hidden" /> */}
@@ -213,6 +214,7 @@ const BrandGuids = () => {
             placeholder="Add Fonts"
             id="files"
             className="px-4 py-12 cursor-pointer rounded-md"
+            multiple
           />
           {/* <input type="file" className="hidden" />
             <input type="" className="hidden" /> */}
@@ -254,7 +256,7 @@ const FontUpload = () => {
           className="gap-1 border-2 border-dashed h-full w-full border-gray-200 rounded  bg-gray-100 cursor-pointer flex flex-col justify-center items-center font-semibold"
         >
           <span className="text-green-500 w-full text-center border-b-2 border-dashed p-2 border-gray-200">
-            Add Fonts
+            + Add Fonts
           </span>
           <input
             type="file"
@@ -262,6 +264,7 @@ const FontUpload = () => {
             placeholder="Add Fonts"
             id="files"
             className="px-4 py-12 cursor-pointer rounded-md"
+            multiple
           />
           {/* <input type="file" className="hidden" />
             <input type="" className="hidden" /> */}

@@ -13,7 +13,7 @@ const DashboradTeam = () => {
             Team
           </h1>
           <Link
-            to={'/dashboard/brands/create-brand'}
+            to={'#'}
             className="flex text-lg bg-green-500 font-medium items-center justify-center text-white py-1 px-2 gap-1 transition-all duration-300 hover:bg-green-400 cursor-pointer"
           >
             <GoPlus className="text-xl" /> Add Member

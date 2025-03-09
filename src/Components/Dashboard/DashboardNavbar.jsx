@@ -10,29 +10,41 @@ import { TiGroup, TiGroupOutline, TiHome, TiTicket } from 'react-icons/ti';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 
 const dashboardNavbar = () => {
-  const [dashboard, SetDashboard] = useState(false);
-  const [req, SetReq] = useState(false);
-  const [brand, SetBrand] = useState(false);
-  const [team, SetTeam] = useState(false);
+  const [dashboard, setDashboard] = useState(false);
+  const [req, setReq] = useState(false);
+  const [brand, setBrand] = useState(false);
+  const [team, setTeam] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
     if (location.pathname === '/dashboard') {
-      SetDashboard(true);
+      setDashboard(true);
+      setReq(false);
+      setBrand(false);
+      setTeam(false);
     } else if (
       location.pathname === '/dashboard/req' ||
       location.pathname === '/dashboard/brands/create-request'
     ) {
-      SetReq(true);
+      setDashboard(false);
+      setReq(true);
+      setBrand(false);
+      setTeam(false);
     } else if (
       location.pathname === '/dashboard/brands' ||
       location.pathname === '/dashboard/brands/create-brand'
     ) {
-      SetBrand(true);
+      setDashboard(false);
+      setReq(false);
+      setBrand(true);
+      setTeam(false);
     } else if (location.pathname === '/dashboard/team') {
-      SetTeam(true);
+      setDashboard(false);
+      setReq(false);
+      setBrand(false);
+      setTeam(true);
     }
-  }, []);
+  }, [location.pathname]);
   return (
     <section className="w-full max-w-7xl mx-auto mb-6">
       <div className="flex justify-between bg-[#0f2333] py-7 px-7">
@@ -59,10 +71,10 @@ const dashboardNavbar = () => {
                 : 'flex items-center gap-2 transition-all duration-300 font-bold text-white border-b-2 border-transparent hover:border-gray-400'
             }
             onClick={() => {
-              SetDashboard(true);
-              SetReq(false);
-              SetBrand(false);
-              SetTeam(false);
+              setDashboard(true);
+              setReq(false);
+              setBrand(false);
+              setTeam(false);
             }}
           >
             <TiHome />
@@ -76,10 +88,10 @@ const dashboardNavbar = () => {
                 : 'flex items-center gap-2 transition-all duration-300 font-bold text-white border-b-2 border-transparent hover:border-gray-400'
             }
             onClick={() => {
-              SetDashboard(false);
-              SetReq(true);
-              SetBrand(false);
-              SetTeam(false);
+              setDashboard(false);
+              setReq(true);
+              setBrand(false);
+              setTeam(false);
             }}
           >
             <BsFillTicketPerforatedFill />
@@ -93,10 +105,10 @@ const dashboardNavbar = () => {
                 : 'flex items-center gap-2 transition-all duration-300 font-bold text-white border-b-2 border-transparent hover:border-gray-400'
             }
             onClick={() => {
-              SetDashboard(false);
-              SetReq(false);
-              SetBrand(true);
-              SetTeam(false);
+              setDashboard(false);
+              setReq(false);
+              setBrand(true);
+              setTeam(false);
             }}
           >
             <FaShop />
@@ -110,10 +122,10 @@ const dashboardNavbar = () => {
                 : 'flex items-center gap-2 transition-all duration-300 font-bold text-white border-b-2 border-transparent hover:border-gray-400'
             }
             onClick={() => {
-              SetDashboard(false);
-              SetReq(false);
-              SetBrand(false);
-              SetTeam(true);
+              setDashboard(false);
+              setReq(false);
+              setBrand(false);
+              setTeam(true);
             }}
           >
             <TiGroup />
