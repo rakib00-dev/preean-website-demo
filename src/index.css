@@ -68,8 +68,7 @@ html {
   font-family: 'Gilroy', sans-serif !important;
 }
 
-body,
-section {
+body {
   background: var(--primary-bg);
 }
 

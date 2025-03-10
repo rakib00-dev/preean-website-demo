@@ -24,7 +24,7 @@ const dashboradRequests = () => {
   console.log(searchValue);
 
   return (
-    <section className="mx-50">
+    <section className=" mx-50">
       <div className="grid gap-2">
         <div className="flex justify-between items-center">
           <h1 className="flex items-center gap-2 text-4xl">

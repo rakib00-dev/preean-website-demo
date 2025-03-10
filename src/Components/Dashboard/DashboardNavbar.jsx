@@ -46,8 +46,8 @@ const dashboardNavbar = () => {
     }
   }, [location.pathname]);
   return (
-    <section className="w-full max-w-7xl mx-auto mb-6">
-      <div className="flex justify-between bg-[#0f2333] py-7 px-7">
+    <section className="w-full bg-[#0f2333] mx-auto mb-6">
+      <div className="flex justify-between mx-auto w-full max-w-7xl py-7 px-7">
         <div className="flex justify-center items-center gap-10">
           <Link
             to="/"

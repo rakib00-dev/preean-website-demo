@@ -11,6 +11,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import DashboardCreateBrand from './Components/Dashboard/DashboardCreateBrand';
 import DashboardCreateRequests from './Components/Dashboard/DashboardCreateRequests';
 import DashboardHome from './Components/Dashboard/DashboardHome';
+import Provider from './provider/Provider';
 
 const ReqDelivered = React.lazy(() =>
   import('./Components/Dashboard/ReqDelivered')
@@ -287,7 +288,11 @@ function App() {
     },
   ]);
 
-  return <RouterProvider router={router} />;
+  return (
+    <Provider>
+      <RouterProvider router={router} />
+    </Provider>
+  );
 }
 
 export default App;
