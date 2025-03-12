@@ -13,7 +13,7 @@ const dashboardPage = () => {
     <section className="w-full max-w-7xl mx-auto">
       <DashboardNavbar />
       {/* <h1 className="text-4xl">
-        hello {user?.role} {user?.name} to dashboardPage
+        hello {user?.role} {user?.name} to dashboard
       </h1> */}
       <Outlet />
     </section>
