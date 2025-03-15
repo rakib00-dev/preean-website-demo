@@ -165,11 +165,15 @@ const LogoGallery = () => {
             id="files"
             className="px-4 py-12 cursor-pointer rounded-md"
             multiple
+            onChange={(e) => {
+              console.log(e.target.files[0].name, e.target.files[0].type);
+            }}
           />
           {/* <input type="file" className="hidden" />
             <input type="" className="hidden" /> */}
         </label>
       </fieldset>
+      {}
       {logos.map((logo, index) => (
         <div
           key={index}
@@ -194,7 +198,7 @@ const BrandGuids = () => {
     {
       src: 'https://cdn-icons-png.flaticon.com/512/337/337946.png',
       name: 'Favicon.png',
-      size: '6 kB',
+      size: 6,
     },
   ];
 
@@ -214,6 +218,9 @@ const BrandGuids = () => {
             placeholder="Add Fonts"
             id="files"
             className="px-4 py-12 cursor-pointer rounded-md"
+            onChange={(e) => {
+              console.log(e.target.files[0].name, e.target.files[0].type);
+            }}
             multiple
           />
           {/* <input type="file" className="hidden" />
@@ -240,13 +247,13 @@ const BrandGuids = () => {
 };
 
 const FontUpload = () => {
-  const fonts = [
+  const [fonts, setFonts] = useState([
     {
       src: '/images/dashboard/dot-file.png',
       name: 'Font.zip',
-      size: '6 kB',
+      size: 6,
     },
-  ];
+  ]);
 
   return (
     <div className="flex flex-wrap gap-4">
@@ -264,7 +271,22 @@ const FontUpload = () => {
             placeholder="Add Fonts"
             id="files"
             className="px-4 py-12 cursor-pointer rounded-md"
+            onChange={(e) => {
+              // const filePath = URL.createObjectURL(e.target.files[0]);
+              const filePath = '/images/dashboard/dot-file.png';
+              const fileName = e.target.files[0].name;
+              const fileSize = e.target.files[0].size;
+
+              const filesData = {
+                src: filePath,
+                name: fileName,
+                size: fileSize,
+              };
+
+              setFonts((oldFiles) => [filesData, ...oldFiles]);
+            }}
             multiple
+            accept=".zip, .ttf, .otf"
           />
           {/* <input type="file" className="hidden" />
             <input type="" className="hidden" /> */}
@@ -273,16 +295,20 @@ const FontUpload = () => {
       {fonts.map((logo, index) => (
         <div
           key={index}
-          className="flex flex-col items-center justify-center border border-gray-300 rounded-lg py-2 px-8 shadow-md "
+          className="flex flex-col gap-2 items-center justify-center border border-gray-300 rounded-lg py-2 px-8 shadow-md w-40"
         >
           <img
             src={logo.src}
             alt={logo.name}
-            className="w-16 h-16 object-contain"
+            className="w-full h-full object-contain"
             loading="lazy"
           />
           <span className="text-sm font-medium mt-2">{logo.name}</span>
-          <span className="text-xs text-gray-500">{logo.size}</span>
+          <span className="text-xs text-gray-500">
+            {logo.size > 1024 * 1024
+              ? (logo.size / (1024 * 1024)).toFixed(2) + ' MB'
+              : (logo.size / 1024).toFixed(2) + ' KB'}
+          </span>
         </div>
       ))}
     </div>
