@@ -171,6 +171,7 @@ const LogoGallery = () => {
               const fileSize = e.target.files[0].size;
 
               const filesData = {
+                // id: self.crypto.randomUUID()
                 src: filePath,
                 name: fileName,
                 size: fileSize,
