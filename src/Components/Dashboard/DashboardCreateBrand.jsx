@@ -194,17 +194,17 @@ const LogoGallery = () => {
 };
 
 const BrandGuids = () => {
-  const logos = [
+  const [logos, setLogos] = useState([
     {
       src: 'https://cdn-icons-png.flaticon.com/512/337/337946.png',
       name: 'Favicon.png',
       size: 6,
     },
-  ];
+  ]);
 
   return (
-    <div className="flex gap-4">
-      <fieldset className="w-fit space-y-1">
+    <div className="flex flex-wrap gap-4">
+      <fieldset className="w-fit h-fit space-y-1">
         <label
           htmlFor="files"
           className="gap-1 border-2 border-dashed h-full w-full border-gray-200 rounded  bg-gray-100 cursor-pointer flex flex-col justify-center items-center font-semibold"
@@ -219,7 +219,17 @@ const BrandGuids = () => {
             id="files"
             className="px-4 py-12 cursor-pointer rounded-md"
             onChange={(e) => {
-              console.log(e.target.files[0].name, e.target.files[0].type);
+              const filePath = URL.createObjectURL(e.target.files[0]);
+              const fileName = e.target.files[0].name;
+              const fileSize = e.target.files[0].size;
+
+              const filesData = {
+                src: filePath,
+                name: fileName,
+                size: fileSize,
+              };
+
+              setLogos((oldFiles) => [filesData, ...oldFiles]);
             }}
             multiple
           />
@@ -227,21 +237,35 @@ const BrandGuids = () => {
             <input type="" className="hidden" /> */}
         </label>
       </fieldset>
-      {logos.map((logo, index) => (
-        <div
-          key={index}
-          className="flex flex-col items-center justify-center border border-gray-300 rounded-lg  py-2 px-8 shadow-md "
-        >
-          <img
-            src={logo.src}
-            alt={logo.name}
-            className="w-16 h-16 object-contain"
-            loading="lazy"
-          />
-          <span className="text-sm font-medium mt-2">{logo.name}</span>
-          <span className="text-xs text-gray-500">{logo.size}</span>
-        </div>
-      ))}
+      <div className="flex flex-wrap gap-3">
+        {logos.map((logo, index) => (
+          <div
+            key={index}
+            className="flex flex-col gap-2 items-center justify-center border border-gray-300 rounded-lg py-2 px-8 shadow-md w-40"
+          >
+            {logo.name.split('.')[1] === 'pdf' ? (
+              <embed
+                src={logo.src}
+                className="w-full h-12 object-contain"
+                loading="lazy"
+              />
+            ) : (
+              <img
+                src={logo.src}
+                alt={logo.name}
+                className="w-full h-full object-contain"
+                loading="lazy"
+              />
+            )}
+            <span className="text-sm font-medium mt-2">{logo.name}</span>
+            <span className="text-xs text-gray-500">
+              {logo.size > 1024 * 1024
+                ? (logo.size / (1024 * 1024)).toFixed(2) + ' MB'
+                : (logo.size / 1024).toFixed(2) + ' KB'}
+            </span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
@@ -257,7 +281,7 @@ const FontUpload = () => {
 
   return (
     <div className="flex flex-wrap gap-4">
-      <fieldset className="w-fit space-y-1">
+      <fieldset className="w-fit h-fit space-y-1">
         <label
           htmlFor="files"
           className="gap-1 border-2 border-dashed h-full w-full border-gray-200 rounded  bg-gray-100 cursor-pointer flex flex-col justify-center items-center font-semibold"
@@ -292,25 +316,27 @@ const FontUpload = () => {
             <input type="" className="hidden" /> */}
         </label>
       </fieldset>
-      {fonts.map((logo, index) => (
-        <div
-          key={index}
-          className="flex flex-col gap-2 items-center justify-center border border-gray-300 rounded-lg py-2 px-8 shadow-md w-40"
-        >
-          <img
-            src={logo.src}
-            alt={logo.name}
-            className="w-full h-full object-contain"
-            loading="lazy"
-          />
-          <span className="text-sm font-medium mt-2">{logo.name}</span>
-          <span className="text-xs text-gray-500">
-            {logo.size > 1024 * 1024
-              ? (logo.size / (1024 * 1024)).toFixed(2) + ' MB'
-              : (logo.size / 1024).toFixed(2) + ' KB'}
-          </span>
-        </div>
-      ))}
+      <div className="flex flex-wrap gap-3">
+        {fonts.map((font, index) => (
+          <div
+            key={index}
+            className="flex flex-col gap-2 items-center justify-center border border-gray-300 rounded-lg py-2 px-8 shadow-md w-40"
+          >
+            <img
+              src={font.src}
+              alt={font.name}
+              className="w-full h-full object-contain"
+              loading="lazy"
+            />
+            <span className="text-sm font-medium mt-2">{font.name}</span>
+            <span className="text-xs text-gray-500">
+              {font.size > 1024 * 1024
+                ? (font.size / (1024 * 1024)).toFixed(2) + ' MB'
+                : (font.size / 1024).toFixed(2) + ' KB'}
+            </span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
