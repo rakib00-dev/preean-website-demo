@@ -130,27 +130,27 @@ const ColorPalette = () => {
 };
 
 const LogoGallery = () => {
-  const logos = [
+  const [logos, setLogos] = useState([
     {
       src: 'https://yt3.googleusercontent.com/OqN3DP0rwXrSBvzuAgfeEGwkdhheV93iWz5KsyMeCgk11AJ9B_F2FvIDTN06cNmQ310twIsU5xU=s160-c-k-c0x00ffffff-no-rj',
       name: 'Favicon.png',
-      size: '6 kB',
+      size: 6,
     },
     {
       src: 'https://www.logodesignlove.com/wp-content/uploads/2021/07/coca-cola-logo-arden-square-01.jpg',
       name: 'safe area black yellow tra...',
-      size: '7 kB',
+      size: 7,
     },
     {
       src: 'https://upload.wikimedia.org/wikipedia/commons/4/4b/McDonald%27s_logo.svg',
       name: 'safe area black green trans...',
-      size: '7 kB',
+      size: 7,
     },
-  ];
+  ]);
 
   return (
     <div className="flex flex-wrap gap-4">
-      <fieldset className="w-fit space-y-1">
+      <fieldset className="w-fit h-fit space-y-1">
         <label
           htmlFor="files"
           className="gap-1 border-2 border-dashed h-full w-full border-gray-200 rounded  bg-gray-100 cursor-pointer flex flex-col justify-center items-center font-semibold"
@@ -166,35 +166,46 @@ const LogoGallery = () => {
             className="px-4 py-12 cursor-pointer rounded-md"
             multiple
             onChange={(e) => {
-              console.log(e.target.files[0].name, e.target.files[0].type);
+              const filePath = URL.createObjectURL(e.target.files[0]);
+              const fileName = e.target.files[0].name;
+              const fileSize = e.target.files[0].size;
+
+              const filesData = {
+                src: filePath,
+                name: fileName,
+                size: fileSize,
+              };
+
+              setLogos((oldFiles) => [filesData, ...oldFiles]);
             }}
           />
           {/* <input type="file" className="hidden" />
             <input type="" className="hidden" /> */}
         </label>
       </fieldset>
-      {}
-      {logos.map((logo, index) => (
-        <div
-          key={index}
-          className="flex flex-col items-center justify-center border border-gray-300 rounded-lg  py-2 px-8 w-40 shadow-md "
-        >
-          <img
-            src={logo.src}
-            alt={logo.name}
-            className="w-16 h-16 object-contain"
-            loading="lazy"
-          />
-          <span className="text-sm font-medium mt-2">{logo.name}</span>
-          <span className="text-xs text-gray-500">{logo.size}</span>
-        </div>
-      ))}
+      <div className="flex flex-wrap gap-3">
+        {logos.map((logo, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center justify-center border border-gray-300 rounded-lg  py-2 px-8 w-40 shadow-md "
+          >
+            <img
+              src={logo.src}
+              alt={logo.name}
+              className="w-16 h-16 object-contain"
+              loading="lazy"
+            />
+            <span className="text-sm font-medium mt-2">{logo.name}</span>
+            <span className="text-xs text-gray-500">{logo.size}</span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
 
 const BrandGuids = () => {
-  const [logos, setLogos] = useState([
+  const [brands, setBrands] = useState([
     {
       src: 'https://cdn-icons-png.flaticon.com/512/337/337946.png',
       name: 'Favicon.png',
@@ -229,7 +240,7 @@ const BrandGuids = () => {
                 size: fileSize,
               };
 
-              setLogos((oldFiles) => [filesData, ...oldFiles]);
+              setBrands((oldFiles) => [filesData, ...oldFiles]);
             }}
             multiple
           />
@@ -238,30 +249,30 @@ const BrandGuids = () => {
         </label>
       </fieldset>
       <div className="flex flex-wrap gap-3">
-        {logos.map((logo, index) => (
+        {brands.map((brand, index) => (
           <div
             key={index}
             className="flex flex-col gap-2 items-center justify-center border border-gray-300 rounded-lg py-2 px-8 shadow-md w-40"
           >
-            {logo.name.split('.')[1] === 'pdf' ? (
+            {brand.name.split('.')[1] === 'pdf' ? (
               <embed
-                src={logo.src}
+                src={brand.src}
                 className="w-full h-12 object-contain"
                 loading="lazy"
               />
             ) : (
               <img
-                src={logo.src}
-                alt={logo.name}
+                src={brand.src}
+                alt={brand.name}
                 className="w-full h-full object-contain"
                 loading="lazy"
               />
             )}
-            <span className="text-sm font-medium mt-2">{logo.name}</span>
+            <span className="text-sm font-medium mt-2">{brand.name}</span>
             <span className="text-xs text-gray-500">
-              {logo.size > 1024 * 1024
-                ? (logo.size / (1024 * 1024)).toFixed(2) + ' MB'
-                : (logo.size / 1024).toFixed(2) + ' KB'}
+              {brand.size > 1024 * 1024
+                ? (brand.size / (1024 * 1024)).toFixed(2) + ' MB'
+                : (brand.size / 1024).toFixed(2) + ' KB'}
             </span>
           </div>
         ))}
